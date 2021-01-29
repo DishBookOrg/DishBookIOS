@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>358983794037-59ha1vnq75jvgimgai2h0rlobop177ov.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.358983794037-59ha1vnq75jvgimgai2h0rlobop177ov</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB7u_RMiwfUZKyrEaxHH-mK2Hwcovarha8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>358983794037</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.dishbook.DishBookIOS</string>
+	<key>PROJECT_ID</key>
+	<string>dishbookapp</string>
+	<key>STORAGE_BUCKET</key>
+	<string>dishbookapp.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:358983794037:ios:d314554db7d7cfb8c4673c</string>
+	<key>DATABASE_URL</key>
+	<string>https://dishbookapp.firebaseio.com</string>
+</dict>
+</plist>

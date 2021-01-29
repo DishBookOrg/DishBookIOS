@@ -3,27 +3,37 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		206F6C092FF500D7FCC9DBF8 /* Pods_DishBookIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16C20488A50629EFC995657 /* Pods_DishBookIOS.framework */; };
 		5F5C525825C4B0E900AC7E3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C525725C4B0E900AC7E3C /* AppDelegate.swift */; };
-		5F5C525A25C4B0E900AC7E3C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C525925C4B0E900AC7E3C /* SceneDelegate.swift */; };
 		5F5C525C25C4B0EA00AC7E3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C525B25C4B0E900AC7E3C /* ViewController.swift */; };
 		5F5C525F25C4B0EA00AC7E3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C525D25C4B0EA00AC7E3C /* Main.storyboard */; };
 		5F5C526125C4B0EE00AC7E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C526025C4B0EE00AC7E3C /* Assets.xcassets */; };
 		5F5C526425C4B0EE00AC7E3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C526225C4B0EE00AC7E3C /* LaunchScreen.storyboard */; };
+		5F5C526D25C4B1FB00AC7E3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C526C25C4B1FB00AC7E3C /* GoogleService-Info.plist */; };
+		5F5C528825C4B3E300AC7E3C /* TableKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5F5C528725C4B3E300AC7E3C /* TableKit */; };
+		5F5C528C25C4B42800AC7E3C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5F5C528B25C4B42800AC7E3C /* IQKeyboardManagerSwift */; };
+		5F5C529325C4B4CC00AC7E3C /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C529225C4B4CC00AC7E3C /* Color.xcassets */; };
+		5F5C52AD25C4B8AF00AC7E3C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C52AC25C4B8AF00AC7E3C /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25017E6F0215EA68CF3A2FA3 /* Pods-DishBookIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.release.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.release.xcconfig"; sourceTree = "<group>"; };
 		5F5C525425C4B0E900AC7E3C /* DishBookIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DishBookIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5C525725C4B0E900AC7E3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5F5C525925C4B0E900AC7E3C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5F5C525B25C4B0E900AC7E3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5F5C525E25C4B0EA00AC7E3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F5C526025C4B0EE00AC7E3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F5C526325C4B0EE00AC7E3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F5C526525C4B0EE00AC7E3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F5C526C25C4B1FB00AC7E3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5F5C529225C4B4CC00AC7E3C /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		5F5C52AC25C4B8AF00AC7E3C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		A16C20488A50629EFC995657 /* Pods_DishBookIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DishBookIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC64CBEA343BD64045494C3F /* Pods-DishBookIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.debug.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F5C528825C4B3E300AC7E3C /* TableKit in Frameworks */,
+				206F6C092FF500D7FCC9DBF8 /* Pods_DishBookIOS.framework in Frameworks */,
+				5F5C528C25C4B42800AC7E3C /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E1713A2750BB817BE4B596C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A16C20488A50629EFC995657 /* Pods_DishBookIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5F5C524B25C4B0E900AC7E3C = {
 			isa = PBXGroup;
 			children = (
 				5F5C525625C4B0E900AC7E3C /* DishBookIOS */,
 				5F5C525525C4B0E900AC7E3C /* Products */,
+				E055B89846E80807F4D381DA /* Pods */,
+				3E1713A2750BB817BE4B596C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +79,186 @@
 		5F5C525625C4B0E900AC7E3C /* DishBookIOS */ = {
 			isa = PBXGroup;
 			children = (
-				5F5C525725C4B0E900AC7E3C /* AppDelegate.swift */,
-				5F5C525925C4B0E900AC7E3C /* SceneDelegate.swift */,
+				5F5C528E25C4B48200AC7E3C /* Classes */,
+				5F5C528F25C4B48B00AC7E3C /* Common */,
 				5F5C525B25C4B0E900AC7E3C /* ViewController.swift */,
-				5F5C525D25C4B0EA00AC7E3C /* Main.storyboard */,
-				5F5C526025C4B0EE00AC7E3C /* Assets.xcassets */,
-				5F5C526225C4B0EE00AC7E3C /* LaunchScreen.storyboard */,
-				5F5C526525C4B0EE00AC7E3C /* Info.plist */,
+				5F5C529025C4B49300AC7E3C /* Storyboards */,
+				5F5C529125C4B4A200AC7E3C /* Resources */,
 			);
 			path = DishBookIOS;
+			sourceTree = "<group>";
+		};
+		5F5C528E25C4B48200AC7E3C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5F5C529925C4B57500AC7E3C /* Coordinators */,
+				5F5C529A25C4B57A00AC7E3C /* Modules */,
+				5F5C529B25C4B58E00AC7E3C /* Views */,
+				5F5C529C25C4B59F00AC7E3C /* Managers */,
+				5F5C529D25C4B5A300AC7E3C /* Models */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5F5C528F25C4B48B00AC7E3C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5F5C529825C4B55F00AC7E3C /* App */,
+				5F5C529F25C4B61900AC7E3C /* Extensions */,
+				5F5C529E25C4B60C00AC7E3C /* Network */,
+				5F5C52A525C4B68100AC7E3C /* Base */,
+				5F5C52A725C4B6B700AC7E3C /* Other */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5F5C529025C4B49300AC7E3C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5F5C525D25C4B0EA00AC7E3C /* Main.storyboard */,
+				5F5C526225C4B0EE00AC7E3C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5F5C529125C4B4A200AC7E3C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5F5C526025C4B0EE00AC7E3C /* Assets.xcassets */,
+				5F5C529225C4B4CC00AC7E3C /* Color.xcassets */,
+				5F5C529625C4B51000AC7E3C /* String */,
+				5F5C526C25C4B1FB00AC7E3C /* GoogleService-Info.plist */,
+				5F5C52AC25C4B8AF00AC7E3C /* R.generated.swift */,
+				5F5C526525C4B0EE00AC7E3C /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5F5C529625C4B51000AC7E3C /* String */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
+		5F5C529825C4B55F00AC7E3C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5F5C525725C4B0E900AC7E3C /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5F5C529925C4B57500AC7E3C /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		5F5C529A25C4B57A00AC7E3C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		5F5C529B25C4B58E00AC7E3C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5F5C529C25C4B59F00AC7E3C /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		5F5C529D25C4B5A300AC7E3C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5F5C529E25C4B60C00AC7E3C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		5F5C529F25C4B61900AC7E3C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5F5C52A125C4B62900AC7E3C /* UIKit */,
+				5F5C52A225C4B62B00AC7E3C /* Combine */,
+				5F5C52A025C4B62400AC7E3C /* Foundation */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5F5C52A025C4B62400AC7E3C /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		5F5C52A125C4B62900AC7E3C /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				5F5C52A425C4B66C00AC7E3C /* UIVIew */,
+				5F5C52A325C4B65B00AC7E3C /* UIViewController */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		5F5C52A225C4B62B00AC7E3C /* Combine */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Combine;
+			sourceTree = "<group>";
+		};
+		5F5C52A325C4B65B00AC7E3C /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		5F5C52A425C4B66C00AC7E3C /* UIVIew */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIVIew;
+			sourceTree = "<group>";
+		};
+		5F5C52A525C4B68100AC7E3C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		5F5C52A725C4B6B700AC7E3C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		E055B89846E80807F4D381DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC64CBEA343BD64045494C3F /* Pods-DishBookIOS.debug.xcconfig */,
+				25017E6F0215EA68CF3A2FA3 /* Pods-DishBookIOS.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,15 +268,23 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F5C526825C4B0EE00AC7E3C /* Build configuration list for PBXNativeTarget "DishBookIOS" */;
 			buildPhases = (
+				61F1BE6E525292DD65995985 /* [CP] Check Pods Manifest.lock */,
+				5F5C52A925C4B7E100AC7E3C /* R.swift */,
 				5F5C525025C4B0E900AC7E3C /* Sources */,
 				5F5C525125C4B0E900AC7E3C /* Frameworks */,
 				5F5C525225C4B0E900AC7E3C /* Resources */,
+				5F5C52AF25C4B9E600AC7E3C /* SwiftLint */,
+				17E73EFE3BC0667EA95C0342 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = DishBookIOS;
+			packageProductDependencies = (
+				5F5C528725C4B3E300AC7E3C /* TableKit */,
+				5F5C528B25C4B42800AC7E3C /* IQKeyboardManagerSwift */,
+			);
 			productName = DishBookIOS;
 			productReference = 5F5C525425C4B0E900AC7E3C /* DishBookIOS.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +312,10 @@
 				Base,
 			);
 			mainGroup = 5F5C524B25C4B0E900AC7E3C;
+			packageReferences = (
+				5F5C528625C4B3E300AC7E3C /* XCRemoteSwiftPackageReference "TableKit" */,
+				5F5C528A25C4B42800AC7E3C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+			);
 			productRefGroup = 5F5C525525C4B0E900AC7E3C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -125,12 +331,94 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F5C526425C4B0EE00AC7E3C /* LaunchScreen.storyboard in Resources */,
+				5F5C526D25C4B1FB00AC7E3C /* GoogleService-Info.plist in Resources */,
+				5F5C529325C4B4CC00AC7E3C /* Color.xcassets in Resources */,
 				5F5C526125C4B0EE00AC7E3C /* Assets.xcassets in Resources */,
 				5F5C525F25C4B0EA00AC7E3C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		17E73EFE3BC0667EA95C0342 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F5C52A925C4B7E100AC7E3C /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		5F5C52AF25C4B9E600AC7E3C /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		61F1BE6E525292DD65995985 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DishBookIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5F5C525025C4B0E900AC7E3C /* Sources */ = {
@@ -139,7 +427,7 @@
 			files = (
 				5F5C525C25C4B0EA00AC7E3C /* ViewController.swift in Sources */,
 				5F5C525825C4B0E900AC7E3C /* AppDelegate.swift in Sources */,
-				5F5C525A25C4B0E900AC7E3C /* SceneDelegate.swift in Sources */,
+				5F5C52AD25C4B8AF00AC7E3C /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +504,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +559,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,12 +571,14 @@
 		};
 		5F5C526925C4B0EE00AC7E3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC64CBEA343BD64045494C3F /* Pods-DishBookIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M92VXVU7J9;
-				INFOPLIST_FILE = DishBookIOS/Info.plist;
+				INFOPLIST_FILE = DishBookIOS/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,12 +592,14 @@
 		};
 		5F5C526A25C4B0EE00AC7E3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25017E6F0215EA68CF3A2FA3 /* Pods-DishBookIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M92VXVU7J9;
-				INFOPLIST_FILE = DishBookIOS/Info.plist;
+				INFOPLIST_FILE = DishBookIOS/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,6 +633,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5F5C528625C4B3E300AC7E3C /* XCRemoteSwiftPackageReference "TableKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maxsokolov/TableKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.11.0;
+			};
+		};
+		5F5C528A25C4B42800AC7E3C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5F5C528725C4B3E300AC7E3C /* TableKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F5C528625C4B3E300AC7E3C /* XCRemoteSwiftPackageReference "TableKit" */;
+			productName = TableKit;
+		};
+		5F5C528B25C4B42800AC7E3C /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F5C528A25C4B42800AC7E3C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5F5C524C25C4B0E900AC7E3C /* Project object */;
 }
