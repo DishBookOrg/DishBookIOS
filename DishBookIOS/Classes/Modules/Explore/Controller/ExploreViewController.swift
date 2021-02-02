@@ -28,8 +28,7 @@ final class ExploreViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .blue
+    
     }
     
     @IBAction func logoutAction(_ sender: UIButton) {

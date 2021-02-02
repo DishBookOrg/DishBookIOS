@@ -16,17 +16,3 @@ class BaseCoordinator: NSObject, CoordinatorProtocol {
         fatalError("Children should implement `start`.")
     }
 }
-
-class BaseFlowCoordinator: BaseCoordinator {
-    
-    var navigationController: UINavigationController?
-    
-    init(navigationController: UINavigationController?) {
-        navigationController?.isNavigationBarHidden = true
-        self.navigationController = navigationController
-    }
-    
-    var rootViewController: UIViewController? {
-        return navigationController
-    }
-}

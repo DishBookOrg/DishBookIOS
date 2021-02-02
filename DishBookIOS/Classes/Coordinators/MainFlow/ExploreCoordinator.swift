@@ -7,14 +7,16 @@
 
 import UIKit
 
-final class ExploreCoordinator: BaseFlowCoordinator {
+final class ExploreCoordinator: BaseRootCoordinator {
     
-    var tabBarController: UITabBarController?
-    
-    override init(navigationController: UINavigationController?) {
-        super.init(navigationController: navigationController)
+    override init() {
+        super.init()
         
-        navigationController?.isNavigationBarHidden = true
+        self.tabItem = UITabBarItem(title: R.string.explore.explore(),
+                                    image: R.image.search(),
+                                    selectedImage: R.image.search()?.withTintColor(R.color.orangeMuted()!,
+                                                                                   renderingMode: .alwaysOriginal))
+        start()
     }
     
     override func start() {

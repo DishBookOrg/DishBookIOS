@@ -7,12 +7,16 @@
 
 import UIKit
 
-final class DishBookCoordinator: BaseFlowCoordinator {
+final class DishBookCoordinator: BaseRootCoordinator {
     
-    override init(navigationController: UINavigationController?) {
-        super.init(navigationController: navigationController)
+    override init() {
+        super.init()
         
-        navigationController?.isNavigationBarHidden = true
+        self.tabItem = UITabBarItem(title: R.string.dishBook.dishBook(),
+                                    image: R.image.dishBook(),
+                                    selectedImage: R.image.dishBook()?.withTintColor(R.color.orangeMuted()!,
+                                                                                     renderingMode: .alwaysOriginal))
+        start()
     }
     
     override func start() {

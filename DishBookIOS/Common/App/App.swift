@@ -43,6 +43,11 @@ struct App {
     
     static func logout() {
         
+        do {
+            try Auth.auth().signOut()
+        } catch let error {
+            print("Error: \(error.localizedDescription)")
+        }
         user = nil
         appCoordinator.logout()
     }

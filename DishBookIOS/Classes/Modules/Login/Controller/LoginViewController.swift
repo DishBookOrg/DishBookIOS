@@ -13,6 +13,10 @@ import CryptoKit
 
 final class LoginViewController: BaseViewController {
     
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var blurView: UIVisualEffectView!
+    
     // MARK: - Private properties
     
     private var viewModel: LoginViewModel
@@ -35,6 +39,16 @@ final class LoginViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupView()
+    }
+    
+    // MARK: - Setup function
+    
+    private func setupView() {
+        
+        blurView.clipsToBounds = true
+        blurView.contentView.layer.cornerRadius = 5
+        blurView.contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
     // MARK: - IBActions

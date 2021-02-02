@@ -56,6 +56,11 @@
                                         <constraint firstItem="4in-nd-PpV" firstAttribute="centerX" secondItem="oqe-WR-2Av" secondAttribute="centerX" id="gG4-4d-anx"/>
                                         <constraint firstItem="4in-nd-PpV" firstAttribute="leading" secondItem="oqe-WR-2Av" secondAttribute="leading" constant="30" id="vTv-JW-yAv"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="Q0Y-6e-SvO"/>
@@ -70,12 +75,21 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="MOz-wf-bjC">
+                                <rect key="frame" x="20" y="74" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="n4E-ZX-uWY"/>
+                                    <constraint firstAttribute="width" constant="100" id="qGo-bD-gFm"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MwW-vI-BhG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MOz-wf-bjC" firstAttribute="top" secondItem="MwW-vI-BhG" secondAttribute="top" constant="30" id="2k1-Rl-354"/>
                             <constraint firstAttribute="bottom" secondItem="QDP-5w-9F6" secondAttribute="bottom" id="3fZ-Dg-DOc"/>
                             <constraint firstItem="QDP-5w-9F6" firstAttribute="trailing" secondItem="MwW-vI-BhG" secondAttribute="trailing" id="7L4-aN-KqF"/>
+                            <constraint firstItem="MOz-wf-bjC" firstAttribute="leading" secondItem="MwW-vI-BhG" secondAttribute="leading" constant="20" id="DbP-O2-idr"/>
                             <constraint firstAttribute="bottom" secondItem="JPP-HO-bVb" secondAttribute="bottom" id="JkN-3f-5PA"/>
                             <constraint firstItem="JPP-HO-bVb" firstAttribute="leading" secondItem="MwW-vI-BhG" secondAttribute="leading" id="K3g-D9-gTJ"/>
                             <constraint firstItem="MwW-vI-BhG" firstAttribute="trailing" secondItem="JPP-HO-bVb" secondAttribute="trailing" id="RuN-yM-ZWz"/>
@@ -83,6 +97,9 @@
                             <constraint firstItem="JPP-HO-bVb" firstAttribute="top" secondItem="zHx-nO-I0q" secondAttribute="top" id="cZo-Ao-YBz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blurView" destination="QDP-5w-9F6" id="ZFW-K0-7sh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8pg-GU-NkX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,6 +107,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Icon" width="1024" height="1024"/>
         <image name="loginImage" width="750" height="1624"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

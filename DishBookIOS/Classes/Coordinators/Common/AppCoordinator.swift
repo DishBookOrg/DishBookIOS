@@ -23,9 +23,8 @@ final class AppCoordinator: BaseCoordinator {
         var coordinator: BaseCoordinator!
         
         if App.user != nil {
-        
-            coordinator = MainFlowCoordinator(window: window)
             
+            coordinator = MainFlowCoordinator(window: window)
         } else {
             
             coordinator = AuthCoordinator(navigationController: navigationController)
