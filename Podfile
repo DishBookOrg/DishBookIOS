@@ -11,9 +11,12 @@ target 'DishBookIOS' do
   pod 'R.swift', '~> 5'
   pod 'SVProgressHUD'
   pod 'Default', '~> 3.0'
+  pod 'Wormholy'
 
-
+  pod 'GoogleSignIn'
   pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
 end
 
