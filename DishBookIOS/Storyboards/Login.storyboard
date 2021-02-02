@@ -20,41 +20,44 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDP-5w-9F6">
-                                <rect key="frame" x="0.0" y="646" width="414" height="250"/>
+                                <rect key="frame" x="0.0" y="638" width="414" height="258"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oqe-WR-2Av">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="258"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4in-nd-PpV">
-                                            <rect key="frame" x="30" y="52" width="354" height="44"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="44" id="rU9-SJ-Ykl"/>
-                                            </constraints>
-                                            <state key="normal" title="Button"/>
-                                            <connections>
-                                                <action selector="appleAuthAction:" destination="BgT-XW-NUW" eventType="touchUpInside" id="s27-eu-hXe"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyR-BC-PPw">
-                                            <rect key="frame" x="30" y="136" width="354" height="44"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="44" id="bl6-g2-03R"/>
-                                            </constraints>
-                                            <state key="normal" title="Button"/>
-                                            <connections>
-                                                <action selector="googleAuthAction:" destination="BgT-XW-NUW" eventType="touchUpInside" id="Lfm-xM-Eqy"/>
-                                            </connections>
-                                        </button>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="HgS-o9-dYz">
+                                            <rect key="frame" x="30" y="60" width="354" height="138"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4in-nd-PpV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="rU9-SJ-Ykl"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="appleAuthAction:" destination="BgT-XW-NUW" eventType="touchUpInside" id="s27-eu-hXe"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyR-BC-PPw">
+                                                    <rect key="frame" x="0.0" y="94" width="354" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="bl6-g2-03R"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="googleAuthAction:" destination="BgT-XW-NUW" eventType="touchUpInside" id="Lfm-xM-Eqy"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="4in-nd-PpV" firstAttribute="top" secondItem="oqe-WR-2Av" secondAttribute="top" constant="52" id="9zE-u1-03O"/>
-                                        <constraint firstItem="FyR-BC-PPw" firstAttribute="centerX" secondItem="oqe-WR-2Av" secondAttribute="centerX" id="AvK-K2-rAc"/>
-                                        <constraint firstItem="FyR-BC-PPw" firstAttribute="top" secondItem="4in-nd-PpV" secondAttribute="bottom" constant="40" id="Lji-59-eRZ"/>
-                                        <constraint firstAttribute="trailing" secondItem="FyR-BC-PPw" secondAttribute="trailing" constant="30" id="Ots-rh-o6t"/>
-                                        <constraint firstAttribute="trailing" secondItem="4in-nd-PpV" secondAttribute="trailing" constant="30" id="QDZ-pa-YQC"/>
-                                        <constraint firstItem="FyR-BC-PPw" firstAttribute="leading" secondItem="oqe-WR-2Av" secondAttribute="leading" constant="30" id="T5q-5U-yjx"/>
-                                        <constraint firstItem="4in-nd-PpV" firstAttribute="centerX" secondItem="oqe-WR-2Av" secondAttribute="centerX" id="gG4-4d-anx"/>
-                                        <constraint firstItem="4in-nd-PpV" firstAttribute="leading" secondItem="oqe-WR-2Av" secondAttribute="leading" constant="30" id="vTv-JW-yAv"/>
+                                        <constraint firstItem="HgS-o9-dYz" firstAttribute="leading" secondItem="oqe-WR-2Av" secondAttribute="leading" constant="30" id="F9O-Ua-dz0"/>
+                                        <constraint firstItem="HgS-o9-dYz" firstAttribute="top" secondItem="oqe-WR-2Av" secondAttribute="top" constant="60" id="RIm-Km-3Qz"/>
+                                        <constraint firstAttribute="bottom" secondItem="HgS-o9-dYz" secondAttribute="bottom" constant="60" id="SWs-nf-quT"/>
+                                        <constraint firstItem="HgS-o9-dYz" firstAttribute="centerX" secondItem="oqe-WR-2Av" secondAttribute="centerX" id="kI2-IB-6u3"/>
+                                        <constraint firstItem="HgS-o9-dYz" firstAttribute="centerY" secondItem="oqe-WR-2Av" secondAttribute="centerY" id="kWC-9A-l2P"/>
+                                        <constraint firstAttribute="trailing" secondItem="HgS-o9-dYz" secondAttribute="trailing" constant="30" id="qNF-KX-9EJ"/>
                                     </constraints>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
@@ -74,6 +77,11 @@
                                         <real key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Q0Y-6e-SvO"/>
+                                    </mask>
+                                </variation>
                             </visualEffectView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="MOz-wf-bjC">
                                 <rect key="frame" x="20" y="74" width="100" height="100"/>
@@ -99,6 +107,8 @@
                     </view>
                     <connections>
                         <outlet property="blurView" destination="QDP-5w-9F6" id="ZFW-K0-7sh"/>
+                        <outlet property="signInWithAppleButton" destination="4in-nd-PpV" id="C2i-dq-Els"/>
+                        <outlet property="signInWithGoogleButton" destination="FyR-BC-PPw" id="V44-BD-Frz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8pg-GU-NkX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

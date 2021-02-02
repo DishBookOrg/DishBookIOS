@@ -16,6 +16,8 @@ final class LoginViewController: BaseViewController {
     // MARK: - IBOutlets
     
     @IBOutlet weak var blurView: UIVisualEffectView!
+    @IBOutlet weak var signInWithAppleButton: UIButton!
+    @IBOutlet weak var signInWithGoogleButton: UIButton!
     
     // MARK: - Private properties
     
@@ -40,6 +42,7 @@ final class LoginViewController: BaseViewController {
         super.viewDidLoad()
         
         setupView()
+        setupButtons()
     }
     
     // MARK: - Setup function
@@ -49,6 +52,24 @@ final class LoginViewController: BaseViewController {
         blurView.clipsToBounds = true
         blurView.contentView.layer.cornerRadius = 5
         blurView.contentView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+    }
+    
+    private func setupButtons() {
+        
+        signInWithAppleButton.setTitle(R.string.login.appleSignIn(), for: .normal)
+        signInWithAppleButton.setImage(R.image.appleLogo()?.withRenderingMode(.alwaysOriginal), for: .normal)
+        
+        signInWithGoogleButton.setTitle(R.string.login.googleSignIn(), for: .normal)
+        signInWithGoogleButton.setImage(R.image.googleLogo()?.withRenderingMode(.alwaysOriginal), for: .normal)
+        
+        [signInWithAppleButton, signInWithGoogleButton].forEach { button in
+            
+            button?.titleLabel?.font = R.font.sfProDisplayMedium(size: 20)
+            button?.setTitleColor(.black, for: .normal)
+            button?.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)
+            button?.backgroundColor = .white
+            button?.layer.cornerRadius = 6
+        }
     }
     
     // MARK: - IBActions
