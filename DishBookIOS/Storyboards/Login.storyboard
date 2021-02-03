@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="6fA-5u-0jZ">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="BgT-XW-NUW" customClass="LoginViewController" customModule="DishBookIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zHx-nO-I0q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginImage" translatesAutoresizingMaskIntoConstraints="NO" id="JPP-HO-bVb">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDP-5w-9F6">
+                                <rect key="frame" x="0.0" y="638" width="414" height="258"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oqe-WR-2Av">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="258"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="HgS-o9-dYz">
+                                            <rect key="frame" x="30" y="60" width="354" height="138"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4in-nd-PpV">
+                                                    <rect key="frame" x="0.0" y="0.0" width="354" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="rU9-SJ-Ykl"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="appleAuthAction:" destination="BgT-XW-NUW" eventType="touchUpInside" id="s27-eu-hXe"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyR-BC-PPw">
+                                                    <rect key="frame" x="0.0" y="94" width="354" height="44"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="44" id="bl6-g2-03R"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="googleAuthAction:" destination="BgT-XW-NUW" eventType="touchUpInside" id="Lfm-xM-Eqy"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="HgS-o9-dYz" firstAttribute="leading" secondItem="oqe-WR-2Av" secondAttribute="leading" constant="30" id="F9O-Ua-dz0"/>
+                                        <constraint firstItem="HgS-o9-dYz" firstAttribute="top" secondItem="oqe-WR-2Av" secondAttribute="top" constant="60" id="RIm-Km-3Qz"/>
+                                        <constraint firstAttribute="bottom" secondItem="HgS-o9-dYz" secondAttribute="bottom" constant="60" id="SWs-nf-quT"/>
+                                        <constraint firstItem="HgS-o9-dYz" firstAttribute="centerX" secondItem="oqe-WR-2Av" secondAttribute="centerX" id="kI2-IB-6u3"/>
+                                        <constraint firstItem="HgS-o9-dYz" firstAttribute="centerY" secondItem="oqe-WR-2Av" secondAttribute="centerY" id="kWC-9A-l2P"/>
+                                        <constraint firstAttribute="trailing" secondItem="HgS-o9-dYz" secondAttribute="trailing" constant="30" id="qNF-KX-9EJ"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                                            <real key="value" value="0.0"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Q0Y-6e-SvO"/>
+                                </constraints>
+                                <blurEffect style="systemUltraThinMaterialDark"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Q0Y-6e-SvO"/>
+                                    </mask>
+                                </variation>
+                            </visualEffectView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="MOz-wf-bjC">
+                                <rect key="frame" x="20" y="74" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="n4E-ZX-uWY"/>
+                                    <constraint firstAttribute="width" constant="100" id="qGo-bD-gFm"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MwW-vI-BhG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MOz-wf-bjC" firstAttribute="top" secondItem="MwW-vI-BhG" secondAttribute="top" constant="30" id="2k1-Rl-354"/>
+                            <constraint firstAttribute="bottom" secondItem="QDP-5w-9F6" secondAttribute="bottom" id="3fZ-Dg-DOc"/>
+                            <constraint firstItem="QDP-5w-9F6" firstAttribute="trailing" secondItem="MwW-vI-BhG" secondAttribute="trailing" id="7L4-aN-KqF"/>
+                            <constraint firstItem="MOz-wf-bjC" firstAttribute="leading" secondItem="MwW-vI-BhG" secondAttribute="leading" constant="20" id="DbP-O2-idr"/>
+                            <constraint firstAttribute="bottom" secondItem="JPP-HO-bVb" secondAttribute="bottom" id="JkN-3f-5PA"/>
+                            <constraint firstItem="JPP-HO-bVb" firstAttribute="leading" secondItem="MwW-vI-BhG" secondAttribute="leading" id="K3g-D9-gTJ"/>
+                            <constraint firstItem="MwW-vI-BhG" firstAttribute="trailing" secondItem="JPP-HO-bVb" secondAttribute="trailing" id="RuN-yM-ZWz"/>
+                            <constraint firstItem="QDP-5w-9F6" firstAttribute="leading" secondItem="MwW-vI-BhG" secondAttribute="leading" id="cNh-dT-IzA"/>
+                            <constraint firstItem="JPP-HO-bVb" firstAttribute="top" secondItem="zHx-nO-I0q" secondAttribute="top" id="cZo-Ao-YBz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blurView" destination="QDP-5w-9F6" id="ZFW-K0-7sh"/>
+                        <outlet property="signInWithAppleButton" destination="4in-nd-PpV" id="C2i-dq-Els"/>
+                        <outlet property="signInWithGoogleButton" destination="FyR-BC-PPw" id="V44-BD-Frz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8pg-GU-NkX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="295.6521739130435" y="163.39285714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon" width="1024" height="1024"/>
+        <image name="loginImage" width="750" height="1624"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

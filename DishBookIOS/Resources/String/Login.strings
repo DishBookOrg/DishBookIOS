@@ -1,0 +1,10 @@
+/* 
+  Login.strings
+  DishBookIOS
+
+  Created by Denys Danyliuk on 02.02.2021.
+  
+*/
+
+"Apple.Sign.In" = "Sign in with Apple";
+"Google.Sign.In" = "Sign in with Google";
