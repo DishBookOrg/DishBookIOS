@@ -32,4 +32,9 @@ final class ProfileViewController: BaseViewController {
         super.viewDidLoad()
         
     }
+    
+    @IBAction func logoutAction(_ sender: UIButton) {
+        
+        App.logout()
+    }
 }

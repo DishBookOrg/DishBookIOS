@@ -13,9 +13,9 @@ final class LoginViewModel: BaseViewModel {
     
     var appleAuthAction: VoidClosure?
     var googleAuthAction: VoidClosure?
-    
     var didLogin: VoidClosure?
     
+    // MARK: - Public properties
     
     var currentNonce: String?
 }

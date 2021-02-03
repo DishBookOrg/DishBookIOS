@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		206F6C092FF500D7FCC9DBF8 /* Pods_DishBookIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16C20488A50629EFC995657 /* Pods_DishBookIOS.framework */; };
+		5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44162925CB04CE0009FE5F /* UIControlSubscription.swift */; };
+		5F44162D25CB04D70009FE5F /* UIControlPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44162C25CB04D70009FE5F /* UIControlPublisher.swift */; };
+		5F44163025CB04E20009FE5F /* UITextField+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44162F25CB04E20009FE5F /* UITextField+Publisher.swift */; };
+		5F44163325CB04F10009FE5F /* UITextView+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44163225CB04F10009FE5F /* UITextView+Publisher.swift */; };
+		5F44163625CB05470009FE5F /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44163525CB05470009FE5F /* Date+Extension.swift */; };
+		5F44163925CB057B0009FE5F /* Publisher+AssignNoRetain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44163825CB057B0009FE5F /* Publisher+AssignNoRetain.swift */; };
+		5F44163C25CB05AD0009FE5F /* SubscribersCompletion+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44163B25CB05AD0009FE5F /* SubscribersCompletion+Ext.swift */; };
+		5F44164025CB06CD0009FE5F /* UIView+FromNib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44163F25CB06CD0009FE5F /* UIView+FromNib.swift */; };
+		5F44164425CB06F10009FE5F /* UIView+Anchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44164325CB06F10009FE5F /* UIView+Anchors.swift */; };
+		5F44164725CB07080009FE5F /* UIView+StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44164625CB07080009FE5F /* UIView+StackView.swift */; };
+		5F44164B25CB07510009FE5F /* UITextView+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44164A25CB07510009FE5F /* UITextView+Placeholder.swift */; };
 		5F5C525825C4B0E900AC7E3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C525725C4B0E900AC7E3C /* AppDelegate.swift */; };
 		5F5C525F25C4B0EA00AC7E3C /* Explore.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C525D25C4B0EA00AC7E3C /* Explore.storyboard */; };
 		5F5C526125C4B0EE00AC7E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C526025C4B0EE00AC7E3C /* Assets.xcassets */; };
@@ -52,7 +63,7 @@
 		5FEBD1B725C9D3DD000F7E9C /* DishBook.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FEBD1B625C9D3DD000F7E9C /* DishBook.storyboard */; };
 		5FEBD1BD25C9D416000F7E9C /* DishBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBD1BC25C9D416000F7E9C /* DishBookViewController.swift */; };
 		5FEBD1C125C9D423000F7E9C /* DishBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBD1C025C9D423000F7E9C /* DishBookViewModel.swift */; };
-		5FEBD1C425C9D42C000F7E9C /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBD1C325C9D42C000F7E9C /* ExploreViewModel.swift */; };
+		5FEBD1C425C9D42C000F7E9C /* ExploreListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBD1C325C9D42C000F7E9C /* ExploreListViewModel.swift */; };
 		5FEBD1C725C9D9A6000F7E9C /* SignInWithGoogleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBD1C625C9D9A6000F7E9C /* SignInWithGoogleCoordinator.swift */; };
 		5FEBD1EA25C9DCD8000F7E9C /* UIApplication+TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBD1E925C9DCD8000F7E9C /* UIApplication+TopViewController.swift */; };
 		5FFB208825C4C8AB0086440A /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FFB208725C4C8AB0086440A /* Login.storyboard */; };
@@ -70,7 +81,7 @@
 		5FFB20D225C4CD450086440A /* UIApplication+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20D125C4CD450086440A /* UIApplication+Keyboard.swift */; };
 		5FFB20D725C4CF480086440A /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20D625C4CF480086440A /* UIView+IBInspectable.swift */; };
 		5FFB20F725C4D2F30086440A /* MainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20F625C4D2F30086440A /* MainFlowCoordinator.swift */; };
-		5FFB20FE25C4D3370086440A /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20FD25C4D3370086440A /* ExploreViewController.swift */; };
+		5FFB20FE25C4D3370086440A /* ExploreListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20FD25C4D3370086440A /* ExploreListViewController.swift */; };
 		5FFB210325C4D4490086440A /* ExploreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB210225C4D4490086440A /* ExploreCoordinator.swift */; };
 		5FFB210625C4D9050086440A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB210525C4D9050086440A /* LoginViewModel.swift */; };
 		5FFB210925C4DA630086440A /* SignInWithAppleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB210825C4DA630086440A /* SignInWithAppleCoordinator.swift */; };
@@ -78,6 +89,17 @@
 
 /* Begin PBXFileReference section */
 		25017E6F0215EA68CF3A2FA3 /* Pods-DishBookIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.release.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.release.xcconfig"; sourceTree = "<group>"; };
+		5F44162925CB04CE0009FE5F /* UIControlSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlSubscription.swift; sourceTree = "<group>"; };
+		5F44162C25CB04D70009FE5F /* UIControlPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlPublisher.swift; sourceTree = "<group>"; };
+		5F44162F25CB04E20009FE5F /* UITextField+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Publisher.swift"; sourceTree = "<group>"; };
+		5F44163225CB04F10009FE5F /* UITextView+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Publisher.swift"; sourceTree = "<group>"; };
+		5F44163525CB05470009FE5F /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		5F44163825CB057B0009FE5F /* Publisher+AssignNoRetain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+AssignNoRetain.swift"; sourceTree = "<group>"; };
+		5F44163B25CB05AD0009FE5F /* SubscribersCompletion+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SubscribersCompletion+Ext.swift"; sourceTree = "<group>"; };
+		5F44163F25CB06CD0009FE5F /* UIView+FromNib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+FromNib.swift"; sourceTree = "<group>"; };
+		5F44164325CB06F10009FE5F /* UIView+Anchors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Anchors.swift"; sourceTree = "<group>"; };
+		5F44164625CB07080009FE5F /* UIView+StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+StackView.swift"; sourceTree = "<group>"; };
+		5F44164A25CB07510009FE5F /* UITextView+Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Placeholder.swift"; sourceTree = "<group>"; };
 		5F5C525425C4B0E900AC7E3C /* DishBookIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DishBookIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F5C525725C4B0E900AC7E3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F5C525E25C4B0EA00AC7E3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Explore.storyboard; sourceTree = "<group>"; };
@@ -122,7 +144,7 @@
 		5FEBD1B625C9D3DD000F7E9C /* DishBook.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DishBook.storyboard; sourceTree = "<group>"; };
 		5FEBD1BC25C9D416000F7E9C /* DishBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishBookViewController.swift; sourceTree = "<group>"; };
 		5FEBD1C025C9D423000F7E9C /* DishBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishBookViewModel.swift; sourceTree = "<group>"; };
-		5FEBD1C325C9D42C000F7E9C /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
+		5FEBD1C325C9D42C000F7E9C /* ExploreListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreListViewModel.swift; sourceTree = "<group>"; };
 		5FEBD1C625C9D9A6000F7E9C /* SignInWithGoogleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithGoogleCoordinator.swift; sourceTree = "<group>"; };
 		5FEBD1E925C9DCD8000F7E9C /* UIApplication+TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+TopViewController.swift"; sourceTree = "<group>"; };
 		5FFB208725C4C8AB0086440A /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -139,7 +161,7 @@
 		5FFB20D125C4CD450086440A /* UIApplication+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Keyboard.swift"; sourceTree = "<group>"; };
 		5FFB20D625C4CF480086440A /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		5FFB20F625C4D2F30086440A /* MainFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlowCoordinator.swift; sourceTree = "<group>"; };
-		5FFB20FD25C4D3370086440A /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
+		5FFB20FD25C4D3370086440A /* ExploreListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreListViewController.swift; sourceTree = "<group>"; };
 		5FFB210225C4D4490086440A /* ExploreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCoordinator.swift; sourceTree = "<group>"; };
 		5FFB210525C4D9050086440A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		5FFB210825C4DA630086440A /* SignInWithAppleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleCoordinator.swift; sourceTree = "<group>"; };
@@ -169,6 +191,30 @@
 				A16C20488A50629EFC995657 /* Pods_DishBookIOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F44162725CB038B0009FE5F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5F44163E25CB05C00009FE5F /* UIApplication */ = {
+			isa = PBXGroup;
+			children = (
+				5FFB20D125C4CD450086440A /* UIApplication+Keyboard.swift */,
+				5FEBD1E925C9DCD8000F7E9C /* UIApplication+TopViewController.swift */,
+			);
+			path = UIApplication;
+			sourceTree = "<group>";
+		};
+		5F44164925CB074A0009FE5F /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+				5F44164A25CB07510009FE5F /* UITextView+Placeholder.swift */,
+			);
+			path = UITextView;
 			sourceTree = "<group>";
 		};
 		5F5C524B25C4B0E900AC7E3C = {
@@ -295,6 +341,7 @@
 				5FBE833925C9EB8900E3F3EB /* NewDish */,
 				5FBE833A25C9EB8F00E3F3EB /* Shoplist */,
 				5FBE833F25C9EB9D00E3F3EB /* Profile */,
+				5F44162725CB038B0009FE5F /* Common */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -302,7 +349,6 @@
 		5F5C529B25C4B58E00AC7E3C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5FBE837F25C9F9EF00E3F3EB /* LoginButtons */,
 				5FFB20B225C4CA360086440A /* Loader.swift */,
 			);
 			path = Views;
@@ -342,6 +388,7 @@
 		5F5C52A025C4B62400AC7E3C /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				5F44163525CB05470009FE5F /* Date+Extension.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -349,8 +396,8 @@
 		5F5C52A125C4B62900AC7E3C /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				5FFB20D125C4CD450086440A /* UIApplication+Keyboard.swift */,
-				5FEBD1E925C9DCD8000F7E9C /* UIApplication+TopViewController.swift */,
+				5F44164925CB074A0009FE5F /* UITextView */,
+				5F44163E25CB05C00009FE5F /* UIApplication */,
 				5F5C52A425C4B66C00AC7E3C /* UIVIew */,
 				5F5C52A325C4B65B00AC7E3C /* UIViewController */,
 			);
@@ -360,6 +407,12 @@
 		5F5C52A225C4B62B00AC7E3C /* Combine */ = {
 			isa = PBXGroup;
 			children = (
+				5F44162925CB04CE0009FE5F /* UIControlSubscription.swift */,
+				5F44162C25CB04D70009FE5F /* UIControlPublisher.swift */,
+				5F44162F25CB04E20009FE5F /* UITextField+Publisher.swift */,
+				5F44163225CB04F10009FE5F /* UITextView+Publisher.swift */,
+				5F44163825CB057B0009FE5F /* Publisher+AssignNoRetain.swift */,
+				5F44163B25CB05AD0009FE5F /* SubscribersCompletion+Ext.swift */,
 			);
 			path = Combine;
 			sourceTree = "<group>";
@@ -375,6 +428,9 @@
 			isa = PBXGroup;
 			children = (
 				5FFB20D625C4CF480086440A /* UIView+IBInspectable.swift */,
+				5F44163F25CB06CD0009FE5F /* UIView+FromNib.swift */,
+				5F44164325CB06F10009FE5F /* UIView+Anchors.swift */,
+				5F44164625CB07080009FE5F /* UIView+StackView.swift */,
 			);
 			path = UIVIew;
 			sourceTree = "<group>";
@@ -394,6 +450,15 @@
 				5FFB20CD25C4CC740086440A /* TypeAliases.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		5F8B0F4525CB0210009E156C /* ExploreList */ = {
+			isa = PBXGroup;
+			children = (
+				5FFB20FB25C4D3180086440A /* ViewModel */,
+				5FFB20FC25C4D31D0086440A /* Controller */,
+			);
+			path = ExploreList;
 			sourceTree = "<group>";
 		};
 		5FBE833925C9EB8900E3F3EB /* NewDish */ = {
@@ -469,13 +534,6 @@
 				5FBE835525C9EC4400E3F3EB /* ProfileViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		5FBE837F25C9F9EF00E3F3EB /* LoginButtons */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = LoginButtons;
 			sourceTree = "<group>";
 		};
 		5FBE838525C9FCF800E3F3EB /* Fonts */ = {
@@ -583,8 +641,7 @@
 		5FFB20FA25C4D30A0086440A /* Explore */ = {
 			isa = PBXGroup;
 			children = (
-				5FFB20FB25C4D3180086440A /* ViewModel */,
-				5FFB20FC25C4D31D0086440A /* Controller */,
+				5F8B0F4525CB0210009E156C /* ExploreList */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -592,7 +649,7 @@
 		5FFB20FB25C4D3180086440A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				5FEBD1C325C9D42C000F7E9C /* ExploreViewModel.swift */,
+				5FEBD1C325C9D42C000F7E9C /* ExploreListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -600,7 +657,7 @@
 		5FFB20FC25C4D31D0086440A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5FFB20FD25C4D3370086440A /* ExploreViewController.swift */,
+				5FFB20FD25C4D3370086440A /* ExploreListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -824,6 +881,7 @@
 				5FBE835025C9EC2F00E3F3EB /* NewDishViewController.swift in Sources */,
 				5FBE835925C9EC5100E3F3EB /* ProfileViewModel.swift in Sources */,
 				5FFB20D225C4CD450086440A /* UIApplication+Keyboard.swift in Sources */,
+				5F44163325CB04F10009FE5F /* UITextView+Publisher.swift in Sources */,
 				5FBE836825C9F12100E3F3EB /* ProfileCoordinator.swift in Sources */,
 				5FEBD1BD25C9D416000F7E9C /* DishBookViewController.swift in Sources */,
 				5FFB20A825C4C9B10086440A /* AppCoordinator.swift in Sources */,
@@ -831,14 +889,20 @@
 				5FEBD1EA25C9DCD8000F7E9C /* UIApplication+TopViewController.swift in Sources */,
 				5FBE835F25C9EC6200E3F3EB /* NewDishViewModel.swift in Sources */,
 				5FBE836225C9F0FB00E3F3EB /* NewDishCoordinator.swift in Sources */,
+				5F44163625CB05470009FE5F /* Date+Extension.swift in Sources */,
 				5FFB210925C4DA630086440A /* SignInWithAppleCoordinator.swift in Sources */,
 				5FFB20BA25C4CB9F0086440A /* BaseCoordinator.swift in Sources */,
 				5FFB20CE25C4CC740086440A /* TypeAliases.swift in Sources */,
 				5FFB20BD25C4CBB60086440A /* CoordinatorProtocol.swift in Sources */,
 				5FFB20F725C4D2F30086440A /* MainFlowCoordinator.swift in Sources */,
-				5FFB20FE25C4D3370086440A /* ExploreViewController.swift in Sources */,
+				5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */,
+				5FFB20FE25C4D3370086440A /* ExploreListViewController.swift in Sources */,
+				5F44162D25CB04D70009FE5F /* UIControlPublisher.swift in Sources */,
 				5FEBD1C725C9D9A6000F7E9C /* SignInWithGoogleCoordinator.swift in Sources */,
+				5F44164425CB06F10009FE5F /* UIView+Anchors.swift in Sources */,
 				5FFB210625C4D9050086440A /* LoginViewModel.swift in Sources */,
+				5F44163925CB057B0009FE5F /* Publisher+AssignNoRetain.swift in Sources */,
+				5F44163025CB04E20009FE5F /* UITextField+Publisher.swift in Sources */,
 				5FBE837A25C9F78700E3F3EB /* BaseFlowCoordinator.swift in Sources */,
 				5FFB208D25C4C8F20086440A /* App.swift in Sources */,
 				5FFB20B025C4CA110086440A /* BaseViewModel.swift in Sources */,
@@ -846,16 +910,20 @@
 				5FBE835625C9EC4400E3F3EB /* ProfileViewController.swift in Sources */,
 				5F5C525825C4B0E900AC7E3C /* AppDelegate.swift in Sources */,
 				5F5C52AD25C4B8AF00AC7E3C /* R.generated.swift in Sources */,
+				5F44163C25CB05AD0009FE5F /* SubscribersCompletion+Ext.swift in Sources */,
 				5FFB20D725C4CF480086440A /* UIView+IBInspectable.swift in Sources */,
 				5FBE836525C9F10A00E3F3EB /* ShoplistCoordinator.swift in Sources */,
-				5FEBD1C425C9D42C000F7E9C /* ExploreViewModel.swift in Sources */,
+				5FEBD1C425C9D42C000F7E9C /* ExploreListViewModel.swift in Sources */,
+				5F44164025CB06CD0009FE5F /* UIView+FromNib.swift in Sources */,
 				5FFB210325C4D4490086440A /* ExploreCoordinator.swift in Sources */,
 				5FBE835325C9EC3E00E3F3EB /* ShoplistViewController.swift in Sources */,
 				5FBE837D25C9F79200E3F3EB /* BaseRootCoordinator.swift in Sources */,
 				5FBE835C25C9EC5A00E3F3EB /* ShoplistViewModel.swift in Sources */,
 				5FFB20B325C4CA360086440A /* Loader.swift in Sources */,
 				5FFB20AC25C4CA020086440A /* BaseViewController.swift in Sources */,
+				5F44164725CB07080009FE5F /* UIView+StackView.swift in Sources */,
 				5FEBD1C125C9D423000F7E9C /* DishBookViewModel.swift in Sources */,
+				5F44164B25CB07510009FE5F /* UITextView+Placeholder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

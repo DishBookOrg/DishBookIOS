@@ -107,8 +107,8 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
                                                       idToken: idTokenString,
                                                       rawNonce: nonce)
             Auth.auth().signIn(with: credential) { [weak self] authResult, error in
+                
                 if error != nil {
-                    
                     print(error?.localizedDescription ?? "")
                     return
                 }

@@ -21,8 +21,8 @@ final class ExploreCoordinator: BaseRootCoordinator {
     
     override func start() {
         
-        let viewModel = ExploreViewModel()
-        let exploreController = ExploreViewController.create(viewModel: viewModel)
+        let viewModel = ExploreListViewModel()
+        let exploreController = ExploreListViewController.create(viewModel: viewModel)
         navigationController?.pushViewController(exploreController, animated: false)
     }
 }
