@@ -57,6 +57,10 @@
 		5FBE839825C9FEDA00E3F3EB /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5FBE838C25C9FE0700E3F3EB /* SF-Pro-Text-Light.otf */; };
 		5FBE839925C9FEDA00E3F3EB /* SF-Pro-Rounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5FBE838825C9FDC000E3F3EB /* SF-Pro-Rounded-Medium.otf */; };
 		5FBE839A25C9FEDA00E3F3EB /* SF-Pro-Rounded-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5FBE838925C9FDD900E3F3EB /* SF-Pro-Rounded-Semibold.otf */; };
+		5FD012F925CDBBF400A0E257 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD012F825CDBBF400A0E257 /* Dish.swift */; };
+		5FD012FC25CDBC0000A0E257 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD012FB25CDBC0000A0E257 /* AlertManager.swift */; };
+		5FD012FF25CDBC1200A0E257 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD012FE25CDBC1200A0E257 /* Network.swift */; };
+		5FD0130225CDBCE100A0E257 /* DishDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD0130125CDBCE100A0E257 /* DishDetailsController.swift */; };
 		5FEBD1AE25C9CDA7000F7E9C /* DishBookCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBD1AD25C9CDA7000F7E9C /* DishBookCoordinator.swift */; };
 		5FEBD1B125C9CE9D000F7E9C /* Explore.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FEBD1B025C9CE9D000F7E9C /* Explore.strings */; };
 		5FEBD1B425C9CEA8000F7E9C /* DishBook.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FEBD1B325C9CEA8000F7E9C /* DishBook.strings */; };
@@ -138,6 +142,10 @@
 		5FBE838D25C9FE1A00E3F3EB /* SF-Pro-Display-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Medium.otf"; sourceTree = "<group>"; };
 		5FBE838E25C9FE3400E3F3EB /* SF-Pro-Rounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Bold.otf"; sourceTree = "<group>"; };
 		5FBE838F25C9FE4600E3F3EB /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		5FD012F825CDBBF400A0E257 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		5FD012FB25CDBC0000A0E257 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		5FD012FE25CDBC1200A0E257 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		5FD0130125CDBCE100A0E257 /* DishDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailsController.swift; sourceTree = "<group>"; };
 		5FEBD1AD25C9CDA7000F7E9C /* DishBookCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishBookCoordinator.swift; sourceTree = "<group>"; };
 		5FEBD1B025C9CE9D000F7E9C /* Explore.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Explore.strings; sourceTree = "<group>"; };
 		5FEBD1B325C9CEA8000F7E9C /* DishBook.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = DishBook.strings; sourceTree = "<group>"; };
@@ -196,6 +204,7 @@
 		5F44162725CB038B0009FE5F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5FD0130125CDBCE100A0E257 /* DishDetailsController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -357,6 +366,7 @@
 		5F5C529C25C4B59F00AC7E3C /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				5FD012FB25CDBC0000A0E257 /* AlertManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -364,6 +374,7 @@
 		5F5C529D25C4B5A300AC7E3C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5FD012F825CDBBF400A0E257 /* Dish.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -371,6 +382,7 @@
 		5F5C529E25C4B60C00AC7E3C /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				5FD012FE25CDBC1200A0E257 /* Network.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -882,10 +894,12 @@
 				5FBE835925C9EC5100E3F3EB /* ProfileViewModel.swift in Sources */,
 				5FFB20D225C4CD450086440A /* UIApplication+Keyboard.swift in Sources */,
 				5F44163325CB04F10009FE5F /* UITextView+Publisher.swift in Sources */,
+				5FD012FC25CDBC0000A0E257 /* AlertManager.swift in Sources */,
 				5FBE836825C9F12100E3F3EB /* ProfileCoordinator.swift in Sources */,
 				5FEBD1BD25C9D416000F7E9C /* DishBookViewController.swift in Sources */,
 				5FFB20A825C4C9B10086440A /* AppCoordinator.swift in Sources */,
 				5FEBD1AE25C9CDA7000F7E9C /* DishBookCoordinator.swift in Sources */,
+				5FD012FF25CDBC1200A0E257 /* Network.swift in Sources */,
 				5FEBD1EA25C9DCD8000F7E9C /* UIApplication+TopViewController.swift in Sources */,
 				5FBE835F25C9EC6200E3F3EB /* NewDishViewModel.swift in Sources */,
 				5FBE836225C9F0FB00E3F3EB /* NewDishCoordinator.swift in Sources */,
@@ -910,6 +924,7 @@
 				5FBE835625C9EC4400E3F3EB /* ProfileViewController.swift in Sources */,
 				5F5C525825C4B0E900AC7E3C /* AppDelegate.swift in Sources */,
 				5F5C52AD25C4B8AF00AC7E3C /* R.generated.swift in Sources */,
+				5FD0130225CDBCE100A0E257 /* DishDetailsController.swift in Sources */,
 				5F44163C25CB05AD0009FE5F /* SubscribersCompletion+Ext.swift in Sources */,
 				5FFB20D725C4CF480086440A /* UIView+IBInspectable.swift in Sources */,
 				5FBE836525C9F10A00E3F3EB /* ShoplistCoordinator.swift in Sources */,
@@ -922,6 +937,7 @@
 				5FFB20B325C4CA360086440A /* Loader.swift in Sources */,
 				5FFB20AC25C4CA020086440A /* BaseViewController.swift in Sources */,
 				5F44164725CB07080009FE5F /* UIView+StackView.swift in Sources */,
+				5FD012F925CDBBF400A0E257 /* Dish.swift in Sources */,
 				5FEBD1C125C9D423000F7E9C /* DishBookViewModel.swift in Sources */,
 				5F44164B25CB07510009FE5F /* UITextView+Placeholder.swift in Sources */,
 			);
