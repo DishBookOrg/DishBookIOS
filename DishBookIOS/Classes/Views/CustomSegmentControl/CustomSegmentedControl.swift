@@ -64,7 +64,7 @@ class CustomSegmentedControl: UIControl {
         }
     }
     
-    public func config(segmentsNames: [String], description: String) {
+    public func config(segmentsNames: [String], descriptionText: String) {
         
         segments = segmentsNames
         
@@ -80,7 +80,7 @@ class CustomSegmentedControl: UIControl {
         }
         stackView.translatesAutoresizingMaskIntoConstraints = false
         selectedLabel.text = segments[0]
-        descriptionLabel.text = description
+        descriptionLabel.text = descriptionText
     }
     
     @objc

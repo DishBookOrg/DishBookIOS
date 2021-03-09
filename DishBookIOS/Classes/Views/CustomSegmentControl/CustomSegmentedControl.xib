@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomSegmentedControl" customModule="DishBookIOS" customModuleProvider="target">
             <connections>
                 <outlet property="descriptionLabel" destination="zR4-x1-bbc" id="WrQ-Pj-vpS"/>
-                <outlet property="gradientimage" destination="SyC-0V-yov" id="xqv-io-waf"/>
+                <outlet property="gradientImage" destination="SyC-0V-yov" id="kfS-DR-5fJ"/>
                 <outlet property="selectedLabel" destination="c6E-Sa-Opw" id="Biu-3b-6hG"/>
                 <outlet property="selectedView" destination="yN7-a9-rDT" id="naB-2u-QQV"/>
                 <outlet property="selectedViewLeading" destination="vIM-XO-D9x" id="TdN-PY-Pfx"/>

@@ -33,7 +33,7 @@ final class NewDishViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        customSegmentedControl.config(segmentsNames: ["Easy", "Medium", "Hard"], description: "Some test text?")
+        customSegmentedControl.config(segmentsNames: ["Easy", "Medium", "Hard"], descriptionText: "Some test text?")
         
     }
     
