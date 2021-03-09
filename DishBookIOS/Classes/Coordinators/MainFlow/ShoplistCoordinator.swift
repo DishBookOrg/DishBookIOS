@@ -14,7 +14,7 @@ final class ShoplistCoordinator: BaseRootCoordinator {
         
         self.tabItem = UITabBarItem(title: R.string.shoplist.shoppingList(),
                                     image: R.image.shoppingList(),
-                                    selectedImage: R.image.shoppingList()?.withTintColor(R.color.orangeMuted()!,
+                                    selectedImage: R.image.shoppingList()?.withTintColor(R.color.primaryOrangeMuted()!,
                                                                                          renderingMode: .alwaysOriginal))
         start()
     }

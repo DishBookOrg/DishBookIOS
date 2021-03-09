@@ -14,7 +14,7 @@ final class ProfileCoordinator: BaseRootCoordinator {
         
         self.tabItem = UITabBarItem(title: R.string.profile.profile(),
                                     image: R.image.profile(),
-                                    selectedImage: R.image.profile()?.withTintColor(R.color.orangeMuted()!,
+                                    selectedImage: R.image.profile()?.withTintColor(R.color.primaryOrangeMuted()!,
                                                                                     renderingMode: .alwaysOriginal))
         start()
     }

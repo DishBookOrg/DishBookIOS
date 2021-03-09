@@ -15,8 +15,22 @@
                     <view key="view" contentMode="scaleToFill" id="q5f-mx-zkr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmb-zs-u7J" customClass="TextFieldWithDescription" customModule="DishBookIOS" customModuleProvider="target">
+                                <rect key="frame" x="16" y="423" width="382" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="CSU-Ue-QZV"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="YSx-wT-ATi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rmb-zs-u7J" firstAttribute="centerY" secondItem="YSx-wT-ATi" secondAttribute="centerY" id="PT5-ve-iHe"/>
+                            <constraint firstItem="rmb-zs-u7J" firstAttribute="leading" secondItem="YSx-wT-ATi" secondAttribute="leading" constant="16" id="Sxv-rY-Pid"/>
+                            <constraint firstItem="YSx-wT-ATi" firstAttribute="trailing" secondItem="rmb-zs-u7J" secondAttribute="trailing" constant="16" id="eA9-P8-TSq"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DNp-Ej-VXU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
