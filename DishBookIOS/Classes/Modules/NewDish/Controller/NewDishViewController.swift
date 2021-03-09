@@ -9,6 +9,8 @@ import UIKit
 
 final class NewDishViewController: BaseViewController {
     
+    @IBOutlet weak var customSegmentedControl: CustomSegmentedControl!
+    
     // MARK: - Private properties
     
     private var viewModel: NewDishViewModel
@@ -30,6 +32,12 @@ final class NewDishViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        customSegmentedControl.config(segmentsNames: ["Easy", "Medium", "Hard"], description: "Some test text?")
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
         
     }
 }

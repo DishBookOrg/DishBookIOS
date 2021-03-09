@@ -10,7 +10,7 @@ import UIKit
 final class TextFieldWithDescription: UIView {
     
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: DescriptionUILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -39,8 +39,6 @@ final class TextFieldWithDescription: UIView {
         
         nameTextField.font = R.font.sfProRoundedSemibold(size: 30)
         nameTextField.textColor = R.color.textBlack()
-        descriptionLabel.font = R.font.sfProRoundedMedium(size: 12)
-        descriptionLabel.textColor = R.color.textDescriptionGray()
     }
     
     public func setup(placeholder: String, description: String) {

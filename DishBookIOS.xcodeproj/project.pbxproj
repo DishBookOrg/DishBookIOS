@@ -10,6 +10,9 @@
 		206F6C092FF500D7FCC9DBF8 /* Pods_DishBookIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16C20488A50629EFC995657 /* Pods_DishBookIOS.framework */; };
 		5D5A5F7D25F7E97600053029 /* TextFieldWithDescription.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5A5F7C25F7E97600053029 /* TextFieldWithDescription.xib */; };
 		5D5A5F8125F7E99200053029 /* TextFieldWithDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5A5F8025F7E99200053029 /* TextFieldWithDescription.swift */; };
+		5D70A26A25F8068D009B2520 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70A26925F8068D009B2520 /* CustomSegmentedControl.swift */; };
+		5D70A26E25F806D8009B2520 /* CustomSegmentedControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D70A26D25F806D8009B2520 /* CustomSegmentedControl.xib */; };
+		5D70A27125F80A4B009B2520 /* DescriptionUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */; };
 		5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44162925CB04CE0009FE5F /* UIControlSubscription.swift */; };
 		5F44162D25CB04D70009FE5F /* UIControlPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44162C25CB04D70009FE5F /* UIControlPublisher.swift */; };
 		5F44163025CB04E20009FE5F /* UITextField+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44162F25CB04E20009FE5F /* UITextField+Publisher.swift */; };
@@ -97,6 +100,9 @@
 		25017E6F0215EA68CF3A2FA3 /* Pods-DishBookIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.release.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.release.xcconfig"; sourceTree = "<group>"; };
 		5D5A5F7C25F7E97600053029 /* TextFieldWithDescription.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldWithDescription.xib; sourceTree = "<group>"; };
 		5D5A5F8025F7E99200053029 /* TextFieldWithDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDescription.swift; sourceTree = "<group>"; };
+		5D70A26925F8068D009B2520 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		5D70A26D25F806D8009B2520 /* CustomSegmentedControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSegmentedControl.xib; sourceTree = "<group>"; };
+		5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionUILabel.swift; sourceTree = "<group>"; };
 		5F44162925CB04CE0009FE5F /* UIControlSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlSubscription.swift; sourceTree = "<group>"; };
 		5F44162C25CB04D70009FE5F /* UIControlPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlPublisher.swift; sourceTree = "<group>"; };
 		5F44162F25CB04E20009FE5F /* UITextField+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Publisher.swift"; sourceTree = "<group>"; };
@@ -208,10 +214,27 @@
 		5D5A5F7F25F7E97B00053029 /* TextFieldWithDescription */ = {
 			isa = PBXGroup;
 			children = (
-				5D5A5F7C25F7E97600053029 /* TextFieldWithDescription.xib */,
 				5D5A5F8025F7E99200053029 /* TextFieldWithDescription.swift */,
+				5D5A5F7C25F7E97600053029 /* TextFieldWithDescription.xib */,
 			);
 			path = TextFieldWithDescription;
+			sourceTree = "<group>";
+		};
+		5D70A26825F80566009B2520 /* CustomSegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				5D70A26925F8068D009B2520 /* CustomSegmentedControl.swift */,
+				5D70A26D25F806D8009B2520 /* CustomSegmentedControl.xib */,
+			);
+			path = CustomSegmentControl;
+			sourceTree = "<group>";
+		};
+		5D70A27425F80DB5009B2520 /* UILabels */ = {
+			isa = PBXGroup;
+			children = (
+				5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */,
+			);
+			path = UILabels;
 			sourceTree = "<group>";
 		};
 		5F44162725CB038B0009FE5F /* Common */ = {
@@ -372,6 +395,8 @@
 			isa = PBXGroup;
 			children = (
 				5FFB20B225C4CA360086440A /* Loader.swift */,
+				5D70A27425F80DB5009B2520 /* UILabels */,
+				5D70A26825F80566009B2520 /* CustomSegmentControl */,
 				5D5A5F7F25F7E97B00053029 /* TextFieldWithDescription */,
 			);
 			path = Views;
@@ -782,6 +807,7 @@
 				5D5A5F7D25F7E97600053029 /* TextFieldWithDescription.xib in Resources */,
 				5FBE837625C9F33A00E3F3EB /* Common.strings in Resources */,
 				5F5C529325C4B4CC00AC7E3C /* Color.xcassets in Resources */,
+				5D70A26E25F806D8009B2520 /* CustomSegmentedControl.xib in Resources */,
 				5FBE834725C9EC1000E3F3EB /* NewDish.storyboard in Resources */,
 				5FBE834D25C9EC1F00E3F3EB /* Profile.storyboard in Resources */,
 				5FBE839725C9FEDA00E3F3EB /* SF-Pro-Text-Semibold.otf in Resources */,
@@ -907,6 +933,7 @@
 				5FFB20C525C4CC2C0086440A /* LoginViewController.swift in Sources */,
 				5FBE835025C9EC2F00E3F3EB /* NewDishViewController.swift in Sources */,
 				5FBE835925C9EC5100E3F3EB /* ProfileViewModel.swift in Sources */,
+				5D70A27125F80A4B009B2520 /* DescriptionUILabel.swift in Sources */,
 				5FFB20D225C4CD450086440A /* UIApplication+Keyboard.swift in Sources */,
 				5F44163325CB04F10009FE5F /* UITextView+Publisher.swift in Sources */,
 				5FD012FC25CDBC0000A0E257 /* AlertManager.swift in Sources */,
@@ -948,6 +975,7 @@
 				5F44164025CB06CD0009FE5F /* UIView+FromNib.swift in Sources */,
 				5FFB210325C4D4490086440A /* ExploreCoordinator.swift in Sources */,
 				5FBE835325C9EC3E00E3F3EB /* ShoplistViewController.swift in Sources */,
+				5D70A26A25F8068D009B2520 /* CustomSegmentedControl.swift in Sources */,
 				5FBE837D25C9F79200E3F3EB /* BaseRootCoordinator.swift in Sources */,
 				5FBE835C25C9EC5A00E3F3EB /* ShoplistViewModel.swift in Sources */,
 				5FFB20B325C4CA360086440A /* Loader.swift in Sources */,
