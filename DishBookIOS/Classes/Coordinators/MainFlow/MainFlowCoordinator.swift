@@ -60,7 +60,7 @@ final class MainFlowCoordinator: BaseCoordinator {
         
         tabBarController.delegate = self
         tabBarController.viewControllers = controllers
-        tabBarController.tabBar.tintColor = R.color.orangeMuted()
+        tabBarController.tabBar.tintColor = R.color.primaryOrangeMuted()
         
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()

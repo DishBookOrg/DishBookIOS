@@ -14,7 +14,7 @@ final class DishBookCoordinator: BaseRootCoordinator {
         
         self.tabItem = UITabBarItem(title: R.string.dishBook.dishBook(),
                                     image: R.image.dishBook(),
-                                    selectedImage: R.image.dishBook()?.withTintColor(R.color.orangeMuted()!,
+                                    selectedImage: R.image.dishBook()?.withTintColor(R.color.primaryOrangeMuted()!,
                                                                                      renderingMode: .alwaysOriginal))
         start()
     }

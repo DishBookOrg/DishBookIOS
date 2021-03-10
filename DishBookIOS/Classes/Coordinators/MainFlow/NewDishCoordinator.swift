@@ -14,7 +14,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
         
         self.tabItem = UITabBarItem(title: R.string.common.new(),
                                     image: R.image.plus(),
-                                    selectedImage: R.image.plus()?.withTintColor(R.color.orangeMuted()!,
+                                    selectedImage: R.image.plus()?.withTintColor(R.color.primaryOrangeMuted()!,
                                                                                  renderingMode: .alwaysOriginal))
         start()
     }

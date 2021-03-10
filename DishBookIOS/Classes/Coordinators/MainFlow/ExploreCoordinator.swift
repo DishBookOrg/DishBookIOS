@@ -14,7 +14,7 @@ final class ExploreCoordinator: BaseRootCoordinator {
         
         self.tabItem = UITabBarItem(title: R.string.explore.explore(),
                                     image: R.image.search(),
-                                    selectedImage: R.image.search()?.withTintColor(R.color.orangeMuted()!,
+                                    selectedImage: R.image.search()?.withTintColor(R.color.primaryOrangeMuted()!,
                                                                                    renderingMode: .alwaysOriginal))
         start()
     }
