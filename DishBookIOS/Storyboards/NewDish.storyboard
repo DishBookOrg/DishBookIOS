@@ -24,10 +24,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZgK-eC-ptT" customClass="CustomStepperView" customModule="DishBookIOS" customModuleProvider="target">
-                                <rect key="frame" x="16" y="423" width="382" height="60"/>
+                                <rect key="frame" x="16" y="410.5" width="382" height="85"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="crU-tp-Hdv"/>
+                                    <constraint firstAttribute="height" constant="85" id="crU-tp-Hdv"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmb-zs-u7J" customClass="TextFieldWithDescription" customModule="DishBookIOS" customModuleProvider="target">

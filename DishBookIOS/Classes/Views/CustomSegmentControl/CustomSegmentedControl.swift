@@ -65,6 +65,7 @@ class CustomSegmentedControl: UIControl {
     }
     
     override func layoutSubviews() {
+//        super.layoutSubviews()
         
         selectedView.layer.cornerRadius = 10
         gradientImage.layer.cornerRadius = 10
@@ -133,14 +134,17 @@ class CustomSegmentedControl: UIControl {
     
 
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-
+        super.beginTracking(touch, with: event)
+        
         return true
     }
     override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-
+        super.continueTracking(touch, with: event)
+        
         return true
     }
     override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+        super.endTracking(touch, with: event)
 
     }
 }
