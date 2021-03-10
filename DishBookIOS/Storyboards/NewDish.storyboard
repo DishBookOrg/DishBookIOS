@@ -17,10 +17,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eoi-2A-Og3" customClass="CustomSegmentedControl" customModule="DishBookIOS" customModuleProvider="target">
-                                <rect key="frame" x="16" y="423" width="382" height="60"/>
+                                <rect key="frame" x="16" y="310" width="382" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="gXf-e3-Qer"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZgK-eC-ptT" customClass="CustomStepperView" customModule="DishBookIOS" customModuleProvider="target">
+                                <rect key="frame" x="16" y="423" width="382" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="crU-tp-Hdv"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmb-zs-u7J" customClass="TextFieldWithDescription" customModule="DishBookIOS" customModuleProvider="target">
@@ -35,12 +42,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Eoi-2A-Og3" firstAttribute="centerX" secondItem="YSx-wT-ATi" secondAttribute="centerX" id="6lU-bF-psn"/>
-                            <constraint firstItem="Eoi-2A-Og3" firstAttribute="centerY" secondItem="YSx-wT-ATi" secondAttribute="centerY" id="ADn-hK-VEr"/>
+                            <constraint firstItem="Eoi-2A-Og3" firstAttribute="centerY" secondItem="YSx-wT-ATi" secondAttribute="centerY" multiplier="0.75" id="ADn-hK-VEr"/>
                             <constraint firstItem="YSx-wT-ATi" firstAttribute="trailing" secondItem="Eoi-2A-Og3" secondAttribute="trailing" constant="16" id="NSo-4C-nrR"/>
                             <constraint firstItem="rmb-zs-u7J" firstAttribute="centerY" secondItem="YSx-wT-ATi" secondAttribute="centerY" multiplier="0.5" id="PT5-ve-iHe"/>
+                            <constraint firstItem="ZgK-eC-ptT" firstAttribute="leading" secondItem="YSx-wT-ATi" secondAttribute="leading" constant="16" id="RHa-yR-rx0"/>
                             <constraint firstItem="rmb-zs-u7J" firstAttribute="leading" secondItem="YSx-wT-ATi" secondAttribute="leading" constant="16" id="Sxv-rY-Pid"/>
                             <constraint firstItem="YSx-wT-ATi" firstAttribute="trailing" secondItem="rmb-zs-u7J" secondAttribute="trailing" constant="16" id="eA9-P8-TSq"/>
+                            <constraint firstItem="ZgK-eC-ptT" firstAttribute="centerY" secondItem="YSx-wT-ATi" secondAttribute="centerY" id="fRi-6O-Hqt"/>
                             <constraint firstItem="Eoi-2A-Og3" firstAttribute="leading" secondItem="YSx-wT-ATi" secondAttribute="leading" constant="16" id="yY9-YO-G7D"/>
+                            <constraint firstItem="ZgK-eC-ptT" firstAttribute="centerX" secondItem="YSx-wT-ATi" secondAttribute="centerX" id="yiM-f1-JJ0"/>
+                            <constraint firstItem="YSx-wT-ATi" firstAttribute="trailing" secondItem="ZgK-eC-ptT" secondAttribute="trailing" constant="16" id="zcC-WS-oUF"/>
                         </constraints>
                     </view>
                     <connections>

@@ -7,6 +7,13 @@
 
 import UIKit
 
+protocol SegmentedControlDelegate: class {
+    
+    /// Calls when selected segment changed
+    /// - Parameter index: index of selected segment
+    func selectedSegmentChanged(index: Int)
+}
+
 class CustomSegmentedControl: UIControl {
 
     // MARK: - @IBOutlets
@@ -20,6 +27,10 @@ class CustomSegmentedControl: UIControl {
     // NSLayoutConstraints
     @IBOutlet weak var selectedViewLeading: NSLayoutConstraint!
     @IBOutlet weak var selectedViewWidth: NSLayoutConstraint!
+    
+    // MARK: - Delegate
+    
+    weak var delegate: SegmentedControlDelegate?
 
     // MARK: - Private variables
     
@@ -46,6 +57,9 @@ class CustomSegmentedControl: UIControl {
         selectedLabel.font = R.font.sfProRoundedSemibold(size: 15)
         selectedLabel.textColor = R.color.textWhite()
         
+        stackView.isUserInteractionEnabled = true
+        selectedView.isUserInteractionEnabled = true
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(sliderTapped(_:)))
         stackView.addGestureRecognizer(tap)
     }
@@ -62,6 +76,10 @@ class CustomSegmentedControl: UIControl {
         }
     }
     
+    /// Use to config the class instance
+    /// - Parameters:
+    ///   - segmentsNames: segments names
+    ///   - descriptionText: description of Segmented Control
     public func config(segmentsNames: [String], descriptionText: String) {
         
         segments = segmentsNames
@@ -73,11 +91,13 @@ class CustomSegmentedControl: UIControl {
             label.text = name
             label.textAlignment = .center
             label.backgroundColor = .systemBackground
+            label.isUserInteractionEnabled = true
             stackView.addArrangedSubview(label)
         }
         stackView.translatesAutoresizingMaskIntoConstraints = false
         selectedLabel.text = segments[0]
         descriptionLabel.text = descriptionText
+        delegate?.selectedSegmentChanged(index: 0)
     }
     
     // MARK: - @objc
@@ -90,6 +110,7 @@ class CustomSegmentedControl: UIControl {
                 
         self.gradientImage.layer.cornerRadius = 0
         self.gradientImage.layer.maskedCorners = []
+        selectedLabel.font = R.font.sfProRoundedSemibold(size: 16)
 
         UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: UIView.AnimationOptions.curveEaseIn) {
 
@@ -104,6 +125,22 @@ class CustomSegmentedControl: UIControl {
                 self.gradientImage.layer.maskedCorners = []
             }
             self.selectedLabel.text = self.segments[index]
+        } completion: { _ in
+            self.selectedLabel.font = R.font.sfProRoundedSemibold(size: 15)
+            self.delegate?.selectedSegmentChanged(index: index)
         }
+    }
+    
+
+    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+
+        return true
+    }
+    override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+
+        return true
+    }
+    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+
     }
 }

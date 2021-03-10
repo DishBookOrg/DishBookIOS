@@ -10,6 +10,8 @@
 		206F6C092FF500D7FCC9DBF8 /* Pods_DishBookIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16C20488A50629EFC995657 /* Pods_DishBookIOS.framework */; };
 		5D5A5F7D25F7E97600053029 /* TextFieldWithDescription.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5A5F7C25F7E97600053029 /* TextFieldWithDescription.xib */; };
 		5D5A5F8125F7E99200053029 /* TextFieldWithDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5A5F8025F7E99200053029 /* TextFieldWithDescription.swift */; };
+		5D5B6E5325F9071600DB9CCE /* CustomStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B6E5225F9071600DB9CCE /* CustomStepperView.swift */; };
+		5D5B6E5725F9072000DB9CCE /* CustomSteperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5B6E5625F9072000DB9CCE /* CustomSteperView.xib */; };
 		5D70A26A25F8068D009B2520 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70A26925F8068D009B2520 /* CustomSegmentedControl.swift */; };
 		5D70A26E25F806D8009B2520 /* CustomSegmentedControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D70A26D25F806D8009B2520 /* CustomSegmentedControl.xib */; };
 		5D70A27125F80A4B009B2520 /* DescriptionUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */; };
@@ -100,6 +102,8 @@
 		25017E6F0215EA68CF3A2FA3 /* Pods-DishBookIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.release.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.release.xcconfig"; sourceTree = "<group>"; };
 		5D5A5F7C25F7E97600053029 /* TextFieldWithDescription.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldWithDescription.xib; sourceTree = "<group>"; };
 		5D5A5F8025F7E99200053029 /* TextFieldWithDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDescription.swift; sourceTree = "<group>"; };
+		5D5B6E5225F9071600DB9CCE /* CustomStepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStepperView.swift; sourceTree = "<group>"; };
+		5D5B6E5625F9072000DB9CCE /* CustomSteperView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSteperView.xib; sourceTree = "<group>"; };
 		5D70A26925F8068D009B2520 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
 		5D70A26D25F806D8009B2520 /* CustomSegmentedControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSegmentedControl.xib; sourceTree = "<group>"; };
 		5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionUILabel.swift; sourceTree = "<group>"; };
@@ -218,6 +222,16 @@
 				5D5A5F7C25F7E97600053029 /* TextFieldWithDescription.xib */,
 			);
 			path = TextFieldWithDescription;
+			sourceTree = "<group>";
+		};
+		5D5B6E5125F906B000DB9CCE /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				5D5B6E5225F9071600DB9CCE /* CustomStepperView.swift */,
+				5D5B6E5625F9072000DB9CCE /* CustomSteperView.xib */,
+			);
+			name = "New Group";
+			path = ../../..;
 			sourceTree = "<group>";
 		};
 		5D70A26825F80566009B2520 /* CustomSegmentControl */ = {
@@ -396,6 +410,7 @@
 			children = (
 				5FFB20B225C4CA360086440A /* Loader.swift */,
 				5D70A27425F80DB5009B2520 /* UILabels */,
+				5D5B6E5125F906B000DB9CCE /* New Group */,
 				5D70A26825F80566009B2520 /* CustomSegmentControl */,
 				5D5A5F7F25F7E97B00053029 /* TextFieldWithDescription */,
 			);
@@ -820,6 +835,7 @@
 				5FEBD1B725C9D3DD000F7E9C /* DishBook.storyboard in Resources */,
 				5FBE837125C9F31F00E3F3EB /* Profile.strings in Resources */,
 				5FBE836E25C9F31600E3F3EB /* Shoplist.strings in Resources */,
+				5D5B6E5725F9072000DB9CCE /* CustomSteperView.xib in Resources */,
 				5FBE839125C9FEDA00E3F3EB /* SF-Pro-Display-Regular.otf in Resources */,
 				5FBE834A25C9EC1800E3F3EB /* Shoplist.storyboard in Resources */,
 				5FBE839625C9FEDA00E3F3EB /* SF-Pro-Text-Medium.otf in Resources */,
@@ -949,6 +965,7 @@
 				5FFB210925C4DA630086440A /* SignInWithAppleCoordinator.swift in Sources */,
 				5FFB20BA25C4CB9F0086440A /* BaseCoordinator.swift in Sources */,
 				5FFB20CE25C4CC740086440A /* TypeAliases.swift in Sources */,
+				5D5B6E5325F9071600DB9CCE /* CustomStepperView.swift in Sources */,
 				5D5A5F8125F7E99200053029 /* TextFieldWithDescription.swift in Sources */,
 				5FFB20BD25C4CBB60086440A /* CoordinatorProtocol.swift in Sources */,
 				5FFB20F725C4D2F30086440A /* MainFlowCoordinator.swift in Sources */,
