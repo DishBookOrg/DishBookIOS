@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Rounded-Regular.otf">
+            <string>SFProRounded-Regular</string>
+        </array>
+        <array key="SF-Pro-Rounded-Semibold.otf">
+            <string>SFProRounded-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DishCardSmallCollectionViewCell" id="gTV-IL-0wX" customClass="DishCardSmallCollectionViewCell" customModule="DishBookIOS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="210" height="260"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="210" height="260"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YVL-LA-kWi">
+                        <rect key="frame" x="10" y="0.0" width="190" height="250"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dishMockImage" translatesAutoresizingMaskIntoConstraints="NO" id="Pdc-BL-jBI">
+                                <rect key="frame" x="0.0" y="0.0" width="190" height="250"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y2V-2X-HRS">
+                                <rect key="frame" x="0.0" y="183" width="190" height="67"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aNI-6P-i74">
+                                    <rect key="frame" x="0.0" y="0.0" width="190" height="67"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unagi sushi Multiline" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usM-vJ-Waa">
+                                            <rect key="frame" x="6" y="2" width="117" height="63"/>
+                                            <fontDescription key="fontDescription" name="SFProRounded-Semibold" family="SF Pro Rounded" pointSize="20"/>
+                                            <color key="textColor" name="TextWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SCb-cH-ndG">
+                                            <rect key="frame" x="125" y="2" width="63" height="63"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4KT-K0-pN6">
+                                                    <rect key="frame" x="0.0" y="2" width="20.5" height="58.5"/>
+                                                    <color key="tintColor" name="TextWhite"/>
+                                                    <imageReference key="image" image="clock" catalog="system" symbolScale="small"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R79-Lz-LKB">
+                                                    <rect key="frame" x="20.5" y="0.0" width="42.5" height="63"/>
+                                                    <fontDescription key="fontDescription" name="SFProRounded-Regular" family="SF Pro Rounded" pointSize="14"/>
+                                                    <color key="textColor" name="TextWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="63" id="lNP-yZ-AHf"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="usM-vJ-Waa" firstAttribute="top" secondItem="aNI-6P-i74" secondAttribute="top" constant="2" id="6Pb-MI-eaK"/>
+                                        <constraint firstAttribute="bottom" secondItem="usM-vJ-Waa" secondAttribute="bottom" constant="2" id="80H-BH-x4w"/>
+                                        <constraint firstItem="SCb-cH-ndG" firstAttribute="top" secondItem="aNI-6P-i74" secondAttribute="top" constant="2" id="IDf-EP-CxG"/>
+                                        <constraint firstAttribute="trailing" secondItem="SCb-cH-ndG" secondAttribute="trailing" constant="2" id="hAA-W0-pRa"/>
+                                        <constraint firstAttribute="bottom" secondItem="SCb-cH-ndG" secondAttribute="bottom" constant="2" id="jKR-aE-Y1F"/>
+                                        <constraint firstItem="usM-vJ-Waa" firstAttribute="leading" secondItem="aNI-6P-i74" secondAttribute="leading" constant="6" id="pyU-od-zHn"/>
+                                        <constraint firstItem="SCb-cH-ndG" firstAttribute="leading" secondItem="usM-vJ-Waa" secondAttribute="trailing" constant="2" id="rUl-vH-r6q"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="puy-wI-Dec"/>
+                                </constraints>
+                                <blurEffect style="systemUltraThinMaterialDark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="y2V-2X-HRS" firstAttribute="leading" secondItem="YVL-LA-kWi" secondAttribute="leading" id="3ir-5X-sOf"/>
+                            <constraint firstAttribute="bottom" secondItem="y2V-2X-HRS" secondAttribute="bottom" id="7Kc-1h-INk"/>
+                            <constraint firstAttribute="trailing" secondItem="Pdc-BL-jBI" secondAttribute="trailing" id="E6U-aA-CkZ"/>
+                            <constraint firstAttribute="trailing" secondItem="y2V-2X-HRS" secondAttribute="trailing" id="JIz-Vb-NRy"/>
+                            <constraint firstAttribute="bottom" secondItem="Pdc-BL-jBI" secondAttribute="bottom" id="SDl-tD-Ual"/>
+                            <constraint firstItem="Pdc-BL-jBI" firstAttribute="leading" secondItem="YVL-LA-kWi" secondAttribute="leading" id="axx-PB-yUZ"/>
+                            <constraint firstItem="Pdc-BL-jBI" firstAttribute="top" secondItem="YVL-LA-kWi" secondAttribute="top" id="gfQ-5H-adp"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layerCornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="YVL-LA-kWi" secondAttribute="bottom" constant="10" id="I01-RO-npR"/>
+                <constraint firstAttribute="trailing" secondItem="YVL-LA-kWi" secondAttribute="trailing" constant="10" id="MVl-em-uxu"/>
+                <constraint firstItem="YVL-LA-kWi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nWP-w0-e9L"/>
+                <constraint firstItem="YVL-LA-kWi" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="uF1-CC-ZZ8"/>
+            </constraints>
+            <size key="customSize" width="210" height="260"/>
+            <connections>
+                <outlet property="clockImageView" destination="4KT-K0-pN6" id="I9k-Z7-pSx"/>
+                <outlet property="dishImageView" destination="Pdc-BL-jBI" id="I9v-9r-wik"/>
+                <outlet property="dishNameLabel" destination="usM-vJ-Waa" id="27c-hB-AxX"/>
+                <outlet property="timeLabel" destination="R79-Lz-LKB" id="0F3-Ni-UVe"/>
+                <outlet property="visualEffectView" destination="y2V-2X-HRS" id="wMw-1L-Uf8"/>
+            </connections>
+            <point key="canvasLocation" x="218.84057971014494" y="190.84821428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="dishMockImage" width="686" height="800"/>
+        <namedColor name="TextWhite">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
