@@ -24,18 +24,8 @@ final class TextFieldWithDescription: UIView {
         setup()
     }
     
-    private func loudViewFromXib() -> UIView {
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "TextFieldWithDescription", bundle: bundle)
-        return nib.instantiate(withOwner: self, options: nil).first as? UIView ?? UIView()
-    }
-    
     private func setup() {
-        
-        let xibView = loudViewFromXib()
-        xibView.frame = self.bounds
-        xibView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        addSubview(xibView)
+        fromNib()
         
         nameTextField.font = R.font.sfProRoundedSemibold(size: 30)
         nameTextField.textColor = R.color.textBlack()
