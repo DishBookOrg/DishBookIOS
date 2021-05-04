@@ -12,6 +12,17 @@
 		5F4218FD25F9509000366A16 /* DishCardSmallCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F4218FB25F9509000366A16 /* DishCardSmallCollectionViewCell.xib */; };
 		5F42190525F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */; };
 		5F42190625F950A900366A16 /* DishCardBigCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F42190425F950A900366A16 /* DishCardBigCollectionViewCell.xib */; };
+		5D5A5F7D25F7E97600053029 /* TextFieldWithDescription.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5A5F7C25F7E97600053029 /* TextFieldWithDescription.xib */; };
+		5D5A5F8125F7E99200053029 /* TextFieldWithDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5A5F8025F7E99200053029 /* TextFieldWithDescription.swift */; };
+		5D5B6E7B25F91EAC00DB9CCE /* CustomStepperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5B6E7925F91EAC00DB9CCE /* CustomStepperView.xib */; };
+		5D5B6E7C25F91EAC00DB9CCE /* CustomStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B6E7A25F91EAC00DB9CCE /* CustomStepperView.swift */; };
+		5D70A26A25F8068D009B2520 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70A26925F8068D009B2520 /* CustomSegmentedControl.swift */; };
+		5D70A26E25F806D8009B2520 /* CustomSegmentedControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D70A26D25F806D8009B2520 /* CustomSegmentedControl.xib */; };
+		5D70A27125F80A4B009B2520 /* DescriptionUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */; };
+		5DCFE06F2641722A00514498 /* StyleableUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5DCFE06E2641722A00514498 /* StyleableUI */; };
+		5DCFE0722641726500514498 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0712641726500514498 /* Styles.swift */; };
+		5DCFE0752641728000514498 /* ViewStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0742641728000514498 /* ViewStyles.swift */; };
+		5DCFE0772641728F00514498 /* LabelStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0762641728F00514498 /* LabelStyles.swift */; };
 		5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44162925CB04CE0009FE5F /* UIControlSubscription.swift */; };
 		5F44162D25CB04D70009FE5F /* UIControlPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44162C25CB04D70009FE5F /* UIControlPublisher.swift */; };
 		5F44163025CB04E20009FE5F /* UITextField+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44162F25CB04E20009FE5F /* UITextField+Publisher.swift */; };
@@ -105,6 +116,16 @@
 		5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardBigCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F42190425F950A900366A16 /* DishCardBigCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishCardBigCollectionViewCell.xib; sourceTree = "<group>"; };
 		5F42190B25F9555E00366A16 /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
+		5D5A5F7C25F7E97600053029 /* TextFieldWithDescription.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldWithDescription.xib; sourceTree = "<group>"; };
+		5D5A5F8025F7E99200053029 /* TextFieldWithDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDescription.swift; sourceTree = "<group>"; };
+		5D5B6E7925F91EAC00DB9CCE /* CustomStepperView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomStepperView.xib; sourceTree = "<group>"; };
+		5D5B6E7A25F91EAC00DB9CCE /* CustomStepperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStepperView.swift; sourceTree = "<group>"; };
+		5D70A26925F8068D009B2520 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		5D70A26D25F806D8009B2520 /* CustomSegmentedControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSegmentedControl.xib; sourceTree = "<group>"; };
+		5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionUILabel.swift; sourceTree = "<group>"; };
+		5DCFE0712641726500514498 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		5DCFE0742641728000514498 /* ViewStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStyles.swift; sourceTree = "<group>"; };
+		5DCFE0762641728F00514498 /* LabelStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyles.swift; sourceTree = "<group>"; };
 		5F44162925CB04CE0009FE5F /* UIControlSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlSubscription.swift; sourceTree = "<group>"; };
 		5F44162C25CB04D70009FE5F /* UIControlPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlPublisher.swift; sourceTree = "<group>"; };
 		5F44162F25CB04E20009FE5F /* UITextField+Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Publisher.swift"; sourceTree = "<group>"; };
@@ -198,6 +219,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DCFE06F2641722A00514498 /* StyleableUI in Frameworks */,
 				5F5C528825C4B3E300AC7E3C /* TableKit in Frameworks */,
 				206F6C092FF500D7FCC9DBF8 /* Pods_DishBookIOS.framework in Frameworks */,
 				5FFB20B725C4CB3C0086440A /* SDWebImage in Frameworks */,
@@ -241,6 +263,51 @@
 				5F42190425F950A900366A16 /* DishCardBigCollectionViewCell.xib */,
 			);
 			path = DishCardBigCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		5D5A5F7F25F7E97B00053029 /* TextFieldWithDescription */ = {
+			isa = PBXGroup;
+			children = (
+				5D5A5F8025F7E99200053029 /* TextFieldWithDescription.swift */,
+				5D5A5F7C25F7E97600053029 /* TextFieldWithDescription.xib */,
+			);
+			path = TextFieldWithDescription;
+			sourceTree = "<group>";
+		};
+		5D5B6E7E25F91EB400DB9CCE /* CustomSteperView */ = {
+			isa = PBXGroup;
+			children = (
+				5D5B6E7A25F91EAC00DB9CCE /* CustomStepperView.swift */,
+				5D5B6E7925F91EAC00DB9CCE /* CustomStepperView.xib */,
+			);
+			path = CustomSteperView;
+			sourceTree = "<group>";
+		};
+		5D70A26825F80566009B2520 /* CustomSegmentControl */ = {
+			isa = PBXGroup;
+			children = (
+				5D70A26925F8068D009B2520 /* CustomSegmentedControl.swift */,
+				5D70A26D25F806D8009B2520 /* CustomSegmentedControl.xib */,
+			);
+			path = CustomSegmentControl;
+			sourceTree = "<group>";
+		};
+		5D70A27425F80DB5009B2520 /* UILabels */ = {
+			isa = PBXGroup;
+			children = (
+				5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */,
+			);
+			path = UILabels;
+			sourceTree = "<group>";
+		};
+		5DCFE0702641725100514498 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				5DCFE0712641726500514498 /* Styles.swift */,
+				5DCFE0742641728000514498 /* ViewStyles.swift */,
+				5DCFE0762641728F00514498 /* LabelStyles.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 		5F44162725CB038B0009FE5F /* Common */ = {
@@ -313,6 +380,7 @@
 		5F5C528F25C4B48B00AC7E3C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5DCFE0702641725100514498 /* Styles */,
 				5F5C529825C4B55F00AC7E3C /* App */,
 				5F5C529F25C4B61900AC7E3C /* Extensions */,
 				5F5C529E25C4B60C00AC7E3C /* Network */,
@@ -402,6 +470,10 @@
 			children = (
 				5F4218F925F9505700366A16 /* DishCards */,
 				5FFB20B225C4CA360086440A /* Loader.swift */,
+				5D70A27425F80DB5009B2520 /* UILabels */,
+				5D5B6E7E25F91EB400DB9CCE /* CustomSteperView */,
+				5D70A26825F80566009B2520 /* CustomSegmentControl */,
+				5D5A5F7F25F7E97B00053029 /* TextFieldWithDescription */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -763,6 +835,7 @@
 				5F5C528725C4B3E300AC7E3C /* TableKit */,
 				5F5C528B25C4B42800AC7E3C /* IQKeyboardManagerSwift */,
 				5FFB20B625C4CB3C0086440A /* SDWebImage */,
+				5DCFE06E2641722A00514498 /* StyleableUI */,
 			);
 			productName = DishBookIOS;
 			productReference = 5F5C525425C4B0E900AC7E3C /* DishBookIOS.app */;
@@ -795,6 +868,7 @@
 				5F5C528625C4B3E300AC7E3C /* XCRemoteSwiftPackageReference "TableKit" */,
 				5F5C528A25C4B42800AC7E3C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				5FFB20B525C4CB3C0086440A /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				5DCFE06D2641722A00514498 /* XCRemoteSwiftPackageReference "StyleableUI" */,
 			);
 			productRefGroup = 5F5C525525C4B0E900AC7E3C /* Products */;
 			projectDirPath = "";
@@ -821,8 +895,10 @@
 				5F42190625F950A900366A16 /* DishCardBigCollectionViewCell.xib in Resources */,
 				5FBE839325C9FEDA00E3F3EB /* SF-Pro-Display-Medium.otf in Resources */,
 				5FEBD1B425C9CEA8000F7E9C /* DishBook.strings in Resources */,
+				5D5A5F7D25F7E97600053029 /* TextFieldWithDescription.xib in Resources */,
 				5FBE837625C9F33A00E3F3EB /* Common.strings in Resources */,
 				5F5C529325C4B4CC00AC7E3C /* Color.xcassets in Resources */,
+				5D70A26E25F806D8009B2520 /* CustomSegmentedControl.xib in Resources */,
 				5FBE834725C9EC1000E3F3EB /* NewDish.storyboard in Resources */,
 				5FBE834D25C9EC1F00E3F3EB /* Profile.storyboard in Resources */,
 				5FBE839725C9FEDA00E3F3EB /* SF-Pro-Text-Semibold.otf in Resources */,
@@ -836,6 +912,7 @@
 				5FEBD1B725C9D3DD000F7E9C /* DishBook.storyboard in Resources */,
 				5FBE837125C9F31F00E3F3EB /* Profile.strings in Resources */,
 				5FBE836E25C9F31600E3F3EB /* Shoplist.strings in Resources */,
+				5D5B6E7B25F91EAC00DB9CCE /* CustomStepperView.xib in Resources */,
 				5FBE839125C9FEDA00E3F3EB /* SF-Pro-Display-Regular.otf in Resources */,
 				5FBE834A25C9EC1800E3F3EB /* Shoplist.storyboard in Resources */,
 				5FBE839625C9FEDA00E3F3EB /* SF-Pro-Text-Medium.otf in Resources */,
@@ -949,6 +1026,7 @@
 				5FFB20C525C4CC2C0086440A /* LoginViewController.swift in Sources */,
 				5FBE835025C9EC2F00E3F3EB /* NewDishViewController.swift in Sources */,
 				5FBE835925C9EC5100E3F3EB /* ProfileViewModel.swift in Sources */,
+				5D70A27125F80A4B009B2520 /* DescriptionUILabel.swift in Sources */,
 				5FFB20D225C4CD450086440A /* UIApplication+Keyboard.swift in Sources */,
 				5F44163325CB04F10009FE5F /* UITextView+Publisher.swift in Sources */,
 				5F42190525F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */,
@@ -967,7 +1045,9 @@
 				5F44163625CB05470009FE5F /* Date+Extension.swift in Sources */,
 				5FFB210925C4DA630086440A /* SignInWithAppleCoordinator.swift in Sources */,
 				5FFB20BA25C4CB9F0086440A /* BaseCoordinator.swift in Sources */,
+				5DCFE0752641728000514498 /* ViewStyles.swift in Sources */,
 				5FFB20CE25C4CC740086440A /* TypeAliases.swift in Sources */,
+				5D5A5F8125F7E99200053029 /* TextFieldWithDescription.swift in Sources */,
 				5FFB20BD25C4CBB60086440A /* CoordinatorProtocol.swift in Sources */,
 				5FFB20F725C4D2F30086440A /* MainFlowCoordinator.swift in Sources */,
 				5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */,
@@ -988,13 +1068,17 @@
 				5F5C52AD25C4B8AF00AC7E3C /* R.generated.swift in Sources */,
 				5FD0130225CDBCE100A0E257 /* DishDetailsController.swift in Sources */,
 				5F44163C25CB05AD0009FE5F /* SubscribersCompletion+Ext.swift in Sources */,
+				5DCFE0772641728F00514498 /* LabelStyles.swift in Sources */,
 				5FFB20D725C4CF480086440A /* UIView+IBInspectable.swift in Sources */,
 				5FBE836525C9F10A00E3F3EB /* ShoplistCoordinator.swift in Sources */,
 				5FEBD1C425C9D42C000F7E9C /* ExploreListViewModel.swift in Sources */,
 				5F44164025CB06CD0009FE5F /* UIView+FromNib.swift in Sources */,
+				5DCFE0722641726500514498 /* Styles.swift in Sources */,
 				5FFB210325C4D4490086440A /* ExploreCoordinator.swift in Sources */,
 				5FBE835325C9EC3E00E3F3EB /* ShoplistViewController.swift in Sources */,
+				5D70A26A25F8068D009B2520 /* CustomSegmentedControl.swift in Sources */,
 				5FBE837D25C9F79200E3F3EB /* BaseRootCoordinator.swift in Sources */,
+				5D5B6E7C25F91EAC00DB9CCE /* CustomStepperView.swift in Sources */,
 				5FBE835C25C9EC5A00E3F3EB /* ShoplistViewModel.swift in Sources */,
 				5FFB20B325C4CA360086440A /* Loader.swift in Sources */,
 				5FFB20AC25C4CA020086440A /* BaseViewController.swift in Sources */,
@@ -1211,6 +1295,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5DCFE06D2641722A00514498 /* XCRemoteSwiftPackageReference "StyleableUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ddanilyuk/StyleableUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
 		5F5C528625C4B3E300AC7E3C /* XCRemoteSwiftPackageReference "TableKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/maxsokolov/TableKit.git";
@@ -1238,6 +1330,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5DCFE06E2641722A00514498 /* StyleableUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DCFE06D2641722A00514498 /* XCRemoteSwiftPackageReference "StyleableUI" */;
+			productName = StyleableUI;
+		};
 		5F5C528725C4B3E300AC7E3C /* TableKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5F5C528625C4B3E300AC7E3C /* XCRemoteSwiftPackageReference "TableKit" */;
