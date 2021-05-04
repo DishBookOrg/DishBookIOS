@@ -23,11 +23,8 @@ final class DishCardSmallCollectionViewCell: UICollectionViewCell {
         
         clipsToBounds = false
         contentView.clipsToBounds = false
-        containerView.clipsToBounds = false
         
-        addSubview(containerView, withEdgeInsets: .zero)
-        containerView.apply(style: Styles.View.testRedShadow)
-        
+        setupContainerView()
         setupDishImageView()
     }
     
@@ -38,18 +35,14 @@ final class DishCardSmallCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
 
-        containerView.apply(style: Styles.View.testRedShadow)
-
-//        containerView.apply(style: Styles.View.smallCornerRadius)
-
-//        apply(style: Styles.View.smallCornerRadius)
-//        dishImageView.apply(style: Styles.View.smallCornerRadius)
+        containerView.apply(style: Styles.View.cardShadow16)
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    private func setupContainerView() {
         
-//        setup()
+        addSubview(containerView, withEdgeInsets: .zero)
+        containerView.clipsToBounds = false
+        containerView.apply(style: Styles.View.cardShadow16)
     }
     
 //    private func setup() {
@@ -64,7 +57,7 @@ final class DishCardSmallCollectionViewCell: UICollectionViewCell {
         
         containerView.addSubview(dishImageView, withEdgeInsets: .zero)
         dishImageView.clipsToBounds = true
-        dishImageView.apply(style: Styles.View.smallCornerRadius)
+        dishImageView.apply(style: Styles.View.cornerRadius20)
     }
 }
  

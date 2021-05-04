@@ -43,7 +43,7 @@ final class CustomStepperView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        apply(style: Styles.View.shadow16)
+        apply(style: Styles.View.cardShadow16)
     }
     
     private func setup() {
@@ -55,7 +55,7 @@ final class CustomStepperView: UIView {
         minusButton.titleLabel?.font = R.font.sfProRoundedMedium(size: 30)
         plusButton.titleLabel?.font = R.font.sfProRoundedMedium(size: 30)
         
-        apply(style: Styles.View.shadow16)
+        apply(style: Styles.View.cardShadow16)
     }
     
     public func config(initialValue: Int, isAllCornersRounded: Bool = true) {

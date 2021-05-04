@@ -51,6 +51,7 @@ final class ExploreListViewController: BaseViewController {
         super.viewDidLoad()
     
         view.backgroundColor = .systemBackground
+        
         setupCollectionView()
     }
     
