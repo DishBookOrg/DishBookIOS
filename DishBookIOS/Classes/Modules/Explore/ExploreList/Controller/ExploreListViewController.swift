@@ -12,14 +12,14 @@ final class ExploreListViewController: BaseViewController {
     
     enum Section: Hashable {
         
-        case title(text: String)
+//        case title(text: String)
         case bigSection(id: Int)
         case smallSection(id: Int)
         
         var itemsCount: Int {
             switch self {
-            case .title:
-                return 1
+//            case .title:
+//                return 1
             case .bigSection:
                 return 3
             case .smallSection:
@@ -34,20 +34,20 @@ final class ExploreListViewController: BaseViewController {
                 return SmallItemsSection().layoutSection()
             case .bigSection:
                 return BigItemsSection().layoutSection()
-            case .title:
-                return SmallItemsSection().layoutSection()
+//            case .title:
+//                return SmallItemsSection().layoutSection()
             }
         }
     }
     
-    typealias DataSource = UICollectionViewDiffableDataSource<UICollectionView.Section, Dish>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<UICollectionView.Section, Dish>
+    typealias DataSource = UICollectionViewDiffableDataSource<Section, Dish>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Dish>
     
     // MARK: - IBOutlets
     
     lazy var collectionView: UICollectionView = {
         
-        let layout = createLayout()
+        let layout = create()
         let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
         collectionView.backgroundColor = .clear
         return collectionView
@@ -69,9 +69,9 @@ final class ExploreListViewController: BaseViewController {
     ]
     
     var sections: [Section] = [
-        .title(text: "Try it!"),
+//        .title(text: "Try it!"),
         .bigSection(id: 0),
-        .title(text: "Breakfast"),
+//        .title(text: "Breakfast"),
         .smallSection(id: 0)
     ]
     
@@ -99,7 +99,7 @@ final class ExploreListViewController: BaseViewController {
             cell.render(props: model)
         }
         
-        let bigDishCollectionViewCell = UICollectionView.CellRegistration<DishCardSmallCollectionViewCell, Dish> { cell, indexPath, model in
+        let bigDishCollectionViewCell = UICollectionView.CellRegistration<DishCardBigCollectionViewCell, Dish> { cell, indexPath, model in
             cell.render(props: model)
         }
         
@@ -107,19 +107,19 @@ final class ExploreListViewController: BaseViewController {
             
             switch indexPath.section {
             case 0:
-                return collectionView.dequeueConfiguredReusableCell(using: smallDishCollectionViewCell, for: indexPath, item: item)
-            case 1:
                 return collectionView.dequeueConfiguredReusableCell(using: bigDishCollectionViewCell, for: indexPath, item: item)
+            case 1:
+                return collectionView.dequeueConfiguredReusableCell(using: smallDishCollectionViewCell, for: indexPath, item: item)
             default:
                 return UICollectionViewCell()
             }
         }
         
         var snapshot = Snapshot()
-        snapshot.appendSections([.main])
-        snapshot.appendItems(dishes, toSection: .main)
-//        snapshot.appendItems([dishes[0], dishes[1]], toSection: .bigSection(id: 0))
-//        snapshot.appendItems([dishes[2], dishes[3], dishes[4], dishes[5]], toSection: .smallSection(id: 0))
+        snapshot.appendSections([.bigSection(id: 0), .smallSection(id: 0)])
+//        snapshot.appendItems(dishes, toSection: .main)
+        snapshot.appendItems([dishes[0], dishes[1]], toSection: .bigSection(id: 0))
+        snapshot.appendItems([dishes[2], dishes[3], dishes[4], dishes[5]], toSection: .smallSection(id: 0))
 
         dataSource?.apply(snapshot)
     }
@@ -128,48 +128,48 @@ final class ExploreListViewController: BaseViewController {
         
     }
     
-//    private func create() -> UICollectionViewCompositionalLayout {
-//        
-//        
-////        let layout = UICollectionViewCompositionalLayout { sectionIndex, layoutEnvironment in
-////
-////            return self.sections[sectionIndex].layoutSection()
-////        }
-////
-//        return layout
-//    }
-    
-    private func createLayout() -> UICollectionViewCompositionalLayout {
-        let layout = UICollectionViewCompositionalLayout {
-            (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+    private func create() -> UICollectionViewCompositionalLayout {
         
         
-            let smallItemSize = NSCollectionLayoutSize(widthDimension: .absolute(190),
-                                                       heightDimension: .absolute(250))
-            
-            let item = NSCollectionLayoutItem(layoutSize: smallItemSize)
-            
-            item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 25, trailing: 10)
-            
-            let groupHeight = NSCollectionLayoutDimension.absolute(250)
-            
-            let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(190),
-                                                   heightDimension: groupHeight)
-            
-            let containerGroup = NSCollectionLayoutGroup.horizontal(
-                layoutSize: groupSize, subitems: [item])
-            
-//
-//            let containerGroup = NSCollectionLayoutGroup(layoutSize: groupSize, si)
-            
-            let section = NSCollectionLayoutSection(group: containerGroup)
-            section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
-            return section
+        let layout = UICollectionViewCompositionalLayout { sectionIndex, layoutEnvironment in
+
+            return self.sections[sectionIndex].sectionLayout
         }
-        
-//        layout.configuration = .accessInstanceVariablesDirectly
-        
+
         return layout
     }
+    
+//    private func createLayout() -> UICollectionViewCompositionalLayout {
+//        let layout = UICollectionViewCompositionalLayout {
+//            (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
+//
+//
+//            let smallItemSize = NSCollectionLayoutSize(widthDimension: .absolute(190),
+//                                                       heightDimension: .absolute(250))
+//
+//            let item = NSCollectionLayoutItem(layoutSize: smallItemSize)
+//
+//            item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 25, trailing: 10)
+//
+//            let groupHeight = NSCollectionLayoutDimension.absolute(250)
+//
+//            let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(190),
+//                                                   heightDimension: groupHeight)
+//
+//            let containerGroup = NSCollectionLayoutGroup.horizontal(
+//                layoutSize: groupSize, subitems: [item])
+//
+////
+////            let containerGroup = NSCollectionLayoutGroup(layoutSize: groupSize, si)
+//
+//            let section = NSCollectionLayoutSection(group: containerGroup)
+//            section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
+//            return section
+//        }
+//
+////        layout.configuration = .accessInstanceVariablesDirectly
+//
+//        return layout
+//    }
 }
 
