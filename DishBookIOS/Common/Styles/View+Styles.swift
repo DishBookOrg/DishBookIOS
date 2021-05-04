@@ -22,6 +22,42 @@ extension Styles.View {
         view.layer.cornerRadius = 20
         view.layer.sublayers?.forEach { $0.cornerRadius = 20 }
     }
+    
+    static var cornerRadius10: Style<UIView> = { view in
+        
+        view.layer.cornerRadius = 10
+        view.layer.sublayers?.forEach { $0.cornerRadius = 10 }
+    }
+    
+    static var cornerRadius0: Style<UIView> = { view in
+        
+        view.layer.cornerRadius = 0
+        view.layer.sublayers?.forEach { $0.cornerRadius = 0 }
+    }
+    
+    static var maskedLeftCorners: Style<UIView> = { view in
+        
+        view.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+        view.layer.sublayers?.forEach {
+            $0.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
+        }
+    }
+    
+    static var maskedRightCorners: Style<UIView> = { view in
+        
+        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+        view.layer.sublayers?.forEach {
+            $0.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+        }
+    }
+    
+    static var noMaskedCorners: Style<UIView> = { view in
+        
+        view.layer.maskedCorners = []
+        view.layer.sublayers?.forEach {
+            $0.maskedCorners = []
+        }
+    }
 }
 
 // MARK: - Gradient

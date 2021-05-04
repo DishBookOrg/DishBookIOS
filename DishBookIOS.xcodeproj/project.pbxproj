@@ -12,13 +12,12 @@
 		5D5A5F8125F7E99200053029 /* TextFieldWithDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5A5F8025F7E99200053029 /* TextFieldWithDescription.swift */; };
 		5D5B6E7B25F91EAC00DB9CCE /* CustomStepperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5B6E7925F91EAC00DB9CCE /* CustomStepperView.xib */; };
 		5D5B6E7C25F91EAC00DB9CCE /* CustomStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B6E7A25F91EAC00DB9CCE /* CustomStepperView.swift */; };
-		5D70A26A25F8068D009B2520 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70A26925F8068D009B2520 /* CustomSegmentedControl.swift */; };
-		5D70A26E25F806D8009B2520 /* CustomSegmentedControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D70A26D25F806D8009B2520 /* CustomSegmentedControl.xib */; };
 		5D70A27125F80A4B009B2520 /* DescriptionUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */; };
-		5DCFE06F2641722A00514498 /* StyleableUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5DCFE06E2641722A00514498 /* StyleableUI */; };
+		5DCFE06F2641722A00514498 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 5DCFE06E2641722A00514498 /* SwiftPackageProductDependency */; };
 		5DCFE0722641726500514498 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0712641726500514498 /* Styles.swift */; };
 		5DCFE0752641728000514498 /* View+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0742641728000514498 /* View+Styles.swift */; };
 		5DCFE0772641728F00514498 /* Label+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0762641728F00514498 /* Label+Styles.swift */; };
+		5DCFE0792641B8E700514498 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0782641B8E700514498 /* SegmentedControl.swift */; };
 		5F4218FC25F9509000366A16 /* DishCardSmallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */; };
 		5F42190525F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */; };
 		5F42190625F950A900366A16 /* DishCardBigCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F42190425F950A900366A16 /* DishCardBigCollectionViewCell.xib */; };
@@ -37,8 +36,8 @@
 		5F5C526125C4B0EE00AC7E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C526025C4B0EE00AC7E3C /* Assets.xcassets */; };
 		5F5C526425C4B0EE00AC7E3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C526225C4B0EE00AC7E3C /* LaunchScreen.storyboard */; };
 		5F5C526D25C4B1FB00AC7E3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C526C25C4B1FB00AC7E3C /* GoogleService-Info.plist */; };
-		5F5C528825C4B3E300AC7E3C /* TableKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5F5C528725C4B3E300AC7E3C /* TableKit */; };
-		5F5C528C25C4B42800AC7E3C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5F5C528B25C4B42800AC7E3C /* IQKeyboardManagerSwift */; };
+		5F5C528825C4B3E300AC7E3C /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 5F5C528725C4B3E300AC7E3C /* SwiftPackageProductDependency */; };
+		5F5C528C25C4B42800AC7E3C /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 5F5C528B25C4B42800AC7E3C /* SwiftPackageProductDependency */; };
 		5F5C529325C4B4CC00AC7E3C /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C529225C4B4CC00AC7E3C /* Color.xcassets */; };
 		5F5C52AD25C4B8AF00AC7E3C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C52AC25C4B8AF00AC7E3C /* R.generated.swift */; };
 		5F8FA25926416D0000E24685 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FA25826416D0000E24685 /* Section.swift */; };
@@ -97,7 +96,7 @@
 		5FFB20AC25C4CA020086440A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20AB25C4CA020086440A /* BaseViewController.swift */; };
 		5FFB20B025C4CA110086440A /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20AF25C4CA110086440A /* BaseViewModel.swift */; };
 		5FFB20B325C4CA360086440A /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20B225C4CA360086440A /* Loader.swift */; };
-		5FFB20B725C4CB3C0086440A /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5FFB20B625C4CB3C0086440A /* SDWebImage */; };
+		5FFB20B725C4CB3C0086440A /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 5FFB20B625C4CB3C0086440A /* SwiftPackageProductDependency */; };
 		5FFB20BA25C4CB9F0086440A /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20B925C4CB9F0086440A /* BaseCoordinator.swift */; };
 		5FFB20BD25C4CBB60086440A /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20BC25C4CBB60086440A /* CoordinatorProtocol.swift */; };
 		5FFB20C125C4CBE90086440A /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20C025C4CBE90086440A /* AuthCoordinator.swift */; };
@@ -118,12 +117,11 @@
 		5D5A5F8025F7E99200053029 /* TextFieldWithDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDescription.swift; sourceTree = "<group>"; };
 		5D5B6E7925F91EAC00DB9CCE /* CustomStepperView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomStepperView.xib; sourceTree = "<group>"; };
 		5D5B6E7A25F91EAC00DB9CCE /* CustomStepperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStepperView.swift; sourceTree = "<group>"; };
-		5D70A26925F8068D009B2520 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
-		5D70A26D25F806D8009B2520 /* CustomSegmentedControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSegmentedControl.xib; sourceTree = "<group>"; };
 		5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionUILabel.swift; sourceTree = "<group>"; };
 		5DCFE0712641726500514498 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		5DCFE0742641728000514498 /* View+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Styles.swift"; sourceTree = "<group>"; };
 		5DCFE0762641728F00514498 /* Label+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label+Styles.swift"; sourceTree = "<group>"; };
+		5DCFE0782641B8E700514498 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardSmallCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardBigCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F42190425F950A900366A16 /* DishCardBigCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishCardBigCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -225,11 +223,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DCFE06F2641722A00514498 /* StyleableUI in Frameworks */,
-				5F5C528825C4B3E300AC7E3C /* TableKit in Frameworks */,
+				5DCFE06F2641722A00514498 /* BuildFile in Frameworks */,
+				5F5C528825C4B3E300AC7E3C /* BuildFile in Frameworks */,
 				206F6C092FF500D7FCC9DBF8 /* Pods_DishBookIOS.framework in Frameworks */,
-				5FFB20B725C4CB3C0086440A /* SDWebImage in Frameworks */,
-				5F5C528C25C4B42800AC7E3C /* IQKeyboardManagerSwift in Frameworks */,
+				5FFB20B725C4CB3C0086440A /* BuildFile in Frameworks */,
+				5F5C528C25C4B42800AC7E3C /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,8 +263,7 @@
 		5D70A26825F80566009B2520 /* CustomSegmentControl */ = {
 			isa = PBXGroup;
 			children = (
-				5D70A26925F8068D009B2520 /* CustomSegmentedControl.swift */,
-				5D70A26D25F806D8009B2520 /* CustomSegmentedControl.xib */,
+				5DCFE0782641B8E700514498 /* SegmentedControl.swift */,
 			);
 			path = CustomSegmentControl;
 			sourceTree = "<group>";
@@ -849,7 +846,6 @@
 				5F5C525225C4B0E900AC7E3C /* Resources */,
 				5F5C52AF25C4B9E600AC7E3C /* SwiftLint */,
 				17E73EFE3BC0667EA95C0342 /* [CP] Embed Pods Frameworks */,
-				468115DFF46CEFD5CFB5533F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -857,10 +853,10 @@
 			);
 			name = DishBookIOS;
 			packageProductDependencies = (
-				5F5C528725C4B3E300AC7E3C /* TableKit */,
-				5F5C528B25C4B42800AC7E3C /* IQKeyboardManagerSwift */,
-				5FFB20B625C4CB3C0086440A /* SDWebImage */,
-				5DCFE06E2641722A00514498 /* StyleableUI */,
+				5F5C528725C4B3E300AC7E3C /* SwiftPackageProductDependency */,
+				5F5C528B25C4B42800AC7E3C /* SwiftPackageProductDependency */,
+				5FFB20B625C4CB3C0086440A /* SwiftPackageProductDependency */,
+				5DCFE06E2641722A00514498 /* SwiftPackageProductDependency */,
 			);
 			productName = DishBookIOS;
 			productReference = 5F5C525425C4B0E900AC7E3C /* DishBookIOS.app */;
@@ -890,10 +886,10 @@
 			);
 			mainGroup = 5F5C524B25C4B0E900AC7E3C;
 			packageReferences = (
-				5F5C528625C4B3E300AC7E3C /* XCRemoteSwiftPackageReference "TableKit" */,
-				5F5C528A25C4B42800AC7E3C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
-				5FFB20B525C4CB3C0086440A /* XCRemoteSwiftPackageReference "SDWebImage" */,
-				5DCFE06D2641722A00514498 /* XCRemoteSwiftPackageReference "StyleableUI" */,
+				5F5C528625C4B3E300AC7E3C /* RemoteSwiftPackageReference */,
+				5F5C528A25C4B42800AC7E3C /* RemoteSwiftPackageReference */,
+				5FFB20B525C4CB3C0086440A /* RemoteSwiftPackageReference */,
+				5DCFE06D2641722A00514498 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 5F5C525525C4B0E900AC7E3C /* Products */;
 			projectDirPath = "";
@@ -923,7 +919,6 @@
 				5D5A5F7D25F7E97600053029 /* TextFieldWithDescription.xib in Resources */,
 				5FBE837625C9F33A00E3F3EB /* Common.strings in Resources */,
 				5F5C529325C4B4CC00AC7E3C /* Color.xcassets in Resources */,
-				5D70A26E25F806D8009B2520 /* CustomSegmentedControl.xib in Resources */,
 				5FBE839725C9FEDA00E3F3EB /* SF-Pro-Text-Semibold.otf in Resources */,
 				5FBE836B25C9F30900E3F3EB /* NewDish.strings in Resources */,
 				5FBE839825C9FEDA00E3F3EB /* SF-Pro-Text-Light.otf in Resources */,
@@ -958,23 +953,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		468115DFF46CEFD5CFB5533F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5F5C52A925C4B7E100AC7E3C /* R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -989,7 +967,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1077,6 +1055,7 @@
 				5F44162D25CB04D70009FE5F /* UIControlPublisher.swift in Sources */,
 				5FEBD1C725C9D9A6000F7E9C /* SignInWithGoogleCoordinator.swift in Sources */,
 				5F44164425CB06F10009FE5F /* UIView+Anchors.swift in Sources */,
+				5DCFE0792641B8E700514498 /* SegmentedControl.swift in Sources */,
 				5F8FA25D26416D4E00E24685 /* BigItemsSection.swift in Sources */,
 				5FFB210625C4D9050086440A /* LoginViewModel.swift in Sources */,
 				5F44163925CB057B0009FE5F /* Publisher+AssignNoRetain.swift in Sources */,
@@ -1101,7 +1080,6 @@
 				5DCFE0722641726500514498 /* Styles.swift in Sources */,
 				5FFB210325C4D4490086440A /* ExploreCoordinator.swift in Sources */,
 				5FBE835325C9EC3E00E3F3EB /* ShoplistViewController.swift in Sources */,
-				5D70A26A25F8068D009B2520 /* CustomSegmentedControl.swift in Sources */,
 				5FBE837D25C9F79200E3F3EB /* BaseRootCoordinator.swift in Sources */,
 				5FCFDA172641881C00B3CFFC /* BindableCell.swift in Sources */,
 				5D5B6E7C25F91EAC00DB9CCE /* CustomStepperView.swift in Sources */,
@@ -1315,7 +1293,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5DCFE06D2641722A00514498 /* XCRemoteSwiftPackageReference "StyleableUI" */ = {
+		5DCFE06D2641722A00514498 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ddanilyuk/StyleableUI";
 			requirement = {
@@ -1323,7 +1301,7 @@
 				minimumVersion = 1.0.1;
 			};
 		};
-		5F5C528625C4B3E300AC7E3C /* XCRemoteSwiftPackageReference "TableKit" */ = {
+		5F5C528625C4B3E300AC7E3C /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/maxsokolov/TableKit.git";
 			requirement = {
@@ -1331,7 +1309,7 @@
 				minimumVersion = 2.11.0;
 			};
 		};
-		5F5C528A25C4B42800AC7E3C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+		5F5C528A25C4B42800AC7E3C /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
@@ -1339,7 +1317,7 @@
 				minimumVersion = 6.5.6;
 			};
 		};
-		5FFB20B525C4CB3C0086440A /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+		5FFB20B525C4CB3C0086440A /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
 			requirement = {
@@ -1350,24 +1328,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5DCFE06E2641722A00514498 /* StyleableUI */ = {
+		5DCFE06E2641722A00514498 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5DCFE06D2641722A00514498 /* XCRemoteSwiftPackageReference "StyleableUI" */;
+			package = 5DCFE06D2641722A00514498 /* RemoteSwiftPackageReference */;
 			productName = StyleableUI;
 		};
-		5F5C528725C4B3E300AC7E3C /* TableKit */ = {
+		5F5C528725C4B3E300AC7E3C /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F5C528625C4B3E300AC7E3C /* XCRemoteSwiftPackageReference "TableKit" */;
+			package = 5F5C528625C4B3E300AC7E3C /* RemoteSwiftPackageReference */;
 			productName = TableKit;
 		};
-		5F5C528B25C4B42800AC7E3C /* IQKeyboardManagerSwift */ = {
+		5F5C528B25C4B42800AC7E3C /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F5C528A25C4B42800AC7E3C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			package = 5F5C528A25C4B42800AC7E3C /* RemoteSwiftPackageReference */;
 			productName = IQKeyboardManagerSwift;
 		};
-		5FFB20B625C4CB3C0086440A /* SDWebImage */ = {
+		5FFB20B625C4CB3C0086440A /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5FFB20B525C4CB3C0086440A /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			package = 5FFB20B525C4CB3C0086440A /* RemoteSwiftPackageReference */;
 			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
