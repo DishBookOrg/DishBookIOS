@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct BigItemsSection: Section {
+struct BigItemsSection: CollectionSection {
     
     var numberOfItems: Int = 5
     
@@ -26,16 +26,16 @@ struct BigItemsSection: Section {
         return section
     }
     
-    func configureCell(collectionView: UICollectionView,
-                       indexPath: IndexPath,
-                       data: Dish) -> UICollectionViewCell {
-        
-//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.dishCardBigCollectionViewCell,
-//                                                            for: indexPath) else {
-//            return UICollectionViewCell()
-//        }
+//    func configureCell(collectionView: UICollectionView,
+//                       indexPath: IndexPath,
+//                       data: Dish) -> UICollectionViewCell {
 //        
-//        cell.configure(with: data)
-        return UICollectionViewCell()
-    }
+////        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.dishCardBigCollectionViewCell,
+////                                                            for: indexPath) else {
+////            return UICollectionViewCell()
+////        }
+////        
+////        cell.configure(with: data)
+//        return UICollectionViewCell()
+//    }
 }
