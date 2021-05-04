@@ -13,8 +13,8 @@ final class DishCardSmallCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var dishImageView: UIImageView!
     @IBOutlet weak var dishNameLabel: UILabel!
+    @IBOutlet weak var dishTimeLabel: UILabel!
     @IBOutlet weak var clockImageView: UIImageView!
-    @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var visualEffectView: UIVisualEffectView!
     
     // MARK: - Lifecycle
@@ -37,6 +37,6 @@ final class DishCardSmallCollectionViewCell: UICollectionViewCell {
         
         dishImageView.image = model.image
         dishNameLabel.text = model.dishName
-        timeLabel.text = "\(model.time) min"
+        dishTimeLabel.text = "\(model.time) min"
     }
 }

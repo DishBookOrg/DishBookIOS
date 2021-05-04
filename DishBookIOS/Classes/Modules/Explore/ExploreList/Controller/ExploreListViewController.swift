@@ -17,6 +17,11 @@ final class ExploreListViewController: BaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+//    let sections: [Section] = [
+//        BigItemsSection()
+//        SmallItemsSection()
+//    ]
+    
     // MARK: - Private properties
     
     private var viewModel: ExploreListViewModel
@@ -51,6 +56,8 @@ final class ExploreListViewController: BaseViewController {
         super.viewDidLoad()
     
         setupCollectionView()
+        
+        viewModel.onShowDetails?()
     }
     
     private func setupCollectionView() {
@@ -89,13 +96,13 @@ final class ExploreListViewController: BaseViewController {
         
     }
     
-    private func customLayout() -> UICollectionViewCompositionalLayout {
-        
-        let layout = UICollectionViewCompositionalLayout {
-            
-        }
-        
-    }
+//    private func customLayout() -> UICollectionViewCompositionalLayout {
+//
+//        let layout = UICollectionViewCompositionalLayout {
+//
+//        }
+//
+//    }
     
     private func createLayout() -> UICollectionViewCompositionalLayout {
         let layout = UICollectionViewCompositionalLayout {

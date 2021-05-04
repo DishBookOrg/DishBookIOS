@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DishCardBigCollectionViewCell" customModule="DishBookIOS" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DishCardBigCollectionViewCell" id="gTV-IL-0wX" customClass="DishCardBigCollectionViewCell" customModule="DishBookIOS" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="343" height="400"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -108,6 +108,14 @@
                 <constraint firstItem="IYO-Qo-jau" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="16" id="yaA-WJ-U3r"/>
             </constraints>
             <size key="customSize" width="343" height="400"/>
+            <connections>
+                <outlet property="clockImageView" destination="0zq-6y-Cf5" id="11q-tK-d0V"/>
+                <outlet property="difficultyLabel" destination="pSS-Kb-8bC" id="Yl0-kL-yes"/>
+                <outlet property="dishImageView" destination="VCn-IK-Zxj" id="S5y-X3-UDc"/>
+                <outlet property="dishNameLabel" destination="wr3-bU-fHV" id="z8x-JH-eW8"/>
+                <outlet property="dishTimeLabel" destination="5Cr-gS-amU" id="2lb-ne-yj4"/>
+                <outlet property="visualEffectView" destination="DKn-Uy-4Ys" id="p4v-7B-qbd"/>
+            </connections>
             <point key="canvasLocation" x="157.24637681159422" y="241.74107142857142"/>
         </collectionViewCell>
     </objects>
