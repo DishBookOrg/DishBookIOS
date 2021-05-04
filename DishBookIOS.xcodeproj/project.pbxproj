@@ -78,6 +78,7 @@
 		5FCFDA1B2641887C00B3CFFC /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCFDA1A2641887C00B3CFFC /* UITableView+Reusable.swift */; };
 		5FCFDA1D2641888600B3CFFC /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCFDA1C2641888600B3CFFC /* UICollectionView+Reusable.swift */; };
 		5FCFDA1F264189E600B3CFFC /* ViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCFDA1E264189E600B3CFFC /* ViewRepresentable.swift */; };
+		5FCFDA212641994600B3CFFC /* Button+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCFDA202641994600B3CFFC /* Button+Styles.swift */; };
 		5FD012F925CDBBF400A0E257 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD012F825CDBBF400A0E257 /* Dish.swift */; };
 		5FD012FC25CDBC0000A0E257 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD012FB25CDBC0000A0E257 /* AlertManager.swift */; };
 		5FD012FF25CDBC1200A0E257 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD012FE25CDBC1200A0E257 /* Network.swift */; };
@@ -183,6 +184,7 @@
 		5FCFDA1A2641887C00B3CFFC /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		5FCFDA1C2641888600B3CFFC /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
 		5FCFDA1E264189E600B3CFFC /* ViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRepresentable.swift; sourceTree = "<group>"; };
+		5FCFDA202641994600B3CFFC /* Button+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Styles.swift"; sourceTree = "<group>"; };
 		5FD012F825CDBBF400A0E257 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 		5FD012FB25CDBC0000A0E257 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		5FD012FE25CDBC1200A0E257 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				5DCFE0712641726500514498 /* Styles.swift */,
 				5DCFE0742641728000514498 /* View+Styles.swift */,
 				5DCFE0762641728F00514498 /* Label+Styles.swift */,
+				5FCFDA202641994600B3CFFC /* Button+Styles.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -1080,6 +1083,7 @@
 				5F44163025CB04E20009FE5F /* UITextField+Publisher.swift in Sources */,
 				5FBE837A25C9F78700E3F3EB /* BaseFlowCoordinator.swift in Sources */,
 				5FFB208D25C4C8F20086440A /* App.swift in Sources */,
+				5FCFDA212641994600B3CFFC /* Button+Styles.swift in Sources */,
 				5FFB20B025C4CA110086440A /* BaseViewModel.swift in Sources */,
 				5FFB20C125C4CBE90086440A /* AuthCoordinator.swift in Sources */,
 				5FBE835625C9EC4400E3F3EB /* ProfileViewController.swift in Sources */,
