@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol StepperViewDelegate: class {
+protocol StepperViewDelegate: AnyObject {
     
     func newValueSeted(value: Int)
 }
@@ -40,12 +40,22 @@ final class CustomStepperView: UIView {
         setup()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        apply(style: Styles.View.shadow16)
+    }
+    
     private func setup() {
         
         titleLabel.font = R.font.sfProRoundedMedium(size: 20)
         titleLabel.textColor = R.color.textWhite()
         steperDisplayLabel.font = R.font.sfProRoundedMedium(size: 20)
         steperDisplayLabel.textColor = R.color.textWhite()
+        minusButton.titleLabel?.font = R.font.sfProRoundedMedium(size: 30)
+        plusButton.titleLabel?.font = R.font.sfProRoundedMedium(size: 30)
+        
+        apply(style: Styles.View.shadow16)
     }
     
     public func config(initialValue: Int, isAllCornersRounded: Bool = true) {

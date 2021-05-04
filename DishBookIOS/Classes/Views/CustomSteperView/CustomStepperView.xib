@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -58,6 +58,7 @@
                                 <constraint firstAttribute="width" constant="30" id="KM3-dB-2s3"/>
                                 <constraint firstAttribute="width" secondItem="x4x-xv-Z34" secondAttribute="height" multiplier="1:1" id="S55-nX-id3"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <color key="tintColor" name="TextBlack"/>
                             <state key="normal" title="-"/>
                             <userDefinedRuntimeAttributes>
@@ -85,6 +86,7 @@
                                 <constraint firstAttribute="width" secondItem="Wiv-Zu-nxi" secondAttribute="height" multiplier="1:1" id="KUJ-L0-ePh"/>
                                 <constraint firstAttribute="width" constant="30" id="XpX-6u-5My"/>
                             </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <color key="tintColor" name="TextBlack"/>
                             <state key="normal" title="+"/>
                             <userDefinedRuntimeAttributes>

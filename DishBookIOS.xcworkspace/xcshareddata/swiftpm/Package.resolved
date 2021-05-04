@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "StyleableUI",
+        "repositoryURL": "https://github.com/ddanilyuk/StyleableUI",
+        "state": {
+          "branch": null,
+          "revision": "b6a2b7d3929506bdeffca1c7f641fe6c1420acf4",
+          "version": "1.0.1"
+        }
+      },
+      {
         "package": "TableKit",
         "repositoryURL": "https://github.com/maxsokolov/TableKit.git",
         "state": {

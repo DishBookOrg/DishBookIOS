@@ -31,5 +31,6 @@ final class DishBookViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        IMPLEMENT_ME()
     }
 }
