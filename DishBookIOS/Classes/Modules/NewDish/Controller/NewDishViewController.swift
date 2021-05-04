@@ -9,7 +9,7 @@ import UIKit
 
 final class NewDishViewController: BaseViewController {
     
-    @IBOutlet weak var customSegmentedControl: CustomSegmentedControl!
+//    @IBOutlet weak var customSegmentedControl: CustomSegmentedControl!
     
     // MARK: - Private properties
     
@@ -17,23 +17,16 @@ final class NewDishViewController: BaseViewController {
     
     // MARK: - Lifecycle
     
-    init?(coder: NSCoder, viewModel: NewDishViewModel) {
+    init(viewModel: NewDishViewModel) {
         self.viewModel = viewModel
         
-        super.init(coder: coder, closableCoordinator: viewModel)
-    }
-    
-    static func create(viewModel: NewDishViewModel) -> NewDishViewController {
-        
-        return R.storyboard.newDish().instantiateViewController(identifier: R.storyboard.newDish.newDishViewController.identifier) { coder in
-            return NewDishViewController(coder: coder, viewModel: viewModel)
-        }
+        super.init(nibName: nil, bundle: nil, closableCoordinator: viewModel)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        customSegmentedControl.config(segmentsNames: ["Easy", "Medium", "Hard"], descriptionText: "Some test text?")
+//        customSegmentedControl.config(segmentsNames: ["Easy", "Medium", "Hard"], descriptionText: "Some test text?")
         
     }
     

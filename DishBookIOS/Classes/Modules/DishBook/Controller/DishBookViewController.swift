@@ -15,17 +15,10 @@ final class DishBookViewController: BaseViewController {
     
     // MARK: - Lifecycle
     
-    init?(coder: NSCoder, viewModel: DishBookViewModel) {
+    init(viewModel: DishBookViewModel) {
         self.viewModel = viewModel
         
-        super.init(coder: coder, closableCoordinator: viewModel)
-    }
-    
-    static func create(viewModel: DishBookViewModel) -> DishBookViewController {
-        
-        return R.storyboard.dishBook().instantiateViewController(identifier: R.storyboard.dishBook.dishBookViewController.identifier) { coder in
-            return DishBookViewController(coder: coder, viewModel: viewModel)
-        }
+        super.init(nibName: nil, bundle: nil, closableCoordinator: viewModel)
     }
     
     override func viewDidLoad() {

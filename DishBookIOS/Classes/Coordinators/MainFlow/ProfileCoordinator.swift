@@ -22,7 +22,7 @@ final class ProfileCoordinator: BaseRootCoordinator {
     override func start() {
         
         let viewModel = ProfileViewModel()
-        let profileViewController = ProfileViewController.create(viewModel: viewModel)
+        let profileViewController = ProfileViewController(viewModel: viewModel)
         navigationController?.pushViewController(profileViewController, animated: false)
     }
 }

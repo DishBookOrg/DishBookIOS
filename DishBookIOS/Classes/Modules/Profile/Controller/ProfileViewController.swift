@@ -8,33 +8,48 @@
 import UIKit
 
 final class ProfileViewController: BaseViewController {
-
+    
     // MARK: - Private properties
     
     private var viewModel: ProfileViewModel
+    private let logoutButton = UIButton()
     
     // MARK: - Lifecycle
     
-    init?(coder: NSCoder, viewModel: ProfileViewModel) {
+    init(viewModel: ProfileViewModel) {
         self.viewModel = viewModel
         
-        super.init(coder: coder, closableCoordinator: viewModel)
-    }
-    
-    static func create(viewModel: ProfileViewModel) -> ProfileViewController {
-        
-        return R.storyboard.profile().instantiateViewController(identifier: R.storyboard.profile.profileViewController.identifier) { coder in
-            return ProfileViewController(coder: coder, viewModel: viewModel)
-        }
+        super.init(nibName: nil, bundle: nil, closableCoordinator: viewModel)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupLogoutButton()
     }
     
-    @IBAction func logoutAction(_ sender: UIButton) {
+    // MARK: - Setup methods
+    
+    private func setupLogoutButton() {
         
-        App.logout()
+        view.addSubview(logoutButton, constraints: [
+            
+            logoutButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            logoutButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            logoutButton.heightAnchor.constraint(equalToConstant: 50),
+            logoutButton.widthAnchor.constraint(equalToConstant: 130)
+        ])
+        
+        logoutButton.backgroundColor = R.color.primaryRed()
+        logoutButton.apply(style: Styles.View.cornerRadius20)
+        logoutButton.setTitle("Logout", for: .normal)
+        logoutButton.setTitleColor(R.color.textWhite(), for: .normal)
+        
+        logoutButton
+            .publisher(for: .touchUpInside)
+            .sink { _ in
+                App.logout()
+            }
+            .store(in: &cancelableSet)
     }
 }
