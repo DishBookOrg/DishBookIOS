@@ -33,7 +33,7 @@ class BaseViewController: UIViewController {
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, closableCoordinator: ClosableCoordinator) {
         self.closableCoordinator = closableCoordinator
-        
+
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     

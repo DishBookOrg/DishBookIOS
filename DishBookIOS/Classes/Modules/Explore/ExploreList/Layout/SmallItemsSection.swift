@@ -30,11 +30,11 @@ struct SmallItemsSection: Section {
                        indexPath: IndexPath,
                        data: Dish) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.dishCardSmallCollectionViewCell, for: indexPath) else {
-            return UICollectionViewCell()
-        }
-        
-        cell.configure(with: data)
-        return cell
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.dishCardSmallCollectionViewCell, for: indexPath) else {
+//            return UICollectionViewCell()
+//        }
+//
+//        cell.render(props: data)
+        return UICollectionViewCell()
     }
 }

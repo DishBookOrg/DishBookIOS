@@ -9,23 +9,25 @@ import UIKit
 
 final class ExploreListViewController: BaseViewController {
     
-    enum Section {
-        case main
-    }
+    typealias DataSource = UICollectionViewDiffableDataSource<UICollectionView.Section, Dish>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<UICollectionView.Section, Dish>
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    
-//    let sections: [Section] = [
-//        BigItemsSection()
-//        SmallItemsSection()
-//    ]
+    lazy var collectionView: UICollectionView = {
+        
+        let layout = createLayout()
+        let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+        collectionView.backgroundColor = .clear
+//        collectionView.register(R.nib.dishCardSmallCollectionViewCell)
+        
+        return collectionView
+    }()
     
     // MARK: - Private properties
     
     private var viewModel: ExploreListViewModel
-    private var dataSource: UICollectionViewDiffableDataSource<Section, Dish>?
+    private var dataSource: DataSource!
     
     var dishes: [Dish] = [
         Dish(dishName: "Some dish", time: 15),
@@ -39,54 +41,47 @@ final class ExploreListViewController: BaseViewController {
     
     // MARK: - Lifecycle
     
-    init?(coder: NSCoder, viewModel: ExploreListViewModel) {
+    init(viewModel: ExploreListViewModel) {
         self.viewModel = viewModel
         
-        super.init(coder: coder, closableCoordinator: viewModel)
-    }
-    
-    static func create(viewModel: ExploreListViewModel) -> ExploreListViewController {
-        
-        return R.storyboard.explore().instantiateViewController(identifier: R.storyboard.explore.exploreViewController.identifier) { coder in
-            return ExploreListViewController(coder: coder, viewModel: viewModel)
-        }
+        super.init(nibName: nil, bundle: nil, closableCoordinator: viewModel)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        view.backgroundColor = .systemBackground
         setupCollectionView()
-        
-        viewModel.onShowDetails?()
     }
     
     private func setupCollectionView() {
+                
+        view.addSubview(collectionView, withEdgeInsets: .zero)
         
-        let layout = createLayout()
-        collectionView.setCollectionViewLayout(layout, animated: true)
-        collectionView.register(R.nib.dishCardSmallCollectionViewCell)
-        
-//        let cellRegistration = UICollectionView.CellRegistration<DishCardSmallCollectionViewCell, Dish> { cell, indexPath, item in
-//            var configuration = cell.defaultContentConfiguration()
-//            cell.configure(with: item)
-//            cell.contentConfiguration = configuration
-//
-//        }
-        
-        dataSource = UICollectionViewDiffableDataSource<Section, Dish>(collectionView: collectionView) {
-            collectionView, indexPath, item -> UICollectionViewCell? in
-            
-            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.dishCardSmallCollectionViewCell, for: indexPath) {
-                cell.configure(with: item)
-                return cell
-
-            } else {
-                return UICollectionViewCell()
-            }
+        let collectionViewCell1 = UICollectionView.CellRegistration<DishCardSmallCollectionViewCell, Dish> { (cell, indexPath, model) in
+            cell.render(props: model)
         }
         
-        var snapshot = NSDiffableDataSourceSnapshot<Section, Dish>()
-
+        
+        dataSource = DataSource(collectionView: collectionView) {
+            collectionView, indexPath, item -> UICollectionViewCell? in
+            
+            return collectionView.dequeueConfiguredReusableCell(using: collectionViewCell1, for: indexPath, item: item)
+        }
+//        
+//        dataSource = DataSource(collectionView: collectionView) {
+//            collectionView, indexPath, item -> UICollectionViewCell? in
+//            
+//            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.dishCardSmallCollectionViewCell, for: indexPath) {
+//                cell.render(props: data)
+//                return cell
+//
+//            } else {
+//                return UICollectionViewCell()
+//            }
+//        }
+//        
+        var snapshot = Snapshot()
         snapshot.appendSections([.main])
         snapshot.appendItems(dishes, toSection: .main)
         dataSource?.apply(snapshot)
@@ -95,14 +90,6 @@ final class ExploreListViewController: BaseViewController {
     private func configureDataSource() {
         
     }
-    
-//    private func customLayout() -> UICollectionViewCompositionalLayout {
-//
-//        let layout = UICollectionViewCompositionalLayout {
-//
-//        }
-//
-//    }
     
     private func createLayout() -> UICollectionViewCompositionalLayout {
         let layout = UICollectionViewCompositionalLayout {
@@ -114,7 +101,7 @@ final class ExploreListViewController: BaseViewController {
             
             let item = NSCollectionLayoutItem(layoutSize: smallItemSize)
             
-            item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+            item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 25, trailing: 10)
             
             let groupHeight = NSCollectionLayoutDimension.absolute(260)
             
@@ -129,7 +116,7 @@ final class ExploreListViewController: BaseViewController {
             
             let section = NSCollectionLayoutSection(group: containerGroup)
             
-            section.orthogonalScrollingBehavior = .continuous
+            section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
             return section
         }
         
@@ -138,3 +125,4 @@ final class ExploreListViewController: BaseViewController {
         return layout
     }
 }
+

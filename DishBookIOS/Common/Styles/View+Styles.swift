@@ -19,8 +19,8 @@ extension Styles.View {
     
     static var smallCornerRadius: Style<UIView> = { view in
         
-        view.layer.cornerRadius = 5
-        view.layer.sublayers?.forEach { $0.cornerRadius = 5 }
+        view.layer.cornerRadius = 20
+//        view.layer.sublayers?.forEach { $0.cornerRadius = 20 }
     }
 }
 
@@ -49,5 +49,14 @@ extension Styles.View {
     static var shadow16: Style<UIView> = { view in
         
         view.apply(styles: blackShadow1, blackShadow2)
+    }
+    
+    static var testRedShadow: Style<UIView> = { view in
+        
+        view.layer.shadowPath = UIBezierPath(rect: view.bounds).cgPath
+        view.layer.shadowRadius = 16
+        view.layer.shadowOffset = .init(width: 0, height: 0)
+        view.layer.shadowOpacity = 0.6
+        view.layer.shadowColor = UIColor.red.cgColor
     }
 }

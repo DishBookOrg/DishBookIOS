@@ -30,12 +30,12 @@ struct BigItemsSection: Section {
                        indexPath: IndexPath,
                        data: Dish) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.dishCardBigCollectionViewCell,
-                                                            for: indexPath) else {
-            return UICollectionViewCell()
-        }
-        
-        cell.configure(with: data)
-        return cell
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.dishCardBigCollectionViewCell,
+//                                                            for: indexPath) else {
+//            return UICollectionViewCell()
+//        }
+//        
+//        cell.configure(with: data)
+        return UICollectionViewCell()
     }
 }
