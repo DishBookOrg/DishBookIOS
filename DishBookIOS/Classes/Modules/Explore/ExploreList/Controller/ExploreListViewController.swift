@@ -89,6 +89,14 @@ final class ExploreListViewController: BaseViewController {
         
     }
     
+    private func customLayout() -> UICollectionViewCompositionalLayout {
+        
+        let layout = UICollectionViewCompositionalLayout {
+            
+        }
+        
+    }
+    
     private func createLayout() -> UICollectionViewCompositionalLayout {
         let layout = UICollectionViewCompositionalLayout {
             (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
@@ -117,6 +125,8 @@ final class ExploreListViewController: BaseViewController {
             section.orthogonalScrollingBehavior = .continuous
             return section
         }
+        
+//        layout.configuration = .accessInstanceVariablesDirectly
         
         return layout
     }

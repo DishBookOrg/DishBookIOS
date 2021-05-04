@@ -32,6 +32,9 @@
 		5F5C528C25C4B42800AC7E3C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5F5C528B25C4B42800AC7E3C /* IQKeyboardManagerSwift */; };
 		5F5C529325C4B4CC00AC7E3C /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C529225C4B4CC00AC7E3C /* Color.xcassets */; };
 		5F5C52AD25C4B8AF00AC7E3C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C52AC25C4B8AF00AC7E3C /* R.generated.swift */; };
+		5F8FA25926416D0000E24685 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FA25826416D0000E24685 /* Section.swift */; };
+		5F8FA25B26416D4300E24685 /* SmallItemsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FA25A26416D4300E24685 /* SmallItemsSection.swift */; };
+		5F8FA25D26416D4E00E24685 /* BigItemsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FA25C26416D4E00E24685 /* BigItemsSection.swift */; };
 		5FBE834725C9EC1000E3F3EB /* NewDish.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FBE834625C9EC1000E3F3EB /* NewDish.storyboard */; };
 		5FBE834A25C9EC1800E3F3EB /* Shoplist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FBE834925C9EC1800E3F3EB /* Shoplist.storyboard */; };
 		5FBE834D25C9EC1F00E3F3EB /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FBE834C25C9EC1F00E3F3EB /* Profile.storyboard */; };
@@ -122,6 +125,9 @@
 		5F5C526C25C4B1FB00AC7E3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5F5C529225C4B4CC00AC7E3C /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		5F5C52AC25C4B8AF00AC7E3C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		5F8FA25826416D0000E24685 /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		5F8FA25A26416D4300E24685 /* SmallItemsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallItemsSection.swift; sourceTree = "<group>"; };
+		5F8FA25C26416D4E00E24685 /* BigItemsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigItemsSection.swift; sourceTree = "<group>"; };
 		5FBE834625C9EC1000E3F3EB /* NewDish.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewDish.storyboard; sourceTree = "<group>"; };
 		5FBE834925C9EC1800E3F3EB /* Shoplist.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Shoplist.storyboard; sourceTree = "<group>"; };
 		5FBE834C25C9EC1F00E3F3EB /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -504,10 +510,21 @@
 		5F8B0F4525CB0210009E156C /* ExploreList */ = {
 			isa = PBXGroup;
 			children = (
+				5F8FA25726416CF700E24685 /* Layout */,
 				5FFB20FB25C4D3180086440A /* ViewModel */,
 				5FFB20FC25C4D31D0086440A /* Controller */,
 			);
 			path = ExploreList;
+			sourceTree = "<group>";
+		};
+		5F8FA25726416CF700E24685 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				5F8FA25826416D0000E24685 /* Section.swift */,
+				5F8FA25A26416D4300E24685 /* SmallItemsSection.swift */,
+				5F8FA25C26416D4E00E24685 /* BigItemsSection.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		5FBE833925C9EB8900E3F3EB /* NewDish */ = {
@@ -935,9 +952,11 @@
 				5FFB20D225C4CD450086440A /* UIApplication+Keyboard.swift in Sources */,
 				5F44163325CB04F10009FE5F /* UITextView+Publisher.swift in Sources */,
 				5F42190525F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */,
+				5F8FA25B26416D4300E24685 /* SmallItemsSection.swift in Sources */,
 				5FD012FC25CDBC0000A0E257 /* AlertManager.swift in Sources */,
 				5FBE836825C9F12100E3F3EB /* ProfileCoordinator.swift in Sources */,
 				5FEBD1BD25C9D416000F7E9C /* DishBookViewController.swift in Sources */,
+				5F8FA25926416D0000E24685 /* Section.swift in Sources */,
 				5FFB20A825C4C9B10086440A /* AppCoordinator.swift in Sources */,
 				5FEBD1AE25C9CDA7000F7E9C /* DishBookCoordinator.swift in Sources */,
 				5FD012FF25CDBC1200A0E257 /* Network.swift in Sources */,
@@ -956,6 +975,7 @@
 				5F44162D25CB04D70009FE5F /* UIControlPublisher.swift in Sources */,
 				5FEBD1C725C9D9A6000F7E9C /* SignInWithGoogleCoordinator.swift in Sources */,
 				5F44164425CB06F10009FE5F /* UIView+Anchors.swift in Sources */,
+				5F8FA25D26416D4E00E24685 /* BigItemsSection.swift in Sources */,
 				5FFB210625C4D9050086440A /* LoginViewModel.swift in Sources */,
 				5F44163925CB057B0009FE5F /* Publisher+AssignNoRetain.swift in Sources */,
 				5F44163025CB04E20009FE5F /* UITextField+Publisher.swift in Sources */,
