@@ -7,6 +7,7 @@
 
 import UIKit
 
+// TODO: Change to publisher
 protocol SegmentedControlDelegate: AnyObject {
     
     /// Calls when selected segment changed
@@ -199,7 +200,7 @@ struct SegmentedControlPreview: PreviewProvider {
     
     static var previews: some View {
         ViewRepresentable(SegmentedControl()) { view in
-            view.render(props: SegmentedControl.Props(segmentsNames: ["Easy", "Medium", "Hard"], descriptionText: "Some test text?"))
+            view.render(props: SegmentedControl.Props(segmentsNames: ["Easy", "Medium"], descriptionText: "Some test text?"))
         }
         .previewLayout(.fixed(width: 414, height: 57))
     }

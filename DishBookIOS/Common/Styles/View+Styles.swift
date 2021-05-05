@@ -29,6 +29,12 @@ extension Styles.View {
         view.layer.sublayers?.forEach { $0.cornerRadius = 10 }
     }
     
+    static var cornerRadius17: Style<UIView> = { view in
+        
+        view.layer.cornerRadius = 17.5
+        view.layer.sublayers?.forEach { $0.cornerRadius = 17.5 }
+    }
+    
     static var cornerRadius0: Style<UIView> = { view in
         
         view.layer.cornerRadius = 0
