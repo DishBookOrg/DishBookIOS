@@ -78,10 +78,10 @@ final class StepperView: UIView {
         
         apply(style: Styles.View.mainGradient)
         
-        descriptionLabel.text = Constants.descriptionText
+        descriptionLabel.text = R.string.newDish.steperDescription()
         descriptionLabel.textColor = R.color.textDescriptionWhite()
         
-        titleLabel.text = Constants.titleText
+        titleLabel.text = R.string.newDish.steperTitle()
         titleLabel.font = R.font.sfProRoundedMedium(size: 20)
         titleLabel.textColor = R.color.textWhite()
         
@@ -126,11 +126,6 @@ final class StepperView: UIView {
         button.setTitle(title, for: .normal)
         button.setTitleColor(R.color.textBlack(), for: .normal)
         button.titleLabel?.font = R.font.sfProRoundedMedium(size: 30)
-    }
-    
-    enum Constants {
-        static let descriptionText = "How many servings your recipe is designed for?"
-        static let titleText = "Servings"
     }
 }
 
