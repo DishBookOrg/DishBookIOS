@@ -12,7 +12,6 @@ protocol CollectionSection: Hashable {
     var numberOfItems: Int { get }
     
     func layoutSection() -> NSCollectionLayoutSection
-//    func createSectionHeader() -> NSCollectionLayoutSupplementaryItem
 }
 
 // MARK: - Implementation

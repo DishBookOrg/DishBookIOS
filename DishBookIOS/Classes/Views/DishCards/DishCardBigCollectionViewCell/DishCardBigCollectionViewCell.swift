@@ -92,32 +92,23 @@ final class DishCardBigCollectionViewCell: UICollectionViewCell {
         dishTimeLabel.apply(style: Styles.Label.roundedRegular6)
         dishTimeLabel.textColor = .white
         
-        let smallConfiguration = UIImage.SymbolConfiguration(pointSize: 17, weight: .regular)
-        let clockImage = UIImage(systemName: "clock", withConfiguration: smallConfiguration)?.withTintColor(.white, renderingMode: .alwaysOriginal)
-        let clockImageView = UIImageView(image: clockImage)
-        
+        dishTimeLabel.textAlignment = .center
         NSLayoutConstraint.activate([
-            clockImageView.widthAnchor.constraint(equalToConstant: 17),
-            clockImageView.heightAnchor.constraint(equalToConstant: 17),
-            dishTimeLabel.widthAnchor.constraint(equalToConstant: 43),
+            dishTimeLabel.widthAnchor.constraint(equalToConstant: 80),
             dishTimeLabel.heightAnchor.constraint(equalToConstant: 25),
-            dishDifficultyLabel.widthAnchor.constraint(equalToConstant: 60),
+            dishDifficultyLabel.widthAnchor.constraint(equalToConstant: 80),
             dishDifficultyLabel.heightAnchor.constraint(equalToConstant: 25)
         ])
         
-        let timeStackView = UIStackView(arrangedSubviews: [clockImageView, dishTimeLabel])
-        timeStackView.axis = .horizontal
-        timeStackView.alignment = .center
-        timeStackView.spacing = 2
-        
-        let trailingStackView = UIStackView(arrangedSubviews: [timeStackView, dishDifficultyLabel])
+        let trailingStackView = UIStackView(arrangedSubviews: [dishTimeLabel, dishDifficultyLabel])
         trailingStackView.axis = .vertical
-        trailingStackView.alignment = .fill
+        trailingStackView.alignment = .center
         
         visualEffectView.contentView.addSubview(trailingStackView, constraints: [
             
             trailingStackView.leadingAnchor.constraint(equalTo: dishNameLabel.trailingAnchor, constant: 6),
             trailingStackView.bottomAnchor.constraint(equalTo: visualEffectView.bottomAnchor, constant: -20),
+            trailingStackView.widthAnchor.constraint(equalToConstant: 80),
             trailingStackView.topAnchor.constraint(equalTo: visualEffectView.topAnchor, constant: 20),
             trailingStackView.trailingAnchor.constraint(equalTo: visualEffectView.trailingAnchor, constant: -6)
         ])
@@ -134,7 +125,7 @@ extension DishCardBigCollectionViewCell: BindableCell {
         
         dishImageView.image = props.image
         dishNameLabel.text = props.dishName
-        dishTimeLabel.text = "\(props.time) min"
+        dishTimeLabel.text = "􀐫 \(props.time) min"
         dishDifficultyLabel.text = "Easy"
     }
 }

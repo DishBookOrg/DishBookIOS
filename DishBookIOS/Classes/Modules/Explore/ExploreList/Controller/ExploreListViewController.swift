@@ -9,8 +9,7 @@ import UIKit
 
 final class ExploreListViewController: BaseViewController {
     
-    
-    enum Section: Hashable {
+    enum ExploreListSection: Hashable {
         
         case bigSection(id: Int, title: String)
         case smallSection(id: Int, title: String)
@@ -37,15 +36,16 @@ final class ExploreListViewController: BaseViewController {
             
             switch self {
             case .smallSection:
-                return SmallItemsSection().layoutSection()
+                return SmallItemsSection(numberOfItems: itemsCount).layoutSection()
             case .bigSection:
-                return BigItemsSection().layoutSection()
+                return BigItemsSection(numberOfItems: itemsCount).layoutSection()
             }
         }
     }
     
-    typealias DataSource = UICollectionViewDiffableDataSource<Section, Dish>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Section, Dish>
+    
+    typealias DataSource = UICollectionViewDiffableDataSource<ExploreListSection, Dish>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<ExploreListSection, Dish>
     
     // MARK: - IBOutlets
     
@@ -57,8 +57,13 @@ final class ExploreListViewController: BaseViewController {
         return collectionView
     }()
     
+    
     // MARK: - Private properties
     
+    private var searchBar: UISearchBar!
+    private var blurEffectView: UIVisualEffectView!
+    
+
     private var viewModel: ExploreListViewModel
     private var dataSource: DataSource!
     
@@ -69,12 +74,16 @@ final class ExploreListViewController: BaseViewController {
         Dish(dishName: "Dish", time: 30),
         Dish(dishName: "Big title diish", time: 40),
         Dish(dishName: "Something", time: 50),
-        Dish(dishName: "Soup", time: 60)
+        Dish(dishName: "Soup 2", time: 150),
+        Dish(dishName: "Avocado", time: 5),
+        Dish(dishName: "Sushi", time: 30)
+        
     ]
     
-    var sections: [Section] = [
+    var sections: [ExploreListSection] = [
         .bigSection(id: 0, title: "Try it!"),
-        .smallSection(id: 0, title: "Breakfast")
+        .smallSection(id: 0, title: "Breakfast"),
+        .smallSection(id: 1, title: "Lunch")
     ]
     
     // MARK: - Lifecycle
@@ -88,18 +97,52 @@ final class ExploreListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemBackground
         
         setupDataSource()
         setupCollectionView()
+        setupSearch()
         apply()
+    }
+    
+    private func setupSearch() {
+        
+        blurEffectView = UIVisualEffectView()
+        
+        view.addSubview(blurEffectView, constraints: [
+            blurEffectView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            blurEffectView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            blurEffectView.topAnchor.constraint(equalTo: view.topAnchor)
+        ])
+        
+        searchBar = UISearchBar()
+        searchBar.placeholder = R.string.explore.search()
+        searchBar.delegate = self
+        searchBar.backgroundImage = UIImage()
+        searchBar.tintColor = R.color.primaryOrange()
+        searchBar.backgroundColor = .clear
+        
+        blurEffectView.contentView.addSubview(searchBar, constraints: [
+            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+            searchBar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 12),
+            searchBar.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -12),
+            blurEffectView.bottomAnchor.constraint(equalTo: searchBar.bottomAnchor)
+        ])
     }
     
     private func setupCollectionView() {
         
-        view.addSubview(collectionView, withEdgeInsets: .zero)
+        view.addSubview(collectionView, constraints: [
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
+            collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 0),
+            collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: 0),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
+        ])
+        
+        collectionView.contentInset = UIEdgeInsets(top: 56, left: 0, bottom: 0, right: 0)
+        collectionView.scrollIndicatorInsets = collectionView.contentInset
+        collectionView.delegate = self
         collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseIdentifier)
-
+        collectionView.backgroundColor = .systemBackground
     }
     
     private func setupDataSource() {
@@ -111,15 +154,14 @@ final class ExploreListViewController: BaseViewController {
         let bigDishCollectionViewCell = UICollectionView.CellRegistration<DishCardBigCollectionViewCell, Dish> { cell, _, dish in
             cell.render(props: dish)
         }
+        
         dataSource = DataSource(collectionView: collectionView) { collectionView, indexPath, item in
             
-            switch indexPath.section {
-            case 0:
+            switch self.sections[indexPath.section] {
+            case .bigSection:
                 return collectionView.dequeueConfiguredReusableCell(using: bigDishCollectionViewCell, for: indexPath, item: item)
-            case 1:
+            case .smallSection:
                 return collectionView.dequeueConfiguredReusableCell(using: smallDishCollectionViewCell, for: indexPath, item: item)
-            default:
-                return UICollectionViewCell()
             }
         }
         
@@ -144,21 +186,55 @@ final class ExploreListViewController: BaseViewController {
         
         snapshot.appendItems([dishes[0], dishes[1]], toSection: sections[0])
         snapshot.appendItems([dishes[2], dishes[3], dishes[4], dishes[5]], toSection: sections[1])
+        snapshot.appendItems([dishes[6], dishes[7], dishes[8]], toSection: sections[2])
         
         dataSource?.apply(snapshot, animatingDifferences: animated)
     }
     
-    private func configureDataSource() {
-        
-    }
-    
     private func createLayout() -> UICollectionViewCompositionalLayout {
         
-        let layout = UICollectionViewCompositionalLayout { sectionIndex, layoutEnvironment in
+        let layout = UICollectionViewCompositionalLayout { sectionIndex, _ in
             
             return self.sections[sectionIndex].sectionLayout
         }
         
         return layout
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+
+extension ExploreListViewController: UICollectionViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        UIView.animate(withDuration: 0.1) {
+            self.blurEffectView.effect = -scrollView.contentOffset.y > 99 ? nil : UIBlurEffect(style: UIBlurEffect.Style.extraLight)
+        }
+    }
+}
+
+// MARK: - UISearchBarDelegate
+
+extension ExploreListViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+    }
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        
+        searchBar.setShowsCancelButton(true, animated: true)
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        
+        searchBar.setShowsCancelButton(false, animated: true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
+        searchBar.setShowsCancelButton(false, animated: true)
+        UIApplication.hideKeyboard()
     }
 }

@@ -9,7 +9,7 @@ import UIKit
 
 struct BigItemsSection: CollectionSection {    
     
-    var numberOfItems: Int = 5
+    var numberOfItems: Int
     
     func layoutSection() -> NSCollectionLayoutSection {
         
