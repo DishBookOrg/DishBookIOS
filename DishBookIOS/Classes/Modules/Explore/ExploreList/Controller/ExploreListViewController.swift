@@ -12,18 +12,24 @@ final class ExploreListViewController: BaseViewController {
     
     enum Section: Hashable {
         
-//        case title(text: String)
-        case bigSection(id: Int)
-        case smallSection(id: Int)
+        case bigSection(id: Int, title: String)
+        case smallSection(id: Int, title: String)
         
         var itemsCount: Int {
             switch self {
-//            case .title:
-//                return 1
             case .bigSection:
                 return 3
             case .smallSection:
                 return 10
+            }
+        }
+        
+        var title: String {
+            switch self {
+            case let .bigSection(_, title):
+                return title
+            case let .smallSection(_, title):
+                return title
             }
         }
         
@@ -34,8 +40,6 @@ final class ExploreListViewController: BaseViewController {
                 return SmallItemsSection().layoutSection()
             case .bigSection:
                 return BigItemsSection().layoutSection()
-//            case .title:
-//                return SmallItemsSection().layoutSection()
             }
         }
     }
@@ -47,7 +51,7 @@ final class ExploreListViewController: BaseViewController {
     
     lazy var collectionView: UICollectionView = {
         
-        let layout = create()
+        let layout = createLayout()
         let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
         collectionView.backgroundColor = .clear
         return collectionView
@@ -69,10 +73,8 @@ final class ExploreListViewController: BaseViewController {
     ]
     
     var sections: [Section] = [
-//        .title(text: "Try it!"),
-        .bigSection(id: 0),
-//        .title(text: "Breakfast"),
-        .smallSection(id: 0)
+        .bigSection(id: 0, title: "Try it!"),
+        .smallSection(id: 0, title: "Breakfast")
     ]
     
     // MARK: - Lifecycle
@@ -85,24 +87,30 @@ final class ExploreListViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         view.backgroundColor = .systemBackground
         
+        setupDataSource()
         setupCollectionView()
+        apply()
     }
     
     private func setupCollectionView() {
         
         view.addSubview(collectionView, withEdgeInsets: .zero)
+        collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseIdentifier)
+
+    }
+    
+    private func setupDataSource() {
         
-        let smallDishCollectionViewCell = UICollectionView.CellRegistration<DishCardSmallCollectionViewCell, Dish> { cell, indexPath, model in
-            cell.render(props: model)
+        let smallDishCollectionViewCell = UICollectionView.CellRegistration<DishCardSmallCollectionViewCell, Dish> { cell, _, dish in
+            cell.render(props: dish)
         }
         
-        let bigDishCollectionViewCell = UICollectionView.CellRegistration<DishCardBigCollectionViewCell, Dish> { cell, indexPath, model in
-            cell.render(props: model)
+        let bigDishCollectionViewCell = UICollectionView.CellRegistration<DishCardBigCollectionViewCell, Dish> { cell, _, dish in
+            cell.render(props: dish)
         }
-        
         dataSource = DataSource(collectionView: collectionView) { collectionView, indexPath, item in
             
             switch indexPath.section {
@@ -115,61 +123,42 @@ final class ExploreListViewController: BaseViewController {
             }
         }
         
+        dataSource.supplementaryViewProvider = { [weak self] collectionView, kind, indexPath in
+            
+            guard let self = self,
+                  let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+                                                                                      withReuseIdentifier: SectionHeader.reuseIdentifier,
+                                                                                      for: indexPath) as? SectionHeader else {
+                return nil
+            }
+            
+            sectionHeader.titleLabel.text = self.sections[indexPath.section].title
+            return sectionHeader
+        }
+    }
+    
+    func apply(animated: Bool = true) {
+        
         var snapshot = Snapshot()
-        snapshot.appendSections([.bigSection(id: 0), .smallSection(id: 0)])
-//        snapshot.appendItems(dishes, toSection: .main)
-        snapshot.appendItems([dishes[0], dishes[1]], toSection: .bigSection(id: 0))
-        snapshot.appendItems([dishes[2], dishes[3], dishes[4], dishes[5]], toSection: .smallSection(id: 0))
-
-        dataSource?.apply(snapshot)
+        snapshot.appendSections(sections)
+        
+        snapshot.appendItems([dishes[0], dishes[1]], toSection: sections[0])
+        snapshot.appendItems([dishes[2], dishes[3], dishes[4], dishes[5]], toSection: sections[1])
+        
+        dataSource?.apply(snapshot, animatingDifferences: animated)
     }
     
     private func configureDataSource() {
         
     }
     
-    private func create() -> UICollectionViewCompositionalLayout {
-        
+    private func createLayout() -> UICollectionViewCompositionalLayout {
         
         let layout = UICollectionViewCompositionalLayout { sectionIndex, layoutEnvironment in
-
+            
             return self.sections[sectionIndex].sectionLayout
         }
-
+        
         return layout
     }
-    
-//    private func createLayout() -> UICollectionViewCompositionalLayout {
-//        let layout = UICollectionViewCompositionalLayout {
-//            (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
-//
-//
-//            let smallItemSize = NSCollectionLayoutSize(widthDimension: .absolute(190),
-//                                                       heightDimension: .absolute(250))
-//
-//            let item = NSCollectionLayoutItem(layoutSize: smallItemSize)
-//
-//            item.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 25, trailing: 10)
-//
-//            let groupHeight = NSCollectionLayoutDimension.absolute(250)
-//
-//            let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(190),
-//                                                   heightDimension: groupHeight)
-//
-//            let containerGroup = NSCollectionLayoutGroup.horizontal(
-//                layoutSize: groupSize, subitems: [item])
-//
-////
-////            let containerGroup = NSCollectionLayoutGroup(layoutSize: groupSize, si)
-//
-//            let section = NSCollectionLayoutSection(group: containerGroup)
-//            section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
-//            return section
-//        }
-//
-////        layout.configuration = .accessInstanceVariablesDirectly
-//
-//        return layout
-//    }
 }
-

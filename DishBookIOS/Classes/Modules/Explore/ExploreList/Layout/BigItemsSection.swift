@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct BigItemsSection: CollectionSection {
+struct BigItemsSection: CollectionSection {    
     
     var numberOfItems: Int = 5
     
@@ -15,18 +15,18 @@ struct BigItemsSection: CollectionSection {
         
         let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
                                                                              heightDimension: .fractionalHeight(1)))
-        item.contentInsets = .init(top: 0, leading: 10, bottom: 0, trailing: 10)
-//        let screenWidth = UIScreen.main.bounds.width
-//        let size = (screenWidth - 40) / screenWidth
+        item.contentInsets = .init(top: 0, leading: 5, bottom: 0, trailing: 5)
         
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                                                          heightDimension: .absolute(400)),
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93),
+                                                                                          heightDimension: .estimated(400)),
                                                        subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .groupPaging
+        section.orthogonalScrollingBehavior = .groupPagingCentered
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 25, trailing: 0)
         
-        section.contentInsets = .init(top: 10, leading: 10, bottom: 25, trailing: 10)
+        let layoutSectionHeader = createSectionHeader()
+        section.boundarySupplementaryItems = [layoutSectionHeader]
         return section
     }
 }

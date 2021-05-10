@@ -12,6 +12,19 @@ protocol CollectionSection: Hashable {
     var numberOfItems: Int { get }
     
     func layoutSection() -> NSCollectionLayoutSection
-//    func configureCell(collectionView: UICollectionView, indexPath: IndexPath, data: Dish) -> UICollectionViewCell
-//    func cellRegistration() -> UICollectionView.CellRegistration<UICollectionViewCell, Dish>
+//    func createSectionHeader() -> NSCollectionLayoutSupplementaryItem
+}
+
+// MARK: - Implementation
+
+extension CollectionSection {
+    
+    func createSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
+        
+        let layoutSectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93), heightDimension: .estimated(47))
+        let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: layoutSectionHeaderSize,
+                                                                              elementKind: UICollectionView.elementKindSectionHeader,
+                                                                              alignment: .top)
+        return layoutSectionHeader
+    }
 }
