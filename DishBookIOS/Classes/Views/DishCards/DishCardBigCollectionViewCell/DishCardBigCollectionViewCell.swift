@@ -42,14 +42,14 @@ final class DishCardBigCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        containerView.apply(style: Styles.View.cardShadow16)
+        containerView.apply(style: Styles.View.cardShadow24)
     }
     
     private func setupContainerView() {
         
         addSubview(containerView, withEdgeInsets: .zero)
         containerView.clipsToBounds = false
-        containerView.apply(style: Styles.View.cardShadow16)
+        containerView.apply(style: Styles.View.cardShadow24)
     }
     
     private func setupDishImageView() {
