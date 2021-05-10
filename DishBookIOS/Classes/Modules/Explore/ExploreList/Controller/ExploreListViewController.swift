@@ -8,61 +8,17 @@
 import UIKit
 
 final class ExploreListViewController: BaseViewController {
-    
-    enum ExploreListSection: Hashable {
         
-        case bigSection(id: Int, title: String)
-        case smallSection(id: Int, title: String)
-        
-        var itemsCount: Int {
-            switch self {
-            case .bigSection:
-                return 3
-            case .smallSection:
-                return 10
-            }
-        }
-        
-        var title: String {
-            switch self {
-            case let .bigSection(_, title):
-                return title
-            case let .smallSection(_, title):
-                return title
-            }
-        }
-        
-        var sectionLayout: NSCollectionLayoutSection {
-            
-            switch self {
-            case .smallSection:
-                return SmallItemsSection(numberOfItems: itemsCount).layoutSection()
-            case .bigSection:
-                return BigItemsSection(numberOfItems: itemsCount).layoutSection()
-            }
-        }
-    }
-    
-    
     typealias DataSource = UICollectionViewDiffableDataSource<ExploreListSection, Dish>
     typealias Snapshot = NSDiffableDataSourceSnapshot<ExploreListSection, Dish>
     
     // MARK: - IBOutlets
     
-    lazy var collectionView: UICollectionView = {
-        
-        let layout = createLayout()
-        let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
-        collectionView.backgroundColor = .clear
-        return collectionView
-    }()
-    
-    
-    // MARK: - Private properties
-    
     private var searchBar: UISearchBar!
     private var blurEffectView: UIVisualEffectView!
+    private var collectionView: UICollectionView!
     
+    // MARK: - Private properties
 
     private var viewModel: ExploreListViewModel
     private var dataSource: DataSource!
@@ -77,7 +33,6 @@ final class ExploreListViewController: BaseViewController {
         Dish(dishName: "Soup 2", time: 150),
         Dish(dishName: "Avocado", time: 5),
         Dish(dishName: "Sushi", time: 30)
-        
     ]
     
     var sections: [ExploreListSection] = [
@@ -97,9 +52,8 @@ final class ExploreListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        setupDataSource()
         setupCollectionView()
+        setupDataSource()
         setupSearch()
         apply()
     }
@@ -130,6 +84,10 @@ final class ExploreListViewController: BaseViewController {
     }
     
     private func setupCollectionView() {
+        
+        let layout = createLayout()
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+        collectionView.backgroundColor = .clear
         
         view.addSubview(collectionView, constraints: [
             collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
@@ -202,6 +160,45 @@ final class ExploreListViewController: BaseViewController {
     }
 }
 
+// MARK: - ExploreListSection
+
+extension ExploreListViewController {
+    
+    enum ExploreListSection: Hashable {
+        
+        case bigSection(id: Int, title: String)
+        case smallSection(id: Int, title: String)
+        
+        var itemsCount: Int {
+            switch self {
+            case .bigSection:
+                return 3
+            case .smallSection:
+                return 10
+            }
+        }
+        
+        var title: String {
+            switch self {
+            case let .bigSection(_, title):
+                return title
+            case let .smallSection(_, title):
+                return title
+            }
+        }
+        
+        var sectionLayout: NSCollectionLayoutSection {
+            
+            switch self {
+            case .smallSection:
+                return SmallItemsSection(numberOfItems: itemsCount).layoutSection()
+            case .bigSection:
+                return BigItemsSection(numberOfItems: itemsCount).layoutSection()
+            }
+        }
+    }
+}
+
 // MARK: - UICollectionViewDelegate
 
 extension ExploreListViewController: UICollectionViewDelegate {
@@ -209,6 +206,7 @@ extension ExploreListViewController: UICollectionViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         UIView.animate(withDuration: 0.1) {
+            // TODO: Change 99 to contentInset.top + safeAreaHeight - 1
             self.blurEffectView.effect = -scrollView.contentOffset.y > 99 ? nil : UIBlurEffect(style: UIBlurEffect.Style.extraLight)
         }
     }
