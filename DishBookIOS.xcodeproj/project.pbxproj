@@ -19,7 +19,7 @@
 		5DCFE0722641726500514498 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0712641726500514498 /* Styles.swift */; };
 		5DCFE0752641728000514498 /* View+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0742641728000514498 /* View+Styles.swift */; };
 		5DCFE0772641728F00514498 /* Label+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0762641728F00514498 /* Label+Styles.swift */; };
-		5F15C86326497030009EB349 /* TitleSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F15C86226497030009EB349 /* TitleSectionHeader.swift */; };
+		5F15C86326497030009EB349 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F15C86226497030009EB349 /* SectionHeader.swift */; };
 		5F4218FC25F9509000366A16 /* DishCardSmallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */; };
 		5F42190525F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */; };
 		5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44162925CB04CE0009FE5F /* UIControlSubscription.swift */; };
@@ -125,7 +125,7 @@
 		5DCFE0712641726500514498 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		5DCFE0742641728000514498 /* View+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Styles.swift"; sourceTree = "<group>"; };
 		5DCFE0762641728F00514498 /* Label+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label+Styles.swift"; sourceTree = "<group>"; };
-		5F15C86226497030009EB349 /* TitleSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSectionHeader.swift; sourceTree = "<group>"; };
+		5F15C86226497030009EB349 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardSmallCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardBigCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F42190B25F9555E00366A16 /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
@@ -603,7 +603,7 @@
 				5F8FA25826416D0000E24685 /* CollectionSection.swift */,
 				5F8FA25A26416D4300E24685 /* SmallItemsSection.swift */,
 				5F8FA25C26416D4E00E24685 /* BigItemsSection.swift */,
-				5F15C86226497030009EB349 /* TitleSectionHeader.swift */,
+				5F15C86226497030009EB349 /* SectionHeader.swift */,
 			);
 			path = Layout;
 			sourceTree = "<group>";
@@ -1108,7 +1108,7 @@
 				5FBE837D25C9F79200E3F3EB /* BaseRootCoordinator.swift in Sources */,
 				5FCFDA172641881C00B3CFFC /* BindableCell.swift in Sources */,
 				5D5B6E7C25F91EAC00DB9CCE /* CustomStepperView.swift in Sources */,
-				5F15C86326497030009EB349 /* TitleSectionHeader.swift in Sources */,
+				5F15C86326497030009EB349 /* SectionHeader.swift in Sources */,
 				5FCFDA1D2641888600B3CFFC /* UICollectionView+Reusable.swift in Sources */,
 				5FBE835C25C9EC5A00E3F3EB /* ShoplistViewModel.swift in Sources */,
 				5FCFDA132641876600B3CFFC /* UICollectionView+Section.swift in Sources */,

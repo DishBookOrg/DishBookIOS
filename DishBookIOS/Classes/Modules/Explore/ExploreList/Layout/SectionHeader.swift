@@ -1,5 +1,5 @@
 //
-//  TitleSectionHeader.swift
+//  SectionHeader.swift
 //  DishBookIOS
 //
 //  Created by Denys Danyliuk on 10.05.2021.
