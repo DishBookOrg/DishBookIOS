@@ -41,7 +41,7 @@ final class ProfileViewController: BaseViewController {
         ])
         
         logoutButton.backgroundColor = R.color.primaryRed()
-        logoutButton.apply(style: Styles.View.cornerRadius20)
+        logoutButton.apply(style: Styles.View.CornerRadius.small)
         logoutButton.setTitle("Logout", for: .normal)
         logoutButton.setTitleColor(R.color.textWhite(), for: .normal)
         

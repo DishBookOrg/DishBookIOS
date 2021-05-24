@@ -42,14 +42,14 @@ final class DishCardBigCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        containerView.apply(style: Styles.View.cardShadow24)
+        containerView.apply(style: Styles.View.Shadow.d24)
     }
     
     private func setupContainerView() {
         
         addSubview(containerView, withEdgeInsets: .zero)
         containerView.clipsToBounds = false
-        containerView.apply(style: Styles.View.cardShadow24)
+        containerView.apply(style: Styles.View.Shadow.d24)
     }
     
     private func setupDishImageView() {
@@ -57,7 +57,7 @@ final class DishCardBigCollectionViewCell: UICollectionViewCell {
         containerView.addSubview(dishImageView, withEdgeInsets: .zero)
         dishImageView.contentMode = .scaleAspectFill
         dishImageView.clipsToBounds = true
-        dishImageView.apply(style: Styles.View.cornerRadius20)
+        dishImageView.apply(style: Styles.View.CornerRadius.small)
     }
     
     private func setupVisualEffectView() {
@@ -75,7 +75,7 @@ final class DishCardBigCollectionViewCell: UICollectionViewCell {
     
     private func setupDishNameLabel() {
         
-        dishNameLabel.apply(style: Styles.Label.roundedSB4)
+        dishNameLabel.apply(style: Styles.Font.Rounded.SB.f4)
         dishNameLabel.textColor = .white
         
         visualEffectView.contentView.addSubview(dishNameLabel, constraints: [
@@ -88,8 +88,8 @@ final class DishCardBigCollectionViewCell: UICollectionViewCell {
     
     private func setupDishTimeLabel() {
         
-        dishDifficultyLabel.apply(style: Styles.Label.easyDifficult)
-        dishTimeLabel.apply(style: Styles.Label.roundedRegular6)
+        dishDifficultyLabel.apply(style: Styles.Label.Difficulty.easy)
+        dishTimeLabel.apply(style: Styles.Font.Rounded.Regular.f4)
         dishTimeLabel.textColor = .white
         
         dishTimeLabel.textAlignment = .center

@@ -40,14 +40,14 @@ final class DishCardSmallCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        containerView.apply(style: Styles.View.cardShadow16)
+        containerView.apply(style: Styles.View.Shadow.d16)
     }
     
     private func setupContainerView() {
         
         addSubview(containerView, withEdgeInsets: .zero)
         containerView.clipsToBounds = false
-        containerView.apply(style: Styles.View.cardShadow16)
+        containerView.apply(style: Styles.View.Shadow.d16)
     }
     
     private func setupDishImageView() {
@@ -55,7 +55,7 @@ final class DishCardSmallCollectionViewCell: UICollectionViewCell {
         containerView.addSubview(dishImageView, withEdgeInsets: .zero)
         dishImageView.contentMode = .scaleAspectFill
         dishImageView.clipsToBounds = true
-        dishImageView.apply(style: Styles.View.cornerRadius20)
+        dishImageView.apply(style: Styles.View.CornerRadius.small)
     }
     
     private func setupVisualEffectView() {
@@ -73,7 +73,7 @@ final class DishCardSmallCollectionViewCell: UICollectionViewCell {
     
     private func setupDishNameLabel() {
         
-        dishNameLabel.apply(style: Styles.Label.roundedSB4)
+        dishNameLabel.apply(style: Styles.Font.Rounded.SB.f4)
         dishNameLabel.textColor = .white
         
         visualEffectView.contentView.addSubview(dishNameLabel, constraints: [
@@ -86,7 +86,7 @@ final class DishCardSmallCollectionViewCell: UICollectionViewCell {
     
     private func setupDishTimeLabel() {
         
-        dishTimeLabel.apply(style: Styles.Label.roundedRegular6)
+        dishTimeLabel.apply(style: Styles.Font.Rounded.Regular.f6)
         dishTimeLabel.textColor = .white
         
         let smallConfiguration = UIImage.SymbolConfiguration(pointSize: 14, weight: .regular)
