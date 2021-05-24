@@ -8,7 +8,9 @@
 import UIKit
 
 final class ExploreListViewController: BaseViewController {
-        
+    
+    // MARK: - Typealiases
+    
     typealias DataSource = UICollectionViewDiffableDataSource<ExploreListSection, Dish>
     typealias Snapshot = NSDiffableDataSourceSnapshot<ExploreListSection, Dish>
     
@@ -19,10 +21,11 @@ final class ExploreListViewController: BaseViewController {
     private var collectionView: UICollectionView!
     
     // MARK: - Private properties
-
+    
     private var viewModel: ExploreListViewModel
     private var dataSource: DataSource!
     
+    // TODO: Remove MOCK Data
     var dishes: [Dish] = [
         Dish(dishName: "Some dish", time: 15),
         Dish(dishName: "Buter", time: 20),
@@ -35,6 +38,7 @@ final class ExploreListViewController: BaseViewController {
         Dish(dishName: "Sushi", time: 30)
     ]
     
+    // TODO: Add localized strings
     var sections: [ExploreListSection] = [
         .bigSection(id: 0, title: "Try it!"),
         .smallSection(id: 0, title: "Breakfast"),
@@ -142,6 +146,7 @@ final class ExploreListViewController: BaseViewController {
         var snapshot = Snapshot()
         snapshot.appendSections(sections)
         
+        // TODO: Remove mock sections split
         snapshot.appendItems([dishes[0], dishes[1]], toSection: sections[0])
         snapshot.appendItems([dishes[2], dishes[3], dishes[4], dishes[5]], toSection: sections[1])
         snapshot.appendItems([dishes[6], dishes[7], dishes[8]], toSection: sections[2])
@@ -205,9 +210,10 @@ extension ExploreListViewController: UICollectionViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        UIView.animate(withDuration: 0.1) {
-            // TODO: Change 99 to contentInset.top + safeAreaHeight - 1
-            self.blurEffectView.effect = -scrollView.contentOffset.y > 99 ? nil : UIBlurEffect(style: UIBlurEffect.Style.extraLight)
+        UIView.animate(withDuration: 0.1) { [self] in
+            blurEffectView.effect = -scrollView.contentOffset.y > scrollView.contentInset.top + view.safeAreaInsets.top - 1
+                ? nil
+                : UIBlurEffect(style: UIBlurEffect.Style.extraLight)
         }
     }
 }
