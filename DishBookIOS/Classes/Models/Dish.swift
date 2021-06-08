@@ -5,4 +5,11 @@
 //  Created by Denys Danyliuk on 05.02.2021.
 //
 
-import Foundation
+import UIKit
+
+struct Dish: Hashable {
+    
+    var dishName: String
+    var time: Int
+    var image: UIImage = R.image.dishMockImage()!
+}

@@ -23,7 +23,7 @@ struct App {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
-        IQKeyboardManager.shared.disabledDistanceHandlingClasses = []
+        IQKeyboardManager.shared.disabledDistanceHandlingClasses = [ExploreListViewController.self]
         IQKeyboardManager.shared.disabledToolbarClasses = []
         
         Wormholy.shakeEnabled = false

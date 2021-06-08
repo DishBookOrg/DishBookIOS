@@ -22,7 +22,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
     override func start() {
         
         let viewModel = NewDishViewModel()
-        let newDishViewController = NewDishViewController.create(viewModel: viewModel)
+        let newDishViewController = NewDishViewController(viewModel: viewModel)
         navigationController?.pushViewController(newDishViewController, animated: false)
     }
 }
