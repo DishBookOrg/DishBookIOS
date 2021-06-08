@@ -14,9 +14,7 @@ target 'DishBookIOS' do
   pod 'Wormholy'
 
   pod 'GoogleSignIn'
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Firestore'
+#  pod 'Firebase/Analytics'
 
 end
 
