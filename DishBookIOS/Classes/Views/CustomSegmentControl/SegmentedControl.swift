@@ -121,10 +121,10 @@ class SegmentedControl: UIControl {
         selectedLabel.textAlignment = .center
         
         selectedView.isUserInteractionEnabled = true
-        selectedView.apply(style: Styles.View.mutedGradient)
+        selectedView.apply(style: Styles.View.Gradient.muted)
         selectedView.addSubview(selectedLabel, withEdgeInsets: .zero)
-        selectedView.apply(style: Styles.View.cornerRadius10)
-        selectedView.apply(style: Styles.View.maskedRightCorners)
+        selectedView.apply(style: Styles.View.CornerRadius.d10)
+        selectedView.apply(style: Styles.View.CornerRadius.maskedRight)
 
         addSubview(selectedView, constraints: [
             selectedViewLeading,
@@ -137,7 +137,7 @@ class SegmentedControl: UIControl {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        selectedView.apply(style: Styles.View.mutedGradient)
+        selectedView.apply(style: Styles.View.Gradient.muted)
         
         if !segments.isEmpty {
             segmentWidth = stackView.frame.width / CGFloat(segments.count)
@@ -153,21 +153,21 @@ class SegmentedControl: UIControl {
         let pointTapped: CGPoint = gestureRecognizer.location(in: self)
         let index = Int(pointTapped.x / segmentWidth)
                 
-        self.selectedView.apply(style: Styles.View.cornerRadius0)
-        self.selectedView.apply(style: Styles.View.noMaskedCorners)
+        self.selectedView.apply(style: Styles.View.CornerRadius.d0)
+        self.selectedView.apply(style: Styles.View.CornerRadius.noMasked)
         selectedLabel.font = R.font.sfProRoundedSemibold(size: 16)
 
         UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: UIView.AnimationOptions.curveEaseIn) {
 
             self.selectedView.frame.origin.x = self.segmentWidth * CGFloat(index)
-            self.selectedView.apply(style: Styles.View.cornerRadius10)
+            self.selectedView.apply(style: Styles.View.CornerRadius.d10)
 
             if index == 0 {
-                self.selectedView.apply(style: Styles.View.maskedRightCorners)
+                self.selectedView.apply(style: Styles.View.CornerRadius.maskedRight)
             } else if index == self.segments.count - 1 {
-                self.selectedView.apply(style: Styles.View.maskedLeftCorners)
+                self.selectedView.apply(style: Styles.View.CornerRadius.maskedLeft)
             } else {
-                self.selectedView.apply(style: Styles.View.noMaskedCorners)
+                self.selectedView.apply(style: Styles.View.CornerRadius.noMasked)
             }
             
             self.selectedLabel.text = self.segments[index]

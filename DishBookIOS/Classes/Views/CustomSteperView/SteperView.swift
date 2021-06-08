@@ -21,6 +21,7 @@ final class StepperView: UIView {
     private let stepperDisplayLabel = UILabel()
     private let minusButton = UIButton()
     private let plusButton = UIButton()
+    private var gradientLayer: CAGradientLayer?
     
     @Published var currentStep: Int = 0 {
         didSet {
@@ -48,8 +49,8 @@ final class StepperView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        apply(style: Styles.View.cardShadow16)
-        apply(style: Styles.View.mainGradient)
+        apply(style: Styles.View.Shadow.d16)
+        gradientLayer?.frame = bounds
     }
     
     public func render(props: Props) {
@@ -76,7 +77,7 @@ final class StepperView: UIView {
     
     private func setupUI() {
         
-        apply(style: Styles.View.mainGradient)
+        gradientLayer = apply(style: Styles.View.Gradient.main)
         
         descriptionLabel.text = R.string.newDish.steperDescription()
         descriptionLabel.textColor = R.color.textDescriptionWhite()
@@ -115,12 +116,12 @@ final class StepperView: UIView {
             plusButton.widthAnchor.constraint(equalToConstant: 35)
         ])
         
-        apply(style: Styles.View.cornerRadius20)
+        apply(style: Styles.View.CornerRadius.small)
     }
     
     private func setupCircleButton(with title: String, button: UIButton) {
         
-        button.apply(style: Styles.View.cornerRadius17)
+        button.apply(style: Styles.View.CornerRadius.d17)
         button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 1, bottom: 4, right: 0)
         button.backgroundColor = .white
         button.setTitle(title, for: .normal)
