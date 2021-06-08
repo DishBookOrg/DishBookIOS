@@ -22,7 +22,7 @@ final class DishBookCoordinator: BaseRootCoordinator {
     override func start() {
         
         let viewModel = DishBookViewModel()
-        let dishBookController = DishBookViewController.create(viewModel: viewModel)
+        let dishBookController = DishBookViewController(viewModel: viewModel)
         navigationController?.pushViewController(dishBookController, animated: false)
     }
 }

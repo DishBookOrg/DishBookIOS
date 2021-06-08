@@ -22,7 +22,7 @@ final class ShoplistCoordinator: BaseRootCoordinator {
     override func start() {
         
         let viewModel = ShoplistViewModel()
-        let shoplistViewController = ShoplistViewController.create(viewModel: viewModel)
+        let shoplistViewController = ShoplistViewController(viewModel: viewModel)
         navigationController?.pushViewController(shoplistViewController, animated: false)
     }
 }

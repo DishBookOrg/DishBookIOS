@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Gedatsu",
+        "repositoryURL": "https://github.com/bannzai/Gedatsu.git",
+        "state": {
+          "branch": null,
+          "revision": "644f18f82943ed9f6392a5c3ca88a430524a789f",
+          "version": "1.2.0"
+        }
+      },
+      {
         "package": "IQKeyboardManagerSwift",
         "repositoryURL": "https://github.com/hackiftekhar/IQKeyboardManager.git",
         "state": {
@@ -17,6 +26,15 @@
           "branch": null,
           "revision": "4aaca57fb2f6dc5554a2228cf1d94289bd0a6c7d",
           "version": "5.10.3"
+        }
+      },
+      {
+        "package": "StyleableUI",
+        "repositoryURL": "https://github.com/ddanilyuk/StyleableUI",
+        "state": {
+          "branch": null,
+          "revision": "024acc63e717fae720b334a70aa29ccfe7130e83",
+          "version": "1.1.0"
         }
       },
       {
