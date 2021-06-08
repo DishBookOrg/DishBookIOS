@@ -7,35 +7,26 @@
 
 import UIKit
 
-struct BigItemsSection: Section {
+struct BigItemsSection: CollectionSection {    
     
-    var numberOfItems: Int = 5
+    var numberOfItems: Int
     
     func layoutSection() -> NSCollectionLayoutSection {
         
         let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
                                                                              heightDimension: .fractionalHeight(1)))
+        item.contentInsets = .init(top: 0, leading: 5, bottom: 0, trailing: 5)
         
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.92),
-                                                                                          heightDimension: .absolute(400)),
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.93),
+                                                                                          heightDimension: .estimated(400)),
                                                        subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPagingCentered
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 25, trailing: 0)
         
+        let layoutSectionHeader = createSectionHeader()
+        section.boundarySupplementaryItems = [layoutSectionHeader]
         return section
-    }
-    
-    func configureCell(collectionView: UICollectionView,
-                       indexPath: IndexPath,
-                       data: Dish) -> UICollectionViewCell {
-        
-//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.dishCardBigCollectionViewCell,
-//                                                            for: indexPath) else {
-//            return UICollectionViewCell()
-//        }
-//        
-//        cell.configure(with: data)
-        return UICollectionViewCell()
     }
 }

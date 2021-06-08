@@ -7,35 +7,27 @@
 
 import UIKit
 
-struct SmallItemsSection: Section {
+struct SmallItemsSection: CollectionSection {
     
-    var numberOfItems: Int = 10
+    var numberOfItems: Int
     
     func layoutSection() -> NSCollectionLayoutSection {
-                
+        
         let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .absolute(190),
                                                                              heightDimension: .absolute(250)))
-
+        
+        item.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10)
         let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(190),
                                                heightDimension: .absolute(250))
         
         let containerGroup = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: containerGroup)
-        section.contentInsets = .init(top: 0, leading: 10, bottom: 0, trailing: 10)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 10, bottom: 25, trailing: 10)
         section.orthogonalScrollingBehavior = .continuousGroupLeadingBoundary
-        return section
-    }
-    
-    func configureCell(collectionView: UICollectionView,
-                       indexPath: IndexPath,
-                       data: Dish) -> UICollectionViewCell {
         
-//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: R.reuseIdentifier.dishCardSmallCollectionViewCell, for: indexPath) else {
-//            return UICollectionViewCell()
-//        }
-//
-//        cell.render(props: data)
-        return UICollectionViewCell()
+        let layoutSectionHeader = createSectionHeader()
+        section.boundarySupplementaryItems = [layoutSectionHeader]
+        return section
     }
 }

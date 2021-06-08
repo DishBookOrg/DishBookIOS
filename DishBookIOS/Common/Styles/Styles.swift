@@ -10,4 +10,12 @@ import StyleableUI
 
 struct Styles {
     
+    struct View { }
+    
+    struct Label { }
+    
+    struct Font { }
+
+    struct Button { }
+
 }
