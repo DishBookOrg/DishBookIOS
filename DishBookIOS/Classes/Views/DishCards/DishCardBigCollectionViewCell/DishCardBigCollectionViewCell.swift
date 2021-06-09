@@ -123,9 +123,10 @@ extension DishCardBigCollectionViewCell: BindableCell {
     
     func render(props: Dish) {
         
-        dishImageView.image = props.image
-        dishNameLabel.text = props.dishName
-        dishTimeLabel.text = "􀐫 \(props.time) min"
+        // TODO: Add placeholder
+        dishImageView.sd_setImage(with: URL(string: props.imageURL), placeholderImage: UIImage())
+        dishNameLabel.text = props.name
+        dishTimeLabel.text = "􀐫 \(props.totalTime) min"
         dishDifficultyLabel.text = "Easy"
     }
 }

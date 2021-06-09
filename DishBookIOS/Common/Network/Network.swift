@@ -9,29 +9,34 @@ import CombineFirebase
 import Firebase
 import Combine
 
-struct API {
+struct APIClient {
     
-    static let shared = API()
+    static let shared = APIClient()
     
-    let ref: DatabaseReference = Database.database().reference()
+    let db: Firestore = Firestore.firestore()
+    
     
     enum Root: String {
         case dishBook = "DishBook"
         case publicDishes = "PublicDishes"
         case users = "Users"
     }
+//
+//    func reference(for root: Root) -> DatabaseReference {
+//        return ref.child(root)
+//    }
     
-    func reference(for root: Root) -> DatabaseReference {
-        return ref.child(root)
+    func collection(for root: Root) -> CollectionReference {
+        return db.collection(root)
     }
 }
 
 
 
 
-extension DatabaseReference {
+extension Firestore {
     
-    func child(_ root: API.Root) -> DatabaseReference {
-        return child(root.rawValue)
+    func collection(_ root: APIClient.Root) -> CollectionReference {
+        return collection(root.rawValue)
     }
 }

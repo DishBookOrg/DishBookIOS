@@ -113,6 +113,7 @@ final class ExploreListViewController: BaseViewController {
             cell.render(props: dish)
         }
         
+        
         let bigDishCollectionViewCell = UICollectionView.CellRegistration<DishCardBigCollectionViewCell, Dish> { cell, _, dish in
             cell.render(props: dish)
         }
