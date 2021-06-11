@@ -31,7 +31,8 @@ final class NewDishViewModel: BaseViewModel {
         
         var stringValue: String {
             switch self {
-            case .own: return R.string.newDish.segmentedControlPrivate()
+            case .own:
+                return R.string.newDish.segmentedControlPrivate()
             case .public: return R.string.newDish.segmentedControlPublic()
             }
         }

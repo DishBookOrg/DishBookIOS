@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import GoogleSignIn
+//import GoogleSignIn
 
 #if DEBUG
 import Gedatsu
@@ -31,9 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-    
-    @available(iOS 9.0, *)
-    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any]) -> Bool {
-        return GIDSignIn.sharedInstance().handle(url)
-    }
+
+//
+//    @available(iOS 9.0, *)
+//    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+//        return GIDSignIn.sharedInstance().handle(url)
+//    }
 }

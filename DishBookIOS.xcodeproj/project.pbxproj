@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		168850F095A0C6DDBA6CCA08 /* Pods_DishBookIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB4B398BA74D68508F3C0540 /* Pods_DishBookIOS.framework */; };
 		5D70A27125F80A4B009B2520 /* DescriptionUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */; };
 		5DB5C36226700D78003CCC73 /* TextFieldWithDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C36126700D78003CCC73 /* TextFieldWithDescription.swift */; };
 		5DCFE0722641726500514498 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0712641726500514498 /* Styles.swift */; };
@@ -32,9 +33,9 @@
 		5F5C526D25C4B1FB00AC7E3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C526C25C4B1FB00AC7E3C /* GoogleService-Info.plist */; };
 		5F5C529325C4B4CC00AC7E3C /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C529225C4B4CC00AC7E3C /* Color.xcassets */; };
 		5F5C52AD25C4B8AF00AC7E3C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C52AC25C4B8AF00AC7E3C /* R.generated.swift */; };
-		5F7B78652673D646006D91AF /* StyleableUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B78642673D646006D91AF /* StyleableUI */; };
-		5F7B78682673D661006D91AF /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B78672673D661006D91AF /* IQKeyboardManagerSwift */; };
-		5F7B786B2673D685006D91AF /* Gedatsu in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B786A2673D685006D91AF /* Gedatsu */; };
+		5F7B78652673D646006D91AF /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B78642673D646006D91AF /* SwiftPackageProductDependency */; };
+		5F7B78682673D661006D91AF /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B78672673D661006D91AF /* SwiftPackageProductDependency */; };
+		5F7B786B2673D685006D91AF /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B786A2673D685006D91AF /* SwiftPackageProductDependency */; };
 		5F8FA25926416D0000E24685 /* CollectionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FA25826416D0000E24685 /* CollectionSection.swift */; };
 		5F8FA25B26416D4300E24685 /* SmallItemsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FA25A26416D4300E24685 /* SmallItemsSection.swift */; };
 		5F8FA25D26416D4E00E24685 /* BigItemsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FA25C26416D4E00E24685 /* BigItemsSection.swift */; };
@@ -116,12 +117,9 @@
 		5FFB210325C4D4490086440A /* ExploreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB210225C4D4490086440A /* ExploreCoordinator.swift */; };
 		5FFB210625C4D9050086440A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB210525C4D9050086440A /* LoginViewModel.swift */; };
 		5FFB210925C4DA630086440A /* SignInWithAppleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB210825C4DA630086440A /* SignInWithAppleCoordinator.swift */; };
-		6C7D9EF2912D7A281801420B /* Pods_DishBookIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F197AF45F4ABEFD29E09F890 /* Pods_DishBookIOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		357954EBE9EDE53EBBE87E58 /* Pods-DishBookIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.debug.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.debug.xcconfig"; sourceTree = "<group>"; };
-		4C1AF54FD29263A30F64DE0E /* Pods-DishBookIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.release.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.release.xcconfig"; sourceTree = "<group>"; };
 		5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionUILabel.swift; sourceTree = "<group>"; };
 		5DB5C36126700D78003CCC73 /* TextFieldWithDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDescription.swift; sourceTree = "<group>"; };
 		5DCFE0712641726500514498 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
@@ -232,7 +230,9 @@
 		5FFB210525C4D9050086440A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		5FFB210825C4DA630086440A /* SignInWithAppleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleCoordinator.swift; sourceTree = "<group>"; };
 		5FFB212425C4DB520086440A /* DishBookIOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DishBookIOS.entitlements; sourceTree = "<group>"; };
-		F197AF45F4ABEFD29E09F890 /* Pods_DishBookIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DishBookIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87BACF15AE555CE80AAF8F8E /* Pods-DishBookIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.release.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.release.xcconfig"; sourceTree = "<group>"; };
+		B89F66BC93B0428A16FE337F /* Pods-DishBookIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.debug.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		EB4B398BA74D68508F3C0540 /* Pods_DishBookIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DishBookIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,16 +240,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F7B786B2673D685006D91AF /* Gedatsu in Frameworks */,
-				5F7B78652673D646006D91AF /* StyleableUI in Frameworks */,
-				6C7D9EF2912D7A281801420B /* Pods_DishBookIOS.framework in Frameworks */,
-				5F7B78682673D661006D91AF /* IQKeyboardManagerSwift in Frameworks */,
+				5F7B786B2673D685006D91AF /* BuildFile in Frameworks */,
+				5F7B78652673D646006D91AF /* BuildFile in Frameworks */,
+				5F7B78682673D661006D91AF /* BuildFile in Frameworks */,
+				168850F095A0C6DDBA6CCA08 /* Pods_DishBookIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		010CAAD96C6E4AFED0AEF483 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB4B398BA74D68508F3C0540 /* Pods_DishBookIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5D70A26825F80566009B2520 /* AddDish */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,7 +344,7 @@
 				5F5C525625C4B0E900AC7E3C /* DishBookIOS */,
 				5F5C525525C4B0E900AC7E3C /* Products */,
 				E055B89846E80807F4D381DA /* Pods */,
-				FEA78A3B5AE4FF9B9F3ECE8A /* Frameworks */,
+				010CAAD96C6E4AFED0AEF483 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -923,18 +931,10 @@
 		E055B89846E80807F4D381DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				357954EBE9EDE53EBBE87E58 /* Pods-DishBookIOS.debug.xcconfig */,
-				4C1AF54FD29263A30F64DE0E /* Pods-DishBookIOS.release.xcconfig */,
+				B89F66BC93B0428A16FE337F /* Pods-DishBookIOS.debug.xcconfig */,
+				87BACF15AE555CE80AAF8F8E /* Pods-DishBookIOS.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		FEA78A3B5AE4FF9B9F3ECE8A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F197AF45F4ABEFD29E09F890 /* Pods_DishBookIOS.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -944,14 +944,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F5C526825C4B0EE00AC7E3C /* Build configuration list for PBXNativeTarget "DishBookIOS" */;
 			buildPhases = (
-				2A49AAE3E78796A8357413E3 /* [CP] Check Pods Manifest.lock */,
+				3B5A197F327A56CD1DE305D6 /* [CP] Check Pods Manifest.lock */,
 				5F5C52A925C4B7E100AC7E3C /* R.swift */,
 				5F5C525025C4B0E900AC7E3C /* Sources */,
 				5F5C525125C4B0E900AC7E3C /* Frameworks */,
 				5F5C525225C4B0E900AC7E3C /* Resources */,
 				5F5C52AF25C4B9E600AC7E3C /* SwiftLint */,
-				A5552FB52D693D4DA269A482 /* [CP] Embed Pods Frameworks */,
-				68D8DF596F4BB5551F021AF5 /* [CP] Copy Pods Resources */,
+				E4D8641B30EC8FD37ECE55BA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -959,9 +958,9 @@
 			);
 			name = DishBookIOS;
 			packageProductDependencies = (
-				5F7B78642673D646006D91AF /* StyleableUI */,
-				5F7B78672673D661006D91AF /* IQKeyboardManagerSwift */,
-				5F7B786A2673D685006D91AF /* Gedatsu */,
+				5F7B78642673D646006D91AF /* SwiftPackageProductDependency */,
+				5F7B78672673D661006D91AF /* SwiftPackageProductDependency */,
+				5F7B786A2673D685006D91AF /* SwiftPackageProductDependency */,
 			);
 			productName = DishBookIOS;
 			productReference = 5F5C525425C4B0E900AC7E3C /* DishBookIOS.app */;
@@ -991,9 +990,9 @@
 			);
 			mainGroup = 5F5C524B25C4B0E900AC7E3C;
 			packageReferences = (
-				5F7B78632673D646006D91AF /* XCRemoteSwiftPackageReference "StyleableUI" */,
-				5F7B78662673D661006D91AF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
-				5F7B78692673D685006D91AF /* XCRemoteSwiftPackageReference "Gedatsu" */,
+				5F7B78632673D646006D91AF /* RemoteSwiftPackageReference */,
+				5F7B78662673D661006D91AF /* RemoteSwiftPackageReference */,
+				5F7B78692673D685006D91AF /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = 5F5C525525C4B0E900AC7E3C /* Products */;
 			projectDirPath = "";
@@ -1037,7 +1036,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A49AAE3E78796A8357413E3 /* [CP] Check Pods Manifest.lock */ = {
+		3B5A197F327A56CD1DE305D6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1073,7 +1072,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/R.generated.swift,
+				"$SRCROOT/R.generated.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1097,24 +1096,7 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
-		68D8DF596F4BB5551F021AF5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A5552FB52D693D4DA269A482 /* [CP] Embed Pods Frameworks */ = {
+		E4D8641B30EC8FD37ECE55BA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1357,7 +1339,7 @@
 		};
 		5F5C526925C4B0EE00AC7E3C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 357954EBE9EDE53EBBE87E58 /* Pods-DishBookIOS.debug.xcconfig */;
+			baseConfigurationReference = B89F66BC93B0428A16FE337F /* Pods-DishBookIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1379,7 +1361,7 @@
 		};
 		5F5C526A25C4B0EE00AC7E3C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C1AF54FD29263A30F64DE0E /* Pods-DishBookIOS.release.xcconfig */;
+			baseConfigurationReference = 87BACF15AE555CE80AAF8F8E /* Pods-DishBookIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1423,7 +1405,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5F7B78632673D646006D91AF /* XCRemoteSwiftPackageReference "StyleableUI" */ = {
+		5F7B78632673D646006D91AF /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ddanilyuk/StyleableUI.git";
 			requirement = {
@@ -1431,7 +1413,7 @@
 				minimumVersion = 1.1.0;
 			};
 		};
-		5F7B78662673D661006D91AF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+		5F7B78662673D661006D91AF /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
@@ -1439,7 +1421,7 @@
 				minimumVersion = 6.5.6;
 			};
 		};
-		5F7B78692673D685006D91AF /* XCRemoteSwiftPackageReference "Gedatsu" */ = {
+		5F7B78692673D685006D91AF /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/bannzai/Gedatsu.git";
 			requirement = {
@@ -1450,19 +1432,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5F7B78642673D646006D91AF /* StyleableUI */ = {
+		5F7B78642673D646006D91AF /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F7B78632673D646006D91AF /* XCRemoteSwiftPackageReference "StyleableUI" */;
+			package = 5F7B78632673D646006D91AF /* RemoteSwiftPackageReference */;
 			productName = StyleableUI;
 		};
-		5F7B78672673D661006D91AF /* IQKeyboardManagerSwift */ = {
+		5F7B78672673D661006D91AF /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F7B78662673D661006D91AF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			package = 5F7B78662673D661006D91AF /* RemoteSwiftPackageReference */;
 			productName = IQKeyboardManagerSwift;
 		};
-		5F7B786A2673D685006D91AF /* Gedatsu */ = {
+		5F7B786A2673D685006D91AF /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F7B78692673D685006D91AF /* XCRemoteSwiftPackageReference "Gedatsu" */;
+			package = 5F7B78692673D685006D91AF /* RemoteSwiftPackageReference */;
 			productName = Gedatsu;
 		};
 /* End XCSwiftPackageProductDependency section */
