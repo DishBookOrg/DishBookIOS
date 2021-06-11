@@ -141,3 +141,17 @@ extension Dish {
                            userCreatedID: "",
                            blockId: nil)
 }
+
+// MARK: - Dish + Array
+
+extension Array where Element == Dish {
+    
+    func addBlockId(_ id: Int) -> [Element] {
+        
+        var arrayCopy = self
+        for index in arrayCopy.indices {
+            arrayCopy[index].blockId = id
+        }
+        return arrayCopy
+    }
+}

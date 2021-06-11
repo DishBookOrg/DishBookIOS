@@ -35,6 +35,8 @@ final class ExploreListViewModel: BaseViewModel {
         getRationDishes(.dinner)
     }
     
+    // MARK: - Public publisher variables
+    
     var sections: AnyPublisher<[ExploreListCollectionBlock], Never> {
         
         return Publishers.CombineLatest($tryItDishes, Publishers.CombineLatest3($breakfastDishes, $lunchDishes, $dinnerDishes))
@@ -46,19 +48,23 @@ final class ExploreListViewModel: BaseViewModel {
                 var sections: [ExploreListCollectionBlock] = []
                 
                 if !tryItDishes.isEmpty {
-                    sections.append(ExploreListCollectionBlock(section: .bigSection(id: 0, title: "Try it!"), items: tryItDishes))
+                    sections.append(ExploreListCollectionBlock(section: .bigSection(id: 0, title: "Try it!"),
+                                                               items: tryItDishes))
                 }
                 
                 if !breakfastDishes.isEmpty {
-                    sections.append(ExploreListCollectionBlock(section: .smallSection(id: 0, ration: .breakfast), items: breakfastDishes))
+                    sections.append(ExploreListCollectionBlock(section: .smallSection(id: 0, ration: .breakfast),
+                                                               items: breakfastDishes))
                 }
                 
                 if !lunchDishes.isEmpty {
-                    sections.append(ExploreListCollectionBlock(section: .smallSection(id: 1, ration: .lunch), items: lunchDishes))
+                    sections.append(ExploreListCollectionBlock(section: .smallSection(id: 1, ration: .lunch),
+                                                               items: lunchDishes))
                 }
                 
                 if !dinnerDishes.isEmpty {
-                    sections.append(ExploreListCollectionBlock(section: .smallSection(id: 2, ration: .dinner), items: dinnerDishes))
+                    sections.append(ExploreListCollectionBlock(section: .smallSection(id: 2, ration: .dinner),
+                                                               items: dinnerDishes))
                 }
                 
                 self?.showLoader = sections.isEmpty
@@ -68,7 +74,7 @@ final class ExploreListViewModel: BaseViewModel {
             .eraseToAnyPublisher()
     }
     
-    // MARK: - Public properties
+    // MARK: - Public methods
     
     func getTryItDishes() {
         
@@ -77,7 +83,9 @@ final class ExploreListViewModel: BaseViewModel {
             .collection(for: .publicDishes)
             .limit(to: 10)
             .getDocuments(as: Dish.self)
-            .sink { completion in
+            .sink { [weak self] completion in
+                
+                self?.showLoader = false
                 
                 if let error = try? completion.error() {
                     print("❗️ failure: \(error)")
@@ -99,8 +107,9 @@ final class ExploreListViewModel: BaseViewModel {
             .whereField("dishRation", in: [ration.rawValue])
             .limit(to: 10)
             .getDocuments(as: Dish.self)
-            .sink { completion in
+            .sink { [weak self] completion in
                 
+                self?.showLoader = false
                 if let error = try? completion.error() {
                     print("❗️ failure: \(error)")
                 }
@@ -117,19 +126,5 @@ final class ExploreListViewModel: BaseViewModel {
                 }
             }
             .store(in: &cancelableSet)
-    }
-    
-
-}
-
-extension Array where Element == Dish {
-    
-    func addBlockId(_ id: Int) -> [Dish] {
-        
-        var copy = self
-        for (index, _) in copy.enumerated() {
-            copy[index].blockId = id
-        }
-        return copy
     }
 }
