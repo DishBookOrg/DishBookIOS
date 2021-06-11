@@ -27,24 +27,6 @@
           "revision": "024acc63e717fae720b334a70aa29ccfe7130e83",
           "version": "1.1.0"
         }
-      },
-      {
-        "package": "StyleableUI",
-        "repositoryURL": "https://github.com/ddanilyuk/StyleableUI",
-        "state": {
-          "branch": null,
-          "revision": "024acc63e717fae720b334a70aa29ccfe7130e83",
-          "version": "1.1.0"
-        }
-      },
-      {
-        "package": "TableKit",
-        "repositoryURL": "https://github.com/maxsokolov/TableKit.git",
-        "state": {
-          "branch": null,
-          "revision": "8bf4840d9d0475a92352f02f368f88b74eced447",
-          "version": "2.11.0"
-        }
       }
     ]
   },

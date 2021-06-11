@@ -33,12 +33,11 @@
 		5F5C526125C4B0EE00AC7E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C526025C4B0EE00AC7E3C /* Assets.xcassets */; };
 		5F5C526425C4B0EE00AC7E3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C526225C4B0EE00AC7E3C /* LaunchScreen.storyboard */; };
 		5F5C526D25C4B1FB00AC7E3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C526C25C4B1FB00AC7E3C /* GoogleService-Info.plist */; };
-		5F5C528825C4B3E300AC7E3C /* TableKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5F5C528725C4B3E300AC7E3C /* TableKit */; };
-		5F5C528C25C4B42800AC7E3C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5F5C528B25C4B42800AC7E3C /* IQKeyboardManagerSwift */; };
 		5F5C529325C4B4CC00AC7E3C /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C529225C4B4CC00AC7E3C /* Color.xcassets */; };
 		5F5C52AD25C4B8AF00AC7E3C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C52AC25C4B8AF00AC7E3C /* R.generated.swift */; };
-		5F8C3E3626700D3E00A1CA27 /* Gedatsu in Frameworks */ = {isa = PBXBuildFile; productRef = 5FCFDA232641B8A600B3CFFC /* Gedatsu */; };
-		5F8C3E3926700F2000A1CA27 /* StyleableUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5F8C3E3826700F2000A1CA27 /* StyleableUI */; };
+		5F7B78652673D646006D91AF /* StyleableUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B78642673D646006D91AF /* StyleableUI */; };
+		5F7B78682673D661006D91AF /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B78672673D661006D91AF /* IQKeyboardManagerSwift */; };
+		5F7B786B2673D685006D91AF /* Gedatsu in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B786A2673D685006D91AF /* Gedatsu */; };
 		5F8FA25926416D0000E24685 /* CollectionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FA25826416D0000E24685 /* CollectionSection.swift */; };
 		5F8FA25B26416D4300E24685 /* SmallItemsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FA25A26416D4300E24685 /* SmallItemsSection.swift */; };
 		5F8FA25D26416D4E00E24685 /* BigItemsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FA25C26416D4E00E24685 /* BigItemsSection.swift */; };
@@ -247,11 +246,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F8C3E3626700D3E00A1CA27 /* Gedatsu in Frameworks */,
-				5F5C528825C4B3E300AC7E3C /* TableKit in Frameworks */,
-				5F5C528C25C4B42800AC7E3C /* IQKeyboardManagerSwift in Frameworks */,
-				5F8C3E3926700F2000A1CA27 /* StyleableUI in Frameworks */,
+				5F7B786B2673D685006D91AF /* Gedatsu in Frameworks */,
+				5F7B78652673D646006D91AF /* StyleableUI in Frameworks */,
 				6C7D9EF2912D7A281801420B /* Pods_DishBookIOS.framework in Frameworks */,
+				5F7B78682673D661006D91AF /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -986,10 +984,9 @@
 			);
 			name = DishBookIOS;
 			packageProductDependencies = (
-				5F5C528725C4B3E300AC7E3C /* TableKit */,
-				5F5C528B25C4B42800AC7E3C /* IQKeyboardManagerSwift */,
-				5FCFDA232641B8A600B3CFFC /* Gedatsu */,
-				5F8C3E3826700F2000A1CA27 /* StyleableUI */,
+				5F7B78642673D646006D91AF /* StyleableUI */,
+				5F7B78672673D661006D91AF /* IQKeyboardManagerSwift */,
+				5F7B786A2673D685006D91AF /* Gedatsu */,
 			);
 			productName = DishBookIOS;
 			productReference = 5F5C525425C4B0E900AC7E3C /* DishBookIOS.app */;
@@ -1019,10 +1016,9 @@
 			);
 			mainGroup = 5F5C524B25C4B0E900AC7E3C;
 			packageReferences = (
-				5F5C528625C4B3E300AC7E3C /* XCRemoteSwiftPackageReference "TableKit" */,
-				5F5C528A25C4B42800AC7E3C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
-				5FCFDA222641B8A600B3CFFC /* XCRemoteSwiftPackageReference "Gedatsu" */,
-				5F8C3E3726700F1F00A1CA27 /* XCRemoteSwiftPackageReference "StyleableUI" */,
+				5F7B78632673D646006D91AF /* XCRemoteSwiftPackageReference "StyleableUI" */,
+				5F7B78662673D661006D91AF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				5F7B78692673D685006D91AF /* XCRemoteSwiftPackageReference "Gedatsu" */,
 			);
 			productRefGroup = 5F5C525525C4B0E900AC7E3C /* Products */;
 			projectDirPath = "";
@@ -1455,23 +1451,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5F5C528625C4B3E300AC7E3C /* XCRemoteSwiftPackageReference "TableKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/maxsokolov/TableKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.11.0;
-			};
-		};
-		5F5C528A25C4B42800AC7E3C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.5.6;
-			};
-		};
-		5F8C3E3726700F1F00A1CA27 /* XCRemoteSwiftPackageReference "StyleableUI" */ = {
+		5F7B78632673D646006D91AF /* XCRemoteSwiftPackageReference "StyleableUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ddanilyuk/StyleableUI.git";
 			requirement = {
@@ -1479,7 +1459,15 @@
 				minimumVersion = 1.1.0;
 			};
 		};
-		5FCFDA222641B8A600B3CFFC /* XCRemoteSwiftPackageReference "Gedatsu" */ = {
+		5F7B78662673D661006D91AF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.6;
+			};
+		};
+		5F7B78692673D685006D91AF /* XCRemoteSwiftPackageReference "Gedatsu" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/bannzai/Gedatsu.git";
 			requirement = {
@@ -1490,24 +1478,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5F5C528725C4B3E300AC7E3C /* TableKit */ = {
+		5F7B78642673D646006D91AF /* StyleableUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F5C528625C4B3E300AC7E3C /* XCRemoteSwiftPackageReference "TableKit" */;
-			productName = TableKit;
-		};
-		5F5C528B25C4B42800AC7E3C /* IQKeyboardManagerSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5F5C528A25C4B42800AC7E3C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
-			productName = IQKeyboardManagerSwift;
-		};
-		5F8C3E3826700F2000A1CA27 /* StyleableUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5F8C3E3726700F1F00A1CA27 /* XCRemoteSwiftPackageReference "StyleableUI" */;
+			package = 5F7B78632673D646006D91AF /* XCRemoteSwiftPackageReference "StyleableUI" */;
 			productName = StyleableUI;
 		};
-		5FCFDA232641B8A600B3CFFC /* Gedatsu */ = {
+		5F7B78672673D661006D91AF /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5FCFDA222641B8A600B3CFFC /* XCRemoteSwiftPackageReference "Gedatsu" */;
+			package = 5F7B78662673D661006D91AF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		5F7B786A2673D685006D91AF /* Gedatsu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F7B78692673D685006D91AF /* XCRemoteSwiftPackageReference "Gedatsu" */;
 			productName = Gedatsu;
 		};
 /* End XCSwiftPackageProductDependency section */
