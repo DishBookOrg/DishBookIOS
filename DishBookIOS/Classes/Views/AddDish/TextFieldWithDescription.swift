@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import Combine
 
 final class TextFieldWithDescription: UIView {
+    
+    lazy var didChangeTextPublisher = nameTextField.textPublisher
     
     private let nameTextField = UITextField()
     private let descriptionLabel = DescriptionUILabel()

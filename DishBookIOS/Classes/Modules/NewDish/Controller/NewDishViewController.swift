@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 
 final class NewDishViewController: BaseViewController {
         
@@ -17,7 +18,7 @@ final class NewDishViewController: BaseViewController {
     private let ownPublicSegmentedControl = SegmentedControl()
     private let difficultySegmentedControl = SegmentedControl()
     private let stepperView = StepperView()
-    
+        
     // MARK: - Lifecycle
     
     init(viewModel: NewDishViewModel) {
@@ -31,6 +32,7 @@ final class NewDishViewController: BaseViewController {
 
         setup()
         setupNavigationBar()
+        setupStreams()
     }
     
     private func setup() {
@@ -40,15 +42,12 @@ final class NewDishViewController: BaseViewController {
         nameTextField.setup(placeholder: R.string.newDish.textFieldNamePlaceholder(), description: R.string.newDish.textFieldNameDescription())
         ownPublicSegmentedControl.render(
             props: SegmentedControl.Props(
-                segmentsNames: [R.string.newDish.segmentedControlPrivate(), R.string.newDish.segmentedControlPublic()],
+                segmentsNames: [Dish.Privacy.private, Dish.Privacy.public],
                 descriptionText: R.string.newDish.segmentedControlPrivatePublicDescription()
             ))
         difficultySegmentedControl.render(
             props: SegmentedControl.Props(
-                segmentsNames: [
-                    R.string.newDish.segmentedControlDifficultyEasy(),
-                    R.string.newDish.segmentedControlDifficultyMedium(),
-                    R.string.newDish.segmentedControlDifficultyHard()],
+                segmentsNames: [Dish.Difficulty.easy, Dish.Difficulty.medium, Dish.Difficulty.hard],
                 descriptionText: R.string.newDish.segmentedControlDifficultyDescription()
             ))
         stepperView.render(props: StepperView.Props(initialValue: 4))
@@ -70,8 +69,38 @@ final class NewDishViewController: BaseViewController {
         ])
     }
     
-    private func setupNavigationBar() {
+    private func setupStreams() {
+        nameTextField.didChangeTextPublisher
+            .sink { [unowned self] in viewModel.didChangeNameSubject.send($0) }
+            .store(in: &cancelableSet)
         
+        ownPublicSegmentedControl.didSelectPublisher
+            .sink { [unowned self] in
+                guard let privacy = $0 as? Dish.Privacy else { return }
+                viewModel.didSelectPrivacyLevelSubject.send(privacy)
+            }
+            .store(in: &cancelableSet)
+        
+        difficultySegmentedControl.didSelectPublisher
+            .sink { [unowned self] in
+                guard let privacy = $0 as? Dish.Difficulty else { return }
+                viewModel.didSelectDifficultyLevelSubject.send(privacy)
+            }
+            .store(in: &cancelableSet)
+        
+        stepperView.$currentStep
+            .sink { [unowned self] in viewModel.didChangeNumberOfServingsSubject.send($0) }
+            .store(in: &cancelableSet)
+    }
+    
+    private func setupNavigationBar() {
+        let nextButton = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(didPressNext))
+        navigationItem.rightBarButtonItem = nextButton
+    }
+    
+    @objc
+    func didPressNext() {
+        viewModel.didPressNextSubject.send(())
     }
 }
 

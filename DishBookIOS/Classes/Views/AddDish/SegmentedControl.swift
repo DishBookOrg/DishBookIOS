@@ -13,11 +13,11 @@ class SegmentedControl: UIControl {
     // MARK: - Publisher
     
     lazy var didSelectPublisher = didSelectSubject.eraseToAnyPublisher()
-    private let didSelectSubject = PassthroughSubject<Int, Never>()
+    private let didSelectSubject = PassthroughSubject<StringConvertible, Never>()
     
     struct Props {
         
-        let segmentsNames: [String]
+        let segmentsNames: [StringConvertible]
         let descriptionText: String
     }
     
@@ -31,7 +31,7 @@ class SegmentedControl: UIControl {
     private lazy var selectedViewLeading = selectedView.leadingAnchor.constraint(equalTo: leadingAnchor)
     private lazy var selectedViewWidth = selectedView.widthAnchor.constraint(equalToConstant: segmentWidth)
     
-    private var segments: [String] = []
+    private var segments: [StringConvertible] = []
     private var segmentWidth: CGFloat = 0
     
     // MARK: - Lifecycle
@@ -65,16 +65,16 @@ class SegmentedControl: UIControl {
             let label = UILabel()
             label.font = R.font.sfProRoundedSemibold(size: 15)
             label.textColor = R.color.textBlack()
-            label.text = name
+            label.text = name.stringValue
             label.textAlignment = .center
             label.backgroundColor = .systemBackground
             label.isUserInteractionEnabled = true
             stackView.addArrangedSubview(label)
         }
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        selectedLabel.text = segments[0]
+        selectedLabel.text = segments[0].stringValue
         descriptionLabel.text = props.descriptionText
-        didSelectSubject.send(0)
+        didSelectSubject.send(segments[0])
     }
     
     private func setup() {
@@ -165,10 +165,10 @@ class SegmentedControl: UIControl {
                 self.selectedView.apply(style: Styles.View.CornerRadius.noMasked)
             }
             
-            self.selectedLabel.text = self.segments[index]
-        } completion: { _ in
-            self.selectedLabel.font = R.font.sfProRoundedSemibold(size: 15)
-            self.didSelectSubject.send(index)
+            self.selectedLabel.text = self.segments[index].stringValue
+        } completion: { [unowned self] _ in
+            selectedLabel.font = R.font.sfProRoundedSemibold(size: 15)
+            didSelectSubject.send(segments[index])
         }
     }
     
@@ -186,17 +186,5 @@ class SegmentedControl: UIControl {
     override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
         super.endTracking(touch, with: event)
         
-    }
-}
-
-import SwiftUI
-struct SegmentedControlPreview: PreviewProvider {
-    
-    
-    static var previews: some View {
-        ViewRepresentable(SegmentedControl()) { view in
-            view.render(props: SegmentedControl.Props(segmentsNames: ["Easy", "Medium"], descriptionText: "Some test text?"))
-        }
-        .previewLayout(.fixed(width: 414, height: 57))
     }
 }

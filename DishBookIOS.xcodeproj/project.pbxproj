@@ -10,6 +10,7 @@
 		168850F095A0C6DDBA6CCA08 /* Pods_DishBookIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB4B398BA74D68508F3C0540 /* Pods_DishBookIOS.framework */; };
 		5D70A27125F80A4B009B2520 /* DescriptionUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */; };
 		5DB5C36226700D78003CCC73 /* TextFieldWithDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C36126700D78003CCC73 /* TextFieldWithDescription.swift */; };
+		5DB5C3662673EC71003CCC73 /* NewDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C3652673EC71003CCC73 /* NewDish.swift */; };
 		5DCFE0722641726500514498 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0712641726500514498 /* Styles.swift */; };
 		5DCFE0792641B8E700514498 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0782641B8E700514498 /* SegmentedControl.swift */; };
 		5DCFE07D264333DD00514498 /* SteperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE07C264333DD00514498 /* SteperView.swift */; };
@@ -33,9 +34,9 @@
 		5F5C526D25C4B1FB00AC7E3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C526C25C4B1FB00AC7E3C /* GoogleService-Info.plist */; };
 		5F5C529325C4B4CC00AC7E3C /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C529225C4B4CC00AC7E3C /* Color.xcassets */; };
 		5F5C52AD25C4B8AF00AC7E3C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C52AC25C4B8AF00AC7E3C /* R.generated.swift */; };
-		5F7B78652673D646006D91AF /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B78642673D646006D91AF /* SwiftPackageProductDependency */; };
-		5F7B78682673D661006D91AF /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B78672673D661006D91AF /* SwiftPackageProductDependency */; };
-		5F7B786B2673D685006D91AF /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B786A2673D685006D91AF /* SwiftPackageProductDependency */; };
+		5F7B78652673D646006D91AF /* StyleableUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B78642673D646006D91AF /* StyleableUI */; };
+		5F7B78682673D661006D91AF /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B78672673D661006D91AF /* IQKeyboardManagerSwift */; };
+		5F7B786B2673D685006D91AF /* Gedatsu in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B786A2673D685006D91AF /* Gedatsu */; };
 		5F8FA25926416D0000E24685 /* CollectionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FA25826416D0000E24685 /* CollectionSection.swift */; };
 		5F8FA25B26416D4300E24685 /* SmallItemsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FA25A26416D4300E24685 /* SmallItemsSection.swift */; };
 		5F8FA25D26416D4E00E24685 /* BigItemsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FA25C26416D4E00E24685 /* BigItemsSection.swift */; };
@@ -122,6 +123,7 @@
 /* Begin PBXFileReference section */
 		5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionUILabel.swift; sourceTree = "<group>"; };
 		5DB5C36126700D78003CCC73 /* TextFieldWithDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDescription.swift; sourceTree = "<group>"; };
+		5DB5C3652673EC71003CCC73 /* NewDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDish.swift; sourceTree = "<group>"; };
 		5DCFE0712641726500514498 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		5DCFE0782641B8E700514498 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		5DCFE07C264333DD00514498 /* SteperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteperView.swift; sourceTree = "<group>"; };
@@ -240,9 +242,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F7B786B2673D685006D91AF /* BuildFile in Frameworks */,
-				5F7B78652673D646006D91AF /* BuildFile in Frameworks */,
-				5F7B78682673D661006D91AF /* BuildFile in Frameworks */,
+				5F7B786B2673D685006D91AF /* Gedatsu in Frameworks */,
+				5F7B78652673D646006D91AF /* StyleableUI in Frameworks */,
+				5F7B78682673D661006D91AF /* IQKeyboardManagerSwift in Frameworks */,
 				168850F095A0C6DDBA6CCA08 /* Pods_DishBookIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -739,6 +741,7 @@
 			isa = PBXGroup;
 			children = (
 				5FBE835E25C9EC6200E3F3EB /* NewDishViewModel.swift */,
+				5DB5C3652673EC71003CCC73 /* NewDish.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -958,9 +961,9 @@
 			);
 			name = DishBookIOS;
 			packageProductDependencies = (
-				5F7B78642673D646006D91AF /* SwiftPackageProductDependency */,
-				5F7B78672673D661006D91AF /* SwiftPackageProductDependency */,
-				5F7B786A2673D685006D91AF /* SwiftPackageProductDependency */,
+				5F7B78642673D646006D91AF /* StyleableUI */,
+				5F7B78672673D661006D91AF /* IQKeyboardManagerSwift */,
+				5F7B786A2673D685006D91AF /* Gedatsu */,
 			);
 			productName = DishBookIOS;
 			productReference = 5F5C525425C4B0E900AC7E3C /* DishBookIOS.app */;
@@ -990,9 +993,9 @@
 			);
 			mainGroup = 5F5C524B25C4B0E900AC7E3C;
 			packageReferences = (
-				5F7B78632673D646006D91AF /* RemoteSwiftPackageReference */,
-				5F7B78662673D661006D91AF /* RemoteSwiftPackageReference */,
-				5F7B78692673D685006D91AF /* RemoteSwiftPackageReference */,
+				5F7B78632673D646006D91AF /* XCRemoteSwiftPackageReference "StyleableUI" */,
+				5F7B78662673D661006D91AF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				5F7B78692673D685006D91AF /* XCRemoteSwiftPackageReference "Gedatsu" */,
 			);
 			productRefGroup = 5F5C525525C4B0E900AC7E3C /* Products */;
 			projectDirPath = "";
@@ -1072,7 +1075,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1132,6 +1135,7 @@
 				5FBE836825C9F12100E3F3EB /* ProfileCoordinator.swift in Sources */,
 				5FEBD1BD25C9D416000F7E9C /* DishBookViewController.swift in Sources */,
 				5F8FA25926416D0000E24685 /* CollectionSection.swift in Sources */,
+				5DB5C3662673EC71003CCC73 /* NewDish.swift in Sources */,
 				5FFB20A825C4C9B10086440A /* AppCoordinator.swift in Sources */,
 				5FEBD1AE25C9CDA7000F7E9C /* DishBookCoordinator.swift in Sources */,
 				5FEBD1EA25C9DCD8000F7E9C /* UIApplication+TopViewController.swift in Sources */,
@@ -1405,7 +1409,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5F7B78632673D646006D91AF /* RemoteSwiftPackageReference */ = {
+		5F7B78632673D646006D91AF /* XCRemoteSwiftPackageReference "StyleableUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ddanilyuk/StyleableUI.git";
 			requirement = {
@@ -1413,7 +1417,7 @@
 				minimumVersion = 1.1.0;
 			};
 		};
-		5F7B78662673D661006D91AF /* RemoteSwiftPackageReference */ = {
+		5F7B78662673D661006D91AF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
@@ -1421,7 +1425,7 @@
 				minimumVersion = 6.5.6;
 			};
 		};
-		5F7B78692673D685006D91AF /* RemoteSwiftPackageReference */ = {
+		5F7B78692673D685006D91AF /* XCRemoteSwiftPackageReference "Gedatsu" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/bannzai/Gedatsu.git";
 			requirement = {
@@ -1432,19 +1436,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5F7B78642673D646006D91AF /* SwiftPackageProductDependency */ = {
+		5F7B78642673D646006D91AF /* StyleableUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F7B78632673D646006D91AF /* RemoteSwiftPackageReference */;
+			package = 5F7B78632673D646006D91AF /* XCRemoteSwiftPackageReference "StyleableUI" */;
 			productName = StyleableUI;
 		};
-		5F7B78672673D661006D91AF /* SwiftPackageProductDependency */ = {
+		5F7B78672673D661006D91AF /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F7B78662673D661006D91AF /* RemoteSwiftPackageReference */;
+			package = 5F7B78662673D661006D91AF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
 		};
-		5F7B786A2673D685006D91AF /* SwiftPackageProductDependency */ = {
+		5F7B786A2673D685006D91AF /* Gedatsu */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F7B78692673D685006D91AF /* RemoteSwiftPackageReference */;
+			package = 5F7B78692673D685006D91AF /* XCRemoteSwiftPackageReference "Gedatsu" */;
 			productName = Gedatsu;
 		};
 /* End XCSwiftPackageProductDependency section */

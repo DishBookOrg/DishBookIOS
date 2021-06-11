@@ -14,7 +14,7 @@ struct Dish {
     /// Document ID in `Firestore Database`
     @DocumentID var id: String?
     
-    /// Property used when dish was adeed by another user
+    /// Property used when dish was added by another user
     /// It contains the id of the document in `Public dishes` collection
     /// If this property is not nil, `userAddedID` property
     /// must be not nil too.
@@ -79,6 +79,10 @@ extension Dish {
 }
 
 // MARK: - Nested types
+
+protocol StringConvertible {
+    var stringValue: String { get }
+}
 
 extension Dish {
     
@@ -153,5 +157,32 @@ extension Array where Element == Dish {
             arrayCopy[index].blockId = id
         }
         return arrayCopy
+    }
+}
+
+
+extension Dish.Difficulty: StringConvertible {
+    
+    var stringValue: String {
+        switch self {
+        case .easy:
+            return R.string.newDish.segmentedControlDifficultyEasy()
+        case .medium:
+            return R.string.newDish.segmentedControlDifficultyMedium()
+        case .hard:
+            return R.string.newDish.segmentedControlDifficultyHard()
+        }
+    }
+}
+
+extension Dish.Privacy: StringConvertible {
+    
+    var stringValue: String {
+        switch self {
+        case .private:
+            return R.string.newDish.segmentedControlPrivate()
+        case .public:
+            return R.string.newDish.segmentedControlPublic()
+        }
     }
 }
