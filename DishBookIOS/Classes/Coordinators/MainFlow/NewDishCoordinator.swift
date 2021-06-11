@@ -16,6 +16,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
                                     image: R.image.plus(),
                                     selectedImage: R.image.plus()?.withTintColor(R.color.primaryOrangeMuted()!,
                                                                                  renderingMode: .alwaysOriginal))
+        navigationController?.isNavigationBarHidden = false
         start()
     }
     

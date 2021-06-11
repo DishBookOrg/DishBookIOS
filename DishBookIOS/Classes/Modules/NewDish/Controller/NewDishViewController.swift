@@ -30,9 +30,12 @@ final class NewDishViewController: BaseViewController {
         super.viewDidLoad()
 
         setup()
+        setupNavigationBar()
     }
     
     private func setup() {
+        
+        let progressBarView = UIImageView(image: R.image.progressBar())
         
         nameTextField.setup(placeholder: R.string.newDish.textFieldNamePlaceholder(), description: R.string.newDish.textFieldNameDescription())
         ownPublicSegmentedControl.render(
@@ -51,12 +54,13 @@ final class NewDishViewController: BaseViewController {
         stepperView.render(props: StepperView.Props(initialValue: 4))
         
         let mainStackView = UIStackView(
-            arrangedSubviews: [nameTextField, ownPublicSegmentedControl, difficultySegmentedControl, stepperView])
+            arrangedSubviews: [progressBarView, nameTextField, ownPublicSegmentedControl, difficultySegmentedControl, stepperView])
         mainStackView.axis = .vertical
         mainStackView.spacing = 60
+        mainStackView.setCustomSpacing(30, after: progressBarView)
         
         view.addSubview(mainStackView, constraints: [
-            mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 74),
+            mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24),
             mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             mainStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             nameTextField.heightAnchor.constraint(equalToConstant: 60),
@@ -64,6 +68,10 @@ final class NewDishViewController: BaseViewController {
             difficultySegmentedControl.heightAnchor.constraint(equalToConstant: 57),
             stepperView.heightAnchor.constraint(equalToConstant: 85)
         ])
+    }
+    
+    private func setupNavigationBar() {
+        
     }
 }
 
