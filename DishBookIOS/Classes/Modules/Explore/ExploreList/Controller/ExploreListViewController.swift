@@ -24,13 +24,7 @@ final class ExploreListViewController: BaseViewController {
     
     private var viewModel: ExploreListViewModel
     private var dataSource: DataSource!
-    
-    // TODO: Add localized strings
-    var sections: [ExploreListSection] = [
-        .bigSection(id: 0, title: "Try it!"),
-        .smallSection(id: 0, title: "Breakfast"),
-//        .smallSection(id: 1, title: "Lunch")
-    ]
+    private var blocks: [ExploreListCollectionBlock] = []
     
     // MARK: - Lifecycle
     
@@ -51,11 +45,13 @@ final class ExploreListViewController: BaseViewController {
     
     private func setupBinding() {
         
-        viewModel.$tryItDishes
-            .dropFirst()
-            .sink { [weak self] dishes in
-                print(dishes)
-                self?.apply(dishes: dishes, animated: true)
+        viewModel.generateSections()
+//            .dropFirst()
+            .sink { [weak self] sections in
+                
+                print(sections)
+                self?.blocks = sections
+                self?.apply(animated: true)
             }
             .store(in: &cancelableSet)
         
@@ -122,7 +118,7 @@ final class ExploreListViewController: BaseViewController {
         
         dataSource = DataSource(collectionView: collectionView) { collectionView, indexPath, item in
             
-            switch self.sections[indexPath.section] {
+            switch self.blocks[indexPath.section].section {
             case .bigSection:
                 return collectionView.dequeueConfiguredReusableCell(using: bigDishCollectionViewCell, for: indexPath, item: item)
             case .smallSection:
@@ -139,27 +135,20 @@ final class ExploreListViewController: BaseViewController {
                 return nil
             }
             
-            sectionHeader.titleLabel.text = self.sections[indexPath.section].title
+            sectionHeader.titleLabel.text = self.blocks[indexPath.section].section.title
             return sectionHeader
         }
     }
     
-    func apply(dishes: [Dish], animated: Bool = true) {
+    func apply(animated: Bool = true) {
+        
+        guard !blocks.isEmpty else {
+            return
+        }
         
         var snapshot = Snapshot()
-        snapshot.appendSections(sections)
-        
-        
-        if let first = dishes.first {
-            collectionView.collectionViewLayout.invalidateLayout()
-            snapshot.appendItems([first, dishes[1]], toSection: sections[0])
-            
-            snapshot.appendItems([dishes[2]], toSection: sections[1])
-            
-
-        }
-//        snapshot.appendItems([dishes[2], dishes[3], dishes[4], dishes[5]], toSection: sections[1])
-//        snapshot.appendItems([dishes[6], dishes[7], dishes[8]], toSection: sections[2])
+        snapshot.appendSections(blocks.map { $0.section })
+        blocks.forEach { snapshot.appendItems($0.items, toSection: $0.section) }
         
         dataSource?.apply(snapshot, animatingDifferences: animated)
     }
@@ -168,7 +157,7 @@ final class ExploreListViewController: BaseViewController {
         
         let layout = UICollectionViewCompositionalLayout { sectionIndex, _ in
             
-            return self.sections[sectionIndex].sectionLayout
+            return self.blocks[sectionIndex].section.sectionLayout
         }
         
         return layout
@@ -182,7 +171,7 @@ extension ExploreListViewController {
     enum ExploreListSection: Hashable {
         
         case bigSection(id: Int, title: String)
-        case smallSection(id: Int, title: String)
+        case smallSection(id: Int, ration: Dish.DishRation)
         
         var itemsCount: Int {
             switch self {
@@ -197,8 +186,8 @@ extension ExploreListViewController {
             switch self {
             case let .bigSection(_, title):
                 return title
-            case let .smallSection(_, title):
-                return title
+            case let .smallSection(_, ration):
+                return ration.rawValue
             }
         }
         

@@ -15,12 +15,22 @@ struct Dish {
     var name: String
     var totalTime: Int
     var imageURL: String
+    var ration: DishRation
     
+    //
+    var blockId: Int?
     
-    init(dishName: String, time: Int) {
-        self.name = dishName
-        self.totalTime = time
-        self.imageURL = ""
+    static var mock: Dish = Dish(id: UUID().uuidString, name: "Some dish name", totalTime: 1800, imageURL: "", ration: .breakfast)
+}
+
+// MARK: - Nested types
+
+extension Dish {
+    
+    enum DishRation: String, Codable {
+        case breakfast = "Breakfast"
+        case lunch = "Lunch"
+        case dinner = "Dinner"
     }
 }
 
@@ -40,5 +50,6 @@ extension Dish: Codable {
         case name = "dishName"
         case totalTime = "dishTotalTime"
         case imageURL = "dishImageURL"
+        case ration = "dishRation"
     }
 }

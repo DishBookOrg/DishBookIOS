@@ -141,7 +141,7 @@ struct DishCardSmallCollectionViewCellPreview: PreviewProvider {
     
     static var previews: some View {
         ViewRepresentable(DishCardSmallCollectionViewCell()) { view in
-            view.render(props: DishCardSmallCollectionViewCell.Props(dishName: "Some dish", time: 15))
+            view.render(props: DishCardSmallCollectionViewCell.Props.mock)
         }
         .previewLayout(.fixed(width: 190, height: 250))
     }

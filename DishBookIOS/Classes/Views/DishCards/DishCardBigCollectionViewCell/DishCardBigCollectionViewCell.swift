@@ -141,7 +141,7 @@ struct DishCardBigCollectionViewCellPreview: PreviewProvider {
     
     static var previews: some View {
         ViewRepresentable(DishCardBigCollectionViewCell()) { view in
-            view.render(props: DishCardBigCollectionViewCell.Props(dishName: "Some veryyyy big funcking dish  dish", time: 15))
+            view.render(props: DishCardBigCollectionViewCell.Props.mock)
         }
         .previewLayout(.fixed(width: 343, height: 500))
     }
