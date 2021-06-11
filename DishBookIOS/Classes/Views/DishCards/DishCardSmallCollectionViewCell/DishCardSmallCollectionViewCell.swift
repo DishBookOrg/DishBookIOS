@@ -76,6 +76,7 @@ final class DishCardSmallCollectionViewCell: UICollectionViewCell {
         
         dishNameLabel.apply(style: Styles.Font.Rounded.SB.f4)
         dishNameLabel.textColor = .white
+        dishNameLabel.numberOfLines = 0
         
         visualEffectView.contentView.addSubview(dishNameLabel, constraints: [
             
