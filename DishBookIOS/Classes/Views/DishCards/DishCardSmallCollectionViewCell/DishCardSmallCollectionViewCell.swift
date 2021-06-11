@@ -139,7 +139,6 @@ extension DishCardSmallCollectionViewCell: BindableCell {
 import SwiftUI
 struct DishCardSmallCollectionViewCellPreview: PreviewProvider {
     
-    
     static var previews: some View {
         ViewRepresentable(DishCardSmallCollectionViewCell()) { view in
             view.render(props: DishCardSmallCollectionViewCell.Props.mock)

@@ -171,7 +171,7 @@ extension ExploreListViewController {
     enum ExploreListSection: Hashable {
         
         case bigSection(id: Int, title: String)
-        case smallSection(id: Int, ration: Dish.DishRation)
+        case smallSection(id: Int, ration: Dish.Ration)
         
         var itemsCount: Int {
             switch self {
@@ -214,6 +214,14 @@ extension ExploreListViewController: UICollectionViewDelegate {
                 ? nil
                 : UIBlurEffect(style: UIBlurEffect.Style.extraLight)
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if let dish = dataSource.itemIdentifier(for: indexPath) {
+            print(dish)
+        }
+        IMPLEMENT_ME(TODO: "Show dish detail")
     }
 }
 

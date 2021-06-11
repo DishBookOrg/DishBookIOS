@@ -90,7 +90,7 @@ final class ExploreListViewModel: BaseViewModel {
             .store(in: &cancelableSet)
     }
     
-    func getRationDishes(_ ration: Dish.DishRation) {
+    func getRationDishes(_ ration: Dish.Ration) {
         
         
         APIClient
