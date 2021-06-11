@@ -10,6 +10,14 @@ import Combine
 
 final class StepperView: UIView {
     
+    // MARK: - Publisher
+    
+    @Published var currentStep: Int = 0 {
+        didSet {
+            stepperDisplayLabel.text = String(currentStep)
+        }
+    }
+    
     struct Props {
         
         let initialValue: Int
@@ -22,12 +30,6 @@ final class StepperView: UIView {
     private let minusButton = UIButton()
     private let plusButton = UIButton()
     private var gradientLayer: CAGradientLayer?
-    
-    @Published var currentStep: Int = 0 {
-        didSet {
-            stepperDisplayLabel.text = String(currentStep)
-        }
-    }
     
     private var cancellables = Set<AnyCancellable>()
         
@@ -77,7 +79,7 @@ final class StepperView: UIView {
     
     private func setupUI() {
         
-        gradientLayer = apply(style: Styles.View.Gradient.main)
+        gradientLayer = apply(style: Styles.View.Gradient.muted)
         
         descriptionLabel.text = R.string.newDish.steperDescription()
         descriptionLabel.textColor = R.color.textDescriptionWhite()

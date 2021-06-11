@@ -8,13 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		206F6C092FF500D7FCC9DBF8 /* Pods_DishBookIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16C20488A50629EFC995657 /* Pods_DishBookIOS.framework */; };
-		5D5A5F7D25F7E97600053029 /* TextFieldWithDescription.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5A5F7C25F7E97600053029 /* TextFieldWithDescription.xib */; };
-		5D5A5F8125F7E99200053029 /* TextFieldWithDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5A5F8025F7E99200053029 /* TextFieldWithDescription.swift */; };
 		5D70A27125F80A4B009B2520 /* DescriptionUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */; };
+		5DB5C36226700D78003CCC73 /* TextFieldWithDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C36126700D78003CCC73 /* TextFieldWithDescription.swift */; };
 		5DCFE06F2641722A00514498 /* StyleableUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5DCFE06E2641722A00514498 /* StyleableUI */; };
 		5DCFE0722641726500514498 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0712641726500514498 /* Styles.swift */; };
-		5DCFE0752641728000514498 /* View+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0742641728000514498 /* View+Styles.swift */; };
-		5DCFE0772641728F00514498 /* Label+Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0762641728F00514498 /* Label+Styles.swift */; };
 		5DCFE0792641B8E700514498 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0782641B8E700514498 /* SegmentedControl.swift */; };
 		5DCFE07D264333DD00514498 /* SteperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE07C264333DD00514498 /* SteperView.swift */; };
 		5F15C86326497030009EB349 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F15C86226497030009EB349 /* SectionHeader.swift */; };
@@ -125,12 +122,9 @@
 
 /* Begin PBXFileReference section */
 		25017E6F0215EA68CF3A2FA3 /* Pods-DishBookIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.release.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.release.xcconfig"; sourceTree = "<group>"; };
-		5D5A5F7C25F7E97600053029 /* TextFieldWithDescription.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldWithDescription.xib; sourceTree = "<group>"; };
-		5D5A5F8025F7E99200053029 /* TextFieldWithDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDescription.swift; sourceTree = "<group>"; };
 		5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionUILabel.swift; sourceTree = "<group>"; };
+		5DB5C36126700D78003CCC73 /* TextFieldWithDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDescription.swift; sourceTree = "<group>"; };
 		5DCFE0712641726500514498 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
-		5DCFE0742641728000514498 /* View+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Styles.swift"; sourceTree = "<group>"; };
-		5DCFE0762641728F00514498 /* Label+Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label+Styles.swift"; sourceTree = "<group>"; };
 		5DCFE0782641B8E700514498 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		5DCFE07C264333DD00514498 /* SteperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteperView.swift; sourceTree = "<group>"; };
 		5F15C86226497030009EB349 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
@@ -266,29 +260,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5D5A5F7F25F7E97B00053029 /* TextFieldWithDescription */ = {
-			isa = PBXGroup;
-			children = (
-				5D5A5F8025F7E99200053029 /* TextFieldWithDescription.swift */,
-				5D5A5F7C25F7E97600053029 /* TextFieldWithDescription.xib */,
-			);
-			path = TextFieldWithDescription;
-			sourceTree = "<group>";
-		};
-		5D5B6E7E25F91EB400DB9CCE /* CustomSteperView */ = {
-			isa = PBXGroup;
-			children = (
-				5DCFE07C264333DD00514498 /* SteperView.swift */,
-			);
-			path = CustomSteperView;
-			sourceTree = "<group>";
-		};
-		5D70A26825F80566009B2520 /* CustomSegmentControl */ = {
+		5D70A26825F80566009B2520 /* AddDish */ = {
 			isa = PBXGroup;
 			children = (
 				5DCFE0782641B8E700514498 /* SegmentedControl.swift */,
+				5DCFE07C264333DD00514498 /* SteperView.swift */,
+				5DB5C36126700D78003CCC73 /* TextFieldWithDescription.swift */,
 			);
-			path = CustomSegmentControl;
+			path = AddDish;
 			sourceTree = "<group>";
 		};
 		5D70A27425F80DB5009B2520 /* UILabels */ = {
@@ -490,10 +469,8 @@
 			isa = PBXGroup;
 			children = (
 				5FFB20B225C4CA360086440A /* Loader.swift */,
-				5D70A26825F80566009B2520 /* CustomSegmentControl */,
-				5D5B6E7E25F91EB400DB9CCE /* CustomSteperView */,
+				5D70A26825F80566009B2520 /* AddDish */,
 				5F4218F925F9505700366A16 /* DishCards */,
-				5D5A5F7F25F7E97B00053029 /* TextFieldWithDescription */,
 				5D70A27425F80DB5009B2520 /* UILabels */,
 			);
 			path = Views;
@@ -1046,7 +1023,6 @@
 				5FBE839A25C9FEDA00E3F3EB /* SF-Pro-Rounded-Semibold.otf in Resources */,
 				5FBE839325C9FEDA00E3F3EB /* SF-Pro-Display-Medium.otf in Resources */,
 				5FEBD1B425C9CEA8000F7E9C /* DishBook.strings in Resources */,
-				5D5A5F7D25F7E97600053029 /* TextFieldWithDescription.xib in Resources */,
 				5FBE837625C9F33A00E3F3EB /* Common.strings in Resources */,
 				5F5C529325C4B4CC00AC7E3C /* Color.xcassets in Resources */,
 				5FBE839725C9FEDA00E3F3EB /* SF-Pro-Text-Semibold.otf in Resources */,
@@ -1180,7 +1156,6 @@
 				5FFB20BA25C4CB9F0086440A /* BaseCoordinator.swift in Sources */,
 				5FACE00D265BA708009728D5 /* Rounded+Font.swift in Sources */,
 				5FFB20CE25C4CC740086440A /* TypeAliases.swift in Sources */,
-				5D5A5F8125F7E99200053029 /* TextFieldWithDescription.swift in Sources */,
 				5FFB20BD25C4CBB60086440A /* CoordinatorProtocol.swift in Sources */,
 				5FFB20F725C4D2F30086440A /* MainFlowCoordinator.swift in Sources */,
 				5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */,
@@ -1215,11 +1190,11 @@
 				5FACE011265BA80D009728D5 /* Medium+Rounded.swift in Sources */,
 				5F44164025CB06CD0009FE5F /* UIView+FromNib.swift in Sources */,
 				5DCFE0722641726500514498 /* Styles.swift in Sources */,
+				5DB5C36226700D78003CCC73 /* TextFieldWithDescription.swift in Sources */,
 				5FFB210325C4D4490086440A /* ExploreCoordinator.swift in Sources */,
 				5FBE835325C9EC3E00E3F3EB /* ShoplistViewController.swift in Sources */,
 				5FBE837D25C9F79200E3F3EB /* BaseRootCoordinator.swift in Sources */,
 				5FCFDA172641881C00B3CFFC /* BindableCell.swift in Sources */,
-				5D5B6E7C25F91EAC00DB9CCE /* CustomStepperView.swift in Sources */,
 				5F15C86326497030009EB349 /* SectionHeader.swift in Sources */,
 				5FCFDA1D2641888600B3CFFC /* UICollectionView+Reusable.swift in Sources */,
 				5FBE835C25C9EC5A00E3F3EB /* ShoplistViewModel.swift in Sources */,

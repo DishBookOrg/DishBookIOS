@@ -6,5 +6,26 @@
   
 */
 
+"TextField.NamePlaceholder" = "Name";
+"TextField.NameDescription" = "Write the name of the dish.";
+"SegmentedControl.PrivatePublicDescription" = "Pick public if you want this recipe to be visible to other users.";
+"SegmentedControl.Private" = "Own";
+"SegmentedControl.Public" = "Public";
+"SegmentedControl.DifficultyDescription" = "How difficult is it to cook this delicious dish?";
+"SegmentedControl.DifficultyEasy" = "Easy";
+"SegmentedControl.DifficultyMedium" = "Medium";
+"SegmentedControl.DifficultyHard" = "Hard";
 "Steper.Title" = "Servings";
 "Steper.Description" = "How many servings your recipe is designed for?";
+
+//"NewDish.NamePlaceholder" = "Name";
+//"NewDish.NamePlaceholder" = "Name";
+//"NewDish.NamePlaceholder" = "Name";
+//"NewDish.NamePlaceholder" = "Name";
+//"NewDish.NamePlaceholder" = "Name";
+//"NewDish.NamePlaceholder" = "Name";
+//"NewDish.NamePlaceholder" = "Name";
+//"NewDish.NamePlaceholder" = "Name";
+//"NewDish.NamePlaceholder" = "Name";
+//"NewDish.NamePlaceholder" = "Name";
+//"NewDish.NamePlaceholder" = "Name";

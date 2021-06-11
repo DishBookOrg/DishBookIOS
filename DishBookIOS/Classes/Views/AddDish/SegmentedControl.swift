@@ -6,38 +6,30 @@
 //
 
 import UIKit
-
-// TODO: Change to publisher
-protocol SegmentedControlDelegate: AnyObject {
-    
-    /// Calls when selected segment changed
-    /// - Parameter index: index of selected segment
-    func selectedSegmentChanged(index: Int)
-}
+import Combine
 
 class SegmentedControl: UIControl {
-
+    
+    // MARK: - Publisher
+    
+    lazy var didSelectPublisher = didSelectSubject.eraseToAnyPublisher()
+    private let didSelectSubject = PassthroughSubject<Int, Never>()
+    
     struct Props {
         
         let segmentsNames: [String]
         let descriptionText: String
     }
     
+    // MARK: - Private variables
+    
     private let descriptionLabel = DescriptionUILabel()
     private let selectedView = UIView()
     private let selectedLabel = UILabel()
     private let stackView = UIStackView()
-    
-    // NSLayoutConstraints
-    
+        
     private lazy var selectedViewLeading = selectedView.leadingAnchor.constraint(equalTo: leadingAnchor)
     private lazy var selectedViewWidth = selectedView.widthAnchor.constraint(equalToConstant: segmentWidth)
-    
-    // MARK: - Delegate
-    
-    weak var delegate: SegmentedControlDelegate?
-
-    // MARK: - Private variables
     
     private var segments: [String] = []
     private var segmentWidth: CGFloat = 0
@@ -52,6 +44,12 @@ class SegmentedControl: UIControl {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func draw(_ rect: CGRect) {
+        selectedView.apply(style: Styles.View.Gradient.muted)
+        selectedView.apply(style: Styles.View.CornerRadius.d10)
+        selectedView.apply(style: Styles.View.CornerRadius.maskedRight)
     }
     
     public func render(props: Props) {
@@ -76,7 +74,7 @@ class SegmentedControl: UIControl {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         selectedLabel.text = segments[0]
         descriptionLabel.text = props.descriptionText
-        delegate?.selectedSegmentChanged(index: 0)
+        didSelectSubject.send(0)
     }
     
     private func setup() {
@@ -87,7 +85,7 @@ class SegmentedControl: UIControl {
             descriptionLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
             descriptionLabel.heightAnchor.constraint(equalToConstant: 16)
         ])
-
+        
         setupStackView()
         setupSelectedView()
     }
@@ -121,11 +119,8 @@ class SegmentedControl: UIControl {
         selectedLabel.textAlignment = .center
         
         selectedView.isUserInteractionEnabled = true
-        selectedView.apply(style: Styles.View.Gradient.muted)
         selectedView.addSubview(selectedLabel, withEdgeInsets: .zero)
-        selectedView.apply(style: Styles.View.CornerRadius.d10)
-        selectedView.apply(style: Styles.View.CornerRadius.maskedRight)
-
+        
         addSubview(selectedView, constraints: [
             selectedViewLeading,
             selectedViewWidth,
@@ -152,16 +147,16 @@ class SegmentedControl: UIControl {
         
         let pointTapped: CGPoint = gestureRecognizer.location(in: self)
         let index = Int(pointTapped.x / segmentWidth)
-                
+        
         self.selectedView.apply(style: Styles.View.CornerRadius.d0)
         self.selectedView.apply(style: Styles.View.CornerRadius.noMasked)
         selectedLabel.font = R.font.sfProRoundedSemibold(size: 16)
-
+        
         UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: UIView.AnimationOptions.curveEaseIn) {
-
+            
             self.selectedView.frame.origin.x = self.segmentWidth * CGFloat(index)
             self.selectedView.apply(style: Styles.View.CornerRadius.d10)
-
+            
             if index == 0 {
                 self.selectedView.apply(style: Styles.View.CornerRadius.maskedRight)
             } else if index == self.segments.count - 1 {
@@ -173,11 +168,11 @@ class SegmentedControl: UIControl {
             self.selectedLabel.text = self.segments[index]
         } completion: { _ in
             self.selectedLabel.font = R.font.sfProRoundedSemibold(size: 15)
-            self.delegate?.selectedSegmentChanged(index: index)
+            self.didSelectSubject.send(index)
         }
     }
     
-
+    
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
         super.beginTracking(touch, with: event)
         
@@ -190,7 +185,7 @@ class SegmentedControl: UIControl {
     }
     override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
         super.endTracking(touch, with: event)
-
+        
     }
 }
 
