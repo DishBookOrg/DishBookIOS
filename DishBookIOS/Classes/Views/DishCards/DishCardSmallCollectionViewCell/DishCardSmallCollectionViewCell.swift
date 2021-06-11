@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseUI
 
 final class DishCardSmallCollectionViewCell: UICollectionViewCell {
     
@@ -75,6 +76,7 @@ final class DishCardSmallCollectionViewCell: UICollectionViewCell {
         
         dishNameLabel.apply(style: Styles.Font.Rounded.SB.f4)
         dishNameLabel.textColor = .white
+        dishNameLabel.numberOfLines = 0
         
         visualEffectView.contentView.addSubview(dishNameLabel, constraints: [
             
@@ -125,9 +127,10 @@ extension DishCardSmallCollectionViewCell: BindableCell {
     
     func render(props: Dish) {
         
-        dishImageView.image = props.image
-        dishNameLabel.text = props.dishName
-        dishTimeLabel.text = "\(props.time) min"
+        dishImageView.sd_setImage(with: Storage.storage().reference(forURL: props.imageURL),
+                                  placeholderImage: UIImage())
+        dishNameLabel.text = props.name
+        dishTimeLabel.text = props.stringTotalTimeShort
     }
 }
 
@@ -136,10 +139,9 @@ extension DishCardSmallCollectionViewCell: BindableCell {
 import SwiftUI
 struct DishCardSmallCollectionViewCellPreview: PreviewProvider {
     
-    
     static var previews: some View {
         ViewRepresentable(DishCardSmallCollectionViewCell()) { view in
-            view.render(props: DishCardSmallCollectionViewCell.Props(dishName: "Some dish", time: 15))
+            view.render(props: DishCardSmallCollectionViewCell.Props.mock)
         }
         .previewLayout(.fixed(width: 190, height: 250))
     }

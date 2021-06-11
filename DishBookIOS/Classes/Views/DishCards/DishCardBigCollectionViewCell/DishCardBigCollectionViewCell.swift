@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseStorage
+import FirebaseUI
 
 final class DishCardBigCollectionViewCell: UICollectionViewCell {
     
@@ -122,10 +124,12 @@ extension DishCardBigCollectionViewCell: BindableCell {
     typealias Props = Dish
     
     func render(props: Dish) {
-        
-        dishImageView.image = props.image
-        dishNameLabel.text = props.dishName
-        dishTimeLabel.text = "􀐫 \(props.time) min"
+            
+        // TODO: Add placeholder
+        dishImageView.sd_setImage(with: Storage.storage().reference(forURL: props.imageURL),
+                                  placeholderImage: UIImage())
+        dishNameLabel.text = props.name
+        dishTimeLabel.text = "􀐫 \(props.stringTotalTimeShort)"
         dishDifficultyLabel.text = "Easy"
     }
 }
@@ -137,7 +141,7 @@ struct DishCardBigCollectionViewCellPreview: PreviewProvider {
     
     static var previews: some View {
         ViewRepresentable(DishCardBigCollectionViewCell()) { view in
-            view.render(props: DishCardBigCollectionViewCell.Props(dishName: "Some veryyyy big funcking dish  dish", time: 15))
+            view.render(props: DishCardBigCollectionViewCell.Props.mock)
         }
         .previewLayout(.fixed(width: 343, height: 500))
     }

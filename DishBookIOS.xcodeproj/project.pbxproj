@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		206F6C092FF500D7FCC9DBF8 /* Pods_DishBookIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16C20488A50629EFC995657 /* Pods_DishBookIOS.framework */; };
 		5D5A5F7D25F7E97600053029 /* TextFieldWithDescription.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5A5F7C25F7E97600053029 /* TextFieldWithDescription.xib */; };
 		5D5A5F8125F7E99200053029 /* TextFieldWithDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5A5F8025F7E99200053029 /* TextFieldWithDescription.swift */; };
 		5D5B6E7B25F91EAC00DB9CCE /* CustomStepperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5B6E7925F91EAC00DB9CCE /* CustomStepperView.xib */; };
@@ -15,11 +14,10 @@
 		5D70A26A25F8068D009B2520 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70A26925F8068D009B2520 /* CustomSegmentedControl.swift */; };
 		5D70A26E25F806D8009B2520 /* CustomSegmentedControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D70A26D25F806D8009B2520 /* CustomSegmentedControl.xib */; };
 		5D70A27125F80A4B009B2520 /* DescriptionUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */; };
-		5DCFE06F2641722A00514498 /* StyleableUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5DCFE06E2641722A00514498 /* StyleableUI */; };
 		5DCFE0722641726500514498 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0712641726500514498 /* Styles.swift */; };
 		5F15C86326497030009EB349 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F15C86226497030009EB349 /* SectionHeader.swift */; };
 		5F4218FC25F9509000366A16 /* DishCardSmallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */; };
-		5F42190525F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */; };
+		5F42190425F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */; };
 		5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44162925CB04CE0009FE5F /* UIControlSubscription.swift */; };
 		5F44162D25CB04D70009FE5F /* UIControlPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44162C25CB04D70009FE5F /* UIControlPublisher.swift */; };
 		5F44163025CB04E20009FE5F /* UITextField+Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44162F25CB04E20009FE5F /* UITextField+Publisher.swift */; };
@@ -35,14 +33,15 @@
 		5F5C526125C4B0EE00AC7E3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C526025C4B0EE00AC7E3C /* Assets.xcassets */; };
 		5F5C526425C4B0EE00AC7E3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C526225C4B0EE00AC7E3C /* LaunchScreen.storyboard */; };
 		5F5C526D25C4B1FB00AC7E3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C526C25C4B1FB00AC7E3C /* GoogleService-Info.plist */; };
-		5F5C528825C4B3E300AC7E3C /* TableKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5F5C528725C4B3E300AC7E3C /* TableKit */; };
-		5F5C528C25C4B42800AC7E3C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5F5C528B25C4B42800AC7E3C /* IQKeyboardManagerSwift */; };
 		5F5C529325C4B4CC00AC7E3C /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C529225C4B4CC00AC7E3C /* Color.xcassets */; };
 		5F5C52AD25C4B8AF00AC7E3C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C52AC25C4B8AF00AC7E3C /* R.generated.swift */; };
+		5F7B78652673D646006D91AF /* StyleableUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B78642673D646006D91AF /* StyleableUI */; };
+		5F7B78682673D661006D91AF /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B78672673D661006D91AF /* IQKeyboardManagerSwift */; };
+		5F7B786B2673D685006D91AF /* Gedatsu in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B786A2673D685006D91AF /* Gedatsu */; };
 		5F8FA25926416D0000E24685 /* CollectionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FA25826416D0000E24685 /* CollectionSection.swift */; };
 		5F8FA25B26416D4300E24685 /* SmallItemsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FA25A26416D4300E24685 /* SmallItemsSection.swift */; };
 		5F8FA25D26416D4E00E24685 /* BigItemsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FA25C26416D4E00E24685 /* BigItemsSection.swift */; };
-		5FACDFF7265BA3C4009728D5 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FACDFF6265BA3C4009728D5 /* Network.swift */; };
+		5FACDFF7265BA3C4009728D5 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FACDFF6265BA3C4009728D5 /* APIClient.swift */; };
 		5FACDFFC265BA405009728D5 /* CornerRadius+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FACDFFB265BA405009728D5 /* CornerRadius+View.swift */; };
 		5FACDFFE265BA416009728D5 /* Gradient+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FACDFFD265BA416009728D5 /* Gradient+View.swift */; };
 		5FACE000265BA41F009728D5 /* Shadow+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FACDFFF265BA41F009728D5 /* Shadow+View.swift */; };
@@ -56,6 +55,7 @@
 		5FACE01A265BA91A009728D5 /* SB+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FACE019265BA91A009728D5 /* SB+Text.swift */; };
 		5FACE01C265BA92A009728D5 /* Medium+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FACE01B265BA92A009728D5 /* Medium+Text.swift */; };
 		5FACE01E265BA932009728D5 /* Regular+Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FACE01D265BA932009728D5 /* Regular+Text.swift */; };
+		5FBE36002673A015009EB0D0 /* ExploreListCollectionBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBE35FF2673A014009EB0D0 /* ExploreListCollectionBlock.swift */; };
 		5FBE835025C9EC2F00E3F3EB /* NewDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBE834F25C9EC2F00E3F3EB /* NewDishViewController.swift */; };
 		5FBE835325C9EC3E00E3F3EB /* ShoplistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBE835225C9EC3E00E3F3EB /* ShoplistViewController.swift */; };
 		5FBE835625C9EC4400E3F3EB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBE835525C9EC4400E3F3EB /* ProfileViewController.swift */; };
@@ -90,7 +90,6 @@
 		5FCFDA1B2641887C00B3CFFC /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCFDA1A2641887C00B3CFFC /* UITableView+Reusable.swift */; };
 		5FCFDA1D2641888600B3CFFC /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCFDA1C2641888600B3CFFC /* UICollectionView+Reusable.swift */; };
 		5FCFDA1F264189E600B3CFFC /* ViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCFDA1E264189E600B3CFFC /* ViewRepresentable.swift */; };
-		5FCFDA242641B8A600B3CFFC /* Gedatsu in Frameworks */ = {isa = PBXBuildFile; productRef = 5FCFDA232641B8A600B3CFFC /* Gedatsu */; };
 		5FD012F925CDBBF400A0E257 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD012F825CDBBF400A0E257 /* Dish.swift */; };
 		5FD012FC25CDBC0000A0E257 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD012FB25CDBC0000A0E257 /* AlertManager.swift */; };
 		5FD0130225CDBCE100A0E257 /* DishDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD0130125CDBCE100A0E257 /* DishDetailsController.swift */; };
@@ -108,7 +107,6 @@
 		5FFB20AC25C4CA020086440A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20AB25C4CA020086440A /* BaseViewController.swift */; };
 		5FFB20B025C4CA110086440A /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20AF25C4CA110086440A /* BaseViewModel.swift */; };
 		5FFB20B325C4CA360086440A /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20B225C4CA360086440A /* Loader.swift */; };
-		5FFB20B725C4CB3C0086440A /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5FFB20B625C4CB3C0086440A /* SDWebImage */; };
 		5FFB20BA25C4CB9F0086440A /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20B925C4CB9F0086440A /* BaseCoordinator.swift */; };
 		5FFB20BD25C4CBB60086440A /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20BC25C4CBB60086440A /* CoordinatorProtocol.swift */; };
 		5FFB20C125C4CBE90086440A /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20C025C4CBE90086440A /* AuthCoordinator.swift */; };
@@ -121,10 +119,12 @@
 		5FFB210325C4D4490086440A /* ExploreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB210225C4D4490086440A /* ExploreCoordinator.swift */; };
 		5FFB210625C4D9050086440A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB210525C4D9050086440A /* LoginViewModel.swift */; };
 		5FFB210925C4DA630086440A /* SignInWithAppleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB210825C4DA630086440A /* SignInWithAppleCoordinator.swift */; };
+		6C7D9EF2912D7A281801420B /* Pods_DishBookIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F197AF45F4ABEFD29E09F890 /* Pods_DishBookIOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		25017E6F0215EA68CF3A2FA3 /* Pods-DishBookIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.release.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.release.xcconfig"; sourceTree = "<group>"; };
+		357954EBE9EDE53EBBE87E58 /* Pods-DishBookIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.debug.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		4C1AF54FD29263A30F64DE0E /* Pods-DishBookIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.release.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.release.xcconfig"; sourceTree = "<group>"; };
 		5D5A5F7C25F7E97600053029 /* TextFieldWithDescription.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldWithDescription.xib; sourceTree = "<group>"; };
 		5D5A5F8025F7E99200053029 /* TextFieldWithDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDescription.swift; sourceTree = "<group>"; };
 		5D5B6E7925F91EAC00DB9CCE /* CustomStepperView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomStepperView.xib; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 		5F8FA25826416D0000E24685 /* CollectionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSection.swift; sourceTree = "<group>"; };
 		5F8FA25A26416D4300E24685 /* SmallItemsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallItemsSection.swift; sourceTree = "<group>"; };
 		5F8FA25C26416D4E00E24685 /* BigItemsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigItemsSection.swift; sourceTree = "<group>"; };
-		5FACDFF6265BA3C4009728D5 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		5FACDFF6265BA3C4009728D5 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		5FACDFFB265BA405009728D5 /* CornerRadius+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CornerRadius+View.swift"; sourceTree = "<group>"; };
 		5FACDFFD265BA416009728D5 /* Gradient+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gradient+View.swift"; sourceTree = "<group>"; };
 		5FACDFFF265BA41F009728D5 /* Shadow+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shadow+View.swift"; sourceTree = "<group>"; };
@@ -173,6 +173,7 @@
 		5FACE019265BA91A009728D5 /* SB+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SB+Text.swift"; sourceTree = "<group>"; };
 		5FACE01B265BA92A009728D5 /* Medium+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Medium+Text.swift"; sourceTree = "<group>"; };
 		5FACE01D265BA932009728D5 /* Regular+Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Regular+Text.swift"; sourceTree = "<group>"; };
+		5FBE35FF2673A014009EB0D0 /* ExploreListCollectionBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreListCollectionBlock.swift; sourceTree = "<group>"; };
 		5FBE834F25C9EC2F00E3F3EB /* NewDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDishViewController.swift; sourceTree = "<group>"; };
 		5FBE835225C9EC3E00E3F3EB /* ShoplistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoplistViewController.swift; sourceTree = "<group>"; };
 		5FBE835525C9EC4400E3F3EB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -237,8 +238,7 @@
 		5FFB210525C4D9050086440A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		5FFB210825C4DA630086440A /* SignInWithAppleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleCoordinator.swift; sourceTree = "<group>"; };
 		5FFB212425C4DB520086440A /* DishBookIOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DishBookIOS.entitlements; sourceTree = "<group>"; };
-		A16C20488A50629EFC995657 /* Pods_DishBookIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DishBookIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC64CBEA343BD64045494C3F /* Pods-DishBookIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.debug.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F197AF45F4ABEFD29E09F890 /* Pods_DishBookIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DishBookIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,26 +246,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FCFDA242641B8A600B3CFFC /* Gedatsu in Frameworks */,
-				5DCFE06F2641722A00514498 /* StyleableUI in Frameworks */,
-				5F5C528825C4B3E300AC7E3C /* TableKit in Frameworks */,
-				206F6C092FF500D7FCC9DBF8 /* Pods_DishBookIOS.framework in Frameworks */,
-				5FFB20B725C4CB3C0086440A /* SDWebImage in Frameworks */,
-				5F5C528C25C4B42800AC7E3C /* IQKeyboardManagerSwift in Frameworks */,
+				5F7B786B2673D685006D91AF /* Gedatsu in Frameworks */,
+				5F7B78652673D646006D91AF /* StyleableUI in Frameworks */,
+				6C7D9EF2912D7A281801420B /* Pods_DishBookIOS.framework in Frameworks */,
+				5F7B78682673D661006D91AF /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3E1713A2750BB817BE4B596C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A16C20488A50629EFC995657 /* Pods_DishBookIOS.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		5D5A5F7F25F7E97B00053029 /* TextFieldWithDescription */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,7 +359,7 @@
 				5F5C525625C4B0E900AC7E3C /* DishBookIOS */,
 				5F5C525525C4B0E900AC7E3C /* Products */,
 				E055B89846E80807F4D381DA /* Pods */,
-				3E1713A2750BB817BE4B596C /* Frameworks */,
+				FEA78A3B5AE4FF9B9F3ECE8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -513,6 +503,7 @@
 			isa = PBXGroup;
 			children = (
 				5FD012F825CDBBF400A0E257 /* Dish.swift */,
+				5FBE35FF2673A014009EB0D0 /* ExploreListCollectionBlock.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -520,7 +511,7 @@
 		5F5C529E25C4B60C00AC7E3C /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				5FACDFF6265BA3C4009728D5 /* Network.swift */,
+				5FACDFF6265BA3C4009728D5 /* APIClient.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -957,10 +948,18 @@
 		E055B89846E80807F4D381DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BC64CBEA343BD64045494C3F /* Pods-DishBookIOS.debug.xcconfig */,
-				25017E6F0215EA68CF3A2FA3 /* Pods-DishBookIOS.release.xcconfig */,
+				357954EBE9EDE53EBBE87E58 /* Pods-DishBookIOS.debug.xcconfig */,
+				4C1AF54FD29263A30F64DE0E /* Pods-DishBookIOS.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FEA78A3B5AE4FF9B9F3ECE8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F197AF45F4ABEFD29E09F890 /* Pods_DishBookIOS.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -970,14 +969,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F5C526825C4B0EE00AC7E3C /* Build configuration list for PBXNativeTarget "DishBookIOS" */;
 			buildPhases = (
-				61F1BE6E525292DD65995985 /* [CP] Check Pods Manifest.lock */,
+				2A49AAE3E78796A8357413E3 /* [CP] Check Pods Manifest.lock */,
 				5F5C52A925C4B7E100AC7E3C /* R.swift */,
 				5F5C525025C4B0E900AC7E3C /* Sources */,
 				5F5C525125C4B0E900AC7E3C /* Frameworks */,
 				5F5C525225C4B0E900AC7E3C /* Resources */,
 				5F5C52AF25C4B9E600AC7E3C /* SwiftLint */,
-				17E73EFE3BC0667EA95C0342 /* [CP] Embed Pods Frameworks */,
-				468115DFF46CEFD5CFB5533F /* [CP] Copy Pods Resources */,
+				A5552FB52D693D4DA269A482 /* [CP] Embed Pods Frameworks */,
+				68D8DF596F4BB5551F021AF5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -985,11 +984,9 @@
 			);
 			name = DishBookIOS;
 			packageProductDependencies = (
-				5F5C528725C4B3E300AC7E3C /* TableKit */,
-				5F5C528B25C4B42800AC7E3C /* IQKeyboardManagerSwift */,
-				5FFB20B625C4CB3C0086440A /* SDWebImage */,
-				5DCFE06E2641722A00514498 /* StyleableUI */,
-				5FCFDA232641B8A600B3CFFC /* Gedatsu */,
+				5F7B78642673D646006D91AF /* StyleableUI */,
+				5F7B78672673D661006D91AF /* IQKeyboardManagerSwift */,
+				5F7B786A2673D685006D91AF /* Gedatsu */,
 			);
 			productName = DishBookIOS;
 			productReference = 5F5C525425C4B0E900AC7E3C /* DishBookIOS.app */;
@@ -1019,11 +1016,9 @@
 			);
 			mainGroup = 5F5C524B25C4B0E900AC7E3C;
 			packageReferences = (
-				5F5C528625C4B3E300AC7E3C /* XCRemoteSwiftPackageReference "TableKit" */,
-				5F5C528A25C4B42800AC7E3C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
-				5FFB20B525C4CB3C0086440A /* XCRemoteSwiftPackageReference "SDWebImage" */,
-				5DCFE06D2641722A00514498 /* XCRemoteSwiftPackageReference "StyleableUI" */,
-				5FCFDA222641B8A600B3CFFC /* XCRemoteSwiftPackageReference "Gedatsu" */,
+				5F7B78632673D646006D91AF /* XCRemoteSwiftPackageReference "StyleableUI" */,
+				5F7B78662673D661006D91AF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				5F7B78692673D685006D91AF /* XCRemoteSwiftPackageReference "Gedatsu" */,
 			);
 			productRefGroup = 5F5C525525C4B0E900AC7E3C /* Products */;
 			projectDirPath = "";
@@ -1070,38 +1065,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		17E73EFE3BC0667EA95C0342 /* [CP] Embed Pods Frameworks */ = {
+		2A49AAE3E78796A8357413E3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DishBookIOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		468115DFF46CEFD5CFB5533F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5F5C52A925C4B7E100AC7E3C /* R.swift */ = {
@@ -1142,26 +1125,38 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
-		61F1BE6E525292DD65995985 /* [CP] Check Pods Manifest.lock */ = {
+		68D8DF596F4BB5551F021AF5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DishBookIOS-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5552FB52D693D4DA269A482 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1177,7 +1172,6 @@
 				5D70A27125F80A4B009B2520 /* DescriptionUILabel.swift in Sources */,
 				5FFB20D225C4CD450086440A /* UIApplication+Keyboard.swift in Sources */,
 				5F44163325CB04F10009FE5F /* UITextView+Publisher.swift in Sources */,
-				5F42190525F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */,
 				5F8FA25B26416D4300E24685 /* SmallItemsSection.swift in Sources */,
 				5FD012FC25CDBC0000A0E257 /* AlertManager.swift in Sources */,
 				5FBE836825C9F12100E3F3EB /* ProfileCoordinator.swift in Sources */,
@@ -1195,6 +1189,7 @@
 				5FBE836225C9F0FB00E3F3EB /* NewDishCoordinator.swift in Sources */,
 				5FCFDA0F2641846E00B3CFFC /* UIView+Constants.swift in Sources */,
 				5F4218FC25F9509000366A16 /* DishCardSmallCollectionViewCell.swift in Sources */,
+				5F42190425F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */,
 				5FACDFFC265BA405009728D5 /* CornerRadius+View.swift in Sources */,
 				5F44163625CB05470009FE5F /* Date+Extension.swift in Sources */,
 				5FFB210925C4DA630086440A /* SignInWithAppleCoordinator.swift in Sources */,
@@ -1217,6 +1212,7 @@
 				5FACDFFE265BA416009728D5 /* Gradient+View.swift in Sources */,
 				5FBE837A25C9F78700E3F3EB /* BaseFlowCoordinator.swift in Sources */,
 				5FACE01A265BA91A009728D5 /* SB+Text.swift in Sources */,
+				5FBE36002673A015009EB0D0 /* ExploreListCollectionBlock.swift in Sources */,
 				5FFB208D25C4C8F20086440A /* App.swift in Sources */,
 				5FACE002265BA51A009728D5 /* Difficulty+Label.swift in Sources */,
 				5FFB20B025C4CA110086440A /* BaseViewModel.swift in Sources */,
@@ -1250,7 +1246,7 @@
 				5FACE01C265BA92A009728D5 /* Medium+Text.swift in Sources */,
 				5F44164725CB07080009FE5F /* UIView+StackView.swift in Sources */,
 				5FACE013265BA845009728D5 /* Regular+Rounded.swift in Sources */,
-				5FACDFF7265BA3C4009728D5 /* Network.swift in Sources */,
+				5FACDFF7265BA3C4009728D5 /* APIClient.swift in Sources */,
 				5FD012F925CDBBF400A0E257 /* Dish.swift in Sources */,
 				5FEBD1C125C9D423000F7E9C /* DishBookViewModel.swift in Sources */,
 				5F44164B25CB07510009FE5F /* UITextView+Placeholder.swift in Sources */,
@@ -1389,7 +1385,7 @@
 		};
 		5F5C526925C4B0EE00AC7E3C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC64CBEA343BD64045494C3F /* Pods-DishBookIOS.debug.xcconfig */;
+			baseConfigurationReference = 357954EBE9EDE53EBBE87E58 /* Pods-DishBookIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1411,7 +1407,7 @@
 		};
 		5F5C526A25C4B0EE00AC7E3C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25017E6F0215EA68CF3A2FA3 /* Pods-DishBookIOS.release.xcconfig */;
+			baseConfigurationReference = 4C1AF54FD29263A30F64DE0E /* Pods-DishBookIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1455,23 +1451,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5DCFE06D2641722A00514498 /* XCRemoteSwiftPackageReference "StyleableUI" */ = {
+		5F7B78632673D646006D91AF /* XCRemoteSwiftPackageReference "StyleableUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ddanilyuk/StyleableUI";
+			repositoryURL = "https://github.com/ddanilyuk/StyleableUI.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
+				minimumVersion = 1.1.0;
 			};
 		};
-		5F5C528625C4B3E300AC7E3C /* XCRemoteSwiftPackageReference "TableKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/maxsokolov/TableKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.11.0;
-			};
-		};
-		5F5C528A25C4B42800AC7E3C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+		5F7B78662673D661006D91AF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
@@ -1479,7 +1467,7 @@
 				minimumVersion = 6.5.6;
 			};
 		};
-		5FCFDA222641B8A600B3CFFC /* XCRemoteSwiftPackageReference "Gedatsu" */ = {
+		5F7B78692673D685006D91AF /* XCRemoteSwiftPackageReference "Gedatsu" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/bannzai/Gedatsu.git";
 			requirement = {
@@ -1487,41 +1475,23 @@
 				minimumVersion = 1.2.0;
 			};
 		};
-		5FFB20B525C4CB3C0086440A /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.9.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5DCFE06E2641722A00514498 /* StyleableUI */ = {
+		5F7B78642673D646006D91AF /* StyleableUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5DCFE06D2641722A00514498 /* XCRemoteSwiftPackageReference "StyleableUI" */;
+			package = 5F7B78632673D646006D91AF /* XCRemoteSwiftPackageReference "StyleableUI" */;
 			productName = StyleableUI;
 		};
-		5F5C528725C4B3E300AC7E3C /* TableKit */ = {
+		5F7B78672673D661006D91AF /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F5C528625C4B3E300AC7E3C /* XCRemoteSwiftPackageReference "TableKit" */;
-			productName = TableKit;
-		};
-		5F5C528B25C4B42800AC7E3C /* IQKeyboardManagerSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5F5C528A25C4B42800AC7E3C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			package = 5F7B78662673D661006D91AF /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
 		};
-		5FCFDA232641B8A600B3CFFC /* Gedatsu */ = {
+		5F7B786A2673D685006D91AF /* Gedatsu */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5FCFDA222641B8A600B3CFFC /* XCRemoteSwiftPackageReference "Gedatsu" */;
+			package = 5F7B78692673D685006D91AF /* XCRemoteSwiftPackageReference "Gedatsu" */;
 			productName = Gedatsu;
-		};
-		5FFB20B625C4CB3C0086440A /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5FFB20B525C4CB3C0086440A /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
