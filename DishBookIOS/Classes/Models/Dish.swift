@@ -17,8 +17,32 @@ struct Dish {
     var imageURL: String
     var ration: DishRation
     
-    //
+    /// This  value is used to make possible display 2 dishes in different sections in one collection
     var blockId: Int?
+}
+
+// MARK: - Computed properties
+
+extension Dish {
+    
+    var stringTotalTimeShort: String {
+        
+        let minutes = totalTime / 60
+        return "\(minutes) m"
+    }
+    
+    var stringTotalTimeFull: String {
+        
+        let minutes = totalTime / 60
+        let seconds = totalTime % 60
+        
+        return seconds == 0 ? "\(minutes) min" : "\(minutes) min \(seconds) s."
+    }
+}
+
+// MARK: - Static properties
+
+extension Dish {
     
     static var mock: Dish = Dish(id: UUID().uuidString, name: "Some dish name", totalTime: 1800, imageURL: "", ration: .breakfast)
 }

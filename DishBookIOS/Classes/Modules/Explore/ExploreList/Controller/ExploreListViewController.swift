@@ -43,19 +43,17 @@ final class ExploreListViewController: BaseViewController {
         setupBinding()
     }
     
+    // MARK: - Settup methods
+    
     private func setupBinding() {
         
-        viewModel.generateSections()
-//            .dropFirst()
+        viewModel.sections
             .sink { [weak self] sections in
-                
-                print(sections)
                 self?.blocks = sections
                 self?.apply(animated: true)
             }
             .store(in: &cancelableSet)
         
-
         viewModel.$showLoader
             .assignNoRetain(to: \.showLoader, on: self)
             .store(in: &cancelableSet)
@@ -140,7 +138,9 @@ final class ExploreListViewController: BaseViewController {
         }
     }
     
-    func apply(animated: Bool = true) {
+    // MARK: - Private methods
+    
+    private func apply(animated: Bool = true) {
         
         guard !blocks.isEmpty else {
             return

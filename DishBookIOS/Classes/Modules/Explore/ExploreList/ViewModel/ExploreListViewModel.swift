@@ -35,7 +35,7 @@ final class ExploreListViewModel: BaseViewModel {
         getRationDishes(.dinner)
     }
     
-    func generateSections() -> AnyPublisher<[ExploreListCollectionBlock], Never> {
+    var sections: AnyPublisher<[ExploreListCollectionBlock], Never> {
         
         return Publishers.CombineLatest($tryItDishes, Publishers.CombineLatest3($breakfastDishes, $lunchDishes, $dinnerDishes))
             .map { args -> ([Dish], [Dish], [Dish], [Dish]) in
