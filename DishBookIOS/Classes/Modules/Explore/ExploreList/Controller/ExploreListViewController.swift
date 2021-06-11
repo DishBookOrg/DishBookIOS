@@ -25,24 +25,11 @@ final class ExploreListViewController: BaseViewController {
     private var viewModel: ExploreListViewModel
     private var dataSource: DataSource!
     
-    // TODO: Remove MOCK Data
-    var dishes: [Dish] = [
-        Dish(dishName: "Some dish", time: 15),
-        Dish(dishName: "Buter", time: 20),
-        Dish(dishName: "Soup", time: 20),
-        Dish(dishName: "Dish", time: 30),
-        Dish(dishName: "Big title diish", time: 40),
-        Dish(dishName: "Something", time: 50),
-        Dish(dishName: "Soup 2", time: 150),
-        Dish(dishName: "Avocado", time: 5),
-        Dish(dishName: "Sushi", time: 30)
-    ]
-    
     // TODO: Add localized strings
     var sections: [ExploreListSection] = [
         .bigSection(id: 0, title: "Try it!"),
         .smallSection(id: 0, title: "Breakfast"),
-        .smallSection(id: 1, title: "Lunch")
+//        .smallSection(id: 1, title: "Lunch")
     ]
     
     // MARK: - Lifecycle
@@ -59,7 +46,23 @@ final class ExploreListViewController: BaseViewController {
         setupCollectionView()
         setupDataSource()
         setupSearch()
-        apply()
+        setupBinding()
+    }
+    
+    private func setupBinding() {
+        
+        viewModel.$tryItDishes
+            .dropFirst()
+            .sink { [weak self] dishes in
+                print(dishes)
+                self?.apply(dishes: dishes, animated: true)
+            }
+            .store(in: &cancelableSet)
+        
+
+        viewModel.$showLoader
+            .assignNoRetain(to: \.showLoader, on: self)
+            .store(in: &cancelableSet)
     }
     
     private func setupSearch() {
@@ -113,7 +116,6 @@ final class ExploreListViewController: BaseViewController {
             cell.render(props: dish)
         }
         
-        
         let bigDishCollectionViewCell = UICollectionView.CellRegistration<DishCardBigCollectionViewCell, Dish> { cell, _, dish in
             cell.render(props: dish)
         }
@@ -142,15 +144,22 @@ final class ExploreListViewController: BaseViewController {
         }
     }
     
-    func apply(animated: Bool = true) {
+    func apply(dishes: [Dish], animated: Bool = true) {
         
         var snapshot = Snapshot()
         snapshot.appendSections(sections)
         
-        // TODO: Remove mock sections split
-        snapshot.appendItems([dishes[0], dishes[1]], toSection: sections[0])
-        snapshot.appendItems([dishes[2], dishes[3], dishes[4], dishes[5]], toSection: sections[1])
-        snapshot.appendItems([dishes[6], dishes[7], dishes[8]], toSection: sections[2])
+        
+        if let first = dishes.first {
+            collectionView.collectionViewLayout.invalidateLayout()
+            snapshot.appendItems([first, dishes[1]], toSection: sections[0])
+            
+            snapshot.appendItems([dishes[2]], toSection: sections[1])
+            
+
+        }
+//        snapshot.appendItems([dishes[2], dishes[3], dishes[4], dishes[5]], toSection: sections[1])
+//        snapshot.appendItems([dishes[6], dishes[7], dishes[8]], toSection: sections[2])
         
         dataSource?.apply(snapshot, animatingDifferences: animated)
     }

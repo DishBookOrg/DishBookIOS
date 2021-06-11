@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseUI
 
 final class DishCardSmallCollectionViewCell: UICollectionViewCell {
     
@@ -125,7 +126,8 @@ extension DishCardSmallCollectionViewCell: BindableCell {
     
     func render(props: Dish) {
         
-        dishImageView.sd_setImage(with: URL(string: props.imageURL), placeholderImage: UIImage())
+        dishImageView.sd_setImage(with: Storage.storage().reference(forURL: props.imageURL),
+                                  placeholderImage: UIImage())
         dishNameLabel.text = props.name
         dishTimeLabel.text = "\(props.totalTime) min"
     }

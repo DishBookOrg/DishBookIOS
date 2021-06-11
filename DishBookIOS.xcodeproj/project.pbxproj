@@ -107,7 +107,6 @@
 		5FFB20AC25C4CA020086440A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20AB25C4CA020086440A /* BaseViewController.swift */; };
 		5FFB20B025C4CA110086440A /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20AF25C4CA110086440A /* BaseViewModel.swift */; };
 		5FFB20B325C4CA360086440A /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20B225C4CA360086440A /* Loader.swift */; };
-		5FFB20B725C4CB3C0086440A /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5FFB20B625C4CB3C0086440A /* SDWebImage */; };
 		5FFB20BA25C4CB9F0086440A /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20B925C4CB9F0086440A /* BaseCoordinator.swift */; };
 		5FFB20BD25C4CBB60086440A /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20BC25C4CBB60086440A /* CoordinatorProtocol.swift */; };
 		5FFB20C125C4CBE90086440A /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB20C025C4CBE90086440A /* AuthCoordinator.swift */; };
@@ -120,12 +119,12 @@
 		5FFB210325C4D4490086440A /* ExploreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB210225C4D4490086440A /* ExploreCoordinator.swift */; };
 		5FFB210625C4D9050086440A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB210525C4D9050086440A /* LoginViewModel.swift */; };
 		5FFB210925C4DA630086440A /* SignInWithAppleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB210825C4DA630086440A /* SignInWithAppleCoordinator.swift */; };
-		FE56F49A58BA80D4BD2A2FBC /* Pods_DishBookIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0180797059E367B9DB2DA869 /* Pods_DishBookIOS.framework */; };
+		6C7D9EF2912D7A281801420B /* Pods_DishBookIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F197AF45F4ABEFD29E09F890 /* Pods_DishBookIOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0180797059E367B9DB2DA869 /* Pods_DishBookIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DishBookIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C67E72D44BF87A708D00522 /* Pods-DishBookIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.release.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.release.xcconfig"; sourceTree = "<group>"; };
+		357954EBE9EDE53EBBE87E58 /* Pods-DishBookIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.debug.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		4C1AF54FD29263A30F64DE0E /* Pods-DishBookIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.release.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.release.xcconfig"; sourceTree = "<group>"; };
 		5D5A5F7C25F7E97600053029 /* TextFieldWithDescription.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldWithDescription.xib; sourceTree = "<group>"; };
 		5D5A5F8025F7E99200053029 /* TextFieldWithDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDescription.swift; sourceTree = "<group>"; };
 		5D5B6E7925F91EAC00DB9CCE /* CustomStepperView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomStepperView.xib; sourceTree = "<group>"; };
@@ -238,7 +237,7 @@
 		5FFB210525C4D9050086440A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		5FFB210825C4DA630086440A /* SignInWithAppleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleCoordinator.swift; sourceTree = "<group>"; };
 		5FFB212425C4DB520086440A /* DishBookIOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DishBookIOS.entitlements; sourceTree = "<group>"; };
-		FB1F38A7A2F94F9328644FA4 /* Pods-DishBookIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.debug.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		F197AF45F4ABEFD29E09F890 /* Pods_DishBookIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DishBookIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,10 +247,9 @@
 			files = (
 				5F8C3E3626700D3E00A1CA27 /* Gedatsu in Frameworks */,
 				5F5C528825C4B3E300AC7E3C /* TableKit in Frameworks */,
-				5FFB20B725C4CB3C0086440A /* SDWebImage in Frameworks */,
 				5F5C528C25C4B42800AC7E3C /* IQKeyboardManagerSwift in Frameworks */,
 				5F8C3E3926700F2000A1CA27 /* StyleableUI in Frameworks */,
-				FE56F49A58BA80D4BD2A2FBC /* Pods_DishBookIOS.framework in Frameworks */,
+				6C7D9EF2912D7A281801420B /* Pods_DishBookIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +359,7 @@
 				5F5C525625C4B0E900AC7E3C /* DishBookIOS */,
 				5F5C525525C4B0E900AC7E3C /* Products */,
 				E055B89846E80807F4D381DA /* Pods */,
-				B19E2D980E275DFD98CADE97 /* Frameworks */,
+				FEA78A3B5AE4FF9B9F3ECE8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -946,21 +944,21 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		B19E2D980E275DFD98CADE97 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0180797059E367B9DB2DA869 /* Pods_DishBookIOS.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		E055B89846E80807F4D381DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FB1F38A7A2F94F9328644FA4 /* Pods-DishBookIOS.debug.xcconfig */,
-				1C67E72D44BF87A708D00522 /* Pods-DishBookIOS.release.xcconfig */,
+				357954EBE9EDE53EBBE87E58 /* Pods-DishBookIOS.debug.xcconfig */,
+				4C1AF54FD29263A30F64DE0E /* Pods-DishBookIOS.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FEA78A3B5AE4FF9B9F3ECE8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F197AF45F4ABEFD29E09F890 /* Pods_DishBookIOS.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -970,14 +968,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F5C526825C4B0EE00AC7E3C /* Build configuration list for PBXNativeTarget "DishBookIOS" */;
 			buildPhases = (
-				4FA8773342F4C7EFC79E335B /* [CP] Check Pods Manifest.lock */,
+				2A49AAE3E78796A8357413E3 /* [CP] Check Pods Manifest.lock */,
 				5F5C52A925C4B7E100AC7E3C /* R.swift */,
 				5F5C525025C4B0E900AC7E3C /* Sources */,
 				5F5C525125C4B0E900AC7E3C /* Frameworks */,
 				5F5C525225C4B0E900AC7E3C /* Resources */,
 				5F5C52AF25C4B9E600AC7E3C /* SwiftLint */,
-				172976CADDD533ED4C6B1379 /* [CP] Embed Pods Frameworks */,
-				82526CC3D2325692E1A75E0C /* [CP] Copy Pods Resources */,
+				A5552FB52D693D4DA269A482 /* [CP] Embed Pods Frameworks */,
+				68D8DF596F4BB5551F021AF5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -987,7 +985,6 @@
 			packageProductDependencies = (
 				5F5C528725C4B3E300AC7E3C /* TableKit */,
 				5F5C528B25C4B42800AC7E3C /* IQKeyboardManagerSwift */,
-				5FFB20B625C4CB3C0086440A /* SDWebImage */,
 				5FCFDA232641B8A600B3CFFC /* Gedatsu */,
 				5F8C3E3826700F2000A1CA27 /* StyleableUI */,
 			);
@@ -1021,7 +1018,6 @@
 			packageReferences = (
 				5F5C528625C4B3E300AC7E3C /* XCRemoteSwiftPackageReference "TableKit" */,
 				5F5C528A25C4B42800AC7E3C /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
-				5FFB20B525C4CB3C0086440A /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				5FCFDA222641B8A600B3CFFC /* XCRemoteSwiftPackageReference "Gedatsu" */,
 				5F8C3E3726700F1F00A1CA27 /* XCRemoteSwiftPackageReference "StyleableUI" */,
 			);
@@ -1070,24 +1066,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		172976CADDD533ED4C6B1379 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4FA8773342F4C7EFC79E335B /* [CP] Check Pods Manifest.lock */ = {
+		2A49AAE3E78796A8357413E3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1147,7 +1126,7 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
-		82526CC3D2325692E1A75E0C /* [CP] Copy Pods Resources */ = {
+		68D8DF596F4BB5551F021AF5 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1162,6 +1141,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5552FB52D693D4DA269A482 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1389,7 +1385,7 @@
 		};
 		5F5C526925C4B0EE00AC7E3C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB1F38A7A2F94F9328644FA4 /* Pods-DishBookIOS.debug.xcconfig */;
+			baseConfigurationReference = 357954EBE9EDE53EBBE87E58 /* Pods-DishBookIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1411,7 +1407,7 @@
 		};
 		5F5C526A25C4B0EE00AC7E3C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C67E72D44BF87A708D00522 /* Pods-DishBookIOS.release.xcconfig */;
+			baseConfigurationReference = 4C1AF54FD29263A30F64DE0E /* Pods-DishBookIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1487,14 +1483,6 @@
 				minimumVersion = 1.2.0;
 			};
 		};
-		5FFB20B525C4CB3C0086440A /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.9.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1517,11 +1505,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5FCFDA222641B8A600B3CFFC /* XCRemoteSwiftPackageReference "Gedatsu" */;
 			productName = Gedatsu;
-		};
-		5FFB20B625C4CB3C0086440A /* SDWebImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5FFB20B525C4CB3C0086440A /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

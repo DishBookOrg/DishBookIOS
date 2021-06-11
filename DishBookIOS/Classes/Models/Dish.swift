@@ -7,28 +7,11 @@
 
 import UIKit
 import FirebaseFirestore
+import FirebaseFirestoreSwift
 
-protocol Snapshotable {
+struct Dish {
     
-    var id: String! { get set }
-    var documentSnapshotMapper: (DocumentSnapshot) throws -> Self? { get }
-}
-
-extension Snapshotable where Self: Codable {
-    
-    var documentSnapshotMapper: (DocumentSnapshot) throws -> Self? {
-        return {
-            var model = try $0.data(as: Self.self)
-            model?.id = $0.documentID
-            return model
-        }
-    }
-}
-
-struct Dish: Codable, Snapshotable {
-    
-    
-    var id: String!
+    @DocumentID var id: String?
     var name: String
     var totalTime: Int
     var imageURL: String
@@ -38,14 +21,6 @@ struct Dish: Codable, Snapshotable {
         self.name = dishName
         self.totalTime = time
         self.imageURL = ""
-    }
-        
-    enum CodingKeys: String, CodingKey {
-        
-        case id
-        case name = "dishName"
-        case totalTime = "dishTotalTime"
-        case imageURL = "dishImageURL"
     }
 }
 
@@ -57,7 +32,13 @@ extension Dish: Hashable {
 
 // MARK: - Codable
 
-extension Dish {
+extension Dish: Codable {
     
-    
+    enum CodingKeys: String, CodingKey {
+        
+        case id
+        case name = "dishName"
+        case totalTime = "dishTotalTime"
+        case imageURL = "dishImageURL"
+    }
 }

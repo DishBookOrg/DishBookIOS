@@ -15,6 +15,7 @@ target 'DishBookIOS' do
 
   pod 'GoogleSignIn'
   
+  pod 'FirebaseUI/Storage'
   pod 'CombineFirebase/Firestore'
   pod 'CombineFirebase/RemoteConfig'
   pod 'CombineFirebase/Database'

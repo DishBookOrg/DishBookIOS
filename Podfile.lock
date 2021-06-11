@@ -320,6 +320,9 @@ PODS:
   - FirebaseStorage (3.9.1):
     - FirebaseCore (~> 6.10)
     - GTMSessionFetcher/Core (~> 1.1)
+  - FirebaseUI/Storage (10.0.2):
+    - Firebase/Storage
+    - SDWebImage (~> 5.6)
   - GoogleDataTransport (7.5.1):
     - nanopb (~> 1.30906.0)
   - GoogleSignIn (5.0.2):
@@ -385,6 +388,9 @@ PODS:
   - R.swift (5.3.1):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
+  - SDWebImage (5.11.1):
+    - SDWebImage/Core (= 5.11.1)
+  - SDWebImage/Core (5.11.1)
   - SVProgressHUD (2.2.5)
   - SwiftLint (0.42.0)
   - Wormholy (1.6.4)
@@ -397,6 +403,7 @@ DEPENDENCIES:
   - CombineFirebase/RemoteConfig
   - CombineFirebase/Storage
   - Default (~> 3.0)
+  - FirebaseUI/Storage
   - GoogleSignIn
   - R.swift (~> 5)
   - SVProgressHUD
@@ -428,6 +435,7 @@ SPEC REPOS:
     - FirebaseInstallations
     - FirebaseRemoteConfig
     - FirebaseStorage
+    - FirebaseUI
     - GoogleDataTransport
     - GoogleSignIn
     - GoogleUtilities
@@ -440,6 +448,7 @@ SPEC REPOS:
     - PromisesObjC
     - R.swift
     - R.swift.Library
+    - SDWebImage
     - SVProgressHUD
     - SwiftLint
     - Wormholy
@@ -468,6 +477,7 @@ SPEC CHECKSUMS:
   FirebaseInstallations: 466c7b4d1f58fe16707693091da253726a731ed2
   FirebaseRemoteConfig: 35a729305f254fb15a2e541d4b36f3a379da7fdc
   FirebaseStorage: 15e0f15ef3c7fec3d1899d68623e47d4447066b4
+  FirebaseUI: 59db3d833773f985550897d54ceb811ba37fb9a5
   GoogleDataTransport: f56af7caa4ed338dc8e138a5d7c5973e66440833
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GoogleUtilities: 7f2f5a07f888cdb145101d6042bc4422f57e70b3
@@ -480,10 +490,11 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   R.swift: 56ec7e3aef34b9eee47a659e42462db2c1cc5ac3
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
   Wormholy: 2e70f64227e010d363f8d33268369f77faf12471
 
-PODFILE CHECKSUM: 988c7833801bec611e5237aa4fba06e4d01f135d
+PODFILE CHECKSUM: 5952d19cb6a4f749ea36930deb871717a41a3a2c
 
 COCOAPODS: 1.10.1

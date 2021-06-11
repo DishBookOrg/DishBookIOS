@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseStorage
+import FirebaseUI
 
 final class DishCardBigCollectionViewCell: UICollectionViewCell {
     
@@ -122,9 +124,10 @@ extension DishCardBigCollectionViewCell: BindableCell {
     typealias Props = Dish
     
     func render(props: Dish) {
-        
+            
         // TODO: Add placeholder
-        dishImageView.sd_setImage(with: URL(string: props.imageURL), placeholderImage: UIImage())
+        dishImageView.sd_setImage(with: Storage.storage().reference(forURL: props.imageURL),
+                                  placeholderImage: UIImage())
         dishNameLabel.text = props.name
         dishTimeLabel.text = "􀐫 \(props.totalTime) min"
         dishDifficultyLabel.text = "Easy"
