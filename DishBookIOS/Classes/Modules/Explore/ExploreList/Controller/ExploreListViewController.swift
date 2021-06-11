@@ -24,26 +24,7 @@ final class ExploreListViewController: BaseViewController {
     
     private var viewModel: ExploreListViewModel
     private var dataSource: DataSource!
-    
-    // TODO: Remove MOCK Data
-    var dishes: [Dish] = [
-        Dish(dishName: "Some dish", time: 15),
-        Dish(dishName: "Buter", time: 20),
-        Dish(dishName: "Soup", time: 20),
-        Dish(dishName: "Dish", time: 30),
-        Dish(dishName: "Big title diish", time: 40),
-        Dish(dishName: "Something", time: 50),
-        Dish(dishName: "Soup 2", time: 150),
-        Dish(dishName: "Avocado", time: 5),
-        Dish(dishName: "Sushi", time: 30)
-    ]
-    
-    // TODO: Add localized strings
-    var sections: [ExploreListSection] = [
-        .bigSection(id: 0, title: "Try it!"),
-        .smallSection(id: 0, title: "Breakfast"),
-        .smallSection(id: 1, title: "Lunch")
-    ]
+    private var blocks: [ExploreListCollectionBlock] = []
     
     // MARK: - Lifecycle
     
@@ -59,7 +40,23 @@ final class ExploreListViewController: BaseViewController {
         setupCollectionView()
         setupDataSource()
         setupSearch()
-        apply()
+        setupBinding()
+    }
+    
+    // MARK: - Settup methods
+    
+    private func setupBinding() {
+        
+        viewModel.sections
+            .sink { [weak self] sections in
+                self?.blocks = sections
+                self?.apply(animated: true)
+            }
+            .store(in: &cancelableSet)
+        
+        viewModel.$showLoader
+            .assignNoRetain(to: \.showLoader, on: self)
+            .store(in: &cancelableSet)
     }
     
     private func setupSearch() {
@@ -119,7 +116,7 @@ final class ExploreListViewController: BaseViewController {
         
         dataSource = DataSource(collectionView: collectionView) { collectionView, indexPath, item in
             
-            switch self.sections[indexPath.section] {
+            switch self.blocks[indexPath.section].section {
             case .bigSection:
                 return collectionView.dequeueConfiguredReusableCell(using: bigDishCollectionViewCell, for: indexPath, item: item)
             case .smallSection:
@@ -136,20 +133,22 @@ final class ExploreListViewController: BaseViewController {
                 return nil
             }
             
-            sectionHeader.titleLabel.text = self.sections[indexPath.section].title
+            sectionHeader.titleLabel.text = self.blocks[indexPath.section].section.title
             return sectionHeader
         }
     }
     
-    func apply(animated: Bool = true) {
+    // MARK: - Private methods
+    
+    private func apply(animated: Bool = true) {
+        
+        guard !blocks.isEmpty else {
+            return
+        }
         
         var snapshot = Snapshot()
-        snapshot.appendSections(sections)
-        
-        // TODO: Remove mock sections split
-        snapshot.appendItems([dishes[0], dishes[1]], toSection: sections[0])
-        snapshot.appendItems([dishes[2], dishes[3], dishes[4], dishes[5]], toSection: sections[1])
-        snapshot.appendItems([dishes[6], dishes[7], dishes[8]], toSection: sections[2])
+        snapshot.appendSections(blocks.map { $0.section })
+        blocks.forEach { snapshot.appendItems($0.items, toSection: $0.section) }
         
         dataSource?.apply(snapshot, animatingDifferences: animated)
     }
@@ -158,7 +157,7 @@ final class ExploreListViewController: BaseViewController {
         
         let layout = UICollectionViewCompositionalLayout { sectionIndex, _ in
             
-            return self.sections[sectionIndex].sectionLayout
+            return self.blocks[sectionIndex].section.sectionLayout
         }
         
         return layout
@@ -172,7 +171,7 @@ extension ExploreListViewController {
     enum ExploreListSection: Hashable {
         
         case bigSection(id: Int, title: String)
-        case smallSection(id: Int, title: String)
+        case smallSection(id: Int, ration: Dish.Ration)
         
         var itemsCount: Int {
             switch self {
@@ -187,8 +186,8 @@ extension ExploreListViewController {
             switch self {
             case let .bigSection(_, title):
                 return title
-            case let .smallSection(_, title):
-                return title
+            case let .smallSection(_, ration):
+                return ration.rawValue
             }
         }
         
@@ -215,6 +214,14 @@ extension ExploreListViewController: UICollectionViewDelegate {
                 ? nil
                 : UIBlurEffect(style: UIBlurEffect.Style.extraLight)
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if let dish = dataSource.itemIdentifier(for: indexPath) {
+            print(dish)
+        }
+        IMPLEMENT_ME(TODO: "Show dish detail")
     }
 }
 

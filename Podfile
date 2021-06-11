@@ -14,9 +14,15 @@ target 'DishBookIOS' do
   pod 'Wormholy'
 
   pod 'GoogleSignIn'
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Firestore'
+  
+  pod 'FirebaseUI/Storage'
+  pod 'CombineFirebase/Firestore'
+  pod 'CombineFirebase/RemoteConfig'
+  pod 'CombineFirebase/Database'
+  pod 'CombineFirebase/Storage'
+  pod 'CombineFirebase/Auth'
+  pod 'CombineFirebase/Functions'
+#  pod 'Firebase/Analytics'
 
 end
 
