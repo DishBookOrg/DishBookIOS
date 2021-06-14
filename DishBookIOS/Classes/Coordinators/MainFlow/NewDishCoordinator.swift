@@ -11,6 +11,10 @@ import Combine
 final class NewDishCoordinator: BaseRootCoordinator {
     
     private var newDish = NewDish()
+    private var ingredientsAndSteps = NewDish.IngredientsAndSteps(ingredients: [
+        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name", ingredientType: "g", ingredientAmount: 350),
+        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Some", ingredientType: "kg", ingredientAmount: 0.5)
+    ], steps: [])
 
     override init() {
         super.init()
@@ -53,7 +57,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
         
         viewModel.didPressNextPublisher
             .sink { [unowned self] in
-                let secondStepViewController = createSecondStep()
+                let secondStepViewController = createAddIngredientsStep()
                 navigationController?.pushViewController(secondStepViewController, animated: true)
             }
             .store(in: &cancelableSet)
@@ -61,10 +65,34 @@ final class NewDishCoordinator: BaseRootCoordinator {
         return FirstStepViewController(viewModel: viewModel)
     }
     
-    private func createSecondStep() -> UIViewController {        
-        let vc = UIViewController()
-        vc.view.backgroundColor = .systemBackground
-        return vc
+    private func createAddIngredientsStep() -> UIViewController {
+        
+        let viewModel = IngredientsViewModel()
+        
+        viewModel.didPressPlusPublisher
+            .sink { [unowned self] in
+                let secondStepViewController = createAddIngredientStep()
+                navigationController?.present(secondStepViewController, animated: true)
+            }
+            .store(in: &cancelableSet)
+        
+        viewModel.didPressNextPublisher
+            .sink { [unowned self] in
+                let secondStepViewController = createAddStepsStep()
+                navigationController?.pushViewController(secondStepViewController, animated: true)
+            }
+            .store(in: &cancelableSet)
+
+        let ingredientsViewController = IngredientsViewController(viewModel: viewModel)
+        ingredientsViewController.render(ingredients: ingredientsAndSteps.ingredients)
+        return ingredientsViewController
     }
     
+    private func createAddIngredientStep() -> UIViewController {
+        UIViewController()
+    }
+    
+    private func createAddStepsStep() -> UIViewController {
+        UIViewController()
+    }
 }

@@ -14,10 +14,9 @@ final class IngredientsViewController: BaseViewController {
     
     private var viewModel: IngredientsViewModel
     
-    private let nameTextField = TextFieldWithDescription()
-    private let ownPublicSegmentedControl = SegmentedControl()
-    private let difficultySegmentedControl = SegmentedControl()
-    private let stepperView = StepperView()
+    private let ingredientsView = IngredientsView()
+    private let scrollView = UIScrollView()
+    private let addIngredientButton = UIButton()
         
     // MARK: - Lifecycle
     
@@ -35,55 +34,60 @@ final class IngredientsViewController: BaseViewController {
         setupStreams()
     }
     
+    func render(ingredients: [NewDish.IngredientsAndSteps.Ingredient]) {
+        let ingredientsProps = ingredients.map { SingleIngredientView.Props(name: $0.ingredientName, amount: "\($0.ingredientAmount) \($0.ingredientType)") }
+        
+        ingredientsView.render(props: IngredientsView.Props(ingredients: ingredientsProps))
+    }
+    
     private func setup() {
         
         let progressBarView = UIImageView(image: R.image.progressBar())
+        let titleLabel = UILabel()
+        titleLabel.apply(style: Styles.Font.Rounded.Medium.f2)
+        titleLabel.textColor = R.color.textBlack()
+        titleLabel.text = "Ingredients"
         
-        nameTextField.setup(placeholder: R.string.newDish.textFieldNamePlaceholder(), description: R.string.newDish.textFieldNameDescription())
-        ownPublicSegmentedControl.render(
-            props: SegmentedControl.Props(
-                segmentsNames: [Dish.Privacy.private, Dish.Privacy.public],
-                descriptionText: R.string.newDish.segmentedControlPrivatePublicDescription()
-            ))
-        difficultySegmentedControl.render(
-            props: SegmentedControl.Props(
-                segmentsNames: [Dish.Difficulty.easy, Dish.Difficulty.medium, Dish.Difficulty.hard],
-                descriptionText: R.string.newDish.segmentedControlDifficultyDescription()
-            ))
-        stepperView.render(props: StepperView.Props(initialValue: 4))
+        scrollView.addSubview(ingredientsView, withEdgeInsets: .zero)
+        scrollView.contentInset.bottom = 94
         
         let mainStackView = UIStackView(
-            arrangedSubviews: [progressBarView, nameTextField, ownPublicSegmentedControl, difficultySegmentedControl, stepperView])
+            arrangedSubviews: [progressBarView, titleLabel, scrollView])
         mainStackView.axis = .vertical
-        mainStackView.spacing = 60
+        mainStackView.spacing = 24
         mainStackView.setCustomSpacing(30, after: progressBarView)
         
-        view.addSubview(mainStackView, constraints: [
-            mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24),
-            mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            mainStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            nameTextField.heightAnchor.constraint(equalToConstant: 60),
-            ownPublicSegmentedControl.heightAnchor.constraint(equalToConstant: 57),
-            difficultySegmentedControl.heightAnchor.constraint(equalToConstant: 57),
-            stepperView.heightAnchor.constraint(equalToConstant: 85)
+        let addIngredientView = UIImageView(image: R.image.addNew())
+        
+        view.addSubview(mainStackView, withEdgeInsets: UIEdgeInsets(top: view.safeAreaInsets.top + 24, left: 16, bottom: 0, right: 16))
+        
+        view.addSubview(addIngredientView, constraints: [
+            addIngredientView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            addIngredientView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            addIngredientView.heightAnchor.constraint(equalToConstant: 44),
+            addIngredientView.widthAnchor.constraint(equalToConstant: 44)
         ])
+        
+        addIngredientView.addSubview(addIngredientButton, withEdgeInsets: .zero)
     }
     
     private func setupStreams() {
-//        nameTextField.didChangeTextPublisher
-//            .sink { [unowned self] in viewModel.didChangeNameSubject.send($0) }
-//            .store(in: &cancelableSet)
         
+        addIngredientButton.publisher(for: .touchUpInside)
+            .sink { [unowned self] _ in viewModel.didPressPlusSubject.send(())}
+            .store(in: &cancelableSet)
     }
     
     private func setupNavigationBar() {
+        
         let nextButton = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(didPressNext))
         navigationItem.rightBarButtonItem = nextButton
     }
     
     @objc
     func didPressNext() {
-//        viewModel.didPressNextSubject.send(())
+        
+        viewModel.didPressNextSubject.send(())
     }
 }
 

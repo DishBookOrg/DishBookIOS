@@ -10,7 +10,7 @@ import Combine
 
 final class SingleIngredientView: UIView {
     
-    struct Props {
+    struct Props: Equatable {
         
         let name: String
         let amount: String
@@ -18,13 +18,14 @@ final class SingleIngredientView: UIView {
     
     private let nameLabel = UILabel()
     private let amountLabel = UILabel()
-    
-    private var renderedProps: Props?
-        
+            
     // MARK: - Lifecycle
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(props: Props) {
+        super.init(frame: .zero)
+        
+        nameLabel.text = props.name
+        amountLabel.text = props.amount
         
         setupUI()
     }
@@ -33,18 +34,6 @@ final class SingleIngredientView: UIView {
         super.init(coder: coder)
         
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    public func render(props: Props) {
-        
-        if props.name != renderedProps?.name {
-            nameLabel.text = props.name
-        }
-        if props.amount != renderedProps?.amount {
-            amountLabel.text = props.amount
-        }
-        
-        renderedProps = props
     }
     
     private func setupUI() {
@@ -73,8 +62,7 @@ import SwiftUI
 struct SingleIngredientViewPreview: PreviewProvider {
     
     static var previews: some View {
-        ViewRepresentable(SingleIngredientView()) { view in
-            view.render(props: SingleIngredientView.Props(name: "Some name", amount: "200 pcs"))
+        ViewRepresentable(SingleIngredientView(props: SingleIngredientView.Props(name: "Some name", amount: "200 pcs"))) { view in
             view.backgroundColor = R.color.primaryOrange()
         }
         .previewLayout(.fixed(width: 343, height: 44))

@@ -10,10 +10,14 @@ import Combine
 
 final class IngredientsViewModel: BaseViewModel {
     
-    // Publishers
-//    lazy var didPressNextPublisher = didPressNextSubject.eraseToAnyPublisher()
+    // MARK: - Publishers
     
-    // Subjects
+    lazy var didPressNextPublisher = didPressNextSubject.eraseToAnyPublisher()
+    lazy var didPressPlusPublisher = didPressPlusSubject.eraseToAnyPublisher()
+    
+    
+    // MARK: - Subjects
 
-//    let didPressNextSubject = PassthroughSubject<Void, Never>()
+    let didPressNextSubject = PassthroughSubject<Void, Never>()
+    let didPressPlusSubject = PassthroughSubject<Void, Never>()
 }
