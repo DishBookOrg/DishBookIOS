@@ -37,7 +37,7 @@ final class IngredientsView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        apply(style: Styles.View.Shadow.d20)
+//        apply(style: Styles.View.Shadow.d20)
         gradientLayer?.frame = bounds
         
         mainStackView.axis = .vertical

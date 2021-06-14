@@ -50,31 +50,48 @@ final class IngredientsViewController: BaseViewController {
         
         scrollView.addSubview(ingredientsView, withEdgeInsets: .zero)
         scrollView.contentInset.bottom = 94
+        scrollView.clipsToBounds = true
+        scrollView.apply(style: Styles.View.CornerRadius.small)
+        scrollView.showsVerticalScrollIndicator = false
         
         let mainStackView = UIStackView(
-            arrangedSubviews: [progressBarView, titleLabel, scrollView])
+            arrangedSubviews: [progressBarView, titleLabel])
         mainStackView.axis = .vertical
         mainStackView.spacing = 24
         mainStackView.setCustomSpacing(30, after: progressBarView)
+        mainStackView.backgroundColor = R.color.textWhite()
         
         let addIngredientView = UIImageView(image: R.image.addNew())
         
-        view.addSubview(mainStackView, withEdgeInsets: UIEdgeInsets(top: view.safeAreaInsets.top + 24, left: 16, bottom: 0, right: 16))
+        view.addSubview(mainStackView, constraints: [
+            mainStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 24),
+            mainStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            mainStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16)
+        ])
+        
+        view.addSubview(scrollView, constraints: [
+            scrollView.topAnchor.constraint(equalTo: mainStackView.bottomAnchor, constant: 24),
+            scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            ingredientsView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -32)
+        ])
         
         view.addSubview(addIngredientView, constraints: [
             addIngredientView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            addIngredientView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            addIngredientView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
             addIngredientView.heightAnchor.constraint(equalToConstant: 44),
             addIngredientView.widthAnchor.constraint(equalToConstant: 44)
         ])
         
         addIngredientView.addSubview(addIngredientButton, withEdgeInsets: .zero)
+        view.sendSubviewToBack(scrollView)
     }
     
     private func setupStreams() {
         
         addIngredientButton.publisher(for: .touchUpInside)
-            .sink { [unowned self] _ in viewModel.didPressPlusSubject.send(())}
+            .sink { [unowned self] _ in viewModel.didPressPlusSubject.send(()) }
             .store(in: &cancelableSet)
     }
     
