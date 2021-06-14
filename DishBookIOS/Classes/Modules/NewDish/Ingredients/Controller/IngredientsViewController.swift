@@ -49,7 +49,7 @@ final class IngredientsViewController: BaseViewController {
         titleLabel.text = "Ingredients"
         
         scrollView.addSubview(ingredientsView, withEdgeInsets: .zero)
-        scrollView.contentInset.bottom = 94
+        scrollView.contentInset.bottom = 60
         scrollView.clipsToBounds = true
         scrollView.apply(style: Styles.View.CornerRadius.small)
         scrollView.showsVerticalScrollIndicator = false
