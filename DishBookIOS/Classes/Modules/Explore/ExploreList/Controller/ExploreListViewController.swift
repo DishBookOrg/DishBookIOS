@@ -97,7 +97,7 @@ final class ExploreListViewController: BaseViewController {
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
         ])
         
-        collectionView.contentInset = UIEdgeInsets(top: 56, left: 0, bottom: 0, right: 0)
+        collectionView.contentInset = UIEdgeInsets(top: 12, left: 0, bottom: 0, right: 0)
         collectionView.scrollIndicatorInsets = collectionView.contentInset
         collectionView.delegate = self
         collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseIdentifier)
