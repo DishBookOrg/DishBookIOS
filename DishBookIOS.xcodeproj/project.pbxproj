@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D5A5F7D25F7E97600053029 /* TextFieldWithDescription.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5A5F7C25F7E97600053029 /* TextFieldWithDescription.xib */; };
-		5D5A5F8125F7E99200053029 /* TextFieldWithDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5A5F8025F7E99200053029 /* TextFieldWithDescription.swift */; };
-		5D5B6E7B25F91EAC00DB9CCE /* CustomStepperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D5B6E7925F91EAC00DB9CCE /* CustomStepperView.xib */; };
-		5D5B6E7C25F91EAC00DB9CCE /* CustomStepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5B6E7A25F91EAC00DB9CCE /* CustomStepperView.swift */; };
-		5D70A26A25F8068D009B2520 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70A26925F8068D009B2520 /* CustomSegmentedControl.swift */; };
-		5D70A26E25F806D8009B2520 /* CustomSegmentedControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D70A26D25F806D8009B2520 /* CustomSegmentedControl.xib */; };
+		168850F095A0C6DDBA6CCA08 /* Pods_DishBookIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB4B398BA74D68508F3C0540 /* Pods_DishBookIOS.framework */; };
 		5D70A27125F80A4B009B2520 /* DescriptionUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */; };
+		5DB5C36226700D78003CCC73 /* TextFieldWithDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C36126700D78003CCC73 /* TextFieldWithDescription.swift */; };
+		5DB5C3662673EC71003CCC73 /* NewDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C3652673EC71003CCC73 /* NewDish.swift */; };
+		5DB5C37F2677B2A3003CCC73 /* StringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C37E2677B2A3003CCC73 /* StringConvertible.swift */; };
 		5DCFE0722641726500514498 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0712641726500514498 /* Styles.swift */; };
+		5DCFE0792641B8E700514498 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0782641B8E700514498 /* SegmentedControl.swift */; };
+		5DCFE07D264333DD00514498 /* SteperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE07C264333DD00514498 /* SteperView.swift */; };
 		5F15C86326497030009EB349 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F15C86226497030009EB349 /* SectionHeader.swift */; };
 		5F4218FC25F9509000366A16 /* DishCardSmallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */; };
 		5F42190425F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */; };
@@ -61,7 +61,7 @@
 		5FBE835625C9EC4400E3F3EB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBE835525C9EC4400E3F3EB /* ProfileViewController.swift */; };
 		5FBE835925C9EC5100E3F3EB /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBE835825C9EC5100E3F3EB /* ProfileViewModel.swift */; };
 		5FBE835C25C9EC5A00E3F3EB /* ShoplistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBE835B25C9EC5A00E3F3EB /* ShoplistViewModel.swift */; };
-		5FBE835F25C9EC6200E3F3EB /* NewDishViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBE835E25C9EC6200E3F3EB /* NewDishViewModel.swift */; };
+		5FBE835F25C9EC6200E3F3EB /* FirstStepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBE835E25C9EC6200E3F3EB /* FirstStepViewModel.swift */; };
 		5FBE836225C9F0FB00E3F3EB /* NewDishCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBE836125C9F0FB00E3F3EB /* NewDishCoordinator.swift */; };
 		5FBE836525C9F10A00E3F3EB /* ShoplistCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBE836425C9F10A00E3F3EB /* ShoplistCoordinator.swift */; };
 		5FBE836825C9F12100E3F3EB /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBE836725C9F12100E3F3EB /* ProfileCoordinator.swift */; };
@@ -119,20 +119,16 @@
 		5FFB210325C4D4490086440A /* ExploreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB210225C4D4490086440A /* ExploreCoordinator.swift */; };
 		5FFB210625C4D9050086440A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB210525C4D9050086440A /* LoginViewModel.swift */; };
 		5FFB210925C4DA630086440A /* SignInWithAppleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB210825C4DA630086440A /* SignInWithAppleCoordinator.swift */; };
-		6C7D9EF2912D7A281801420B /* Pods_DishBookIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F197AF45F4ABEFD29E09F890 /* Pods_DishBookIOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		357954EBE9EDE53EBBE87E58 /* Pods-DishBookIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.debug.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.debug.xcconfig"; sourceTree = "<group>"; };
-		4C1AF54FD29263A30F64DE0E /* Pods-DishBookIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.release.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.release.xcconfig"; sourceTree = "<group>"; };
-		5D5A5F7C25F7E97600053029 /* TextFieldWithDescription.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldWithDescription.xib; sourceTree = "<group>"; };
-		5D5A5F8025F7E99200053029 /* TextFieldWithDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDescription.swift; sourceTree = "<group>"; };
-		5D5B6E7925F91EAC00DB9CCE /* CustomStepperView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomStepperView.xib; sourceTree = "<group>"; };
-		5D5B6E7A25F91EAC00DB9CCE /* CustomStepperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStepperView.swift; sourceTree = "<group>"; };
-		5D70A26925F8068D009B2520 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
-		5D70A26D25F806D8009B2520 /* CustomSegmentedControl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomSegmentedControl.xib; sourceTree = "<group>"; };
 		5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionUILabel.swift; sourceTree = "<group>"; };
+		5DB5C36126700D78003CCC73 /* TextFieldWithDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDescription.swift; sourceTree = "<group>"; };
+		5DB5C3652673EC71003CCC73 /* NewDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDish.swift; sourceTree = "<group>"; };
+		5DB5C37E2677B2A3003CCC73 /* StringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConvertible.swift; sourceTree = "<group>"; };
 		5DCFE0712641726500514498 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		5DCFE0782641B8E700514498 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
+		5DCFE07C264333DD00514498 /* SteperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteperView.swift; sourceTree = "<group>"; };
 		5F15C86226497030009EB349 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardSmallCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardBigCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -179,7 +175,7 @@
 		5FBE835525C9EC4400E3F3EB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5FBE835825C9EC5100E3F3EB /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		5FBE835B25C9EC5A00E3F3EB /* ShoplistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoplistViewModel.swift; sourceTree = "<group>"; };
-		5FBE835E25C9EC6200E3F3EB /* NewDishViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDishViewModel.swift; sourceTree = "<group>"; };
+		5FBE835E25C9EC6200E3F3EB /* FirstStepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStepViewModel.swift; sourceTree = "<group>"; };
 		5FBE836125C9F0FB00E3F3EB /* NewDishCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDishCoordinator.swift; sourceTree = "<group>"; };
 		5FBE836425C9F10A00E3F3EB /* ShoplistCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoplistCoordinator.swift; sourceTree = "<group>"; };
 		5FBE836725C9F12100E3F3EB /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
@@ -238,7 +234,9 @@
 		5FFB210525C4D9050086440A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		5FFB210825C4DA630086440A /* SignInWithAppleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleCoordinator.swift; sourceTree = "<group>"; };
 		5FFB212425C4DB520086440A /* DishBookIOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DishBookIOS.entitlements; sourceTree = "<group>"; };
-		F197AF45F4ABEFD29E09F890 /* Pods_DishBookIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DishBookIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		87BACF15AE555CE80AAF8F8E /* Pods-DishBookIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.release.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.release.xcconfig"; sourceTree = "<group>"; };
+		B89F66BC93B0428A16FE337F /* Pods-DishBookIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DishBookIOS.debug.xcconfig"; path = "Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		EB4B398BA74D68508F3C0540 /* Pods_DishBookIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DishBookIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,39 +246,30 @@
 			files = (
 				5F7B786B2673D685006D91AF /* Gedatsu in Frameworks */,
 				5F7B78652673D646006D91AF /* StyleableUI in Frameworks */,
-				6C7D9EF2912D7A281801420B /* Pods_DishBookIOS.framework in Frameworks */,
 				5F7B78682673D661006D91AF /* IQKeyboardManagerSwift in Frameworks */,
+				168850F095A0C6DDBA6CCA08 /* Pods_DishBookIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5D5A5F7F25F7E97B00053029 /* TextFieldWithDescription */ = {
+		010CAAD96C6E4AFED0AEF483 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5D5A5F8025F7E99200053029 /* TextFieldWithDescription.swift */,
-				5D5A5F7C25F7E97600053029 /* TextFieldWithDescription.xib */,
+				EB4B398BA74D68508F3C0540 /* Pods_DishBookIOS.framework */,
 			);
-			path = TextFieldWithDescription;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5D5B6E7E25F91EB400DB9CCE /* CustomSteperView */ = {
+		5D70A26825F80566009B2520 /* AddDish */ = {
 			isa = PBXGroup;
 			children = (
-				5D5B6E7A25F91EAC00DB9CCE /* CustomStepperView.swift */,
-				5D5B6E7925F91EAC00DB9CCE /* CustomStepperView.xib */,
+				5DCFE0782641B8E700514498 /* SegmentedControl.swift */,
+				5DCFE07C264333DD00514498 /* SteperView.swift */,
+				5DB5C36126700D78003CCC73 /* TextFieldWithDescription.swift */,
 			);
-			path = CustomSteperView;
-			sourceTree = "<group>";
-		};
-		5D70A26825F80566009B2520 /* CustomSegmentControl */ = {
-			isa = PBXGroup;
-			children = (
-				5D70A26925F8068D009B2520 /* CustomSegmentedControl.swift */,
-				5D70A26D25F806D8009B2520 /* CustomSegmentedControl.xib */,
-			);
-			path = CustomSegmentControl;
+			path = AddDish;
 			sourceTree = "<group>";
 		};
 		5D70A27425F80DB5009B2520 /* UILabels */ = {
@@ -359,7 +348,7 @@
 				5F5C525625C4B0E900AC7E3C /* DishBookIOS */,
 				5F5C525525C4B0E900AC7E3C /* Products */,
 				E055B89846E80807F4D381DA /* Pods */,
-				FEA78A3B5AE4FF9B9F3ECE8A /* Frameworks */,
+				010CAAD96C6E4AFED0AEF483 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -482,10 +471,8 @@
 			isa = PBXGroup;
 			children = (
 				5FFB20B225C4CA360086440A /* Loader.swift */,
-				5D70A26825F80566009B2520 /* CustomSegmentControl */,
-				5D5B6E7E25F91EB400DB9CCE /* CustomSteperView */,
+				5D70A26825F80566009B2520 /* AddDish */,
 				5F4218F925F9505700366A16 /* DishCards */,
-				5D5A5F7F25F7E97B00053029 /* TextFieldWithDescription */,
 				5D70A27425F80DB5009B2520 /* UILabels */,
 			);
 			path = Views;
@@ -595,6 +582,7 @@
 				5FCFDA162641881C00B3CFFC /* BindableCell.swift */,
 				5FCFDA182641885000B3CFFC /* ReusableCell.swift */,
 				5FCFDA1E264189E600B3CFFC /* ViewRepresentable.swift */,
+				5DB5C37E2677B2A3003CCC73 /* StringConvertible.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -755,7 +743,8 @@
 		5FBE834025C9EBD700E3F3EB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				5FBE835E25C9EC6200E3F3EB /* NewDishViewModel.swift */,
+				5FBE835E25C9EC6200E3F3EB /* FirstStepViewModel.swift */,
+				5DB5C3652673EC71003CCC73 /* NewDish.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -948,18 +937,10 @@
 		E055B89846E80807F4D381DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				357954EBE9EDE53EBBE87E58 /* Pods-DishBookIOS.debug.xcconfig */,
-				4C1AF54FD29263A30F64DE0E /* Pods-DishBookIOS.release.xcconfig */,
+				B89F66BC93B0428A16FE337F /* Pods-DishBookIOS.debug.xcconfig */,
+				87BACF15AE555CE80AAF8F8E /* Pods-DishBookIOS.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		FEA78A3B5AE4FF9B9F3ECE8A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F197AF45F4ABEFD29E09F890 /* Pods_DishBookIOS.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -969,14 +950,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5F5C526825C4B0EE00AC7E3C /* Build configuration list for PBXNativeTarget "DishBookIOS" */;
 			buildPhases = (
-				2A49AAE3E78796A8357413E3 /* [CP] Check Pods Manifest.lock */,
+				3B5A197F327A56CD1DE305D6 /* [CP] Check Pods Manifest.lock */,
 				5F5C52A925C4B7E100AC7E3C /* R.swift */,
 				5F5C525025C4B0E900AC7E3C /* Sources */,
 				5F5C525125C4B0E900AC7E3C /* Frameworks */,
 				5F5C525225C4B0E900AC7E3C /* Resources */,
 				5F5C52AF25C4B9E600AC7E3C /* SwiftLint */,
-				A5552FB52D693D4DA269A482 /* [CP] Embed Pods Frameworks */,
-				68D8DF596F4BB5551F021AF5 /* [CP] Copy Pods Resources */,
+				E4D8641B30EC8FD37ECE55BA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1044,10 +1024,8 @@
 				5FBE839A25C9FEDA00E3F3EB /* SF-Pro-Rounded-Semibold.otf in Resources */,
 				5FBE839325C9FEDA00E3F3EB /* SF-Pro-Display-Medium.otf in Resources */,
 				5FEBD1B425C9CEA8000F7E9C /* DishBook.strings in Resources */,
-				5D5A5F7D25F7E97600053029 /* TextFieldWithDescription.xib in Resources */,
 				5FBE837625C9F33A00E3F3EB /* Common.strings in Resources */,
 				5F5C529325C4B4CC00AC7E3C /* Color.xcassets in Resources */,
-				5D70A26E25F806D8009B2520 /* CustomSegmentedControl.xib in Resources */,
 				5FBE839725C9FEDA00E3F3EB /* SF-Pro-Text-Semibold.otf in Resources */,
 				5FBE836B25C9F30900E3F3EB /* NewDish.strings in Resources */,
 				5FBE839825C9FEDA00E3F3EB /* SF-Pro-Text-Light.otf in Resources */,
@@ -1056,7 +1034,6 @@
 				5F5C526125C4B0EE00AC7E3C /* Assets.xcassets in Resources */,
 				5FBE837125C9F31F00E3F3EB /* Profile.strings in Resources */,
 				5FBE836E25C9F31600E3F3EB /* Shoplist.strings in Resources */,
-				5D5B6E7B25F91EAC00DB9CCE /* CustomStepperView.xib in Resources */,
 				5FBE839125C9FEDA00E3F3EB /* SF-Pro-Display-Regular.otf in Resources */,
 				5FBE839625C9FEDA00E3F3EB /* SF-Pro-Text-Medium.otf in Resources */,
 			);
@@ -1065,7 +1042,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A49AAE3E78796A8357413E3 /* [CP] Check Pods Manifest.lock */ = {
+		3B5A197F327A56CD1DE305D6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1125,24 +1102,7 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
-		68D8DF596F4BB5551F021AF5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A5552FB52D693D4DA269A482 /* [CP] Embed Pods Frameworks */ = {
+		E4D8641B30EC8FD37ECE55BA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1174,9 +1134,11 @@
 				5F44163325CB04F10009FE5F /* UITextView+Publisher.swift in Sources */,
 				5F8FA25B26416D4300E24685 /* SmallItemsSection.swift in Sources */,
 				5FD012FC25CDBC0000A0E257 /* AlertManager.swift in Sources */,
+				5DCFE07D264333DD00514498 /* SteperView.swift in Sources */,
 				5FBE836825C9F12100E3F3EB /* ProfileCoordinator.swift in Sources */,
 				5FEBD1BD25C9D416000F7E9C /* DishBookViewController.swift in Sources */,
 				5F8FA25926416D0000E24685 /* CollectionSection.swift in Sources */,
+				5DB5C3662673EC71003CCC73 /* NewDish.swift in Sources */,
 				5FFB20A825C4C9B10086440A /* AppCoordinator.swift in Sources */,
 				5FEBD1AE25C9CDA7000F7E9C /* DishBookCoordinator.swift in Sources */,
 				5FEBD1EA25C9DCD8000F7E9C /* UIApplication+TopViewController.swift in Sources */,
@@ -1185,7 +1147,7 @@
 				5FACE015265BA8CC009728D5 /* Text+Font.swift in Sources */,
 				5FCFDA192641885000B3CFFC /* ReusableCell.swift in Sources */,
 				5FACE004265BA5CE009728D5 /* Base+Button.swift in Sources */,
-				5FBE835F25C9EC6200E3F3EB /* NewDishViewModel.swift in Sources */,
+				5FBE835F25C9EC6200E3F3EB /* FirstStepViewModel.swift in Sources */,
 				5FBE836225C9F0FB00E3F3EB /* NewDishCoordinator.swift in Sources */,
 				5FCFDA0F2641846E00B3CFFC /* UIView+Constants.swift in Sources */,
 				5F4218FC25F9509000366A16 /* DishCardSmallCollectionViewCell.swift in Sources */,
@@ -1196,7 +1158,6 @@
 				5FFB20BA25C4CB9F0086440A /* BaseCoordinator.swift in Sources */,
 				5FACE00D265BA708009728D5 /* Rounded+Font.swift in Sources */,
 				5FFB20CE25C4CC740086440A /* TypeAliases.swift in Sources */,
-				5D5A5F8125F7E99200053029 /* TextFieldWithDescription.swift in Sources */,
 				5FFB20BD25C4CBB60086440A /* CoordinatorProtocol.swift in Sources */,
 				5FFB20F725C4D2F30086440A /* MainFlowCoordinator.swift in Sources */,
 				5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */,
@@ -1205,6 +1166,7 @@
 				5F44162D25CB04D70009FE5F /* UIControlPublisher.swift in Sources */,
 				5FEBD1C725C9D9A6000F7E9C /* SignInWithGoogleCoordinator.swift in Sources */,
 				5F44164425CB06F10009FE5F /* UIView+Anchors.swift in Sources */,
+				5DCFE0792641B8E700514498 /* SegmentedControl.swift in Sources */,
 				5F8FA25D26416D4E00E24685 /* BigItemsSection.swift in Sources */,
 				5FFB210625C4D9050086440A /* LoginViewModel.swift in Sources */,
 				5F44163925CB057B0009FE5F /* Publisher+AssignNoRetain.swift in Sources */,
@@ -1226,17 +1188,17 @@
 				5FACE01E265BA932009728D5 /* Regular+Text.swift in Sources */,
 				5FFB20D725C4CF480086440A /* UIView+IBInspectable.swift in Sources */,
 				5FBE836525C9F10A00E3F3EB /* ShoplistCoordinator.swift in Sources */,
+				5DB5C37F2677B2A3003CCC73 /* StringConvertible.swift in Sources */,
 				5FCFDA1F264189E600B3CFFC /* ViewRepresentable.swift in Sources */,
 				5FEBD1C425C9D42C000F7E9C /* ExploreListViewModel.swift in Sources */,
 				5FACE011265BA80D009728D5 /* Medium+Rounded.swift in Sources */,
 				5F44164025CB06CD0009FE5F /* UIView+FromNib.swift in Sources */,
 				5DCFE0722641726500514498 /* Styles.swift in Sources */,
+				5DB5C36226700D78003CCC73 /* TextFieldWithDescription.swift in Sources */,
 				5FFB210325C4D4490086440A /* ExploreCoordinator.swift in Sources */,
 				5FBE835325C9EC3E00E3F3EB /* ShoplistViewController.swift in Sources */,
-				5D70A26A25F8068D009B2520 /* CustomSegmentedControl.swift in Sources */,
 				5FBE837D25C9F79200E3F3EB /* BaseRootCoordinator.swift in Sources */,
 				5FCFDA172641881C00B3CFFC /* BindableCell.swift in Sources */,
-				5D5B6E7C25F91EAC00DB9CCE /* CustomStepperView.swift in Sources */,
 				5F15C86326497030009EB349 /* SectionHeader.swift in Sources */,
 				5FCFDA1D2641888600B3CFFC /* UICollectionView+Reusable.swift in Sources */,
 				5FBE835C25C9EC5A00E3F3EB /* ShoplistViewModel.swift in Sources */,
@@ -1385,7 +1347,7 @@
 		};
 		5F5C526925C4B0EE00AC7E3C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 357954EBE9EDE53EBBE87E58 /* Pods-DishBookIOS.debug.xcconfig */;
+			baseConfigurationReference = B89F66BC93B0428A16FE337F /* Pods-DishBookIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1407,7 +1369,7 @@
 		};
 		5F5C526A25C4B0EE00AC7E3C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C1AF54FD29263A30F64DE0E /* Pods-DishBookIOS.release.xcconfig */;
+			baseConfigurationReference = 87BACF15AE555CE80AAF8F8E /* Pods-DishBookIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

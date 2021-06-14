@@ -25,6 +25,14 @@ final class AppCoordinator: BaseCoordinator {
         if App.user != nil {
             
             coordinator = MainFlowCoordinator(window: window)
+            coordinator.isCompleted = { [weak self] in
+                
+                self?.free(coordinator: coordinator)
+                self?.start()
+            }
+            
+            store(coordinator: coordinator)
+
         } else {
             
             coordinator = AuthCoordinator(navigationController: navigationController)
