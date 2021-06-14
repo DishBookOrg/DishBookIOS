@@ -11,7 +11,6 @@ import Combine
 final class NewDishCoordinator: BaseRootCoordinator {
     
     private var newDish = NewDish()
-    private var cancelableSet: Set<AnyCancellable> = []
 
     override init() {
         super.init()
@@ -33,6 +32,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
     }
     
     private func createFirstStep() -> UIViewController {
+        
         let viewModel = FirstStepViewModel()
 
         viewModel.didChangeNamePublisher

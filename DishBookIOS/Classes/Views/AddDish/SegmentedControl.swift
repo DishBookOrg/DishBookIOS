@@ -148,43 +148,27 @@ class SegmentedControl: UIControl {
         let pointTapped: CGPoint = gestureRecognizer.location(in: self)
         let index = Int(pointTapped.x / segmentWidth)
         
-        self.selectedView.apply(style: Styles.View.CornerRadius.d0)
-        self.selectedView.apply(style: Styles.View.CornerRadius.noMasked)
+        selectedView.apply(style: Styles.View.CornerRadius.d0)
+        selectedView.apply(style: Styles.View.CornerRadius.noMasked)
         selectedLabel.font = R.font.sfProRoundedSemibold(size: 16)
         
-        UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: UIView.AnimationOptions.curveEaseIn) {
+        UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.5, options: UIView.AnimationOptions.curveEaseIn) { [self] in
             
-            self.selectedView.frame.origin.x = self.segmentWidth * CGFloat(index)
-            self.selectedView.apply(style: Styles.View.CornerRadius.d10)
+            selectedView.frame.origin.x = segmentWidth * CGFloat(index)
+            selectedView.apply(style: Styles.View.CornerRadius.d10)
             
             if index == 0 {
-                self.selectedView.apply(style: Styles.View.CornerRadius.maskedRight)
+                selectedView.apply(style: Styles.View.CornerRadius.maskedRight)
             } else if index == self.segments.count - 1 {
-                self.selectedView.apply(style: Styles.View.CornerRadius.maskedLeft)
+                selectedView.apply(style: Styles.View.CornerRadius.maskedLeft)
             } else {
-                self.selectedView.apply(style: Styles.View.CornerRadius.noMasked)
+                selectedView.apply(style: Styles.View.CornerRadius.noMasked)
             }
             
-            self.selectedLabel.text = self.segments[index].stringValue
+            selectedLabel.text = segments[index].stringValue
         } completion: { [unowned self] _ in
             selectedLabel.font = R.font.sfProRoundedSemibold(size: 15)
             didSelectSubject.send(segments[index])
         }
-    }
-    
-    
-    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-        super.beginTracking(touch, with: event)
-        
-        return true
-    }
-    override func continueTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
-        super.continueTracking(touch, with: event)
-        
-        return true
-    }
-    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
-        super.endTracking(touch, with: event)
-        
     }
 }

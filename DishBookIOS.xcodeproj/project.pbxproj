@@ -15,6 +15,7 @@
 		5DB5C377267779CF003CCC73 /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C376267779CF003CCC73 /* IngredientsViewController.swift */; };
 		5DB5C37926777D22003CCC73 /* SingleIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C37826777D22003CCC73 /* SingleIngredientView.swift */; };
 		5DB5C37B267787A6003CCC73 /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C37A267787A6003CCC73 /* IngredientsView.swift */; };
+		5DB5C37F2677B2A3003CCC73 /* StringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C37E2677B2A3003CCC73 /* StringConvertible.swift */; };
 		5DCFE0722641726500514498 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0712641726500514498 /* Styles.swift */; };
 		5DCFE0792641B8E700514498 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0782641B8E700514498 /* SegmentedControl.swift */; };
 		5DCFE07D264333DD00514498 /* SteperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE07C264333DD00514498 /* SteperView.swift */; };
@@ -132,6 +133,7 @@
 		5DB5C376267779CF003CCC73 /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
 		5DB5C37826777D22003CCC73 /* SingleIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleIngredientView.swift; sourceTree = "<group>"; };
 		5DB5C37A267787A6003CCC73 /* IngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
+		5DB5C37E2677B2A3003CCC73 /* StringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConvertible.swift; sourceTree = "<group>"; };
 		5DCFE0712641726500514498 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		5DCFE0782641B8E700514498 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		5DCFE07C264333DD00514498 /* SteperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteperView.swift; sourceTree = "<group>"; };
@@ -693,6 +695,7 @@
 				5FCFDA162641881C00B3CFFC /* BindableCell.swift */,
 				5FCFDA182641885000B3CFFC /* ReusableCell.swift */,
 				5FCFDA1E264189E600B3CFFC /* ViewRepresentable.swift */,
+				5DB5C37E2677B2A3003CCC73 /* StringConvertible.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -1304,6 +1307,7 @@
 				5FACE01E265BA932009728D5 /* Regular+Text.swift in Sources */,
 				5FFB20D725C4CF480086440A /* UIView+IBInspectable.swift in Sources */,
 				5FBE836525C9F10A00E3F3EB /* ShoplistCoordinator.swift in Sources */,
+				5DB5C37F2677B2A3003CCC73 /* StringConvertible.swift in Sources */,
 				5FCFDA1F264189E600B3CFFC /* ViewRepresentable.swift in Sources */,
 				5FEBD1C425C9D42C000F7E9C /* ExploreListViewModel.swift in Sources */,
 				5FACE011265BA80D009728D5 /* Medium+Rounded.swift in Sources */,
