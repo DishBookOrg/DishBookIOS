@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import FirebaseStorage
 
 struct Dish {
     
@@ -27,12 +28,7 @@ struct Dish {
     var totalTime: Int
     
     /// URL to image model.
-    ///
-    /// ``` swift
-    /// // How to set image to imageView
-    /// dishImageView.sd_setImage(with: Storage.storage().reference(forURL: imageURL),
-    ///                           placeholderImage: UIImage())
-    /// ```
+    /// Use `.imageReference` with sd_setImage
     var imageURL: String
     
     /// Ration enum
@@ -75,6 +71,10 @@ extension Dish {
         let seconds = totalTime % 60
         
         return seconds == 0 ? "\(minutes) min" : "\(minutes) min \(seconds) s."
+    }
+    
+    var imageReference: StorageReference {
+        return Storage.storage().reference(forURL: imageURL)
     }
 }
 

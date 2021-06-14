@@ -77,7 +77,7 @@ final class ExploreListViewController: BaseViewController {
         searchBar.backgroundColor = .clear
         
         blurEffectView.contentView.addSubview(searchBar, constraints: [
-            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),
+            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -44),
             searchBar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 12),
             searchBar.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -12),
             blurEffectView.bottomAnchor.constraint(equalTo: searchBar.bottomAnchor)
@@ -218,10 +218,12 @@ extension ExploreListViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        if let dish = dataSource.itemIdentifier(for: indexPath) {
-            print(dish)
+        guard let dish = dataSource.itemIdentifier(for: indexPath) else {
+            return
         }
-        IMPLEMENT_ME(TODO: "Show dish detail")
+        
+        print(dish)
+        viewModel.didPressDishDetailSubject.send(dish)
     }
 }
 

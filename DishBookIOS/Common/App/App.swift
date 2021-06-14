@@ -32,6 +32,22 @@ struct App {
         user = Auth.auth().currentUser
         
         print("Setup complete")
+        
+        
+        let appearance = UINavigationBar.appearance()
+        
+        appearance.isTranslucent = true
+        appearance.tintColor = R.color.primaryOrange()!
+        appearance.barTintColor = .clear
+        appearance.shadowImage = UIImage()
+//        appearance.titleTextAttributes = [
+//            .foregroundColor: theme.navigationBarTitleColor,
+//            .font: theme.navigationBarTitleFont
+//        ]
+        
+//        appearance.backIndicatorImage = theme.navigationBarBackButtonImage
+//        appearance.backIndicatorTransitionMaskImage = theme.navigationBarBackButtonImage
+        appearance.setBackgroundImage(UIImage(), for: .default)
     }
     
     static func startCoordinator(in window: UIWindow) {
