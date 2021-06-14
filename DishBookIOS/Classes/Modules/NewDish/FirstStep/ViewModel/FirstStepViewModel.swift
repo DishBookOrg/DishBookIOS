@@ -22,7 +22,5 @@ final class FirstStepViewModel: BaseViewModel {
     let didSelectDifficultyLevelSubject = PassthroughSubject<Dish.Difficulty, Never>()
     let didChangeNameSubject = PassthroughSubject<String, Never>()
     let didChangeNumberOfServingsSubject = PassthroughSubject<Int, Never>()
-    let didPressNextSubject = PassthroughSubject<Void, Never>()
-    
-    var onNext: VoidClosure?
+    let didPressNextSubject = PassthroughSubject<Void, Never>()    
 }

@@ -26,6 +26,8 @@ final class NewDishCoordinator: BaseRootCoordinator {
     
     override func start() {
         
+        navigationController?.navigationBar.tintColor = R.color.textBlack()
+        
         let firstStepViewController = createFirstStep()
         navigationController?.pushViewController(firstStepViewController, animated: false)
     }

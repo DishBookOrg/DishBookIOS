@@ -11,6 +11,10 @@
 		5D70A27125F80A4B009B2520 /* DescriptionUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */; };
 		5DB5C36226700D78003CCC73 /* TextFieldWithDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C36126700D78003CCC73 /* TextFieldWithDescription.swift */; };
 		5DB5C3662673EC71003CCC73 /* NewDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C3652673EC71003CCC73 /* NewDish.swift */; };
+		5DB5C375267779C2003CCC73 /* IngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C374267779C2003CCC73 /* IngredientsViewModel.swift */; };
+		5DB5C377267779CF003CCC73 /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C376267779CF003CCC73 /* IngredientsViewController.swift */; };
+		5DB5C37926777D22003CCC73 /* SingleIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C37826777D22003CCC73 /* SingleIngredientView.swift */; };
+		5DB5C37B267787A6003CCC73 /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C37A267787A6003CCC73 /* IngredientsView.swift */; };
 		5DCFE0722641726500514498 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0712641726500514498 /* Styles.swift */; };
 		5DCFE0792641B8E700514498 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0782641B8E700514498 /* SegmentedControl.swift */; };
 		5DCFE07D264333DD00514498 /* SteperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE07C264333DD00514498 /* SteperView.swift */; };
@@ -124,6 +128,10 @@
 		5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionUILabel.swift; sourceTree = "<group>"; };
 		5DB5C36126700D78003CCC73 /* TextFieldWithDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDescription.swift; sourceTree = "<group>"; };
 		5DB5C3652673EC71003CCC73 /* NewDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDish.swift; sourceTree = "<group>"; };
+		5DB5C374267779C2003CCC73 /* IngredientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewModel.swift; sourceTree = "<group>"; };
+		5DB5C376267779CF003CCC73 /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
+		5DB5C37826777D22003CCC73 /* SingleIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleIngredientView.swift; sourceTree = "<group>"; };
+		5DB5C37A267787A6003CCC73 /* IngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
 		5DCFE0712641726500514498 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		5DCFE0782641B8E700514498 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		5DCFE07C264333DD00514498 /* SteperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteperView.swift; sourceTree = "<group>"; };
@@ -266,6 +274,8 @@
 				5DCFE0782641B8E700514498 /* SegmentedControl.swift */,
 				5DCFE07C264333DD00514498 /* SteperView.swift */,
 				5DB5C36126700D78003CCC73 /* TextFieldWithDescription.swift */,
+				5DB5C37826777D22003CCC73 /* SingleIngredientView.swift */,
+				5DB5C37A267787A6003CCC73 /* IngredientsView.swift */,
 			);
 			path = AddDish;
 			sourceTree = "<group>";
@@ -276,6 +286,109 @@
 				5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */,
 			);
 			path = UILabels;
+			sourceTree = "<group>";
+		};
+		5DB5C3672677776D003CCC73 /* FirstStep */ = {
+			isa = PBXGroup;
+			children = (
+				5FBE834025C9EBD700E3F3EB /* ViewModel */,
+				5FBE834125C9EBDD00E3F3EB /* Controller */,
+			);
+			path = FirstStep;
+			sourceTree = "<group>";
+		};
+		5DB5C3682677778F003CCC73 /* Ingredients */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5C36C26777895003CCC73 /* ViewModel */,
+				5DB5C370267778AB003CCC73 /* Controller */,
+			);
+			path = Ingredients;
+			sourceTree = "<group>";
+		};
+		5DB5C369267777B3003CCC73 /* NewIngredient */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5C371267778AE003CCC73 /* Controller */,
+				5DB5C36D2677789F003CCC73 /* ViewModel */,
+			);
+			path = NewIngredient;
+			sourceTree = "<group>";
+		};
+		5DB5C36A267777D8003CCC73 /* CreateSteps */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5C372267778B1003CCC73 /* Controller */,
+				5DB5C36E267778A2003CCC73 /* ViewModel */,
+			);
+			path = CreateSteps;
+			sourceTree = "<group>";
+		};
+		5DB5C36B2677780B003CCC73 /* CreateStep */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5C373267778B5003CCC73 /* Controller */,
+				5DB5C36F267778A5003CCC73 /* ViewModel */,
+			);
+			path = CreateStep;
+			sourceTree = "<group>";
+		};
+		5DB5C36C26777895003CCC73 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5C374267779C2003CCC73 /* IngredientsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5DB5C36D2677789F003CCC73 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5DB5C36E267778A2003CCC73 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5DB5C36F267778A5003CCC73 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5DB5C370267778AB003CCC73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5C376267779CF003CCC73 /* IngredientsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DB5C371267778AE003CCC73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DB5C372267778B1003CCC73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DB5C373267778B5003CCC73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		5DCFE0702641725100514498 /* Styles */ = {
@@ -713,8 +826,11 @@
 		5FBE833925C9EB8900E3F3EB /* NewDish */ = {
 			isa = PBXGroup;
 			children = (
-				5FBE834025C9EBD700E3F3EB /* ViewModel */,
-				5FBE834125C9EBDD00E3F3EB /* Controller */,
+				5DB5C3672677776D003CCC73 /* FirstStep */,
+				5DB5C3682677778F003CCC73 /* Ingredients */,
+				5DB5C369267777B3003CCC73 /* NewIngredient */,
+				5DB5C36A267777D8003CCC73 /* CreateSteps */,
+				5DB5C36B2677780B003CCC73 /* CreateStep */,
 			);
 			path = NewDish;
 			sourceTree = "<group>";
@@ -1159,7 +1275,9 @@
 				5FFB20F725C4D2F30086440A /* MainFlowCoordinator.swift in Sources */,
 				5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */,
 				5FACE00F265BA74B009728D5 /* SB+Rounded.swift in Sources */,
+				5DB5C377267779CF003CCC73 /* IngredientsViewController.swift in Sources */,
 				5FFB20FE25C4D3370086440A /* ExploreListViewController.swift in Sources */,
+				5DB5C37926777D22003CCC73 /* SingleIngredientView.swift in Sources */,
 				5F44162D25CB04D70009FE5F /* UIControlPublisher.swift in Sources */,
 				5FEBD1C725C9D9A6000F7E9C /* SignInWithGoogleCoordinator.swift in Sources */,
 				5F44164425CB06F10009FE5F /* UIView+Anchors.swift in Sources */,
@@ -1177,6 +1295,7 @@
 				5FFB20B025C4CA110086440A /* BaseViewModel.swift in Sources */,
 				5FFB20C125C4CBE90086440A /* AuthCoordinator.swift in Sources */,
 				5FBE835625C9EC4400E3F3EB /* ProfileViewController.swift in Sources */,
+				5DB5C37B267787A6003CCC73 /* IngredientsView.swift in Sources */,
 				5F5C525825C4B0E900AC7E3C /* AppDelegate.swift in Sources */,
 				5F5C52AD25C4B8AF00AC7E3C /* R.generated.swift in Sources */,
 				5FD0130225CDBCE100A0E257 /* DishDetailsController.swift in Sources */,
@@ -1206,6 +1325,7 @@
 				5FACE013265BA845009728D5 /* Regular+Rounded.swift in Sources */,
 				5FACDFF7265BA3C4009728D5 /* APIClient.swift in Sources */,
 				5FD012F925CDBBF400A0E257 /* Dish.swift in Sources */,
+				5DB5C375267779C2003CCC73 /* IngredientsViewModel.swift in Sources */,
 				5FEBD1C125C9D423000F7E9C /* DishBookViewModel.swift in Sources */,
 				5F44164B25CB07510009FE5F /* UITextView+Placeholder.swift in Sources */,
 			);
