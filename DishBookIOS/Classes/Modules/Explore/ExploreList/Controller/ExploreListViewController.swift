@@ -14,6 +14,13 @@ final class ExploreListViewController: BaseViewController {
     typealias DataSource = UICollectionViewDiffableDataSource<ExploreListSection, Dish>
     typealias Snapshot = NSDiffableDataSourceSnapshot<ExploreListSection, Dish>
     
+    // MARK: - State
+    
+    enum State {
+        case explore
+        case search
+    }
+    
     // MARK: - IBOutlets
     
     private var searchBar: UISearchBar!
@@ -25,6 +32,20 @@ final class ExploreListViewController: BaseViewController {
     private var viewModel: ExploreListViewModel
     private var dataSource: DataSource!
     private var blocks: [ExploreListCollectionBlock] = []
+    private var state: State = .explore {
+        didSet {
+            guard state != oldValue else {
+                return
+            }
+            
+            switch state {
+            case .explore:
+                collectionView.setCollectionViewLayout(createLayout(), animated: false)
+            case .search:
+                collectionView.setCollectionViewLayout(createSearchLayout(), animated: false)
+            }
+        }
+    }
     
     // MARK: - Lifecycle
     
@@ -56,6 +77,16 @@ final class ExploreListViewController: BaseViewController {
         
         viewModel.$showLoader
             .assignNoRetain(to: \.showLoader, on: self)
+            .store(in: &cancelableSet)
+        
+        viewModel.$dishesInSearch
+            .dropFirst()
+            .sink { [weak self] dishes in
+                guard self?.state == .search else {
+                    return
+                }
+                self?.applySearch(dishes)
+            }
             .store(in: &cancelableSet)
     }
     
@@ -114,13 +145,15 @@ final class ExploreListViewController: BaseViewController {
             cell.render(props: dish)
         }
         
-        dataSource = DataSource(collectionView: collectionView) { collectionView, indexPath, item in
+        dataSource = DataSource(collectionView: collectionView) { [unowned self] collectionView, indexPath, item in
             
             switch self.blocks[indexPath.section].section {
             case .bigSection:
                 return collectionView.dequeueConfiguredReusableCell(using: bigDishCollectionViewCell, for: indexPath, item: item)
             case .smallSection:
                 return collectionView.dequeueConfiguredReusableCell(using: smallDishCollectionViewCell, for: indexPath, item: item)
+            case .search:
+                return collectionView.dequeueConfiguredReusableCell(using: bigDishCollectionViewCell, for: indexPath, item: item)
             }
         }
         
@@ -153,11 +186,29 @@ final class ExploreListViewController: BaseViewController {
         dataSource?.apply(snapshot, animatingDifferences: animated)
     }
     
+    private func applySearch(_ dishes: [Dish]) {
+        
+        var snapshot = Snapshot()
+        snapshot.appendSections([.search])
+        snapshot.appendItems(dishes, toSection: .search)
+        dataSource?.apply(snapshot, animatingDifferences: true)
+    }
+    
     private func createLayout() -> UICollectionViewCompositionalLayout {
         
-        let layout = UICollectionViewCompositionalLayout { sectionIndex, _ in
+        let layout = UICollectionViewCompositionalLayout { sectionIndex, environment in
             
-            return self.blocks[sectionIndex].section.sectionLayout
+            return self.blocks[sectionIndex].section.sectionLayout(with: environment)
+        }
+        
+        return layout
+    }
+    
+    private func createSearchLayout() -> UICollectionViewCompositionalLayout {
+        
+        let layout = UICollectionViewCompositionalLayout { sectionIndex, environment in
+            
+            return ExploreListSection.search.sectionLayout(with: environment)
         }
         
         return layout
@@ -172,6 +223,7 @@ extension ExploreListViewController {
         
         case bigSection(id: Int, title: String)
         case smallSection(id: Int, ration: Dish.Ration)
+        case search
         
         var itemsCount: Int {
             switch self {
@@ -179,6 +231,8 @@ extension ExploreListViewController {
                 return 3
             case .smallSection:
                 return 10
+            case .search:
+                return 1
             }
         }
         
@@ -188,16 +242,20 @@ extension ExploreListViewController {
                 return title
             case let .smallSection(_, ration):
                 return ration.rawValue
+            case .search:
+                return ""
             }
         }
         
-        var sectionLayout: NSCollectionLayoutSection {
+        func sectionLayout(with environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? {
             
             switch self {
             case .smallSection:
-                return SmallItemsSection(numberOfItems: itemsCount).layoutSection()
+                return SmallItemsSection(numberOfItems: itemsCount).layoutSection(environment: environment)
             case .bigSection:
-                return BigItemsSection(numberOfItems: itemsCount).layoutSection()
+                return BigItemsSection(numberOfItems: itemsCount).layoutSection(environment: environment)
+            case .search:
+                return SearchSection(numberOfItems: itemsCount).layoutSection(environment: environment)
             }
         }
     }
@@ -231,20 +289,46 @@ extension ExploreListViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
+        state = .search
+        
+        if !searchText.isEmpty {
+            
+            viewModel.searchDishes(with: searchText)
+        } else {
+            applySearch([])
+            
+//            state = .explore
+//            apply(animated: true)
+        }
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         
-        searchBar.setShowsCancelButton(true, animated: true)
+        if searchBar.searchTextField.text?.isEmpty ?? false {
+            state = .search
+            applySearch([])
+            searchBar.setShowsCancelButton(true, animated: false)
+        }
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         
-        searchBar.setShowsCancelButton(false, animated: true)
+        if searchBar.searchTextField.text?.isEmpty ?? false {
+            apply(animated: true)
+            state = .explore
+            searchBar.setShowsCancelButton(false, animated: false)
+        }
+//        state = .explore
+//        collectionView.setCollectionViewLayout(createLayout(), animated: false)
     }
+    
+//    searcBase
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         
+        state = .explore
+        collectionView.setCollectionViewLayout(createLayout(), animated: false)
+        apply(animated: true)
         searchBar.setShowsCancelButton(false, animated: true)
         UIApplication.hideKeyboard()
     }
