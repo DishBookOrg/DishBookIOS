@@ -12,7 +12,7 @@ final class FirstStepViewController: BaseViewController {
         
     // MARK: - Private properties
     
-    private var viewModel: NewDishViewModel
+    private var viewModel: FirstStepViewModel
     
     private let nameTextField = TextFieldWithDescription()
     private let ownPublicSegmentedControl = SegmentedControl()
@@ -21,7 +21,7 @@ final class FirstStepViewController: BaseViewController {
         
     // MARK: - Lifecycle
     
-    init(viewModel: NewDishViewModel) {
+    init(viewModel: FirstStepViewModel) {
         self.viewModel = viewModel
         
         super.init(nibName: nil, bundle: nil, closableCoordinator: viewModel)
@@ -108,6 +108,6 @@ import SwiftUI
 struct NewDishViewPreview: PreviewProvider {
 
     static var previews: some View {
-        ViewRepresentable(FirstStepViewController(viewModel: NewDishViewModel()).view)
+        ViewRepresentable(FirstStepViewController(viewModel: FirstStepViewModel()).view)
     }
 }

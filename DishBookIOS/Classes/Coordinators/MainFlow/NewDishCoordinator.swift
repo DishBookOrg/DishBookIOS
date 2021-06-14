@@ -12,9 +12,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
     
     private var newDish = NewDish()
     private var cancelableSet: Set<AnyCancellable> = []
-    let viewModel = NewDishViewModel()
-    lazy var firstStepViewController = FirstStepViewController(viewModel: viewModel)
-    
+
     override init() {
         super.init()
         
@@ -33,7 +31,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
     }
     
     private func createFirstStep() -> UIViewController {
-        
+        let viewModel = FirstStepViewModel()
 
         viewModel.didChangeNamePublisher
             .sink { [unowned self] in newDish.name = $0 }
@@ -58,7 +56,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
             }
             .store(in: &cancelableSet)
 
-        return firstStepViewController
+        return FirstStepViewController(viewModel: viewModel)
     }
     
     private func createSecondStep() -> UIViewController {        

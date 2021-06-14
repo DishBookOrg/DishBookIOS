@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class NewDishViewModel: BaseViewModel {
+final class FirstStepViewModel: BaseViewModel {
     
     // Publishers
     lazy var didSelectPrivacyLevelPublisher = didSelectPrivacyLevelSubject.eraseToAnyPublisher()
