@@ -10,14 +10,16 @@ import Combine
 
 final class FirstStepViewModel: BaseViewModel {
     
-    // Publishers
+    // MARK: - Publishers
+    
     lazy var didSelectPrivacyLevelPublisher = didSelectPrivacyLevelSubject.eraseToAnyPublisher()
     lazy var didSelectDifficultyLevelPublisher = didSelectDifficultyLevelSubject.eraseToAnyPublisher()
     lazy var didChangeNamePublisher = didChangeNameSubject.eraseToAnyPublisher()
     lazy var didChangeNumberOfServingsPublisher = didChangeNumberOfServingsSubject.eraseToAnyPublisher()
     lazy var didPressNextPublisher = didPressNextSubject.eraseToAnyPublisher()
     
-    // Subjects
+    // MARK: - Subjects
+    
     let didSelectPrivacyLevelSubject = PassthroughSubject<Dish.Privacy, Never>()
     let didSelectDifficultyLevelSubject = PassthroughSubject<Dish.Difficulty, Never>()
     let didChangeNameSubject = PassthroughSubject<String, Never>()

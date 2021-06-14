@@ -80,10 +80,6 @@ extension Dish {
 
 // MARK: - Nested types
 
-protocol StringConvertible {
-    var stringValue: String { get }
-}
-
 extension Dish {
     
     enum Ration: String, Codable {

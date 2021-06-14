@@ -13,13 +13,7 @@ struct NewDish {
     
     /// Document ID in `Firestore Database`
     @DocumentID var id: String?
-    
-    /// Property used when dish was added by another user
-    /// It contains the id of the document in `Public dishes` collection
-    /// If this property is not nil, `userAddedID` property
-    /// must be not nil too.
-    var dishID: String?
-    
+        
     /// Dish name
     var name: String?
     
