@@ -13,7 +13,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
     private var newDish = NewDish()
     private var cancelableSet: Set<AnyCancellable> = []
     let viewModel = NewDishViewModel()
-    lazy var firstStepViewController = NewDishViewController(viewModel: viewModel)
+    lazy var firstStepViewController = FirstStepViewController(viewModel: viewModel)
     
     override init() {
         super.init()

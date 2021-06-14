@@ -11,7 +11,6 @@ final class AppCoordinator: BaseCoordinator {
     
     let window: UIWindow
     
-    
     init(window: UIWindow) {
         self.window = window
         super.init()

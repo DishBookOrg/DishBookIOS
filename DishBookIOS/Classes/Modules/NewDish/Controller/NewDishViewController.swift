@@ -1,5 +1,5 @@
 //
-//  NewDishViewController.swift
+//  FirstStepViewController.swift
 //  DishBookIOS
 //
 //  Created by Denys Danyliuk on 02.02.2021.
@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-final class NewDishViewController: BaseViewController {
+final class FirstStepViewController: BaseViewController {
         
     // MARK: - Private properties
     
@@ -108,6 +108,6 @@ import SwiftUI
 struct NewDishViewPreview: PreviewProvider {
 
     static var previews: some View {
-        ViewRepresentable(NewDishViewController(viewModel: NewDishViewModel()).view)
+        ViewRepresentable(FirstStepViewController(viewModel: NewDishViewModel()).view)
     }
 }
