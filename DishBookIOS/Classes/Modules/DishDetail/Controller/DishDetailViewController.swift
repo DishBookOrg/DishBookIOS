@@ -16,7 +16,7 @@ final class DishDetailViewController: BaseViewController {
     private let scrollView = UIScrollView()
     private let stackView = UIStackView()
     
-    private let dishImageView = UIImageView()
+    private let dishImageView = DishShadowImageView()
     private let dishShortDescriptionView = DishShortDescriptionView()
     
     // MARK: - Lifecycle
@@ -47,18 +47,14 @@ final class DishDetailViewController: BaseViewController {
             stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -32)
         ])
         
-        dishImageView.clipsToBounds = true
-        dishImageView.contentMode = .scaleAspectFill
-        dishImageView.apply(style: Styles.View.CornerRadius.small)
-        dishImageView.apply(style: Styles.View.Shadow.d20)
-        
+        stackView.clipsToBounds = false
         stackView.addArrangedSubview(dishImageView)
         stackView.addArrangedSubview(dishShortDescriptionView)
     }
     
     private func render(with dish: Dish) {
         
-        dishImageView.sd_setImage(with: dish.imageReference)
+        dishImageView.render(props: dish.imageReference)
         dishShortDescriptionView.render(props: DishShortDescriptionView.Props(dishName: dish.name,
                                                                               difficulty: dish.difficulty,
                                                                               totalTimeFull: dish.stringTotalTimeFull))

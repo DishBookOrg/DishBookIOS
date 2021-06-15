@@ -97,6 +97,7 @@
 		5FD012F925CDBBF400A0E257 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD012F825CDBBF400A0E257 /* Dish.swift */; };
 		5FD012FC25CDBC0000A0E257 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD012FB25CDBC0000A0E257 /* AlertManager.swift */; };
 		5FD0130225CDBCE100A0E257 /* DishDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD0130125CDBCE100A0E257 /* DishDetailsController.swift */; };
+		5FEBB75926794EA1003C2DBA /* DishShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBB75826794EA1003C2DBA /* DishShadowImageView.swift */; };
 		5FEBD1AE25C9CDA7000F7E9C /* DishBookCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBD1AD25C9CDA7000F7E9C /* DishBookCoordinator.swift */; };
 		5FEBD1B125C9CE9D000F7E9C /* Explore.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FEBD1B025C9CE9D000F7E9C /* Explore.strings */; };
 		5FEBD1B425C9CEA8000F7E9C /* DishBook.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FEBD1B325C9CEA8000F7E9C /* DishBook.strings */; };
@@ -215,6 +216,7 @@
 		5FD012F825CDBBF400A0E257 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 		5FD012FB25CDBC0000A0E257 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		5FD0130125CDBCE100A0E257 /* DishDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailsController.swift; sourceTree = "<group>"; };
+		5FEBB75826794EA1003C2DBA /* DishShadowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishShadowImageView.swift; sourceTree = "<group>"; };
 		5FEBD1AD25C9CDA7000F7E9C /* DishBookCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishBookCoordinator.swift; sourceTree = "<group>"; };
 		5FEBD1B025C9CE9D000F7E9C /* Explore.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Explore.strings; sourceTree = "<group>"; };
 		5FEBD1B325C9CEA8000F7E9C /* DishBook.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = DishBook.strings; sourceTree = "<group>"; };
@@ -627,6 +629,7 @@
 			children = (
 				5F7B78762677EF7D006D91AF /* DishShortDescriptionView.swift */,
 				5F7B787A2677F2F4006D91AF /* DishDifficultyView.swift */,
+				5FEBB75826794EA1003C2DBA /* DishShadowImageView.swift */,
 			);
 			path = DishDetails;
 			sourceTree = "<group>";
@@ -1195,6 +1198,7 @@
 				5FBE835F25C9EC6200E3F3EB /* FirstStepViewModel.swift in Sources */,
 				5FBE836225C9F0FB00E3F3EB /* NewDishCoordinator.swift in Sources */,
 				5FCFDA0F2641846E00B3CFFC /* UIView+Constants.swift in Sources */,
+				5FEBB75926794EA1003C2DBA /* DishShadowImageView.swift in Sources */,
 				5F4218FC25F9509000366A16 /* DishCardSmallCollectionViewCell.swift in Sources */,
 				5F42190425F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */,
 				5FACDFFC265BA405009728D5 /* CornerRadius+View.swift in Sources */,
