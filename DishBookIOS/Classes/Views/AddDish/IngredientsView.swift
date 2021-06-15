@@ -37,7 +37,6 @@ final class IngredientsView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-//        apply(style: Styles.View.Shadow.d20)
         gradientLayer?.frame = bounds
         
         mainStackView.axis = .vertical
@@ -51,6 +50,8 @@ final class IngredientsView: UIView {
         }
         
         if props.ingredients != renderedProps?.ingredients {
+            mainStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+            
             props.ingredients.forEach { ingredient in
                 let singleIngredientView = SingleIngredientView(props: ingredient)
                 let spaser = UIView()

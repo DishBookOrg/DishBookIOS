@@ -17,6 +17,7 @@ final class FirstStepViewModel: BaseViewModel {
     lazy var didChangeNamePublisher = didChangeNameSubject.eraseToAnyPublisher()
     lazy var didChangeNumberOfServingsPublisher = didChangeNumberOfServingsSubject.eraseToAnyPublisher()
     lazy var didPressNextPublisher = didPressNextSubject.eraseToAnyPublisher()
+    lazy var didPressBackPublisher = didPressBackSubject.eraseToAnyPublisher()
     
     // MARK: - Subjects
     
@@ -24,5 +25,6 @@ final class FirstStepViewModel: BaseViewModel {
     let didSelectDifficultyLevelSubject = PassthroughSubject<Dish.Difficulty, Never>()
     let didChangeNameSubject = PassthroughSubject<String, Never>()
     let didChangeNumberOfServingsSubject = PassthroughSubject<Int, Never>()
-    let didPressNextSubject = PassthroughSubject<Void, Never>()    
+    let didPressNextSubject = PassthroughSubject<Void, Never>()
+    let didPressBackSubject = PassthroughSubject<Void, Never>()
 }

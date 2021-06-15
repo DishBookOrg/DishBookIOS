@@ -42,7 +42,7 @@ final class IngredientsViewController: BaseViewController {
     
     private func setup() {
         
-        let progressBarView = UIImageView(image: R.image.progressBar())
+        let progressBarView = UIImageView(image: R.image.progressBarStep2())
         let titleLabel = UILabel()
         titleLabel.apply(style: Styles.Font.Rounded.Medium.f2)
         titleLabel.textColor = R.color.textBlack()
@@ -77,6 +77,7 @@ final class IngredientsViewController: BaseViewController {
             ingredientsView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -32)
         ])
         
+        addIngredientView.isUserInteractionEnabled = true
         view.addSubview(addIngredientView, constraints: [
             addIngredientView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             addIngredientView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
@@ -90,7 +91,8 @@ final class IngredientsViewController: BaseViewController {
     
     private func setupStreams() {
         
-        addIngredientButton.publisher(for: .touchUpInside)
+        addIngredientButton.isUserInteractionEnabled = true
+        addIngredientButton.publisher(for: .allEvents)
             .sink { [unowned self] _ in viewModel.didPressPlusSubject.send(()) }
             .store(in: &cancelableSet)
     }

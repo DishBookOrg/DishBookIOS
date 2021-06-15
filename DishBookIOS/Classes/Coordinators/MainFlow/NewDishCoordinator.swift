@@ -10,6 +10,8 @@ import Combine
 
 final class NewDishCoordinator: BaseRootCoordinator {
     
+    // MARK: - Variables
+    
     private var newDish = NewDish()
     private var ingredientsAndSteps = NewDish.IngredientsAndSteps(ingredients: [
         NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name", ingredientType: "g", ingredientAmount: 350),
@@ -17,7 +19,11 @@ final class NewDishCoordinator: BaseRootCoordinator {
         NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name2", ingredientType: "g", ingredientAmount: 350),
         NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Some3", ingredientType: "kg", ingredientAmount: 0.5)
     ], steps: [])
+    
+    private var ingredientsViewController: IngredientsViewController?
 
+    // MARK: - Life cycle
+    
     override init() {
         super.init()
         
@@ -34,8 +40,11 @@ final class NewDishCoordinator: BaseRootCoordinator {
         navigationController?.navigationBar.tintColor = R.color.textBlack()
         
         let firstStepViewController = createFirstStep()
+        firstStepViewController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(firstStepViewController, animated: false)
     }
+    
+    // MARK: - FirstStep
     
     private func createFirstStep() -> UIViewController {
         
@@ -63,9 +72,19 @@ final class NewDishCoordinator: BaseRootCoordinator {
                 navigationController?.pushViewController(secondStepViewController, animated: true)
             }
             .store(in: &cancelableSet)
+        
+        viewModel.didPressBackSubject
+            .sink {
+                if let main = App.appCoordinator.childCoordinators.first as? MainFlowCoordinator {
+                    main.tabBarController.selectedIndex = 0
+                }
+            }
+            .store(in: &cancelableSet)
 
         return FirstStepViewController(viewModel: viewModel)
     }
+    
+    // MARK: - AddIngredients
     
     private func createAddIngredientsStep() -> UIViewController {
         
@@ -74,7 +93,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
         viewModel.didPressPlusPublisher
             .sink { [unowned self] in
                 let secondStepViewController = createAddIngredientStep()
-                navigationController?.present(secondStepViewController, animated: true)
+                ingredientsViewController?.present(secondStepViewController, animated: true)
             }
             .store(in: &cancelableSet)
         
@@ -85,14 +104,33 @@ final class NewDishCoordinator: BaseRootCoordinator {
             }
             .store(in: &cancelableSet)
 
-        let ingredientsViewController = IngredientsViewController(viewModel: viewModel)
-        ingredientsViewController.render(ingredients: ingredientsAndSteps.ingredients)
-        return ingredientsViewController
+        ingredientsViewController = IngredientsViewController(viewModel: viewModel)
+        ingredientsViewController?.render(ingredients: ingredientsAndSteps.ingredients)
+        return ingredientsViewController!
     }
     
+    // MARK: - AddIngredient
+    
     private func createAddIngredientStep() -> UIViewController {
-        UIViewController()
+        let viewModel = NewIngredientViewModel()
+        
+        viewModel.didPressDonePublisher
+            .sink { [unowned self] in
+                ingredientsAndSteps.ingredients.append($0)
+                ingredientsViewController?.render(ingredients: ingredientsAndSteps.ingredients)
+                ingredientsViewController?.dismiss(animated: true)
+            }
+            .store(in: &cancelableSet)
+        
+        viewModel.didPressBackPublisher
+            .sink { [unowned self] _ in ingredientsViewController?.dismiss(animated: true) }
+            .store(in: &cancelableSet)
+        
+        let ingredientViewController = NewIngredientViewController(viewModel: viewModel)
+        return ingredientViewController
     }
+    
+    // MARK: - AddSteps
     
     private func createAddStepsStep() -> UIViewController {
         UIViewController()
