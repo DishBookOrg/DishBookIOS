@@ -18,6 +18,7 @@ final class DishDetailViewController: BaseViewController {
     
     private let dishImageView = DishShadowImageView()
     private let dishShortDescriptionView = DishShortDescriptionView()
+    private let dishServingsView = DishServingsView()
     
     // MARK: - Lifecycle
     
@@ -50,10 +51,12 @@ final class DishDetailViewController: BaseViewController {
         stackView.clipsToBounds = false
         stackView.addArrangedSubview(dishImageView)
         stackView.addArrangedSubview(dishShortDescriptionView)
+        stackView.addArrangedSubview(dishServingsView)
     }
     
     private func render(with dish: Dish) {
         
+        dishServingsView.render(props: dish)
         dishImageView.render(props: dish.imageReference)
         dishShortDescriptionView.render(props: DishShortDescriptionView.Props(dishName: dish.name,
                                                                               difficulty: dish.difficulty,

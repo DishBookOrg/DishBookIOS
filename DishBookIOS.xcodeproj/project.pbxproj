@@ -98,6 +98,8 @@
 		5FD012FC25CDBC0000A0E257 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD012FB25CDBC0000A0E257 /* AlertManager.swift */; };
 		5FD0130225CDBCE100A0E257 /* DishDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD0130125CDBCE100A0E257 /* DishDetailsController.swift */; };
 		5FEBB75926794EA1003C2DBA /* DishShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBB75826794EA1003C2DBA /* DishShadowImageView.swift */; };
+		5FEBB75B267950C6003C2DBA /* DishDetail.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FEBB75A267950C6003C2DBA /* DishDetail.strings */; };
+		5FEBB75D26795130003C2DBA /* DishServingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBB75C26795130003C2DBA /* DishServingsView.swift */; };
 		5FEBD1AE25C9CDA7000F7E9C /* DishBookCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBD1AD25C9CDA7000F7E9C /* DishBookCoordinator.swift */; };
 		5FEBD1B125C9CE9D000F7E9C /* Explore.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FEBD1B025C9CE9D000F7E9C /* Explore.strings */; };
 		5FEBD1B425C9CEA8000F7E9C /* DishBook.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FEBD1B325C9CEA8000F7E9C /* DishBook.strings */; };
@@ -217,6 +219,8 @@
 		5FD012FB25CDBC0000A0E257 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		5FD0130125CDBCE100A0E257 /* DishDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailsController.swift; sourceTree = "<group>"; };
 		5FEBB75826794EA1003C2DBA /* DishShadowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishShadowImageView.swift; sourceTree = "<group>"; };
+		5FEBB75A267950C6003C2DBA /* DishDetail.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = DishDetail.strings; sourceTree = "<group>"; };
+		5FEBB75C26795130003C2DBA /* DishServingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishServingsView.swift; sourceTree = "<group>"; };
 		5FEBD1AD25C9CDA7000F7E9C /* DishBookCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishBookCoordinator.swift; sourceTree = "<group>"; };
 		5FEBD1B025C9CE9D000F7E9C /* Explore.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Explore.strings; sourceTree = "<group>"; };
 		5FEBD1B325C9CEA8000F7E9C /* DishBook.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = DishBook.strings; sourceTree = "<group>"; };
@@ -440,6 +444,7 @@
 				5FBE836D25C9F31600E3F3EB /* Shoplist.strings */,
 				5FBE837025C9F31F00E3F3EB /* Profile.strings */,
 				5FBE837525C9F33A00E3F3EB /* Common.strings */,
+				5FEBB75A267950C6003C2DBA /* DishDetail.strings */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -630,6 +635,7 @@
 				5F7B78762677EF7D006D91AF /* DishShortDescriptionView.swift */,
 				5F7B787A2677F2F4006D91AF /* DishDifficultyView.swift */,
 				5FEBB75826794EA1003C2DBA /* DishShadowImageView.swift */,
+				5FEBB75C26795130003C2DBA /* DishServingsView.swift */,
 			);
 			path = DishDetails;
 			sourceTree = "<group>";
@@ -1080,6 +1086,7 @@
 				5FEBD1B125C9CE9D000F7E9C /* Explore.strings in Resources */,
 				5F5C526125C4B0EE00AC7E3C /* Assets.xcassets in Resources */,
 				5FBE837125C9F31F00E3F3EB /* Profile.strings in Resources */,
+				5FEBB75B267950C6003C2DBA /* DishDetail.strings in Resources */,
 				5FBE836E25C9F31600E3F3EB /* Shoplist.strings in Resources */,
 				5FBE839125C9FEDA00E3F3EB /* SF-Pro-Display-Regular.otf in Resources */,
 				5FBE839625C9FEDA00E3F3EB /* SF-Pro-Text-Medium.otf in Resources */,
@@ -1211,6 +1218,7 @@
 				5FFB20F725C4D2F30086440A /* MainFlowCoordinator.swift in Sources */,
 				5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */,
 				5FACE00F265BA74B009728D5 /* SB+Rounded.swift in Sources */,
+				5FEBB75D26795130003C2DBA /* DishServingsView.swift in Sources */,
 				5FFB20FE25C4D3370086440A /* ExploreListViewController.swift in Sources */,
 				5F44162D25CB04D70009FE5F /* UIControlPublisher.swift in Sources */,
 				5FEBD1C725C9D9A6000F7E9C /* SignInWithGoogleCoordinator.swift in Sources */,
