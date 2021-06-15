@@ -37,6 +37,7 @@ final class ExploreListViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = " "
         setupCollectionView()
         setupDataSource()
         setupSearch()

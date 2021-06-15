@@ -100,6 +100,7 @@
 		5FEBB75926794EA1003C2DBA /* DishShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBB75826794EA1003C2DBA /* DishShadowImageView.swift */; };
 		5FEBB75B267950C6003C2DBA /* DishDetail.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FEBB75A267950C6003C2DBA /* DishDetail.strings */; };
 		5FEBB75D26795130003C2DBA /* DishServingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBB75C26795130003C2DBA /* DishServingsView.swift */; };
+		5FEBB75F267956A3003C2DBA /* DishStepsCollapseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBB75E267956A3003C2DBA /* DishStepsCollapseView.swift */; };
 		5FEBD1AE25C9CDA7000F7E9C /* DishBookCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBD1AD25C9CDA7000F7E9C /* DishBookCoordinator.swift */; };
 		5FEBD1B125C9CE9D000F7E9C /* Explore.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FEBD1B025C9CE9D000F7E9C /* Explore.strings */; };
 		5FEBD1B425C9CEA8000F7E9C /* DishBook.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FEBD1B325C9CEA8000F7E9C /* DishBook.strings */; };
@@ -221,6 +222,7 @@
 		5FEBB75826794EA1003C2DBA /* DishShadowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishShadowImageView.swift; sourceTree = "<group>"; };
 		5FEBB75A267950C6003C2DBA /* DishDetail.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = DishDetail.strings; sourceTree = "<group>"; };
 		5FEBB75C26795130003C2DBA /* DishServingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishServingsView.swift; sourceTree = "<group>"; };
+		5FEBB75E267956A3003C2DBA /* DishStepsCollapseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishStepsCollapseView.swift; sourceTree = "<group>"; };
 		5FEBD1AD25C9CDA7000F7E9C /* DishBookCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishBookCoordinator.swift; sourceTree = "<group>"; };
 		5FEBD1B025C9CE9D000F7E9C /* Explore.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Explore.strings; sourceTree = "<group>"; };
 		5FEBD1B325C9CEA8000F7E9C /* DishBook.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = DishBook.strings; sourceTree = "<group>"; };
@@ -636,6 +638,7 @@
 				5F7B787A2677F2F4006D91AF /* DishDifficultyView.swift */,
 				5FEBB75826794EA1003C2DBA /* DishShadowImageView.swift */,
 				5FEBB75C26795130003C2DBA /* DishServingsView.swift */,
+				5FEBB75E267956A3003C2DBA /* DishStepsCollapseView.swift */,
 			);
 			path = DishDetails;
 			sourceTree = "<group>";
@@ -1252,6 +1255,7 @@
 				5FEBD1C425C9D42C000F7E9C /* ExploreListViewModel.swift in Sources */,
 				5FACE011265BA80D009728D5 /* Medium+Rounded.swift in Sources */,
 				5F44164025CB06CD0009FE5F /* UIView+FromNib.swift in Sources */,
+				5FEBB75F267956A3003C2DBA /* DishStepsCollapseView.swift in Sources */,
 				5DCFE0722641726500514498 /* Styles.swift in Sources */,
 				5DB5C36226700D78003CCC73 /* TextFieldWithDescription.swift in Sources */,
 				5FFB210325C4D4490086440A /* ExploreCoordinator.swift in Sources */,

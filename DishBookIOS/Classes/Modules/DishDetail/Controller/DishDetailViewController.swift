@@ -19,6 +19,7 @@ final class DishDetailViewController: BaseViewController {
     private let dishImageView = DishShadowImageView()
     private let dishShortDescriptionView = DishShortDescriptionView()
     private let dishServingsView = DishServingsView()
+    private let dishStepsCollapseView = DishStepsCollapseView()
     
     // MARK: - Lifecycle
     
@@ -37,6 +38,7 @@ final class DishDetailViewController: BaseViewController {
     
     private func setupViews() {
         
+        scrollView.showsVerticalScrollIndicator = false
         view.addSubview(scrollView, withEdgeInsets: .zero)
         scrollView.addSubview(stackView, withEdgeInsets: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
         
@@ -45,6 +47,7 @@ final class DishDetailViewController: BaseViewController {
         
         NSLayoutConstraint.activate([
             dishImageView.heightAnchor.constraint(equalToConstant: 400),
+            dishStepsCollapseView.heightAnchor.constraint(equalToConstant: 68),
             stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -32)
         ])
         
@@ -52,11 +55,16 @@ final class DishDetailViewController: BaseViewController {
         stackView.addArrangedSubview(dishImageView)
         stackView.addArrangedSubview(dishShortDescriptionView)
         stackView.addArrangedSubview(dishServingsView)
+        stackView.addArrangedSubview(dishStepsCollapseView)
+
+        
+        stackView.setCustomSpacing(30, after: dishStepsCollapseView)
     }
     
     private func render(with dish: Dish) {
         
         dishServingsView.render(props: dish)
+        dishStepsCollapseView.render(props: 5)
         dishImageView.render(props: dish.imageReference)
         dishShortDescriptionView.render(props: DishShortDescriptionView.Props(dishName: dish.name,
                                                                               difficulty: dish.difficulty,
@@ -74,5 +82,13 @@ final class DishDetailViewController: BaseViewController {
                 render(with: dish)
             }
             .store(in: &cancelableSet)
+        
+        dishStepsCollapseView
+            .$isOpened
+            .sink { isOpenedSteps in
+                print(isOpenedSteps)
+            }
+            .store(in: &cancelableSet)
+
     }
 }
