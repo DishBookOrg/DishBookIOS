@@ -16,6 +16,8 @@
 		5DCFE0792641B8E700514498 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0782641B8E700514498 /* SegmentedControl.swift */; };
 		5DCFE07D264333DD00514498 /* SteperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE07C264333DD00514498 /* SteperView.swift */; };
 		5F05422726795DF800977C1B /* DishStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05422626795DF800977C1B /* DishStepView.swift */; };
+		5F05422A26796D5800977C1B /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05422926796D5800977C1B /* GradientButton.swift */; };
+		5F05422C26796D6300977C1B /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05422B26796D6300977C1B /* BlackButton.swift */; };
 		5F15C86326497030009EB349 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F15C86226497030009EB349 /* SectionHeader.swift */; };
 		5F4218FC25F9509000366A16 /* DishCardSmallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */; };
 		5F42190425F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */; };
@@ -139,6 +141,8 @@
 		5DCFE0782641B8E700514498 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		5DCFE07C264333DD00514498 /* SteperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteperView.swift; sourceTree = "<group>"; };
 		5F05422626795DF800977C1B /* DishStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishStepView.swift; sourceTree = "<group>"; };
+		5F05422926796D5800977C1B /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		5F05422B26796D6300977C1B /* BlackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackButton.swift; sourceTree = "<group>"; };
 		5F15C86226497030009EB349 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardSmallCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardBigCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -308,6 +312,15 @@
 				5FACDFFA265BA3E6009728D5 /* Button */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		5F05422826796D4A00977C1B /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				5F05422926796D5800977C1B /* GradientButton.swift */,
+				5F05422B26796D6300977C1B /* BlackButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		5F4218F925F9505700366A16 /* DishCards */ = {
@@ -491,6 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				5FFB20B225C4CA360086440A /* Loader.swift */,
+				5F05422826796D4A00977C1B /* Buttons */,
 				5F7B78742677EF38006D91AF /* DishDetails */,
 				5D70A26825F80566009B2520 /* AddDish */,
 				5F4218F925F9505700366A16 /* DishCards */,
@@ -1255,12 +1269,14 @@
 				5FFB20D725C4CF480086440A /* UIView+IBInspectable.swift in Sources */,
 				5FBE836525C9F10A00E3F3EB /* ShoplistCoordinator.swift in Sources */,
 				5DB5C37F2677B2A3003CCC73 /* StringConvertible.swift in Sources */,
+				5F05422C26796D6300977C1B /* BlackButton.swift in Sources */,
 				5FCFDA1F264189E600B3CFFC /* ViewRepresentable.swift in Sources */,
 				5FEBD1C425C9D42C000F7E9C /* ExploreListViewModel.swift in Sources */,
 				5FACE011265BA80D009728D5 /* Medium+Rounded.swift in Sources */,
 				5F44164025CB06CD0009FE5F /* UIView+FromNib.swift in Sources */,
 				5FEBB75F267956A3003C2DBA /* DishStepsCollapseView.swift in Sources */,
 				5DCFE0722641726500514498 /* Styles.swift in Sources */,
+				5F05422A26796D5800977C1B /* GradientButton.swift in Sources */,
 				5DB5C36226700D78003CCC73 /* TextFieldWithDescription.swift in Sources */,
 				5FFB210325C4D4490086440A /* ExploreCoordinator.swift in Sources */,
 				5FBE835325C9EC3E00E3F3EB /* ShoplistViewController.swift in Sources */,

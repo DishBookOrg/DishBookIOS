@@ -20,6 +20,8 @@ final class DishDetailViewController: BaseViewController {
     private let dishShortDescriptionView = DishShortDescriptionView()
     private let dishServingsView = DishServingsView()
     private let dishStepsCollapseView = DishStepsCollapseView()
+    private let addToDishBookButton = GradientButton()
+    private let cookItButton = BlackButton()
     
     // MARK: - Lifecycle
     
@@ -49,14 +51,21 @@ final class DishDetailViewController: BaseViewController {
         NSLayoutConstraint.activate([
             dishImageView.heightAnchor.constraint(equalToConstant: 400),
             dishStepsCollapseView.heightAnchor.constraint(equalToConstant: 68),
+            addToDishBookButton.heightAnchor.constraint(equalToConstant: 68),
+            cookItButton.heightAnchor.constraint(equalToConstant: 68),
             stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -32)
         ])
+        
+        addToDishBookButton.setTitle(R.string.dishDetail.addToDishBookButton(), for: .normal)
+        cookItButton.setTitle(R.string.dishDetail.cookItButton(), for: .normal)
         
         stackView.clipsToBounds = false
         stackView.addArrangedSubview(dishImageView)
         stackView.addArrangedSubview(dishShortDescriptionView)
         stackView.addArrangedSubview(dishServingsView)
         stackView.addArrangedSubview(dishStepsCollapseView)
+        stackView.addArrangedSubview(addToDishBookButton)
+        stackView.addArrangedSubview(cookItButton)
         
         generateSteps()
         hideSteps(animated: false)
