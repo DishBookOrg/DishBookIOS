@@ -39,6 +39,7 @@ final class DishDetailViewController: BaseViewController {
     private func setupViews() {
         
         scrollView.showsVerticalScrollIndicator = false
+        scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 40, right: 0)
         view.addSubview(scrollView, withEdgeInsets: .zero)
         scrollView.addSubview(stackView, withEdgeInsets: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
         
@@ -56,9 +57,9 @@ final class DishDetailViewController: BaseViewController {
         stackView.addArrangedSubview(dishShortDescriptionView)
         stackView.addArrangedSubview(dishServingsView)
         stackView.addArrangedSubview(dishStepsCollapseView)
-
         
-        stackView.setCustomSpacing(30, after: dishStepsCollapseView)
+        generateSteps()
+        hideSteps(animated: false)
     }
     
     private func render(with dish: Dish) {
@@ -85,10 +86,42 @@ final class DishDetailViewController: BaseViewController {
         
         dishStepsCollapseView
             .$isOpened
-            .sink { isOpenedSteps in
-                print(isOpenedSteps)
+            .sink { [unowned self] isOpenedSteps in
+                isOpenedSteps ? showSteps() : hideSteps()
             }
             .store(in: &cancelableSet)
-
+    }
+    
+    private func generateSteps() {
+        
+        let view = DishStepView()
+        view.render(props: viewModel.dish)
+        stackView.insertArrangedSubview(view, at: 4)
+        
+        let view2 = DishStepView()
+        view2.render(props: viewModel.dish)
+        stackView.insertArrangedSubview(view2, at: 5)
+        
+        let view3 = DishStepView()
+        view3.render(props: viewModel.dish)
+        stackView.insertArrangedSubview(view3, at: 6)
+    }
+    
+    private func showSteps(animated: Bool = true) {
+        
+        stackView.arrangedSubviews
+            .filter { $0 is DishStepView }
+            .forEach { $0.showInStackView(animated: animated) }
+        
+        if let firstDishStepFrame = stackView.arrangedSubviews.first(where: { $0 is DishStepView })?.frame {
+            scrollView.scrollRectToVisible(firstDishStepFrame, animated: true)
+        }
+    }
+    
+    private func hideSteps(animated: Bool = true) {
+        
+        stackView.arrangedSubviews
+            .filter { $0 is DishStepView }
+            .forEach { $0.hideInStackView(animated: animated) }
     }
 }
