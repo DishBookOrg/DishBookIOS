@@ -15,21 +15,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
         NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name", ingredientType: "g", ingredientAmount: 350),
         NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Some", ingredientType: "kg", ingredientAmount: 0.5),
         NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name2", ingredientType: "g", ingredientAmount: 350),
-        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Some3", ingredientType: "kg", ingredientAmount: 0.5),
-        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name4", ingredientType: "g", ingredientAmount: 350),
-        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Some5", ingredientType: "kg", ingredientAmount: 0.5),
-        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name6", ingredientType: "g", ingredientAmount: 350),
-        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Some 7", ingredientType: "kg", ingredientAmount: 0.5),
-        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name8", ingredientType: "g", ingredientAmount: 350),
-        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Some9", ingredientType: "kg", ingredientAmount: 0.5),
-        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name 10", ingredientType: "g", ingredientAmount: 350),
-        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Some 11", ingredientType: "kg", ingredientAmount: 0.5),
-        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name 12", ingredientType: "g", ingredientAmount: 350),
-        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Some 13", ingredientType: "kg", ingredientAmount: 0.5),
-        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name 14", ingredientType: "g", ingredientAmount: 350),
-        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Some 15", ingredientType: "kg", ingredientAmount: 0.5),
-        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name 16", ingredientType: "g", ingredientAmount: 350),
-        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Some 17", ingredientType: "kg", ingredientAmount: 0.5)
+        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Some3", ingredientType: "kg", ingredientAmount: 0.5)
     ], steps: [])
 
     override init() {
