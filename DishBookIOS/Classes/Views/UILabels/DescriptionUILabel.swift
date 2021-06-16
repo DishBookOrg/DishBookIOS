@@ -8,10 +8,15 @@
 import UIKit
 
 final class DescriptionUILabel: UILabel {
-        
-    override func layoutSubviews() {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         
         font = R.font.sfProRoundedMedium(size: 12)
         textColor = R.color.textDescriptionGray()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
