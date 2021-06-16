@@ -13,7 +13,7 @@ final class IngredientsView: UIView {
     struct Props {
         
         let ingredients: [SingleIngredientView.Props]
-        let isAllCornersRounded: Bool = true
+        var isAllCornersRounded: Bool = true
     }
     
     private let mainStackView = UIStackView()
@@ -45,8 +45,10 @@ final class IngredientsView: UIView {
     
     public func render(props: Props) {
         
-        if !props.isAllCornersRounded && props.isAllCornersRounded != renderedProps?.isAllCornersRounded {
-            self.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        if !props.isAllCornersRounded {
+            
+            gradientLayer?.removeFromSuperlayer()
+            gradientLayer = nil
         }
         
         if props.ingredients != renderedProps?.ingredients {

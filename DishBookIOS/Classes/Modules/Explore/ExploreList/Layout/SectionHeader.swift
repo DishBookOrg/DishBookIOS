@@ -20,12 +20,12 @@ final class SectionHeader: UICollectionReusableView {
         titleLabel.font = R.font.sfProRoundedSemibold(size: 30)
         
         addSubview(titleLabel, constraints: [
-            titleLabel.heightAnchor.constraint(equalToConstant: 34),
+            titleLabel.heightAnchor.constraint(equalToConstant: 34).prioritised(as: .defaultHigh),
             
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 16),
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 3),
-            titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10)
+            titleLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).prioritised(as: .defaultHigh)
         ])
     }
     

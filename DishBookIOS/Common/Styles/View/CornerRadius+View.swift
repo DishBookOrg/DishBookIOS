@@ -33,6 +33,12 @@ extension Styles.View.CornerRadius {
         view.layer.sublayers?.forEach { $0.cornerRadius = 10 }
     }
     
+    static var d3: Style<UIView> = { view in
+        
+        view.layer.cornerRadius = 3
+        view.layer.sublayers?.forEach { $0.cornerRadius = 3 }
+    }
+    
     static var d0: Style<UIView> = { view in
         
         view.layer.cornerRadius = 0

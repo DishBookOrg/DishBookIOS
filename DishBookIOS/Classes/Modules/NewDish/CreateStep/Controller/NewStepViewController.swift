@@ -21,7 +21,7 @@ final class NewStepViewController: BaseViewController {
     
     private let stepNumber: Int
         
-    private var step = NewDish.IngredientsAndSteps.Step(stepDescription: "", stepAttachmentURL: "", stepTime: 0)
+    private var step = IngredientsAndSteps.Step(stepDescription: "", stepAttachmentURL: "", stepTime: 0)
         
     // MARK: - Lifecycle
     

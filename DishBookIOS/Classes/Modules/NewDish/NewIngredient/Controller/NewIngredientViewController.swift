@@ -21,7 +21,7 @@ final class NewIngredientViewController: BaseViewController {
     private let doneButton = UIButton()
     private let backButton = UIButton()
         
-    private var ingredient = NewDish.IngredientsAndSteps.Ingredient(ingredientName: "", ingredientType: "", ingredientAmount: 0)
+    private var ingredient = IngredientsAndSteps.Ingredient(ingredientName: "", ingredientType: "", ingredientAmount: 0)
         
     // MARK: - Lifecycle
     

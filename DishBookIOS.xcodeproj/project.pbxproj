@@ -10,7 +10,6 @@
 		168850F095A0C6DDBA6CCA08 /* Pods_DishBookIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB4B398BA74D68508F3C0540 /* Pods_DishBookIOS.framework */; };
 		5D70A27125F80A4B009B2520 /* DescriptionUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */; };
 		5DB5C36226700D78003CCC73 /* TextFieldWithDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C36126700D78003CCC73 /* TextFieldWithDescription.swift */; };
-		5DB5C3662673EC71003CCC73 /* NewDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C3652673EC71003CCC73 /* NewDish.swift */; };
 		5DB5C375267779C2003CCC73 /* IngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C374267779C2003CCC73 /* IngredientsViewModel.swift */; };
 		5DB5C377267779CF003CCC73 /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C376267779CF003CCC73 /* IngredientsViewController.swift */; };
 		5DB5C37926777D22003CCC73 /* SingleIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C37826777D22003CCC73 /* SingleIngredientView.swift */; };
@@ -29,7 +28,13 @@
 		5DCFE0722641726500514498 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0712641726500514498 /* Styles.swift */; };
 		5DCFE0792641B8E700514498 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0782641B8E700514498 /* SegmentedControl.swift */; };
 		5DCFE07D264333DD00514498 /* SteperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE07C264333DD00514498 /* SteperView.swift */; };
+		5F05422726795DF800977C1B /* DishStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05422626795DF800977C1B /* DishStepView.swift */; };
+		5F05422A26796D5800977C1B /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05422926796D5800977C1B /* GradientButton.swift */; };
+		5F05422C26796D6300977C1B /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05422B26796D6300977C1B /* BlackButton.swift */; };
 		5F15C86326497030009EB349 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F15C86226497030009EB349 /* SectionHeader.swift */; };
+		5F2B6B42267AA07E00FF3CAB /* String+StorageRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B41267AA07E00FF3CAB /* String+StorageRef.swift */; };
+		5F2B6B44267AA53200FF3CAB /* UINavigationBar+Touches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B43267AA53200FF3CAB /* UINavigationBar+Touches.swift */; };
+		5F2B6B47267AAD2600FF3CAB /* Constraints+Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B46267AAD2600FF3CAB /* Constraints+Priority.swift */; };
 		5F4218FC25F9509000366A16 /* DishCardSmallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */; };
 		5F42190425F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */; };
 		5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44162925CB04CE0009FE5F /* UIControlSubscription.swift */; };
@@ -49,9 +54,15 @@
 		5F5C526D25C4B1FB00AC7E3C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C526C25C4B1FB00AC7E3C /* GoogleService-Info.plist */; };
 		5F5C529325C4B4CC00AC7E3C /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F5C529225C4B4CC00AC7E3C /* Color.xcassets */; };
 		5F5C52AD25C4B8AF00AC7E3C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F5C52AC25C4B8AF00AC7E3C /* R.generated.swift */; };
+		5F6A7EEB267A89DE0073DE43 /* IngredientsAndSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6A7EEA267A89DE0073DE43 /* IngredientsAndSteps.swift */; };
+		5F6A7EED267A89F00073DE43 /* NewDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6A7EEC267A89F00073DE43 /* NewDish.swift */; };
 		5F7B78652673D646006D91AF /* StyleableUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B78642673D646006D91AF /* StyleableUI */; };
 		5F7B78682673D661006D91AF /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B78672673D661006D91AF /* IQKeyboardManagerSwift */; };
 		5F7B786B2673D685006D91AF /* Gedatsu in Frameworks */ = {isa = PBXBuildFile; productRef = 5F7B786A2673D685006D91AF /* Gedatsu */; };
+		5F7B78702677EDC5006D91AF /* DishDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7B786F2677EDC5006D91AF /* DishDetailViewController.swift */; };
+		5F7B78722677EE03006D91AF /* DishDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7B78712677EE03006D91AF /* DishDetailViewModel.swift */; };
+		5F7B78772677EF7D006D91AF /* DishShortDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7B78762677EF7D006D91AF /* DishShortDescriptionView.swift */; };
+		5F7B787B2677F2F4006D91AF /* DishDifficultyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F7B787A2677F2F4006D91AF /* DishDifficultyView.swift */; };
 		5F8FA25926416D0000E24685 /* CollectionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FA25826416D0000E24685 /* CollectionSection.swift */; };
 		5F8FA25B26416D4300E24685 /* SmallItemsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FA25A26416D4300E24685 /* SmallItemsSection.swift */; };
 		5F8FA25D26416D4E00E24685 /* BigItemsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8FA25C26416D4E00E24685 /* BigItemsSection.swift */; };
@@ -107,6 +118,10 @@
 		5FD012F925CDBBF400A0E257 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD012F825CDBBF400A0E257 /* Dish.swift */; };
 		5FD012FC25CDBC0000A0E257 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD012FB25CDBC0000A0E257 /* AlertManager.swift */; };
 		5FD0130225CDBCE100A0E257 /* DishDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD0130125CDBCE100A0E257 /* DishDetailsController.swift */; };
+		5FEBB75926794EA1003C2DBA /* DishShadowImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBB75826794EA1003C2DBA /* DishShadowImageView.swift */; };
+		5FEBB75B267950C6003C2DBA /* DishDetail.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FEBB75A267950C6003C2DBA /* DishDetail.strings */; };
+		5FEBB75D26795130003C2DBA /* DishServingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBB75C26795130003C2DBA /* DishServingsView.swift */; };
+		5FEBB75F267956A3003C2DBA /* DishStepsCollapseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBB75E267956A3003C2DBA /* DishStepsCollapseView.swift */; };
 		5FEBD1AE25C9CDA7000F7E9C /* DishBookCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FEBD1AD25C9CDA7000F7E9C /* DishBookCoordinator.swift */; };
 		5FEBD1B125C9CE9D000F7E9C /* Explore.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FEBD1B025C9CE9D000F7E9C /* Explore.strings */; };
 		5FEBD1B425C9CEA8000F7E9C /* DishBook.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5FEBD1B325C9CEA8000F7E9C /* DishBook.strings */; };
@@ -138,7 +153,6 @@
 /* Begin PBXFileReference section */
 		5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionUILabel.swift; sourceTree = "<group>"; };
 		5DB5C36126700D78003CCC73 /* TextFieldWithDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDescription.swift; sourceTree = "<group>"; };
-		5DB5C3652673EC71003CCC73 /* NewDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDish.swift; sourceTree = "<group>"; };
 		5DB5C374267779C2003CCC73 /* IngredientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewModel.swift; sourceTree = "<group>"; };
 		5DB5C376267779CF003CCC73 /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
 		5DB5C37826777D22003CCC73 /* SingleIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleIngredientView.swift; sourceTree = "<group>"; };
@@ -157,7 +171,13 @@
 		5DCFE0712641726500514498 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		5DCFE0782641B8E700514498 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		5DCFE07C264333DD00514498 /* SteperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteperView.swift; sourceTree = "<group>"; };
+		5F05422626795DF800977C1B /* DishStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishStepView.swift; sourceTree = "<group>"; };
+		5F05422926796D5800977C1B /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		5F05422B26796D6300977C1B /* BlackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackButton.swift; sourceTree = "<group>"; };
 		5F15C86226497030009EB349 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		5F2B6B41267AA07E00FF3CAB /* String+StorageRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+StorageRef.swift"; sourceTree = "<group>"; };
+		5F2B6B43267AA53200FF3CAB /* UINavigationBar+Touches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Touches.swift"; sourceTree = "<group>"; };
+		5F2B6B46267AAD2600FF3CAB /* Constraints+Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constraints+Priority.swift"; sourceTree = "<group>"; };
 		5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardSmallCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardBigCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F42190B25F9555E00366A16 /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
@@ -180,6 +200,12 @@
 		5F5C526C25C4B1FB00AC7E3C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5F5C529225C4B4CC00AC7E3C /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		5F5C52AC25C4B8AF00AC7E3C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		5F6A7EEA267A89DE0073DE43 /* IngredientsAndSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsAndSteps.swift; sourceTree = "<group>"; };
+		5F6A7EEC267A89F00073DE43 /* NewDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDish.swift; sourceTree = "<group>"; };
+		5F7B786F2677EDC5006D91AF /* DishDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailViewController.swift; sourceTree = "<group>"; };
+		5F7B78712677EE03006D91AF /* DishDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailViewModel.swift; sourceTree = "<group>"; };
+		5F7B78762677EF7D006D91AF /* DishShortDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishShortDescriptionView.swift; sourceTree = "<group>"; };
+		5F7B787A2677F2F4006D91AF /* DishDifficultyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDifficultyView.swift; sourceTree = "<group>"; };
 		5F8FA25826416D0000E24685 /* CollectionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSection.swift; sourceTree = "<group>"; };
 		5F8FA25A26416D4300E24685 /* SmallItemsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallItemsSection.swift; sourceTree = "<group>"; };
 		5F8FA25C26416D4E00E24685 /* BigItemsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigItemsSection.swift; sourceTree = "<group>"; };
@@ -235,6 +261,10 @@
 		5FD012F825CDBBF400A0E257 /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 		5FD012FB25CDBC0000A0E257 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		5FD0130125CDBCE100A0E257 /* DishDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishDetailsController.swift; sourceTree = "<group>"; };
+		5FEBB75826794EA1003C2DBA /* DishShadowImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishShadowImageView.swift; sourceTree = "<group>"; };
+		5FEBB75A267950C6003C2DBA /* DishDetail.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = DishDetail.strings; sourceTree = "<group>"; };
+		5FEBB75C26795130003C2DBA /* DishServingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishServingsView.swift; sourceTree = "<group>"; };
+		5FEBB75E267956A3003C2DBA /* DishStepsCollapseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishStepsCollapseView.swift; sourceTree = "<group>"; };
 		5FEBD1AD25C9CDA7000F7E9C /* DishBookCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishBookCoordinator.swift; sourceTree = "<group>"; };
 		5FEBD1B025C9CE9D000F7E9C /* Explore.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Explore.strings; sourceTree = "<group>"; };
 		5FEBD1B325C9CEA8000F7E9C /* DishBook.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = DishBook.strings; sourceTree = "<group>"; };
@@ -434,6 +464,23 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
+		5F05422826796D4A00977C1B /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				5F05422926796D5800977C1B /* GradientButton.swift */,
+				5F05422B26796D6300977C1B /* BlackButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		5F2B6B45267AAD0400FF3CAB /* UINavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				5F2B6B43267AA53200FF3CAB /* UINavigationBar+Touches.swift */,
+			);
+			path = UINavigationBar;
+			sourceTree = "<group>";
+		};
 		5F4218F925F9505700366A16 /* DishCards */ = {
 			isa = PBXGroup;
 			children = (
@@ -572,6 +619,7 @@
 				5FBE836D25C9F31600E3F3EB /* Shoplist.strings */,
 				5FBE837025C9F31F00E3F3EB /* Profile.strings */,
 				5FBE837525C9F33A00E3F3EB /* Common.strings */,
+				5FEBB75A267950C6003C2DBA /* DishDetail.strings */,
 			);
 			path = String;
 			sourceTree = "<group>";
@@ -601,6 +649,7 @@
 				5FFB20C325C4CC1A0086440A /* Login */,
 				5FFB20FA25C4D30A0086440A /* Explore */,
 				5FEBD1B925C9D3EF000F7E9C /* DishBook */,
+				5F7B786C2677ED83006D91AF /* DishDetail */,
 				5FBE833925C9EB8900E3F3EB /* NewDish */,
 				5FBE833A25C9EB8F00E3F3EB /* Shoplist */,
 				5FBE833F25C9EB9D00E3F3EB /* Profile */,
@@ -613,6 +662,8 @@
 			isa = PBXGroup;
 			children = (
 				5FFB20B225C4CA360086440A /* Loader.swift */,
+				5F05422826796D4A00977C1B /* Buttons */,
+				5F7B78742677EF38006D91AF /* DishDetails */,
 				5D70A26825F80566009B2520 /* AddDish */,
 				5F4218F925F9505700366A16 /* DishCards */,
 				5D70A27425F80DB5009B2520 /* UILabels */,
@@ -633,7 +684,9 @@
 			isa = PBXGroup;
 			children = (
 				5FD012F825CDBBF400A0E257 /* Dish.swift */,
+				5F6A7EEC267A89F00073DE43 /* NewDish.swift */,
 				5FBE35FF2673A014009EB0D0 /* ExploreListCollectionBlock.swift */,
+				5F6A7EEA267A89DE0073DE43 /* IngredientsAndSteps.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -660,6 +713,8 @@
 			isa = PBXGroup;
 			children = (
 				5F44163525CB05470009FE5F /* Date+Extension.swift */,
+				5F2B6B41267AA07E00FF3CAB /* String+StorageRef.swift */,
+				5F2B6B46267AAD2600FF3CAB /* Constraints+Priority.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -667,6 +722,7 @@
 		5F5C52A125C4B62900AC7E3C /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				5F2B6B45267AAD0400FF3CAB /* UINavigationBar */,
 				5FCFDA112641875600B3CFFC /* UITableView */,
 				5FCFDA102641874900B3CFFC /* UICollectionView */,
 				5F44164925CB074A0009FE5F /* UITextView */,
@@ -728,6 +784,44 @@
 				5DB5C37E2677B2A3003CCC73 /* StringConvertible.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		5F7B786C2677ED83006D91AF /* DishDetail */ = {
+			isa = PBXGroup;
+			children = (
+				5F7B786D2677ED96006D91AF /* ViewModel */,
+				5F7B786E2677ED9C006D91AF /* Controller */,
+			);
+			path = DishDetail;
+			sourceTree = "<group>";
+		};
+		5F7B786D2677ED96006D91AF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5F7B78712677EE03006D91AF /* DishDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5F7B786E2677ED9C006D91AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5F7B786F2677EDC5006D91AF /* DishDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5F7B78742677EF38006D91AF /* DishDetails */ = {
+			isa = PBXGroup;
+			children = (
+				5F7B78762677EF7D006D91AF /* DishShortDescriptionView.swift */,
+				5F7B787A2677F2F4006D91AF /* DishDifficultyView.swift */,
+				5FEBB75826794EA1003C2DBA /* DishShadowImageView.swift */,
+				5FEBB75C26795130003C2DBA /* DishServingsView.swift */,
+				5FEBB75E267956A3003C2DBA /* DishStepsCollapseView.swift */,
+				5F05422626795DF800977C1B /* DishStepView.swift */,
+			);
+			path = DishDetails;
 			sourceTree = "<group>";
 		};
 		5F8B0F4525CB0210009E156C /* ExploreList */ = {
@@ -890,7 +984,6 @@
 			isa = PBXGroup;
 			children = (
 				5FBE835E25C9EC6200E3F3EB /* FirstStepViewModel.swift */,
-				5DB5C3652673EC71003CCC73 /* NewDish.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1179,6 +1272,7 @@
 				5FEBD1B125C9CE9D000F7E9C /* Explore.strings in Resources */,
 				5F5C526125C4B0EE00AC7E3C /* Assets.xcassets in Resources */,
 				5FBE837125C9F31F00E3F3EB /* Profile.strings in Resources */,
+				5FEBB75B267950C6003C2DBA /* DishDetail.strings in Resources */,
 				5FBE836E25C9F31600E3F3EB /* Shoplist.strings in Resources */,
 				5FBE839125C9FEDA00E3F3EB /* SF-Pro-Display-Regular.otf in Resources */,
 				5FBE839625C9FEDA00E3F3EB /* SF-Pro-Text-Medium.otf in Resources */,
@@ -1275,8 +1369,10 @@
 				5FFB20C525C4CC2C0086440A /* LoginViewController.swift in Sources */,
 				5FBE835025C9EC2F00E3F3EB /* NewDishViewController.swift in Sources */,
 				5FBE835925C9EC5100E3F3EB /* ProfileViewModel.swift in Sources */,
+				5F2B6B42267AA07E00FF3CAB /* String+StorageRef.swift in Sources */,
 				5D70A27125F80A4B009B2520 /* DescriptionUILabel.swift in Sources */,
 				5FFB20D225C4CD450086440A /* UIApplication+Keyboard.swift in Sources */,
+				5F6A7EED267A89F00073DE43 /* NewDish.swift in Sources */,
 				5F44163325CB04F10009FE5F /* UITextView+Publisher.swift in Sources */,
 				5DB5C393267A992A003CCC73 /* NewStepViewModel.swift in Sources */,
 				5F8FA25B26416D4300E24685 /* SmallItemsSection.swift in Sources */,
@@ -1285,8 +1381,8 @@
 				5DCFE07D264333DD00514498 /* SteperView.swift in Sources */,
 				5FBE836825C9F12100E3F3EB /* ProfileCoordinator.swift in Sources */,
 				5FEBD1BD25C9D416000F7E9C /* DishBookViewController.swift in Sources */,
+				5F7B787B2677F2F4006D91AF /* DishDifficultyView.swift in Sources */,
 				5F8FA25926416D0000E24685 /* CollectionSection.swift in Sources */,
-				5DB5C3662673EC71003CCC73 /* NewDish.swift in Sources */,
 				5FFB20A825C4C9B10086440A /* AppCoordinator.swift in Sources */,
 				5FEBD1AE25C9CDA7000F7E9C /* DishBookCoordinator.swift in Sources */,
 				5FEBD1EA25C9DCD8000F7E9C /* UIApplication+TopViewController.swift in Sources */,
@@ -1298,8 +1394,10 @@
 				5FBE835F25C9EC6200E3F3EB /* FirstStepViewModel.swift in Sources */,
 				5FBE836225C9F0FB00E3F3EB /* NewDishCoordinator.swift in Sources */,
 				5FCFDA0F2641846E00B3CFFC /* UIView+Constants.swift in Sources */,
+				5FEBB75926794EA1003C2DBA /* DishShadowImageView.swift in Sources */,
 				5F4218FC25F9509000366A16 /* DishCardSmallCollectionViewCell.swift in Sources */,
 				5F42190425F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */,
+				5F05422726795DF800977C1B /* DishStepView.swift in Sources */,
 				5FACDFFC265BA405009728D5 /* CornerRadius+View.swift in Sources */,
 				5DB5C38D26796C9E003CCC73 /* CreateStepsViewController.swift in Sources */,
 				5F44163625CB05470009FE5F /* Date+Extension.swift in Sources */,
@@ -1311,8 +1409,10 @@
 				5FFB20CE25C4CC740086440A /* TypeAliases.swift in Sources */,
 				5FFB20BD25C4CBB60086440A /* CoordinatorProtocol.swift in Sources */,
 				5FFB20F725C4D2F30086440A /* MainFlowCoordinator.swift in Sources */,
+				5F2B6B44267AA53200FF3CAB /* UINavigationBar+Touches.swift in Sources */,
 				5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */,
 				5FACE00F265BA74B009728D5 /* SB+Rounded.swift in Sources */,
+				5FEBB75D26795130003C2DBA /* DishServingsView.swift in Sources */,
 				5DB5C377267779CF003CCC73 /* IngredientsViewController.swift in Sources */,
 				5FFB20FE25C4D3370086440A /* ExploreListViewController.swift in Sources */,
 				5DB5C37926777D22003CCC73 /* SingleIngredientView.swift in Sources */,
@@ -1340,17 +1440,23 @@
 				5DB5C38326794F4D003CCC73 /* NewIngredientViewController.swift in Sources */,
 				5F5C52AD25C4B8AF00AC7E3C /* R.generated.swift in Sources */,
 				5FD0130225CDBCE100A0E257 /* DishDetailsController.swift in Sources */,
+				5F7B78772677EF7D006D91AF /* DishShortDescriptionView.swift in Sources */,
 				5F44163C25CB05AD0009FE5F /* SubscribersCompletion+Ext.swift in Sources */,
 				5FCFDA152641877100B3CFFC /* UITableView+Section.swift in Sources */,
+				5F7B78722677EE03006D91AF /* DishDetailViewModel.swift in Sources */,
 				5FACE01E265BA932009728D5 /* Regular+Text.swift in Sources */,
 				5FFB20D725C4CF480086440A /* UIView+IBInspectable.swift in Sources */,
 				5FBE836525C9F10A00E3F3EB /* ShoplistCoordinator.swift in Sources */,
 				5DB5C37F2677B2A3003CCC73 /* StringConvertible.swift in Sources */,
+				5F05422C26796D6300977C1B /* BlackButton.swift in Sources */,
 				5FCFDA1F264189E600B3CFFC /* ViewRepresentable.swift in Sources */,
 				5FEBD1C425C9D42C000F7E9C /* ExploreListViewModel.swift in Sources */,
+				5F2B6B47267AAD2600FF3CAB /* Constraints+Priority.swift in Sources */,
 				5FACE011265BA80D009728D5 /* Medium+Rounded.swift in Sources */,
 				5F44164025CB06CD0009FE5F /* UIView+FromNib.swift in Sources */,
+				5FEBB75F267956A3003C2DBA /* DishStepsCollapseView.swift in Sources */,
 				5DCFE0722641726500514498 /* Styles.swift in Sources */,
+				5F05422A26796D5800977C1B /* GradientButton.swift in Sources */,
 				5DB5C36226700D78003CCC73 /* TextFieldWithDescription.swift in Sources */,
 				5FFB210325C4D4490086440A /* ExploreCoordinator.swift in Sources */,
 				5FBE835325C9EC3E00E3F3EB /* ShoplistViewController.swift in Sources */,
@@ -1360,8 +1466,10 @@
 				5DB5C38526794F5B003CCC73 /* NewIngredientViewModel.swift in Sources */,
 				5FCFDA1D2641888600B3CFFC /* UICollectionView+Reusable.swift in Sources */,
 				5FBE835C25C9EC5A00E3F3EB /* ShoplistViewModel.swift in Sources */,
+				5F6A7EEB267A89DE0073DE43 /* IngredientsAndSteps.swift in Sources */,
 				5FCFDA132641876600B3CFFC /* UICollectionView+Section.swift in Sources */,
 				5FFB20B325C4CA360086440A /* Loader.swift in Sources */,
+				5F7B78702677EDC5006D91AF /* DishDetailViewController.swift in Sources */,
 				5DB5C389267962E2003CCC73 /* GradientView.swift in Sources */,
 				5FFB20AC25C4CA020086440A /* BaseViewController.swift in Sources */,
 				5FACE01C265BA92A009728D5 /* Medium+Text.swift in Sources */,

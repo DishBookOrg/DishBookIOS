@@ -21,6 +21,12 @@ final class ExploreListViewModel: BaseViewModel {
     @Published var breakfastDishes: [Dish] = []
     @Published var lunchDishes: [Dish] = []
     @Published var dinnerDishes: [Dish] = []
+    @Published var dishesInSearch: [Dish] = []
+
+    // MARK: - Publishers with subjects
+    
+    lazy var didPressDishDetailPublisher = didPressDishDetailSubject.eraseToAnyPublisher()
+    let didPressDishDetailSubject = PassthroughSubject<Dish, Never>()
     
     // MARK: - Lifecycle
     
@@ -100,7 +106,6 @@ final class ExploreListViewModel: BaseViewModel {
     
     func getRationDishes(_ ration: Dish.Ration) {
         
-        
         APIClient
             .shared
             .collection(for: .publicDishes)
@@ -124,6 +129,32 @@ final class ExploreListViewModel: BaseViewModel {
                 case .dinner:
                     self?.dinnerDishes = dishes
                 }
+            }
+            .store(in: &cancelableSet)
+    }
+    
+    func searchDishes(with name: String) {
+        
+        showLoader = true
+        
+        APIClient
+            .shared
+            .collection(for: .publicDishes)
+            .order(by: "dishName")
+            .whereField("dishName", isGreaterThanOrEqualTo: name)
+            .whereField("dishName", isLessThanOrEqualTo: name + "z")
+            .limit(to: 100)
+            .getDocuments(as: Dish.self)
+            .sink { [weak self] completion in
+                
+                self?.showLoader = false
+                if let error = try? completion.error() {
+                    print("❗️ failure: \(error)")
+                }
+                
+            } receiveValue: { [weak self] dishes in
+                print(dishes)
+                self?.dishesInSearch = dishes
             }
             .store(in: &cancelableSet)
     }

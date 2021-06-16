@@ -17,6 +17,6 @@ final class NewStepViewModel: BaseViewModel {
     
     // MARK: - Subjects
 
-    let didPressDoneSubject = PassthroughSubject<NewDish.IngredientsAndSteps.Step, Never>()
+    let didPressDoneSubject = PassthroughSubject<IngredientsAndSteps.Step, Never>()
     let didPressBackSubject = PassthroughSubject<Void, Never>()
 }

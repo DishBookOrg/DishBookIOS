@@ -18,7 +18,7 @@ final class CreateStepsViewController: BaseViewController {
     private let scrollView = UIScrollView()
     private let addStepButton = UIButton()
     
-    private var renderedProps: [NewDish.IngredientsAndSteps.Step]?
+    private var renderedProps: [IngredientsAndSteps.Step]?
         
     // MARK: - Lifecycle
     
@@ -36,7 +36,7 @@ final class CreateStepsViewController: BaseViewController {
         setupStreams()
     }
     
-    func render(steps: [NewDish.IngredientsAndSteps.Step]) {
+    func render(steps: [IngredientsAndSteps.Step]) {
         
         let props = steps.enumerated().map { StepView.Props(image: nil, stepNumber: $0, description: $1.stepDescription) }
         

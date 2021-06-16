@@ -1,0 +1,12 @@
+/* 
+  DishDetail.strings
+  DishBookIOS
+
+  Created by Denys Danyliuk on 16.06.2021.
+  
+*/
+
+"Number.Of.Servings.Description" = "Please, choose number of servings";
+"Steps.Label" = "Steps";
+"Add.To.Dish.Book.Button" = "Add to Dish book";
+"Cook.It.Button" = "Cook it!";

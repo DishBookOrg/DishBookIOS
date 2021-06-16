@@ -28,13 +28,11 @@ struct Dish {
     var totalTime: Int
     
     /// URL to image model.
-    ///
-    /// ``` swift
-    /// // How to set image to imageView
-    /// dishImageView.sd_setImage(with: Storage.storage().reference(forURL: imageURL),
-    ///                           placeholderImage: UIImage())
-    /// ```
+    /// Use `.imageReference` with sd_setImage
     var imageURL: String
+    
+    /// Number of servings choosen in NewDish
+    var numberOfServings: Int
     
     /// Ration enum
     var ration: Ration
@@ -58,12 +56,8 @@ struct Dish {
     
     /// This  value is used to make possible display 2 dishes in different sections in one collection
     var blockId: Int?
-}
-
-extension String {
-    var imageReference: StorageReference {
-        return Storage.storage().reference(forURL: self)
-    }
+    
+    var ingredientsAndSteps: IngredientsAndSteps?
 }
 
 // MARK: - Computed properties
@@ -82,6 +76,11 @@ extension Dish {
         let seconds = totalTime % 60
         
         return seconds == 0 ? "\(minutes) min" : "\(minutes) min \(seconds) s."
+    }
+    
+    var imageReference: StorageReference {
+        
+        return imageURL.imageReference
     }
 }
 
@@ -130,6 +129,7 @@ extension Dish: Codable {
         case userCreatedID = "userCreatedID"
         case userAddedID = "userAddedID"
         case privacy = "dishPrivacy"
+        case numberOfServings = "dishNumberOfServings"
     }
 }
 
@@ -141,6 +141,7 @@ extension Dish {
                            name: "Some dish name",
                            totalTime: 1800,
                            imageURL: "",
+                           numberOfServings: 4,
                            ration: .breakfast,
                            difficulty: .easy,
                            privacy: .public,
@@ -187,5 +188,21 @@ extension Dish.Privacy: StringConvertible {
         case .public:
             return R.string.newDish.segmentedControlPublic()
         }
+    }
+}
+
+
+extension Dish {
+    
+    init(newDish: NewDish) {
+        name = newDish.name ?? ""
+        totalTime = newDish.totalTime ?? 0
+        imageURL = newDish.imageURL ?? ""
+        numberOfServings = newDish.numberOfServings ?? 0
+        ration = .dinner
+        difficulty = newDish.difficulty ?? .easy
+        privacy = newDish.privacy ?? .private
+        createdTime = Date()
+        userCreatedID = App.user?.uid ?? ""
     }
 }
