@@ -65,14 +65,12 @@ extension DishDetailViewModel {
             .document("IngredientsAndSteps")
             .publisher(as: IngredientsAndSteps.self)
             .dropFirst()
-//            .getDocument(as: IngredientsAndSteps.self)
             .sink { completion in
                 print(completion)
             } receiveValue: { [unowned self] value in
-                print(value)
                 dish.ingredientsAndSteps = value
             }
             .store(in: &cancelableSet)
-
+        
     }
 }
