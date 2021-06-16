@@ -17,7 +17,6 @@ final class NewIngredientViewController: BaseViewController {
     private let nameTextField = TextFieldWithDescription()
     private let amountTextField = TextFieldCentered()
     private let unitTextField = TextFieldCentered()
-    private let scrollView = UIScrollView()
     private let amountUnitBackgroundView = GradientView()
     private let doneButton = UIButton()
     private let backButton = UIButton()
@@ -56,7 +55,7 @@ final class NewIngredientViewController: BaseViewController {
         nameTextField.setup(placeholder: "Name", description: "Start entering the name of the ingredient.")
         amountTextField.setup(placeholder: "0", description: "Amount")
         unitTextField.setup(placeholder: "g", description: "Unit")
-        amountTextField.nameTextField.keyboardType = .numberPad
+        amountTextField.nameTextField.keyboardType = .decimalPad
         
         let amountUnitStackView = UIStackView(arrangedSubviews: [amountTextField, unitTextField])
         amountUnitStackView.axis = .horizontal
@@ -92,7 +91,7 @@ final class NewIngredientViewController: BaseViewController {
             .store(in: &cancelableSet)
         
         amountTextField.didChangeTextPublisher
-            .sink { [unowned self] in ingredient.ingredientAmount = Float($0) ?? 0 }
+            .sink { [unowned self] in ingredient.ingredientAmount = Float($0.replacingOccurrences(of: ",", with: ".")) ?? 0 }
             .store(in: &cancelableSet)
         
         unitTextField.didChangeTextPublisher

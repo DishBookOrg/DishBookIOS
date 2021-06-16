@@ -27,6 +27,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
     ])
     
     private var ingredientsViewController: IngredientsViewController?
+    private var createStepsViewController: CreateStepsViewController?
 
     // MARK: - Life cycle
     
@@ -141,12 +142,43 @@ final class NewDishCoordinator: BaseRootCoordinator {
     private func createAddStepsStep() -> UIViewController {
         let viewModel = CreateStepsViewModel()
         
-        let createStepsViewController = CreateStepsViewController(viewModel: viewModel)
-        createStepsViewController.render(steps: ingredientsAndSteps.steps)
-        return createStepsViewController
+        viewModel.didPressPlusPublisher
+            .sink { [unowned self] in
+                ingredientsViewController?.present(createAddNewStepStep(), animated: true)
+            }
+            .store(in: &cancelableSet)
+        
+        viewModel.didPressNextPublisher
+            .sink { [unowned self] in
+                
+            }
+            .store(in: &cancelableSet)
+        
+        createStepsViewController = CreateStepsViewController(viewModel: viewModel)
+        createStepsViewController?.render(steps: ingredientsAndSteps.steps)
+        return createStepsViewController!
     }
     
     // MARK: - AddStep
+    
+    private func createAddNewStepStep() -> UIViewController {
+        let viewModel = NewStepViewModel()
+        
+        viewModel.didPressDonePublisher
+            .sink { [unowned self] in
+                ingredientsAndSteps.steps.append($0)
+                createStepsViewController?.render(steps: ingredientsAndSteps.steps)
+                createStepsViewController?.dismiss(animated: true)
+            }
+            .store(in: &cancelableSet)
+        
+        viewModel.didPressBackPublisher
+            .sink { [unowned self] _ in createStepsViewController?.dismiss(animated: true) }
+            .store(in: &cancelableSet)
+        
+        let ingredientViewController = NewStepViewController(viewModel: viewModel, stepNumber: ingredientsAndSteps.steps.count + 1)
+        return ingredientViewController
+    }
     
     // MARK: - ShowAllDish
 }

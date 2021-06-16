@@ -23,6 +23,9 @@
 		5DB5C38B26796C5E003CCC73 /* CreateStepsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C38A26796C5E003CCC73 /* CreateStepsViewModel.swift */; };
 		5DB5C38D26796C9E003CCC73 /* CreateStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C38C26796C9E003CCC73 /* CreateStepsViewController.swift */; };
 		5DB5C38F26796FDA003CCC73 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C38E26796FDA003CCC73 /* StepView.swift */; };
+		5DB5C391267A9900003CCC73 /* NewStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C390267A9900003CCC73 /* NewStepViewController.swift */; };
+		5DB5C393267A992A003CCC73 /* NewStepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C392267A992A003CCC73 /* NewStepViewModel.swift */; };
+		5DB5C395267A9C85003CCC73 /* ShadowedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C394267A9C85003CCC73 /* ShadowedView.swift */; };
 		5DCFE0722641726500514498 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0712641726500514498 /* Styles.swift */; };
 		5DCFE0792641B8E700514498 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0782641B8E700514498 /* SegmentedControl.swift */; };
 		5DCFE07D264333DD00514498 /* SteperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE07C264333DD00514498 /* SteperView.swift */; };
@@ -148,6 +151,9 @@
 		5DB5C38A26796C5E003CCC73 /* CreateStepsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStepsViewModel.swift; sourceTree = "<group>"; };
 		5DB5C38C26796C9E003CCC73 /* CreateStepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStepsViewController.swift; sourceTree = "<group>"; };
 		5DB5C38E26796FDA003CCC73 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
+		5DB5C390267A9900003CCC73 /* NewStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStepViewController.swift; sourceTree = "<group>"; };
+		5DB5C392267A992A003CCC73 /* NewStepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStepViewModel.swift; sourceTree = "<group>"; };
+		5DB5C394267A9C85003CCC73 /* ShadowedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedView.swift; sourceTree = "<group>"; };
 		5DCFE0712641726500514498 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		5DCFE0782641B8E700514498 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		5DCFE07C264333DD00514498 /* SteperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteperView.swift; sourceTree = "<group>"; };
@@ -379,6 +385,7 @@
 		5DB5C36F267778A5003CCC73 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5DB5C392267A992A003CCC73 /* NewStepViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -410,6 +417,7 @@
 		5DB5C373267778B5003CCC73 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5DB5C390267A9900003CCC73 /* NewStepViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -608,6 +616,7 @@
 				5D70A26825F80566009B2520 /* AddDish */,
 				5F4218F925F9505700366A16 /* DishCards */,
 				5D70A27425F80DB5009B2520 /* UILabels */,
+				5DB5C394267A9C85003CCC73 /* ShadowedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1269,6 +1278,7 @@
 				5D70A27125F80A4B009B2520 /* DescriptionUILabel.swift in Sources */,
 				5FFB20D225C4CD450086440A /* UIApplication+Keyboard.swift in Sources */,
 				5F44163325CB04F10009FE5F /* UITextView+Publisher.swift in Sources */,
+				5DB5C393267A992A003CCC73 /* NewStepViewModel.swift in Sources */,
 				5F8FA25B26416D4300E24685 /* SmallItemsSection.swift in Sources */,
 				5FD012FC25CDBC0000A0E257 /* AlertManager.swift in Sources */,
 				5DB5C38B26796C5E003CCC73 /* CreateStepsViewModel.swift in Sources */,
@@ -1294,6 +1304,7 @@
 				5DB5C38D26796C9E003CCC73 /* CreateStepsViewController.swift in Sources */,
 				5F44163625CB05470009FE5F /* Date+Extension.swift in Sources */,
 				5FFB210925C4DA630086440A /* SignInWithAppleCoordinator.swift in Sources */,
+				5DB5C391267A9900003CCC73 /* NewStepViewController.swift in Sources */,
 				5DB5C3872679544E003CCC73 /* TextFieldCentered.swift in Sources */,
 				5FFB20BA25C4CB9F0086440A /* BaseCoordinator.swift in Sources */,
 				5FACE00D265BA708009728D5 /* Rounded+Font.swift in Sources */,
@@ -1320,6 +1331,7 @@
 				5FFB208D25C4C8F20086440A /* App.swift in Sources */,
 				5FACE002265BA51A009728D5 /* Difficulty+Label.swift in Sources */,
 				5FFB20B025C4CA110086440A /* BaseViewModel.swift in Sources */,
+				5DB5C395267A9C85003CCC73 /* ShadowedView.swift in Sources */,
 				5FFB20C125C4CBE90086440A /* AuthCoordinator.swift in Sources */,
 				5FBE835625C9EC4400E3F3EB /* ProfileViewController.swift in Sources */,
 				5DB5C37B267787A6003CCC73 /* IngredientsView.swift in Sources */,
