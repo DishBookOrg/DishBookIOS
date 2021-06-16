@@ -9,13 +9,36 @@ import UIKit
 
 final class StepView: UIView {
     
+    struct Props {
+        let image: UIImage?
+        let stepNumber: Int
+        let description: String
+    }
+    
     private let backgroundImageView = UIImageView()
     private let imageView = UIImageView()
+    private let descriptionLabel = UILabel()
+    private let titleLabel = UILabel()
+    
+    private var renderedProps: Props?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         setup()
+    }
+    
+    func render(props: Props) {
+        if props.image != renderedProps?.image {
+            backgroundImageView.image = props.image
+            imageView.image = props.image
+        }
+        if props.stepNumber != renderedProps?.stepNumber {
+            
+        }
+        if props.description != renderedProps?.description {
+            
+        }
     }
     
     private func setup() {

@@ -75,8 +75,8 @@ final class NewDishCoordinator: BaseRootCoordinator {
         
         viewModel.didPressBackSubject
             .sink {
-                if let main = App.appCoordinator.childCoordinators.first as? MainFlowCoordinator {
-                    main.tabBarController.selectedIndex = 0
+                if let mainFlowCoordinator = App.appCoordinator.childCoordinators.first as? MainFlowCoordinator {
+                    mainFlowCoordinator.tabBarController.selectedIndex = 0
                 }
             }
             .store(in: &cancelableSet)
