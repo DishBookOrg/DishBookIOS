@@ -42,7 +42,25 @@ struct NewDish {
     /// If this property is not nil, `dishID` property
     /// must be not nil too.
     var userCreatedD: String?
-
+    
+    struct IngredientsAndSteps: Codable {
+        var ingredients: [Ingredient]
+        var steps: [Step]
+        
+        struct Ingredient: Codable {
+            var ingredientName: String
+            var ingredientType: String
+            var ingredientAmount: Float
+        }
+        
+        struct Step: Codable {
+            var stepDescription: String
+            var stepAttachmentURL: String
+            
+            /// Time in seconds
+            var stepTime: Int
+        }
+    }
 }
 
 // MARK: - Hashable

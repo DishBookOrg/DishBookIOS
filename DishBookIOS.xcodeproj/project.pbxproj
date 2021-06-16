@@ -11,7 +11,18 @@
 		5D70A27125F80A4B009B2520 /* DescriptionUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */; };
 		5DB5C36226700D78003CCC73 /* TextFieldWithDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C36126700D78003CCC73 /* TextFieldWithDescription.swift */; };
 		5DB5C3662673EC71003CCC73 /* NewDish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C3652673EC71003CCC73 /* NewDish.swift */; };
+		5DB5C375267779C2003CCC73 /* IngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C374267779C2003CCC73 /* IngredientsViewModel.swift */; };
+		5DB5C377267779CF003CCC73 /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C376267779CF003CCC73 /* IngredientsViewController.swift */; };
+		5DB5C37926777D22003CCC73 /* SingleIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C37826777D22003CCC73 /* SingleIngredientView.swift */; };
+		5DB5C37B267787A6003CCC73 /* IngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C37A267787A6003CCC73 /* IngredientsView.swift */; };
 		5DB5C37F2677B2A3003CCC73 /* StringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C37E2677B2A3003CCC73 /* StringConvertible.swift */; };
+		5DB5C38326794F4D003CCC73 /* NewIngredientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C38226794F4D003CCC73 /* NewIngredientViewController.swift */; };
+		5DB5C38526794F5B003CCC73 /* NewIngredientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C38426794F5B003CCC73 /* NewIngredientViewModel.swift */; };
+		5DB5C3872679544E003CCC73 /* TextFieldCentered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C3862679544E003CCC73 /* TextFieldCentered.swift */; };
+		5DB5C389267962E2003CCC73 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C388267962E2003CCC73 /* GradientView.swift */; };
+		5DB5C38B26796C5E003CCC73 /* CreateStepsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C38A26796C5E003CCC73 /* CreateStepsViewModel.swift */; };
+		5DB5C38D26796C9E003CCC73 /* CreateStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C38C26796C9E003CCC73 /* CreateStepsViewController.swift */; };
+		5DB5C38F26796FDA003CCC73 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C38E26796FDA003CCC73 /* StepView.swift */; };
 		5DCFE0722641726500514498 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0712641726500514498 /* Styles.swift */; };
 		5DCFE0792641B8E700514498 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0782641B8E700514498 /* SegmentedControl.swift */; };
 		5DCFE07D264333DD00514498 /* SteperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE07C264333DD00514498 /* SteperView.swift */; };
@@ -125,7 +136,18 @@
 		5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionUILabel.swift; sourceTree = "<group>"; };
 		5DB5C36126700D78003CCC73 /* TextFieldWithDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithDescription.swift; sourceTree = "<group>"; };
 		5DB5C3652673EC71003CCC73 /* NewDish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDish.swift; sourceTree = "<group>"; };
+		5DB5C374267779C2003CCC73 /* IngredientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewModel.swift; sourceTree = "<group>"; };
+		5DB5C376267779CF003CCC73 /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
+		5DB5C37826777D22003CCC73 /* SingleIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleIngredientView.swift; sourceTree = "<group>"; };
+		5DB5C37A267787A6003CCC73 /* IngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsView.swift; sourceTree = "<group>"; };
 		5DB5C37E2677B2A3003CCC73 /* StringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConvertible.swift; sourceTree = "<group>"; };
+		5DB5C38226794F4D003CCC73 /* NewIngredientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewIngredientViewController.swift; sourceTree = "<group>"; };
+		5DB5C38426794F5B003CCC73 /* NewIngredientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewIngredientViewModel.swift; sourceTree = "<group>"; };
+		5DB5C3862679544E003CCC73 /* TextFieldCentered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCentered.swift; sourceTree = "<group>"; };
+		5DB5C388267962E2003CCC73 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		5DB5C38A26796C5E003CCC73 /* CreateStepsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStepsViewModel.swift; sourceTree = "<group>"; };
+		5DB5C38C26796C9E003CCC73 /* CreateStepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStepsViewController.swift; sourceTree = "<group>"; };
+		5DB5C38E26796FDA003CCC73 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 		5DCFE0712641726500514498 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		5DCFE0782641B8E700514498 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		5DCFE07C264333DD00514498 /* SteperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteperView.swift; sourceTree = "<group>"; };
@@ -268,6 +290,11 @@
 				5DCFE0782641B8E700514498 /* SegmentedControl.swift */,
 				5DCFE07C264333DD00514498 /* SteperView.swift */,
 				5DB5C36126700D78003CCC73 /* TextFieldWithDescription.swift */,
+				5DB5C3862679544E003CCC73 /* TextFieldCentered.swift */,
+				5DB5C37826777D22003CCC73 /* SingleIngredientView.swift */,
+				5DB5C37A267787A6003CCC73 /* IngredientsView.swift */,
+				5DB5C388267962E2003CCC73 /* GradientView.swift */,
+				5DB5C38E26796FDA003CCC73 /* StepView.swift */,
 			);
 			path = AddDish;
 			sourceTree = "<group>";
@@ -278,6 +305,113 @@
 				5D70A27025F80A4B009B2520 /* DescriptionUILabel.swift */,
 			);
 			path = UILabels;
+			sourceTree = "<group>";
+		};
+		5DB5C3672677776D003CCC73 /* FirstStep */ = {
+			isa = PBXGroup;
+			children = (
+				5FBE834025C9EBD700E3F3EB /* ViewModel */,
+				5FBE834125C9EBDD00E3F3EB /* Controller */,
+			);
+			path = FirstStep;
+			sourceTree = "<group>";
+		};
+		5DB5C3682677778F003CCC73 /* Ingredients */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5C36C26777895003CCC73 /* ViewModel */,
+				5DB5C370267778AB003CCC73 /* Controller */,
+			);
+			path = Ingredients;
+			sourceTree = "<group>";
+		};
+		5DB5C369267777B3003CCC73 /* NewIngredient */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5C36D2677789F003CCC73 /* ViewModel */,
+				5DB5C371267778AE003CCC73 /* Controller */,
+			);
+			path = NewIngredient;
+			sourceTree = "<group>";
+		};
+		5DB5C36A267777D8003CCC73 /* CreateSteps */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5C372267778B1003CCC73 /* Controller */,
+				5DB5C36E267778A2003CCC73 /* ViewModel */,
+			);
+			path = CreateSteps;
+			sourceTree = "<group>";
+		};
+		5DB5C36B2677780B003CCC73 /* CreateStep */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5C373267778B5003CCC73 /* Controller */,
+				5DB5C36F267778A5003CCC73 /* ViewModel */,
+			);
+			path = CreateStep;
+			sourceTree = "<group>";
+		};
+		5DB5C36C26777895003CCC73 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5C374267779C2003CCC73 /* IngredientsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5DB5C36D2677789F003CCC73 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5C38426794F5B003CCC73 /* NewIngredientViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5DB5C36E267778A2003CCC73 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5C38A26796C5E003CCC73 /* CreateStepsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5DB5C36F267778A5003CCC73 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5DB5C370267778AB003CCC73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5C376267779CF003CCC73 /* IngredientsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DB5C371267778AE003CCC73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5C38226794F4D003CCC73 /* NewIngredientViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DB5C372267778B1003CCC73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5C38C26796C9E003CCC73 /* CreateStepsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DB5C373267778B5003CCC73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		5DCFE0702641725100514498 /* Styles */ = {
@@ -716,8 +850,11 @@
 		5FBE833925C9EB8900E3F3EB /* NewDish */ = {
 			isa = PBXGroup;
 			children = (
-				5FBE834025C9EBD700E3F3EB /* ViewModel */,
-				5FBE834125C9EBDD00E3F3EB /* Controller */,
+				5DB5C3672677776D003CCC73 /* FirstStep */,
+				5DB5C3682677778F003CCC73 /* Ingredients */,
+				5DB5C369267777B3003CCC73 /* NewIngredient */,
+				5DB5C36A267777D8003CCC73 /* CreateSteps */,
+				5DB5C36B2677780B003CCC73 /* CreateStep */,
 			);
 			path = NewDish;
 			sourceTree = "<group>";
@@ -1134,6 +1271,7 @@
 				5F44163325CB04F10009FE5F /* UITextView+Publisher.swift in Sources */,
 				5F8FA25B26416D4300E24685 /* SmallItemsSection.swift in Sources */,
 				5FD012FC25CDBC0000A0E257 /* AlertManager.swift in Sources */,
+				5DB5C38B26796C5E003CCC73 /* CreateStepsViewModel.swift in Sources */,
 				5DCFE07D264333DD00514498 /* SteperView.swift in Sources */,
 				5FBE836825C9F12100E3F3EB /* ProfileCoordinator.swift in Sources */,
 				5FEBD1BD25C9D416000F7E9C /* DishBookViewController.swift in Sources */,
@@ -1153,8 +1291,10 @@
 				5F4218FC25F9509000366A16 /* DishCardSmallCollectionViewCell.swift in Sources */,
 				5F42190425F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */,
 				5FACDFFC265BA405009728D5 /* CornerRadius+View.swift in Sources */,
+				5DB5C38D26796C9E003CCC73 /* CreateStepsViewController.swift in Sources */,
 				5F44163625CB05470009FE5F /* Date+Extension.swift in Sources */,
 				5FFB210925C4DA630086440A /* SignInWithAppleCoordinator.swift in Sources */,
+				5DB5C3872679544E003CCC73 /* TextFieldCentered.swift in Sources */,
 				5FFB20BA25C4CB9F0086440A /* BaseCoordinator.swift in Sources */,
 				5FACE00D265BA708009728D5 /* Rounded+Font.swift in Sources */,
 				5FFB20CE25C4CC740086440A /* TypeAliases.swift in Sources */,
@@ -1162,7 +1302,9 @@
 				5FFB20F725C4D2F30086440A /* MainFlowCoordinator.swift in Sources */,
 				5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */,
 				5FACE00F265BA74B009728D5 /* SB+Rounded.swift in Sources */,
+				5DB5C377267779CF003CCC73 /* IngredientsViewController.swift in Sources */,
 				5FFB20FE25C4D3370086440A /* ExploreListViewController.swift in Sources */,
+				5DB5C37926777D22003CCC73 /* SingleIngredientView.swift in Sources */,
 				5F44162D25CB04D70009FE5F /* UIControlPublisher.swift in Sources */,
 				5FEBD1C725C9D9A6000F7E9C /* SignInWithGoogleCoordinator.swift in Sources */,
 				5F44164425CB06F10009FE5F /* UIView+Anchors.swift in Sources */,
@@ -1180,7 +1322,10 @@
 				5FFB20B025C4CA110086440A /* BaseViewModel.swift in Sources */,
 				5FFB20C125C4CBE90086440A /* AuthCoordinator.swift in Sources */,
 				5FBE835625C9EC4400E3F3EB /* ProfileViewController.swift in Sources */,
+				5DB5C37B267787A6003CCC73 /* IngredientsView.swift in Sources */,
 				5F5C525825C4B0E900AC7E3C /* AppDelegate.swift in Sources */,
+				5DB5C38F26796FDA003CCC73 /* StepView.swift in Sources */,
+				5DB5C38326794F4D003CCC73 /* NewIngredientViewController.swift in Sources */,
 				5F5C52AD25C4B8AF00AC7E3C /* R.generated.swift in Sources */,
 				5FD0130225CDBCE100A0E257 /* DishDetailsController.swift in Sources */,
 				5F44163C25CB05AD0009FE5F /* SubscribersCompletion+Ext.swift in Sources */,
@@ -1200,16 +1345,19 @@
 				5FBE837D25C9F79200E3F3EB /* BaseRootCoordinator.swift in Sources */,
 				5FCFDA172641881C00B3CFFC /* BindableCell.swift in Sources */,
 				5F15C86326497030009EB349 /* SectionHeader.swift in Sources */,
+				5DB5C38526794F5B003CCC73 /* NewIngredientViewModel.swift in Sources */,
 				5FCFDA1D2641888600B3CFFC /* UICollectionView+Reusable.swift in Sources */,
 				5FBE835C25C9EC5A00E3F3EB /* ShoplistViewModel.swift in Sources */,
 				5FCFDA132641876600B3CFFC /* UICollectionView+Section.swift in Sources */,
 				5FFB20B325C4CA360086440A /* Loader.swift in Sources */,
+				5DB5C389267962E2003CCC73 /* GradientView.swift in Sources */,
 				5FFB20AC25C4CA020086440A /* BaseViewController.swift in Sources */,
 				5FACE01C265BA92A009728D5 /* Medium+Text.swift in Sources */,
 				5F44164725CB07080009FE5F /* UIView+StackView.swift in Sources */,
 				5FACE013265BA845009728D5 /* Regular+Rounded.swift in Sources */,
 				5FACDFF7265BA3C4009728D5 /* APIClient.swift in Sources */,
 				5FD012F925CDBBF400A0E257 /* Dish.swift in Sources */,
+				5DB5C375267779C2003CCC73 /* IngredientsViewModel.swift in Sources */,
 				5FEBD1C125C9D423000F7E9C /* DishBookViewModel.swift in Sources */,
 				5F44164B25CB07510009FE5F /* UITextView+Placeholder.swift in Sources */,
 			);

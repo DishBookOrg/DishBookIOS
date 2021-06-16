@@ -10,8 +10,20 @@ import Combine
 
 final class NewDishCoordinator: BaseRootCoordinator {
     
+    // MARK: - Variables
+    
     private var newDish = NewDish()
+    private var ingredientsAndSteps = NewDish.IngredientsAndSteps(ingredients: [
+        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name", ingredientType: "g", ingredientAmount: 350),
+        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Some", ingredientType: "kg", ingredientAmount: 0.5),
+        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name2", ingredientType: "g", ingredientAmount: 350),
+        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Some3", ingredientType: "kg", ingredientAmount: 0.5)
+    ], steps: [])
+    
+    private var ingredientsViewController: IngredientsViewController?
 
+    // MARK: - Life cycle
+    
     override init() {
         super.init()
         
@@ -25,9 +37,14 @@ final class NewDishCoordinator: BaseRootCoordinator {
     
     override func start() {
         
+        navigationController?.navigationBar.tintColor = R.color.textBlack()
+        
         let firstStepViewController = createFirstStep()
+        firstStepViewController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(firstStepViewController, animated: false)
     }
+    
+    // MARK: - FirstStep
     
     private func createFirstStep() -> UIViewController {
         
@@ -51,18 +68,78 @@ final class NewDishCoordinator: BaseRootCoordinator {
         
         viewModel.didPressNextPublisher
             .sink { [unowned self] in
-                let secondStepViewController = createSecondStep()
+                let secondStepViewController = createAddIngredientsStep()
                 navigationController?.pushViewController(secondStepViewController, animated: true)
+            }
+            .store(in: &cancelableSet)
+        
+        viewModel.didPressBackSubject
+            .sink {
+                if let mainFlowCoordinator = App.appCoordinator.childCoordinators.first as? MainFlowCoordinator {
+                    mainFlowCoordinator.tabBarController.selectedIndex = 0
+                }
             }
             .store(in: &cancelableSet)
 
         return FirstStepViewController(viewModel: viewModel)
     }
     
-    private func createSecondStep() -> UIViewController {        
-        let vc = UIViewController()
-        vc.view.backgroundColor = .systemBackground
-        return vc
+    // MARK: - AddIngredients
+    
+    private func createAddIngredientsStep() -> UIViewController {
+        
+        let viewModel = IngredientsViewModel()
+        
+        viewModel.didPressPlusPublisher
+            .sink { [unowned self] in
+                let secondStepViewController = createAddIngredientStep()
+                ingredientsViewController?.present(secondStepViewController, animated: true)
+            }
+            .store(in: &cancelableSet)
+        
+        viewModel.didPressNextPublisher
+            .sink { [unowned self] in
+                let secondStepViewController = createAddStepsStep()
+                navigationController?.pushViewController(secondStepViewController, animated: true)
+            }
+            .store(in: &cancelableSet)
+
+        ingredientsViewController = IngredientsViewController(viewModel: viewModel)
+        ingredientsViewController?.render(ingredients: ingredientsAndSteps.ingredients)
+        return ingredientsViewController!
     }
     
+    // MARK: - AddIngredient
+    
+    private func createAddIngredientStep() -> UIViewController {
+        let viewModel = NewIngredientViewModel()
+        
+        viewModel.didPressDonePublisher
+            .sink { [unowned self] in
+                ingredientsAndSteps.ingredients.append($0)
+                ingredientsViewController?.render(ingredients: ingredientsAndSteps.ingredients)
+                ingredientsViewController?.dismiss(animated: true)
+            }
+            .store(in: &cancelableSet)
+        
+        viewModel.didPressBackPublisher
+            .sink { [unowned self] _ in ingredientsViewController?.dismiss(animated: true) }
+            .store(in: &cancelableSet)
+        
+        let ingredientViewController = NewIngredientViewController(viewModel: viewModel)
+        return ingredientViewController
+    }
+    
+    // MARK: - AddSteps
+    
+    private func createAddStepsStep() -> UIViewController {
+        let viewModel = CreateStepsViewModel()
+        
+        let createStepsViewController = CreateStepsViewController(viewModel: viewModel)
+        return createStepsViewController
+    }
+    
+    // MARK: - AddStep
+    
+    // MARK: - ShowAllDish
 }
