@@ -67,8 +67,6 @@ final class DishDetailViewController: BaseViewController {
         stackView.addArrangedSubview(dishStepsCollapseView)
         stackView.addArrangedSubview(addToDishBookButton)
         stackView.addArrangedSubview(cookItButton)
-        
-        hideSteps(animated: false)
     }
     
     private func render(with dish: Dish) {
@@ -128,8 +126,14 @@ final class DishDetailViewController: BaseViewController {
     
     private func setupSteps(_ steps: [IngredientsAndSteps.Step]) {
         
-        stackView.arrangedSubviews
+        var isHidden: Bool = true
+        
+        let dishStepViews = stackView.arrangedSubviews
             .filter { $0 is DishStepView }
+        
+        isHidden = dishStepViews.isEmpty
+        
+        dishStepViews
             .forEach { $0.removeFromSuperview() }
         
         steps.enumerated().forEach { index, step in
@@ -138,7 +142,7 @@ final class DishDetailViewController: BaseViewController {
             dishStepView.render(props: DishStepView.Props(number: index + 1,
                                                           imageReference: step.stepAttachmentURL.imageReference,
                                                           description: step.stepDescription))
-            dishStepView.isHidden = true
+            dishStepView.isHidden = isHidden
             stackView.insertArrangedSubview(dishStepView, at: 4 + index )
         }
     }
