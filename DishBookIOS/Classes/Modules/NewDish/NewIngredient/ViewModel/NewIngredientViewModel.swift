@@ -17,6 +17,6 @@ final class NewIngredientViewModel: BaseViewModel {
     
     // MARK: - Subjects
 
-    let didPressDoneSubject = PassthroughSubject<NewDish.IngredientsAndSteps.Ingredient, Never>()
+    let didPressDoneSubject = PassthroughSubject<IngredientsAndSteps.Ingredient, Never>()
     let didPressBackSubject = PassthroughSubject<Void, Never>()
 }

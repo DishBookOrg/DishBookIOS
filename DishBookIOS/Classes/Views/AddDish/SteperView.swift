@@ -12,7 +12,7 @@ final class StepperView: UIView {
     
     // MARK: - Publisher
     
-    @Published var currentStep: Int = 0 {
+    @Published var currentStep: Int = 1 {
         didSet {
             stepperDisplayLabel.text = String(currentStep)
         }
@@ -21,7 +21,7 @@ final class StepperView: UIView {
     struct Props {
         
         let initialValue: Int
-        let isAllCornersRounded: Bool = true
+        var isAllCornersRounded: Bool = true
     }
     
     private let titleLabel = UILabel()
@@ -60,7 +60,9 @@ final class StepperView: UIView {
         currentStep = props.initialValue
         
         if !props.isAllCornersRounded {
-            self.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+            layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+            gradientLayer?.removeFromSuperlayer()
+            descriptionLabel.text = R.string.dishDetail.numberOfServingsDescription()
         }
     }
     
