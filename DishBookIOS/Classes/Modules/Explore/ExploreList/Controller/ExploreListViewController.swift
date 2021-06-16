@@ -293,43 +293,55 @@ extension ExploreListViewController: UISearchBarDelegate {
         state = .search
         
         if !searchText.isEmpty {
-            
             viewModel.searchDishes(with: searchText)
         } else {
             applySearch([])
-            
-//            state = .explore
-//            apply(animated: true)
         }
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         
-        if searchBar.searchTextField.text?.isEmpty ?? false {
-            state = .search
-            applySearch([])
-            searchBar.setShowsCancelButton(true, animated: false)
+        guard let text = searchBar.searchTextField.text, text.isEmpty else {
+            return
         }
+        
+        state = .search
+        applySearch([])
+        searchBar.setShowsCancelButton(true, animated: true)
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         
-        if searchBar.searchTextField.text?.isEmpty ?? false {
-            apply(animated: true)
-            state = .explore
-            searchBar.setShowsCancelButton(false, animated: false)
+        guard let text = searchBar.searchTextField.text, text.isEmpty else {
+            return
         }
-//        state = .explore
-//        collectionView.setCollectionViewLayout(createLayout(), animated: false)
+        
+        apply(animated: true)
+        state = .explore
+        searchBar.setShowsCancelButton(false, animated: true)
     }
     
-//    searcBase
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+        UIApplication.hideKeyboard()
+    }
+    
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        
+        DispatchQueue.main.async {
+            if let cancelButton = searchBar.value(forKey: "cancelButton") as? UIButton {
+                cancelButton.isEnabled = true
+            }
+        }
+        return true
+    }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         
         state = .explore
         collectionView.setCollectionViewLayout(createLayout(), animated: false)
         apply(animated: true)
+        searchBar.searchTextField.text = nil
         searchBar.setShowsCancelButton(false, animated: true)
         UIApplication.hideKeyboard()
     }
