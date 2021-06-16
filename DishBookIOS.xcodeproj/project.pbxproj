@@ -30,6 +30,8 @@
 		5F05422C26796D6300977C1B /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05422B26796D6300977C1B /* BlackButton.swift */; };
 		5F15C86326497030009EB349 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F15C86226497030009EB349 /* SectionHeader.swift */; };
 		5F2B6B42267AA07E00FF3CAB /* String+StorageRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B41267AA07E00FF3CAB /* String+StorageRef.swift */; };
+		5F2B6B44267AA53200FF3CAB /* UINavigationBar+Touches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B43267AA53200FF3CAB /* UINavigationBar+Touches.swift */; };
+		5F2B6B47267AAD2600FF3CAB /* Constraints+Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B46267AAD2600FF3CAB /* Constraints+Priority.swift */; };
 		5F4218FC25F9509000366A16 /* DishCardSmallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */; };
 		5F42190425F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */; };
 		5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44162925CB04CE0009FE5F /* UIControlSubscription.swift */; };
@@ -168,6 +170,8 @@
 		5F05422B26796D6300977C1B /* BlackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackButton.swift; sourceTree = "<group>"; };
 		5F15C86226497030009EB349 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		5F2B6B41267AA07E00FF3CAB /* String+StorageRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+StorageRef.swift"; sourceTree = "<group>"; };
+		5F2B6B43267AA53200FF3CAB /* UINavigationBar+Touches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Touches.swift"; sourceTree = "<group>"; };
+		5F2B6B46267AAD2600FF3CAB /* Constraints+Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constraints+Priority.swift"; sourceTree = "<group>"; };
 		5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardSmallCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardBigCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F42190B25F9555E00366A16 /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
@@ -438,6 +442,14 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		5F2B6B45267AAD0400FF3CAB /* UINavigationBar */ = {
+			isa = PBXGroup;
+			children = (
+				5F2B6B43267AA53200FF3CAB /* UINavigationBar+Touches.swift */,
+			);
+			path = UINavigationBar;
+			sourceTree = "<group>";
+		};
 		5F4218F925F9505700366A16 /* DishCards */ = {
 			isa = PBXGroup;
 			children = (
@@ -670,6 +682,7 @@
 			children = (
 				5F44163525CB05470009FE5F /* Date+Extension.swift */,
 				5F2B6B41267AA07E00FF3CAB /* String+StorageRef.swift */,
+				5F2B6B46267AAD2600FF3CAB /* Constraints+Priority.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -677,6 +690,7 @@
 		5F5C52A125C4B62900AC7E3C /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				5F2B6B45267AAD0400FF3CAB /* UINavigationBar */,
 				5FCFDA112641875600B3CFFC /* UITableView */,
 				5FCFDA102641874900B3CFFC /* UICollectionView */,
 				5F44164925CB074A0009FE5F /* UITextView */,
@@ -1360,6 +1374,7 @@
 				5FFB20CE25C4CC740086440A /* TypeAliases.swift in Sources */,
 				5FFB20BD25C4CBB60086440A /* CoordinatorProtocol.swift in Sources */,
 				5FFB20F725C4D2F30086440A /* MainFlowCoordinator.swift in Sources */,
+				5F2B6B44267AA53200FF3CAB /* UINavigationBar+Touches.swift in Sources */,
 				5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */,
 				5FACE00F265BA74B009728D5 /* SB+Rounded.swift in Sources */,
 				5FEBB75D26795130003C2DBA /* DishServingsView.swift in Sources */,
@@ -1400,6 +1415,7 @@
 				5F05422C26796D6300977C1B /* BlackButton.swift in Sources */,
 				5FCFDA1F264189E600B3CFFC /* ViewRepresentable.swift in Sources */,
 				5FEBD1C425C9D42C000F7E9C /* ExploreListViewModel.swift in Sources */,
+				5F2B6B47267AAD2600FF3CAB /* Constraints+Priority.swift in Sources */,
 				5FACE011265BA80D009728D5 /* Medium+Rounded.swift in Sources */,
 				5F44164025CB06CD0009FE5F /* UIView+FromNib.swift in Sources */,
 				5FEBB75F267956A3003C2DBA /* DishStepsCollapseView.swift in Sources */,

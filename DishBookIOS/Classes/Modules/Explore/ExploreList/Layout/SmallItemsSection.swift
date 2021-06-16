@@ -11,7 +11,7 @@ struct SmallItemsSection: CollectionSection {
     
     var numberOfItems: Int
     
-    func layoutSection() -> NSCollectionLayoutSection {
+    func layoutSection(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         
         let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .absolute(190),
                                                                              heightDimension: .absolute(250)))

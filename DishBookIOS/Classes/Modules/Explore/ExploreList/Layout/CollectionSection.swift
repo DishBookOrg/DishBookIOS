@@ -11,7 +11,7 @@ protocol CollectionSection: Hashable {
     
     var numberOfItems: Int { get }
     
-    func layoutSection() -> NSCollectionLayoutSection
+    func layoutSection(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection
 }
 
 // MARK: - Implementation
