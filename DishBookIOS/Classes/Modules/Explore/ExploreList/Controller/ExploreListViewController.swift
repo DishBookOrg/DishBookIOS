@@ -222,7 +222,6 @@ extension ExploreListViewController: UICollectionViewDelegate {
             return
         }
         
-        print(dish)
         viewModel.didPressDishDetailSubject.send(dish)
     }
 }
