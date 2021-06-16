@@ -12,7 +12,7 @@ final class TextFieldCentered: UIView {
     
     lazy var didChangeTextPublisher = nameTextField.textPublisher
     
-    private let nameTextField = UITextField()
+    let nameTextField = UITextField()
     private let descriptionLabel = UILabel()
     
     override init(frame: CGRect) {
@@ -32,6 +32,7 @@ final class TextFieldCentered: UIView {
         nameTextField.font = R.font.sfProTextMedium(size: 22)
         nameTextField.textColor = R.color.textWhite()
         nameTextField.textAlignment = .center
+        nameTextField.autocapitalizationType = .none
         
         descriptionLabel.apply(style: Styles.Font.Rounded.Regular.f6)
         descriptionLabel.textColor = R.color.textDescriptionWhite()

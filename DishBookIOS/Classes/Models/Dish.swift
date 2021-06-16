@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import FirebaseStorage
 
 struct Dish {
     
@@ -57,6 +58,12 @@ struct Dish {
     
     /// This  value is used to make possible display 2 dishes in different sections in one collection
     var blockId: Int?
+}
+
+extension String {
+    var imageReference: StorageReference {
+        return Storage.storage().reference(forURL: self)
+    }
 }
 
 // MARK: - Computed properties

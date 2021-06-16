@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import FirebaseUI
 
 final class StepView: UIView {
     
     struct Props {
-        let image: UIImage?
+        let image: String?
         let stepNumber: Int
         let description: String
     }
@@ -19,6 +20,8 @@ final class StepView: UIView {
     private let imageView = UIImageView()
     private let descriptionLabel = UILabel()
     private let titleLabel = UILabel()
+    
+    private let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: .systemUltraThinMaterialDark))
     
     private var renderedProps: Props?
     
@@ -29,20 +32,58 @@ final class StepView: UIView {
     }
     
     func render(props: Props) {
-        if props.image != renderedProps?.image {
-            backgroundImageView.image = props.image
-            imageView.image = props.image
+        if props.image != renderedProps?.image, let image = props.image {
+            backgroundImageView.sd_setImage(with: image.imageReference)
+            imageView.sd_setImage(with: image.imageReference)
         }
         if props.stepNumber != renderedProps?.stepNumber {
-            
+            titleLabel.text = "Step №\(props.stepNumber)"
         }
         if props.description != renderedProps?.description {
-            
+            descriptionLabel.text = props.description
         }
     }
     
     private func setup() {
+        apply(style: Styles.View.CornerRadius.small)
+        clipsToBounds = true
         
+        backgroundImageView.contentMode = .scaleAspectFill
+        visualEffectView.layer.masksToBounds = false
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        imageView.apply(style: Styles.View.CornerRadius.d10)
+        
+        let separatorView = UIView()
+        separatorView.backgroundColor = R.color.textDescriptionWhite()
+        separatorView.apply(style: Styles.View.CornerRadius.d1)
+        
+        titleLabel.apply(style: Styles.Font.Rounded.SB.f4)
+        titleLabel.textColor = R.color.textWhite()
+        
+        descriptionLabel.apply(style: Styles.Font.Text.Regular.f6)
+        descriptionLabel.textColor = R.color.textWhite()
+        descriptionLabel.numberOfLines = 0
+        
+        let labelsStackView = UIStackView(arrangedSubviews: [titleLabel, descriptionLabel])
+        labelsStackView.axis = .vertical
+                
+        let mainStackView = UIStackView(arrangedSubviews: [imageView, separatorView, labelsStackView])
+        mainStackView.axis = .horizontal
+        mainStackView.spacing = 6
+        
+        
+        addSubview(backgroundImageView, withEdgeInsets: .zero)
+        addSubview(visualEffectView, withEdgeInsets: .zero)
+        
+        addSubview(mainStackView, constraints: [
+            mainStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            mainStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            mainStackView.topAnchor.constraint(equalTo: topAnchor, constant: 16),
+            mainStackView.heightAnchor.constraint(equalToConstant: 100),
+            imageView.widthAnchor.constraint(equalToConstant: 100),
+            separatorView.widthAnchor.constraint(equalToConstant: 2)
+        ])
     }
     
     required init?(coder: NSCoder) {
@@ -50,13 +91,3 @@ final class StepView: UIView {
     }
 }
 
-import SwiftUI
-struct StepViewPreview: PreviewProvider {
-    
-    static var previews: some View {
-        ViewRepresentable(StepView()) { view in
-            
-        }
-        .previewLayout(.fixed(width: 337, height: 132))
-    }
-}

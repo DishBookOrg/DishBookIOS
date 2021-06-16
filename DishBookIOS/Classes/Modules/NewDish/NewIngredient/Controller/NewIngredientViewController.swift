@@ -56,6 +56,7 @@ final class NewIngredientViewController: BaseViewController {
         nameTextField.setup(placeholder: "Name", description: "Start entering the name of the ingredient.")
         amountTextField.setup(placeholder: "0", description: "Amount")
         unitTextField.setup(placeholder: "g", description: "Unit")
+        amountTextField.nameTextField.keyboardType = .numberPad
         
         let amountUnitStackView = UIStackView(arrangedSubviews: [amountTextField, unitTextField])
         amountUnitStackView.axis = .horizontal

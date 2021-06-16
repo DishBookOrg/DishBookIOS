@@ -18,7 +18,13 @@ final class NewDishCoordinator: BaseRootCoordinator {
         NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Some", ingredientType: "kg", ingredientAmount: 0.5),
         NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name2", ingredientType: "g", ingredientAmount: 350),
         NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Some3", ingredientType: "kg", ingredientAmount: 0.5)
-    ], steps: [])
+    ], steps: [
+        NewDish.IngredientsAndSteps.Step(stepDescription: "venenatis blandit consequat. Donec quis vulputate arcu. Fusce augue n", stepAttachmentURL: "", stepTime: 120),
+        NewDish.IngredientsAndSteps.Step(stepDescription: "et, consectetur adipiscing elit. Ut tincidunt dui tellus, ac imperdiet neque condimentum egestas. Cras libero ex, vulputate eu ipsum non, eleifend dignis", stepAttachmentURL: "", stepTime: 120),
+        NewDish.IngredientsAndSteps.Step(stepDescription: "Donec quis vulputate arcu. Fusce augue n", stepAttachmentURL: "", stepTime: 120),
+        NewDish.IngredientsAndSteps.Step(stepDescription: "Fusce augue n", stepAttachmentURL: "", stepTime: 120),
+        NewDish.IngredientsAndSteps.Step(stepDescription: "Donec quis vulputate arcu.", stepAttachmentURL: "", stepTime: 120),
+    ])
     
     private var ingredientsViewController: IngredientsViewController?
 
@@ -136,6 +142,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
         let viewModel = CreateStepsViewModel()
         
         let createStepsViewController = CreateStepsViewController(viewModel: viewModel)
+        createStepsViewController.render(steps: ingredientsAndSteps.steps)
         return createStepsViewController
     }
     
