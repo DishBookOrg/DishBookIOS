@@ -29,6 +29,7 @@
 		5F05422A26796D5800977C1B /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05422926796D5800977C1B /* GradientButton.swift */; };
 		5F05422C26796D6300977C1B /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05422B26796D6300977C1B /* BlackButton.swift */; };
 		5F15C86326497030009EB349 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F15C86226497030009EB349 /* SectionHeader.swift */; };
+		5F2B6B42267AA07E00FF3CAB /* String+StorageRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B41267AA07E00FF3CAB /* String+StorageRef.swift */; };
 		5F4218FC25F9509000366A16 /* DishCardSmallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */; };
 		5F42190425F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */; };
 		5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44162925CB04CE0009FE5F /* UIControlSubscription.swift */; };
@@ -166,6 +167,7 @@
 		5F05422926796D5800977C1B /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
 		5F05422B26796D6300977C1B /* BlackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackButton.swift; sourceTree = "<group>"; };
 		5F15C86226497030009EB349 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		5F2B6B41267AA07E00FF3CAB /* String+StorageRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+StorageRef.swift"; sourceTree = "<group>"; };
 		5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardSmallCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardBigCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F42190B25F9555E00366A16 /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
@@ -667,6 +669,7 @@
 			isa = PBXGroup;
 			children = (
 				5F44163525CB05470009FE5F /* Date+Extension.swift */,
+				5F2B6B41267AA07E00FF3CAB /* String+StorageRef.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -1319,6 +1322,7 @@
 				5FFB20C525C4CC2C0086440A /* LoginViewController.swift in Sources */,
 				5FBE835025C9EC2F00E3F3EB /* NewDishViewController.swift in Sources */,
 				5FBE835925C9EC5100E3F3EB /* ProfileViewModel.swift in Sources */,
+				5F2B6B42267AA07E00FF3CAB /* String+StorageRef.swift in Sources */,
 				5D70A27125F80A4B009B2520 /* DescriptionUILabel.swift in Sources */,
 				5FFB20D225C4CD450086440A /* UIApplication+Keyboard.swift in Sources */,
 				5F6A7EED267A89F00073DE43 /* NewDish.swift in Sources */,

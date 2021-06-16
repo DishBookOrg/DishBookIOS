@@ -165,11 +165,3 @@ final class DishDetailViewController: BaseViewController {
             .forEach { $0.hideInStackView(animated: animated) }
     }
 }
-
-// TODO: Remove with `Nastya` MR
-
-extension String {
-    var imageReference: StorageReference {
-        return Storage.storage().reference(forURL: self)
-    }
-}

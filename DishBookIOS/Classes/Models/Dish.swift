@@ -79,7 +79,7 @@ extension Dish {
     }
     
     var imageReference: StorageReference {
-        return Storage.storage().reference(forURL: imageURL)
+        return imageURL.imageReference
     }
 }
 
