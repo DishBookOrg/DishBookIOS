@@ -12,7 +12,7 @@ final class StepperView: UIView {
     
     // MARK: - Publisher
     
-    @Published var currentStep: Int = 0 {
+    @Published var currentStep: Int = 1 {
         didSet {
             stepperDisplayLabel.text = String(currentStep)
         }

@@ -7,12 +7,18 @@
 
 import UIKit
 import Combine
+import FirebaseStorage
 
 final class DishStepView: UIView {
     
     // MARK: - Props
     
-    typealias Props = Dish
+    struct Props {
+        
+        var number: Int
+        var imageReference: StorageReference
+        var description: String
+    }
     
     // MARK: - Private properties
     
@@ -89,15 +95,15 @@ final class DishStepView: UIView {
     
     public func render(props: Props) {
         
-        stepNumberLabel.text = "Step 1"
+        stepNumberLabel.text = "Step \(props.number)"
         stepImageView.sd_setImage(with: props.imageReference)
-        stepDescriptionLabel.text = "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
-        
+        stepDescriptionLabel.text = props.description
     }
 }
 
 // MARK: - Preview
 
+/*
 import SwiftUI
 struct DishStepViewPreview: PreviewProvider {
     
@@ -108,3 +114,4 @@ struct DishStepViewPreview: PreviewProvider {
         .previewLayout(.fixed(width: 343, height: 68))
     }
 }
+*/

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseStorage
 
 final class DishDetailViewController: BaseViewController {
     
@@ -46,7 +47,7 @@ final class DishDetailViewController: BaseViewController {
         scrollView.addSubview(stackView, withEdgeInsets: UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16))
         
         stackView.axis = .vertical
-        stackView.spacing = 40
+        stackView.spacing = 24
         
         NSLayoutConstraint.activate([
             dishImageView.heightAnchor.constraint(equalToConstant: 400),
@@ -59,6 +60,13 @@ final class DishDetailViewController: BaseViewController {
         addToDishBookButton.setTitle(R.string.dishDetail.addToDishBookButton(), for: .normal)
         cookItButton.setTitle(R.string.dishDetail.cookItButton(), for: .normal)
         
+        dishServingsView
+            .$numberOfServings
+            .sink { numberOfServings in
+                print(numberOfServings)
+            }
+            .store(in: &cancelableSet)
+        
         stackView.clipsToBounds = false
         stackView.addArrangedSubview(dishImageView)
         stackView.addArrangedSubview(dishShortDescriptionView)
@@ -67,14 +75,27 @@ final class DishDetailViewController: BaseViewController {
         stackView.addArrangedSubview(addToDishBookButton)
         stackView.addArrangedSubview(cookItButton)
         
-        generateSteps()
         hideSteps(animated: false)
     }
     
     private func render(with dish: Dish) {
         
-        dishServingsView.render(props: dish)
-        dishStepsCollapseView.render(props: 5)
+        if let ingredientsAndSteps = dish.ingredientsAndSteps {
+            
+            let ingredients = ingredientsAndSteps.ingredients.map { SingleIngredientView.Props(name: $0.ingredientName, amount: "\($0.ingredientAmount) \($0.ingredientType)") }
+            
+            dishServingsView.render(props: DishServingsView.Props(numberOfServings: dish.numberOfServings, ingredients: ingredients))
+            dishStepsCollapseView.render(props: ingredientsAndSteps.steps.count)
+            setupSteps(ingredientsAndSteps.steps)
+            
+            dishServingsView.showInStackView(animated: true)
+            dishStepsCollapseView.showInStackView(animated: true)
+            
+        } else {
+            dishServingsView.hideInStackView(animated: true)
+            dishStepsCollapseView.hideInStackView(animated: true)
+        }
+        
         dishImageView.render(props: dish.imageReference)
         dishShortDescriptionView.render(props: DishShortDescriptionView.Props(dishName: dish.name,
                                                                               difficulty: dish.difficulty,
@@ -101,19 +122,22 @@ final class DishDetailViewController: BaseViewController {
             .store(in: &cancelableSet)
     }
     
-    private func generateSteps() {
+    private func setupSteps(_ steps: [IngredientsAndSteps.Step]) {
         
-        let view = DishStepView()
-        view.render(props: viewModel.dish)
-        stackView.insertArrangedSubview(view, at: 4)
+        stackView.arrangedSubviews
+            .filter { $0 is DishStepView }
+            .forEach { $0.removeFromSuperview() }
         
-        let view2 = DishStepView()
-        view2.render(props: viewModel.dish)
-        stackView.insertArrangedSubview(view2, at: 5)
-        
-        let view3 = DishStepView()
-        view3.render(props: viewModel.dish)
-        stackView.insertArrangedSubview(view3, at: 6)
+        steps.enumerated().forEach { index, step in
+            
+            let dishStepView = DishStepView()
+            dishStepView.render(props: DishStepView.Props(number: index + 1,
+                                                          imageReference: step.stepAttachmentURL.imageReference,
+                                                          description: step.stepDescription))
+            dishStepView.isHidden = true
+//            stackView.inserA
+            stackView.insertArrangedSubview(dishStepView, at: 4 + index )
+        }
     }
     
     private func showSteps(animated: Bool = true) {
@@ -132,5 +156,12 @@ final class DishDetailViewController: BaseViewController {
         stackView.arrangedSubviews
             .filter { $0 is DishStepView }
             .forEach { $0.hideInStackView(animated: animated) }
+    }
+}
+
+// TODO: Remove with `Nastya` MR
+extension String {
+    var imageReference: StorageReference {
+        return Storage.storage().reference(forURL: self)
     }
 }

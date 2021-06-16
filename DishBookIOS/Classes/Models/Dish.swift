@@ -31,6 +31,9 @@ struct Dish {
     /// Use `.imageReference` with sd_setImage
     var imageURL: String
     
+    /// Number of servings choosen in NewDish
+    var numberOfServings: Int
+    
     /// Ration enum
     var ration: Ration
     
@@ -53,6 +56,8 @@ struct Dish {
     
     /// This  value is used to make possible display 2 dishes in different sections in one collection
     var blockId: Int?
+    
+    var ingredientsAndSteps: IngredientsAndSteps?
 }
 
 // MARK: - Computed properties
@@ -123,6 +128,7 @@ extension Dish: Codable {
         case userCreatedID = "userCreatedID"
         case userAddedID = "userAddedID"
         case privacy = "dishPrivacy"
+        case numberOfServings = "dishNumberOfServings"
     }
 }
 
@@ -134,6 +140,7 @@ extension Dish {
                            name: "Some dish name",
                            totalTime: 1800,
                            imageURL: "",
+                           numberOfServings: 4,
                            ration: .breakfast,
                            difficulty: .easy,
                            privacy: .public,

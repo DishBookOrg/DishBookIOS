@@ -6,18 +6,27 @@
 //
 
 import UIKit
+import Combine
 
 final class DishServingsView: UIView {
     
     // MARK: - Props
-    
-    typealias Props = Dish
+        
+    struct Props {
+        var numberOfServings: Int
+        var ingredients: [SingleIngredientView.Props]
+    }
     
     // MARK: - Private properties
     
     private let stackView = UIStackView()
     private let stepperView = StepperView()
     private let separatorView = UIView()
+    private let ingredientsView = IngredientsView()
+    
+    // MARK: - Published properties
+    
+    @Published var numberOfServings: Int = 1
     
     // MARK: - Lifecycle
     
@@ -45,37 +54,26 @@ final class DishServingsView: UIView {
         addSubview(stackView, withEdgeInsets: .zero)
         
         separatorView.backgroundColor = R.color.textWhite()
-
-        // TODO: Change to ingredients view
-        let emptyView = UIView()
-        emptyView.backgroundColor = .clear
+        
+        stepperView
+            .$currentStep
+            .assign(to: &$numberOfServings)
+//            .store
         
         NSLayoutConstraint.activate([
             stepperView.heightAnchor.constraint(equalToConstant: 85),
             separatorView.heightAnchor.constraint(equalToConstant: 2),
-            emptyView.heightAnchor.constraint(equalToConstant: 200)
+            ingredientsView.heightAnchor.constraint(greaterThanOrEqualToConstant: 44)
         ])
         
         stackView.addArrangedSubview(stepperView)
         stackView.addArrangedSubview(separatorView)
-        stackView.addArrangedSubview(emptyView)
+        stackView.addArrangedSubview(ingredientsView)
     }
     
     public func render(props: Props) {
         
-        stepperView.render(props: StepperView.Props(initialValue: 4, isAllCornersRounded: false))
-    }
-}
-
-// MARK: - Preview
-
-import SwiftUI
-struct DishServingsViewPreview: PreviewProvider {
-    
-    static var previews: some View {
-        ViewRepresentable(DishServingsView()) { view in
-            view.render(props: DishServingsView.Props.mock)
-        }
-        .previewLayout(.sizeThatFits)
+        stepperView.render(props: StepperView.Props(initialValue: props.numberOfServings, isAllCornersRounded: false))
+        ingredientsView.render(props: IngredientsView.Props(ingredients: props.ingredients, isAllCornersRounded: false))
     }
 }

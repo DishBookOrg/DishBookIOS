@@ -13,11 +13,11 @@ final class NewDishCoordinator: BaseRootCoordinator {
     // MARK: - Variables
     
     private var newDish = NewDish()
-    private var ingredientsAndSteps = NewDish.IngredientsAndSteps(ingredients: [
-        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name", ingredientType: "g", ingredientAmount: 350),
-        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Some", ingredientType: "kg", ingredientAmount: 0.5),
-        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name2", ingredientType: "g", ingredientAmount: 350),
-        NewDish.IngredientsAndSteps.Ingredient(ingredientName: "Some3", ingredientType: "kg", ingredientAmount: 0.5)
+    private var ingredientsAndSteps = IngredientsAndSteps(ingredients: [
+        IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name", ingredientType: "g", ingredientAmount: 350),
+        IngredientsAndSteps.Ingredient(ingredientName: "Some", ingredientType: "kg", ingredientAmount: 0.5),
+        IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name2", ingredientType: "g", ingredientAmount: 350),
+        IngredientsAndSteps.Ingredient(ingredientName: "Some3", ingredientType: "kg", ingredientAmount: 0.5)
     ], steps: [])
     
     private var ingredientsViewController: IngredientsViewController?
