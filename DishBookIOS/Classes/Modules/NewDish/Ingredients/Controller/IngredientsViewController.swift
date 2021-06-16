@@ -34,7 +34,7 @@ final class IngredientsViewController: BaseViewController {
         setupStreams()
     }
     
-    func render(ingredients: [NewDish.IngredientsAndSteps.Ingredient]) {
+    func render(ingredients: [IngredientsAndSteps.Ingredient]) {
         let ingredientsProps = ingredients.map { SingleIngredientView.Props(name: $0.ingredientName, amount: "\($0.ingredientAmount) \($0.ingredientType)") }
         
         ingredientsView.render(props: IngredientsView.Props(ingredients: ingredientsProps))

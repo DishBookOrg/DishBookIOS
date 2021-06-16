@@ -21,8 +21,12 @@ final class ExploreListViewModel: BaseViewModel {
     @Published var breakfastDishes: [Dish] = []
     @Published var lunchDishes: [Dish] = []
     @Published var dinnerDishes: [Dish] = []
-    
     @Published var dishesInSearch: [Dish] = []
+
+    // MARK: - Publishers with subjects
+    
+    lazy var didPressDishDetailPublisher = didPressDishDetailSubject.eraseToAnyPublisher()
+    let didPressDishDetailSubject = PassthroughSubject<Dish, Never>()
     
     // MARK: - Lifecycle
     
