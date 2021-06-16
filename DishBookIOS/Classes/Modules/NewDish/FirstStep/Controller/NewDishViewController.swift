@@ -37,7 +37,7 @@ final class FirstStepViewController: BaseViewController {
     
     private func setup() {
         
-        let progressBarView = UIImageView(image: R.image.progressBar())
+        let progressBarView = UIImageView(image: R.image.progressBarStep1())
         
         nameTextField.setup(placeholder: R.string.newDish.textFieldNamePlaceholder(), description: R.string.newDish.textFieldNameDescription())
         ownPublicSegmentedControl.render(
@@ -76,14 +76,18 @@ final class FirstStepViewController: BaseViewController {
         
         ownPublicSegmentedControl.didSelectPublisher
             .sink { [unowned self] in
-                guard let privacy = $0 as? Dish.Privacy else { return }
+                guard let privacy = $0 as? Dish.Privacy else {
+                    return
+                }
                 viewModel.didSelectPrivacyLevelSubject.send(privacy)
             }
             .store(in: &cancelableSet)
         
         difficultySegmentedControl.didSelectPublisher
             .sink { [unowned self] in
-                guard let privacy = $0 as? Dish.Difficulty else { return }
+                guard let privacy = $0 as? Dish.Difficulty else {
+                    return
+                }
                 viewModel.didSelectDifficultyLevelSubject.send(privacy)
             }
             .store(in: &cancelableSet)
@@ -96,11 +100,19 @@ final class FirstStepViewController: BaseViewController {
     private func setupNavigationBar() {
         let nextButton = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(didPressNext))
         navigationItem.rightBarButtonItem = nextButton
+        
+        let backButton = UIBarButtonItem(image: R.image.back(), style: .plain, target: self, action: #selector(didPressBack))
+        navigationItem.leftBarButtonItem = backButton
     }
     
     @objc
     func didPressNext() {
         viewModel.didPressNextSubject.send(())
+    }
+    
+    @objc
+    func didPressBack() {
+        viewModel.didPressBackSubject.send(())
     }
 }
 

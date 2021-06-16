@@ -17,6 +17,7 @@ final class FirstStepViewModel: BaseViewModel {
     lazy var didChangeNamePublisher = didChangeNameSubject.eraseToAnyPublisher()
     lazy var didChangeNumberOfServingsPublisher = didChangeNumberOfServingsSubject.eraseToAnyPublisher()
     lazy var didPressNextPublisher = didPressNextSubject.eraseToAnyPublisher()
+    lazy var didPressBackPublisher = didPressBackSubject.eraseToAnyPublisher()
     
     // MARK: - Subjects
     
@@ -25,6 +26,5 @@ final class FirstStepViewModel: BaseViewModel {
     let didChangeNameSubject = PassthroughSubject<String, Never>()
     let didChangeNumberOfServingsSubject = PassthroughSubject<Int, Never>()
     let didPressNextSubject = PassthroughSubject<Void, Never>()
-    
-    var onNext: VoidClosure?
+    let didPressBackSubject = PassthroughSubject<Void, Never>()
 }
