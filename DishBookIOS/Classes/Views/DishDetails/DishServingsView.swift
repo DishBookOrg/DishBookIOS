@@ -22,7 +22,7 @@ final class DishServingsView: UIView {
     private let stackView = UIStackView()
     private let stepperView = StepperView()
     private let separatorView = UIView()
-    private let ingredientsView = IngredientsView()
+    let ingredientsView = IngredientsView()
     
     // MARK: - Published properties
     

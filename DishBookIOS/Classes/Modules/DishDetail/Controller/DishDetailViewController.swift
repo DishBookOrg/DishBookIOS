@@ -60,13 +60,6 @@ final class DishDetailViewController: BaseViewController {
         addToDishBookButton.setTitle(R.string.dishDetail.addToDishBookButton(), for: .normal)
         cookItButton.setTitle(R.string.dishDetail.cookItButton(), for: .normal)
         
-        dishServingsView
-            .$numberOfServings
-            .sink { numberOfServings in
-                print(numberOfServings)
-            }
-            .store(in: &cancelableSet)
-        
         stackView.clipsToBounds = false
         stackView.addArrangedSubview(dishImageView)
         stackView.addArrangedSubview(dishShortDescriptionView)
@@ -104,6 +97,17 @@ final class DishDetailViewController: BaseViewController {
     
     private func setupBindings() {
         
+        dishServingsView
+            .$numberOfServings
+            .sink { [unowned self] numberOfServings in
+                
+                guard let newIngredints = viewModel.countNewIngredients(numberOfServings: numberOfServings) else {
+                    return
+                }
+                dishServingsView.ingredientsView.render(props: IngredientsView.Props(ingredients: newIngredints, isAllCornersRounded: false))
+            }
+            .store(in: &cancelableSet)
+        
         viewModel.$showLoader
             .assignNoRetain(to: \.showLoader, on: self)
             .store(in: &cancelableSet)
@@ -135,7 +139,6 @@ final class DishDetailViewController: BaseViewController {
                                                           imageReference: step.stepAttachmentURL.imageReference,
                                                           description: step.stepDescription))
             dishStepView.isHidden = true
-//            stackView.inserA
             stackView.insertArrangedSubview(dishStepView, at: 4 + index )
         }
     }
@@ -160,6 +163,7 @@ final class DishDetailViewController: BaseViewController {
 }
 
 // TODO: Remove with `Nastya` MR
+
 extension String {
     var imageReference: StorageReference {
         return Storage.storage().reference(forURL: self)

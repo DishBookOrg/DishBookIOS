@@ -22,6 +22,29 @@ final class DishDetailViewModel: BaseViewModel {
         
         getFullDish()
     }
+    
+    func countNewIngredients(numberOfServings: Int) -> [SingleIngredientView.Props]? {
+        
+        guard let ingredientsAndSteps = dish.ingredientsAndSteps else {
+            return nil
+        }
+        
+        let value = Float(numberOfServings) / Float(dish.numberOfServings)
+        let newIngredients = ingredientsAndSteps
+            .ingredients
+            .map { ingredient -> IngredientsAndSteps.Ingredient in
+                var newIngredient = ingredient
+                newIngredient.ingredientAmount = round(ingredient.ingredientAmount * value * 100) / 100.0
+                return newIngredient
+            }
+        
+        let singleIngredientViewProps = newIngredients
+            .map {
+                SingleIngredientView.Props(name: $0.ingredientName,
+                                           amount: "\($0.ingredientAmount) \($0.ingredientType)")
+            }
+        return singleIngredientViewProps
+    }
 }
 
 // MARK: - API
