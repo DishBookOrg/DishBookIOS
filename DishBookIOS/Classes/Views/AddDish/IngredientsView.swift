@@ -55,14 +55,14 @@ final class IngredientsView: UIView {
             props.ingredients.forEach { ingredient in
                 let singleIngredientView = SingleIngredientView(props: ingredient)
                 let spaser = UIView()
-                spaser.backgroundColor = R.color.grayUnmarked()
+                spaser.backgroundColor = R.color.grayUnmarked()?.withAlphaComponent(0.5)
                 mainStackView.addArrangedSubview(singleIngredientView)
                 if props.ingredients[props.ingredients.count - 1] != ingredient {
                     mainStackView.addArrangedSubview(spaser)
                 }
                 NSLayoutConstraint.activate([
                     singleIngredientView.heightAnchor.constraint(equalToConstant: 44),
-                    spaser.heightAnchor.constraint(equalToConstant: 1)
+                    spaser.heightAnchor.constraint(equalToConstant: 0.5)
                 ])
             }
         }

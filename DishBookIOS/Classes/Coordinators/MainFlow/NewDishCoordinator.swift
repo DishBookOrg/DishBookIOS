@@ -133,6 +133,13 @@ final class NewDishCoordinator: BaseRootCoordinator {
     // MARK: - AddSteps
     
     private func createAddStepsStep() -> UIViewController {
-        UIViewController()
+        let viewModel = CreateStepsViewModel()
+        
+        let createStepsViewController = CreateStepsViewController(viewModel: viewModel)
+        return createStepsViewController
     }
+    
+    // MARK: - AddStep
+    
+    // MARK: - ShowAllDish
 }

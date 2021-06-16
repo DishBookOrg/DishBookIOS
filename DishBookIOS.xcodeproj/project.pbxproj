@@ -20,6 +20,9 @@
 		5DB5C38526794F5B003CCC73 /* NewIngredientViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C38426794F5B003CCC73 /* NewIngredientViewModel.swift */; };
 		5DB5C3872679544E003CCC73 /* TextFieldCentered.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C3862679544E003CCC73 /* TextFieldCentered.swift */; };
 		5DB5C389267962E2003CCC73 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C388267962E2003CCC73 /* GradientView.swift */; };
+		5DB5C38B26796C5E003CCC73 /* CreateStepsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C38A26796C5E003CCC73 /* CreateStepsViewModel.swift */; };
+		5DB5C38D26796C9E003CCC73 /* CreateStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C38C26796C9E003CCC73 /* CreateStepsViewController.swift */; };
+		5DB5C38F26796FDA003CCC73 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C38E26796FDA003CCC73 /* StepView.swift */; };
 		5DCFE0722641726500514498 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0712641726500514498 /* Styles.swift */; };
 		5DCFE0792641B8E700514498 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0782641B8E700514498 /* SegmentedControl.swift */; };
 		5DCFE07D264333DD00514498 /* SteperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE07C264333DD00514498 /* SteperView.swift */; };
@@ -142,6 +145,9 @@
 		5DB5C38426794F5B003CCC73 /* NewIngredientViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewIngredientViewModel.swift; sourceTree = "<group>"; };
 		5DB5C3862679544E003CCC73 /* TextFieldCentered.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCentered.swift; sourceTree = "<group>"; };
 		5DB5C388267962E2003CCC73 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		5DB5C38A26796C5E003CCC73 /* CreateStepsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStepsViewModel.swift; sourceTree = "<group>"; };
+		5DB5C38C26796C9E003CCC73 /* CreateStepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStepsViewController.swift; sourceTree = "<group>"; };
+		5DB5C38E26796FDA003CCC73 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 		5DCFE0712641726500514498 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		5DCFE0782641B8E700514498 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		5DCFE07C264333DD00514498 /* SteperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteperView.swift; sourceTree = "<group>"; };
@@ -288,6 +294,7 @@
 				5DB5C37826777D22003CCC73 /* SingleIngredientView.swift */,
 				5DB5C37A267787A6003CCC73 /* IngredientsView.swift */,
 				5DB5C388267962E2003CCC73 /* GradientView.swift */,
+				5DB5C38E26796FDA003CCC73 /* StepView.swift */,
 			);
 			path = AddDish;
 			sourceTree = "<group>";
@@ -364,6 +371,7 @@
 		5DB5C36E267778A2003CCC73 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5DB5C38A26796C5E003CCC73 /* CreateStepsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -394,6 +402,7 @@
 		5DB5C372267778B1003CCC73 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5DB5C38C26796C9E003CCC73 /* CreateStepsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1262,6 +1271,7 @@
 				5F44163325CB04F10009FE5F /* UITextView+Publisher.swift in Sources */,
 				5F8FA25B26416D4300E24685 /* SmallItemsSection.swift in Sources */,
 				5FD012FC25CDBC0000A0E257 /* AlertManager.swift in Sources */,
+				5DB5C38B26796C5E003CCC73 /* CreateStepsViewModel.swift in Sources */,
 				5DCFE07D264333DD00514498 /* SteperView.swift in Sources */,
 				5FBE836825C9F12100E3F3EB /* ProfileCoordinator.swift in Sources */,
 				5FEBD1BD25C9D416000F7E9C /* DishBookViewController.swift in Sources */,
@@ -1281,6 +1291,7 @@
 				5F4218FC25F9509000366A16 /* DishCardSmallCollectionViewCell.swift in Sources */,
 				5F42190425F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */,
 				5FACDFFC265BA405009728D5 /* CornerRadius+View.swift in Sources */,
+				5DB5C38D26796C9E003CCC73 /* CreateStepsViewController.swift in Sources */,
 				5F44163625CB05470009FE5F /* Date+Extension.swift in Sources */,
 				5FFB210925C4DA630086440A /* SignInWithAppleCoordinator.swift in Sources */,
 				5DB5C3872679544E003CCC73 /* TextFieldCentered.swift in Sources */,
@@ -1313,6 +1324,7 @@
 				5FBE835625C9EC4400E3F3EB /* ProfileViewController.swift in Sources */,
 				5DB5C37B267787A6003CCC73 /* IngredientsView.swift in Sources */,
 				5F5C525825C4B0E900AC7E3C /* AppDelegate.swift in Sources */,
+				5DB5C38F26796FDA003CCC73 /* StepView.swift in Sources */,
 				5DB5C38326794F4D003CCC73 /* NewIngredientViewController.swift in Sources */,
 				5F5C52AD25C4B8AF00AC7E3C /* R.generated.swift in Sources */,
 				5FD0130225CDBCE100A0E257 /* DishDetailsController.swift in Sources */,
