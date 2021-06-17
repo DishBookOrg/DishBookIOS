@@ -98,6 +98,17 @@ extension Dish {
         case easy = 1
         case medium = 2
         case hard = 3
+        
+        var color: UIColor {
+            switch self {
+            case .easy:
+                return R.color.primaryGreen()!
+            case .medium:
+                return R.color.primaryOrange()!
+            case .hard:
+                return R.color.primaryRed()!
+            }
+        }
     }
     
     enum Privacy: Int, Codable {

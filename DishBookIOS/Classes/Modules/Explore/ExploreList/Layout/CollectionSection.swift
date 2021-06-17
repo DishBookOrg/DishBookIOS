@@ -9,8 +9,6 @@ import UIKit
 
 protocol CollectionSection: Hashable {
     
-    var numberOfItems: Int { get }
-    
     func layoutSection(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection
 }
 

@@ -13,7 +13,7 @@ target 'DishBookIOS' do
   pod 'Default', '~> 3.0'
   pod 'Wormholy'
 
-  # pod 'GoogleSignIn'
+  pod 'GoogleSignIn'
   
   pod 'FirebaseUI/Storage'
   pod 'CombineFirebase/Firestore'

@@ -8,9 +8,7 @@
 import UIKit
 
 struct SmallItemsSection: CollectionSection {
-    
-    var numberOfItems: Int
-    
+        
     func layoutSection(environment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection {
         
         let item = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .absolute(190),

@@ -225,17 +225,6 @@ extension ExploreListViewController {
         case smallSection(id: Int, ration: Dish.Ration)
         case search
         
-        var itemsCount: Int {
-            switch self {
-            case .bigSection:
-                return 3
-            case .smallSection:
-                return 10
-            case .search:
-                return 1
-            }
-        }
-        
         var title: String {
             switch self {
             case let .bigSection(_, title):
@@ -251,11 +240,11 @@ extension ExploreListViewController {
             
             switch self {
             case .smallSection:
-                return SmallItemsSection(numberOfItems: itemsCount).layoutSection(environment: environment)
+                return SmallItemsSection().layoutSection(environment: environment)
             case .bigSection:
-                return BigItemsSection(numberOfItems: itemsCount).layoutSection(environment: environment)
+                return BigItemsSection().layoutSection(environment: environment)
             case .search:
-                return SearchSection(numberOfItems: itemsCount).layoutSection(environment: environment)
+                return SearchSection().layoutSection(environment: environment)
             }
         }
     }

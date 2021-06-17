@@ -17,7 +17,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
     
     private var ingredientsViewController: IngredientsViewController?
     private var createStepsViewController: CreateStepsViewController?
-
+    
     // MARK: - Life cycle
     
     override init() {
@@ -45,7 +45,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
     private func createFirstStep() -> UIViewController {
         
         let viewModel = FirstStepViewModel()
-
+        
         viewModel.didChangeNamePublisher
             .sink { [unowned self] in newDish.name = $0 }
             .store(in: &cancelableSet)
@@ -76,7 +76,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
                 }
             }
             .store(in: &cancelableSet)
-
+        
         return FirstStepViewController(viewModel: viewModel)
     }
     
@@ -99,7 +99,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
                 navigationController?.pushViewController(secondStepViewController, animated: true)
             }
             .store(in: &cancelableSet)
-
+        
         ingredientsViewController = IngredientsViewController(viewModel: viewModel)
         ingredientsViewController?.render(ingredients: ingredientsAndSteps.ingredients)
         return ingredientsViewController!
