@@ -13,18 +13,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
     // MARK: - Variables
     
     private var newDish = NewDish()
-    private var ingredientsAndSteps = IngredientsAndSteps(ingredients: [
-        IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name", ingredientType: "g", ingredientAmount: 350),
-        IngredientsAndSteps.Ingredient(ingredientName: "Some", ingredientType: "kg", ingredientAmount: 0.5),
-        IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name2", ingredientType: "g", ingredientAmount: 350),
-        IngredientsAndSteps.Ingredient(ingredientName: "Some3", ingredientType: "kg", ingredientAmount: 0.5)
-    ], steps: [
-        IngredientsAndSteps.Step(stepDescription: "venenatis blandit consequat. Donec quis vulputate arcu. Fusce augue n", stepAttachmentURL: "https://firebasestorage.googleapis.com/v0/b/dishbookapp.appspot.com/o/chicken.jpg", stepTime: 120),
-        IngredientsAndSteps.Step(stepDescription: "et, consectetur adipiscing elit. Ut tincidunt dui tellus, ac imperdiet neque condimentum egestas. Cras libero ex, vulputate eu ipsum non, eleifend dignis", stepAttachmentURL: "https://firebasestorage.googleapis.com/v0/b/dishbookapp.appspot.com/o/chicken.jpg", stepTime: 120),
-        IngredientsAndSteps.Step(stepDescription: "Donec quis vulputate arcu. Fusce augue n", stepAttachmentURL: "https://firebasestorage.googleapis.com/v0/b/dishbookapp.appspot.com/o/chicken.jpg", stepTime: 120),
-        IngredientsAndSteps.Step(stepDescription: "Fusce augue n", stepAttachmentURL: "https://firebasestorage.googleapis.com/v0/b/dishbookapp.appspot.com/o/chicken.jpg", stepTime: 120),
-        IngredientsAndSteps.Step(stepDescription: "Donec quis vulputate arcu.", stepAttachmentURL: "https://firebasestorage.googleapis.com/v0/b/dishbookapp.appspot.com/o/chicken.jpg", stepTime: 120),
-    ])
+    private var ingredientsAndSteps = IngredientsAndSteps(ingredients: [], steps: [])
     
     private var ingredientsViewController: IngredientsViewController?
     private var createStepsViewController: CreateStepsViewController?
@@ -184,7 +173,12 @@ final class NewDishCoordinator: BaseRootCoordinator {
         
         var dish = Dish(newDish: newDish)
         dish.ingredientsAndSteps = ingredientsAndSteps
-        let viewModel = DishDetailViewModel(dish: dish)
+        let viewModel = DishDetailViewModel(dish: dish, type: .newDish)
+        
+        viewModel.didPressPublicatePublisher
+            .sink { [unowned self] _ in }
+            .store(in: &cancelableSet)
+        
         let viewController = DishDetailViewController(viewModel: viewModel)
         return viewController
     }

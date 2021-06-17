@@ -22,7 +22,7 @@ final class DishDetailViewController: BaseViewController {
     private let dishServingsView = DishServingsView()
     private let dishStepsCollapseView = DishStepsCollapseView()
     private let addToDishBookButton = GradientButton()
-    private let cookItButton = BlackButton()
+    private let highlightedButton = BlackButton()
     
     // MARK: - Lifecycle
     
@@ -55,20 +55,27 @@ final class DishDetailViewController: BaseViewController {
             dishImageView.heightAnchor.constraint(equalToConstant: 400),
             dishStepsCollapseView.heightAnchor.constraint(equalToConstant: 68),
             addToDishBookButton.heightAnchor.constraint(equalToConstant: 68),
-            cookItButton.heightAnchor.constraint(equalToConstant: 68),
+            highlightedButton.heightAnchor.constraint(equalToConstant: 68),
             stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: -32)
         ])
         
         addToDishBookButton.setTitle(R.string.dishDetail.addToDishBookButton(), for: .normal)
-        cookItButton.setTitle(R.string.dishDetail.cookItButton(), for: .normal)
+        
+        if viewModel.type == .explore || viewModel.type == .dishBook {
+            highlightedButton.setTitle(R.string.dishDetail.cookItButton(), for: .normal)
+        } else {
+            highlightedButton.setTitle(R.string.dishDetail.publicateButton(), for: .normal)
+        }
         
         stackView.clipsToBounds = false
         stackView.addArrangedSubview(dishImageView)
         stackView.addArrangedSubview(dishShortDescriptionView)
         stackView.addArrangedSubview(dishServingsView)
         stackView.addArrangedSubview(dishStepsCollapseView)
-        stackView.addArrangedSubview(addToDishBookButton)
-        stackView.addArrangedSubview(cookItButton)
+        if viewModel.type == .explore {
+            stackView.addArrangedSubview(addToDishBookButton)
+        }
+        stackView.addArrangedSubview(highlightedButton)
     }
     
     private func render(with dish: Dish) {
@@ -124,6 +131,11 @@ final class DishDetailViewController: BaseViewController {
             .sink { [unowned self] isOpenedSteps in
                 isOpenedSteps ? showSteps() : hideSteps()
             }
+            .store(in: &cancelableSet)
+        
+        highlightedButton
+            .publisher(for: .touchUpInside)
+            .sink { [unowned self] _ in viewModel.didPressPublicateSubject.send(()) }
             .store(in: &cancelableSet)
     }
     

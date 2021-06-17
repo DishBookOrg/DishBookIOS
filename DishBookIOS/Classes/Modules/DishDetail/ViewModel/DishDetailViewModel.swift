@@ -6,17 +6,30 @@
 //
 
 import UIKit
+import Combine
 
 final class DishDetailViewModel: BaseViewModel {
+    
+    enum DishDetailsType {
+        case explore
+        case newDish
+        case dishBook
+    }
     
     // MARK: - Published properties
     
     @Published var dish: Dish
     
+    lazy var didPressPublicatePublisher = didPressPublicateSubject.eraseToAnyPublisher()
+    let didPressPublicateSubject = PassthroughSubject<Void, Never>()
+    
+    let type: DishDetailsType
+    
     // MARK: - Lifecycle
     
-    init(dish: Dish) {
+    init(dish: Dish, type: DishDetailsType) {
         self.dish = dish
+        self.type = type
         
         super.init()
         
