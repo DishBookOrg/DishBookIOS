@@ -38,7 +38,7 @@ final class CreateStepsViewController: BaseViewController {
     
     func render(steps: [IngredientsAndSteps.Step]) {
         
-        let props = steps.enumerated().map { StepView.Props(image: nil, stepNumber: $0, description: $1.stepDescription) }
+        let props = steps.enumerated().map { StepView.Props(image: $1.stepAttachmentURL, stepNumber: $0, description: $1.stepDescription) }
         
         stepsStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
             

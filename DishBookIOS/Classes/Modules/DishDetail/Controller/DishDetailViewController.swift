@@ -35,9 +35,10 @@ final class DishDetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupViews()
         setupBindings()
 
+        setupViews()
+        render(with: viewModel.dish)
     }
     
     private func setupViews() {
@@ -112,6 +113,7 @@ final class DishDetailViewController: BaseViewController {
             .store(in: &cancelableSet)
         
         viewModel.$dish
+            .dropFirst()
             .sink { [unowned self] dish in
                 render(with: dish)
             }
@@ -126,6 +128,10 @@ final class DishDetailViewController: BaseViewController {
     }
     
     private func setupSteps(_ steps: [IngredientsAndSteps.Step]) {
+        
+        guard !stackView.arrangedSubviews.isEmpty else {
+            return
+        }
         
         var isHidden: Bool = true
         

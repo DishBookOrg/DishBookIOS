@@ -32,12 +32,13 @@ final class StepView: UIView {
     }
     
     func render(props: Props) {
+        
         if props.image != renderedProps?.image, let image = props.image {
             backgroundImageView.sd_setImage(with: image.imageReference)
             imageView.sd_setImage(with: image.imageReference)
         }
         if props.stepNumber != renderedProps?.stepNumber {
-            titleLabel.text = "Step №\(props.stepNumber)"
+            titleLabel.text = "Step №\(props.stepNumber + 1)"
         }
         if props.description != renderedProps?.description {
             descriptionLabel.text = props.description
