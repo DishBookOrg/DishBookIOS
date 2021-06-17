@@ -29,7 +29,7 @@ struct Dish {
     
     /// URL to image model.
     /// Use `.imageReference` with sd_setImage
-    var imageURL: String
+    var imageURL: String?
     
     /// Number of servings choosen in NewDish
     var numberOfServings: Int
@@ -79,7 +79,8 @@ extension Dish {
     }
     
     var imageReference: StorageReference {
-        return imageURL.imageReference
+        
+        return (imageURL ?? "").imageReference
     }
 }
 
@@ -187,5 +188,20 @@ extension Dish.Privacy: StringConvertible {
         case .public:
             return R.string.newDish.segmentedControlPublic()
         }
+    }
+}
+
+extension Dish {
+    
+    init(newDish: NewDish) {
+        name = newDish.name ?? ""
+        totalTime = newDish.totalTime ?? 0
+        imageURL = newDish.imageURL ?? ""
+        numberOfServings = newDish.numberOfServings ?? 0
+        ration = .dinner
+        difficulty = newDish.difficulty ?? .easy
+        privacy = newDish.privacy ?? .private
+        createdTime = Date()
+        userCreatedID = App.user?.uid ?? ""
     }
 }

@@ -45,6 +45,12 @@ extension Styles.View.CornerRadius {
         view.layer.sublayers?.forEach { $0.cornerRadius = 0 }
     }
     
+    static var d1: Style<UIView> = { view in
+        
+        view.layer.cornerRadius = 1
+        view.layer.sublayers?.forEach { $0.cornerRadius = 1 }
+    }
+    
     static var maskedRight: Style<UIView> = { view in
         
         view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]

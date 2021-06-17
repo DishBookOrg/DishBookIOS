@@ -22,6 +22,9 @@
 		5DB5C38B26796C5E003CCC73 /* CreateStepsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C38A26796C5E003CCC73 /* CreateStepsViewModel.swift */; };
 		5DB5C38D26796C9E003CCC73 /* CreateStepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C38C26796C9E003CCC73 /* CreateStepsViewController.swift */; };
 		5DB5C38F26796FDA003CCC73 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C38E26796FDA003CCC73 /* StepView.swift */; };
+		5DB5C391267A9900003CCC73 /* NewStepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C390267A9900003CCC73 /* NewStepViewController.swift */; };
+		5DB5C393267A992A003CCC73 /* NewStepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C392267A992A003CCC73 /* NewStepViewModel.swift */; };
+		5DB5C395267A9C85003CCC73 /* ShadowedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB5C394267A9C85003CCC73 /* ShadowedView.swift */; };
 		5DCFE0722641726500514498 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0712641726500514498 /* Styles.swift */; };
 		5DCFE0792641B8E700514498 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE0782641B8E700514498 /* SegmentedControl.swift */; };
 		5DCFE07D264333DD00514498 /* SteperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DCFE07C264333DD00514498 /* SteperView.swift */; };
@@ -32,6 +35,8 @@
 		5F2B6B42267AA07E00FF3CAB /* String+StorageRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B41267AA07E00FF3CAB /* String+StorageRef.swift */; };
 		5F2B6B44267AA53200FF3CAB /* UINavigationBar+Touches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B43267AA53200FF3CAB /* UINavigationBar+Touches.swift */; };
 		5F2B6B47267AAD2600FF3CAB /* Constraints+Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B46267AAD2600FF3CAB /* Constraints+Priority.swift */; };
+		5F2B6B50267BD20C00FF3CAB /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B4F267BD20C00FF3CAB /* ImagePickerView.swift */; };
+		5F2B6B52267BD41100FF3CAB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B51267BD41100FF3CAB /* ImagePicker.swift */; };
 		5F4218FC25F9509000366A16 /* DishCardSmallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */; };
 		5F42190425F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */; };
 		5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44162925CB04CE0009FE5F /* UIControlSubscription.swift */; };
@@ -162,6 +167,9 @@
 		5DB5C38A26796C5E003CCC73 /* CreateStepsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStepsViewModel.swift; sourceTree = "<group>"; };
 		5DB5C38C26796C9E003CCC73 /* CreateStepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStepsViewController.swift; sourceTree = "<group>"; };
 		5DB5C38E26796FDA003CCC73 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
+		5DB5C390267A9900003CCC73 /* NewStepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStepViewController.swift; sourceTree = "<group>"; };
+		5DB5C392267A992A003CCC73 /* NewStepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStepViewModel.swift; sourceTree = "<group>"; };
+		5DB5C394267A9C85003CCC73 /* ShadowedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowedView.swift; sourceTree = "<group>"; };
 		5DCFE0712641726500514498 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		5DCFE0782641B8E700514498 /* SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControl.swift; sourceTree = "<group>"; };
 		5DCFE07C264333DD00514498 /* SteperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteperView.swift; sourceTree = "<group>"; };
@@ -172,6 +180,8 @@
 		5F2B6B41267AA07E00FF3CAB /* String+StorageRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+StorageRef.swift"; sourceTree = "<group>"; };
 		5F2B6B43267AA53200FF3CAB /* UINavigationBar+Touches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Touches.swift"; sourceTree = "<group>"; };
 		5F2B6B46267AAD2600FF3CAB /* Constraints+Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constraints+Priority.swift"; sourceTree = "<group>"; };
+		5F2B6B4F267BD20C00FF3CAB /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		5F2B6B51267BD41100FF3CAB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardSmallCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardBigCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F42190B25F9555E00366A16 /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
@@ -325,6 +335,7 @@
 				5DB5C37A267787A6003CCC73 /* IngredientsView.swift */,
 				5DB5C388267962E2003CCC73 /* GradientView.swift */,
 				5DB5C38E26796FDA003CCC73 /* StepView.swift */,
+				5F2B6B4F267BD20C00FF3CAB /* ImagePickerView.swift */,
 			);
 			path = AddDish;
 			sourceTree = "<group>";
@@ -373,6 +384,15 @@
 			path = CreateSteps;
 			sourceTree = "<group>";
 		};
+		5DB5C36B2677780B003CCC73 /* CreateStep */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5C373267778B5003CCC73 /* Controller */,
+				5DB5C36F267778A5003CCC73 /* ViewModel */,
+			);
+			path = CreateStep;
+			sourceTree = "<group>";
+		};
 		5DB5C36C26777895003CCC73 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +417,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		5DB5C36F267778A5003CCC73 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5C392267A992A003CCC73 /* NewStepViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		5DB5C370267778AB003CCC73 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +445,14 @@
 			isa = PBXGroup;
 			children = (
 				5DB5C38C26796C9E003CCC73 /* CreateStepsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DB5C373267778B5003CCC73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DB5C390267A9900003CCC73 /* NewStepViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -636,6 +672,7 @@
 				5D70A26825F80566009B2520 /* AddDish */,
 				5F4218F925F9505700366A16 /* DishCards */,
 				5D70A27425F80DB5009B2520 /* UILabels */,
+				5DB5C394267A9C85003CCC73 /* ShadowedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -644,6 +681,7 @@
 			isa = PBXGroup;
 			children = (
 				5FD012FB25CDBC0000A0E257 /* AlertManager.swift */,
+				5F2B6B51267BD41100FF3CAB /* ImagePicker.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -925,6 +963,7 @@
 				5DB5C3682677778F003CCC73 /* Ingredients */,
 				5DB5C369267777B3003CCC73 /* NewIngredient */,
 				5DB5C36A267777D8003CCC73 /* CreateSteps */,
+				5DB5C36B2677780B003CCC73 /* CreateStep */,
 			);
 			path = NewDish;
 			sourceTree = "<group>";
@@ -1341,6 +1380,7 @@
 				5FFB20D225C4CD450086440A /* UIApplication+Keyboard.swift in Sources */,
 				5F6A7EED267A89F00073DE43 /* NewDish.swift in Sources */,
 				5F44163325CB04F10009FE5F /* UITextView+Publisher.swift in Sources */,
+				5DB5C393267A992A003CCC73 /* NewStepViewModel.swift in Sources */,
 				5F8FA25B26416D4300E24685 /* SmallItemsSection.swift in Sources */,
 				5FD012FC25CDBC0000A0E257 /* AlertManager.swift in Sources */,
 				5DB5C38B26796C5E003CCC73 /* CreateStepsViewModel.swift in Sources */,
@@ -1356,6 +1396,7 @@
 				5FACE000265BA41F009728D5 /* Shadow+View.swift in Sources */,
 				5FACE015265BA8CC009728D5 /* Text+Font.swift in Sources */,
 				5FCFDA192641885000B3CFFC /* ReusableCell.swift in Sources */,
+				5F2B6B50267BD20C00FF3CAB /* ImagePickerView.swift in Sources */,
 				5FACE004265BA5CE009728D5 /* Base+Button.swift in Sources */,
 				5FBE835F25C9EC6200E3F3EB /* FirstStepViewModel.swift in Sources */,
 				5FBE836225C9F0FB00E3F3EB /* NewDishCoordinator.swift in Sources */,
@@ -1368,6 +1409,7 @@
 				5DB5C38D26796C9E003CCC73 /* CreateStepsViewController.swift in Sources */,
 				5F44163625CB05470009FE5F /* Date+Extension.swift in Sources */,
 				5FFB210925C4DA630086440A /* SignInWithAppleCoordinator.swift in Sources */,
+				5DB5C391267A9900003CCC73 /* NewStepViewController.swift in Sources */,
 				5DB5C3872679544E003CCC73 /* TextFieldCentered.swift in Sources */,
 				5FFB20BA25C4CB9F0086440A /* BaseCoordinator.swift in Sources */,
 				5FACE00D265BA708009728D5 /* Rounded+Font.swift in Sources */,
@@ -1396,6 +1438,7 @@
 				5FFB208D25C4C8F20086440A /* App.swift in Sources */,
 				5FACE002265BA51A009728D5 /* Difficulty+Label.swift in Sources */,
 				5FFB20B025C4CA110086440A /* BaseViewModel.swift in Sources */,
+				5DB5C395267A9C85003CCC73 /* ShadowedView.swift in Sources */,
 				5FFB20C125C4CBE90086440A /* AuthCoordinator.swift in Sources */,
 				5FBE835625C9EC4400E3F3EB /* ProfileViewController.swift in Sources */,
 				5DB5C37B267787A6003CCC73 /* IngredientsView.swift in Sources */,
@@ -1431,6 +1474,7 @@
 				5FCFDA1D2641888600B3CFFC /* UICollectionView+Reusable.swift in Sources */,
 				5FBE835C25C9EC5A00E3F3EB /* ShoplistViewModel.swift in Sources */,
 				5F6A7EEB267A89DE0073DE43 /* IngredientsAndSteps.swift in Sources */,
+				5F2B6B52267BD41100FF3CAB /* ImagePicker.swift in Sources */,
 				5FCFDA132641876600B3CFFC /* UICollectionView+Section.swift in Sources */,
 				5FFB20B325C4CA360086440A /* Loader.swift in Sources */,
 				5F7B78702677EDC5006D91AF /* DishDetailViewController.swift in Sources */,

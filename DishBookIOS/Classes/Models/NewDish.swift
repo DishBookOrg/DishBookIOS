@@ -29,6 +29,8 @@ struct NewDish {
     /// ```
     var imageURL: String?
     
+    var numberOfServings: Int?
+    
     /// Ration enum
     var ration: Dish.Ration?
     

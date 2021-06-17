@@ -14,9 +14,11 @@ final class CreateStepsViewController: BaseViewController {
     
     private var viewModel: CreateStepsViewModel
     
-    private let stepsView = IngredientsView()
+    private let stepsStackView = UIStackView()
     private let scrollView = UIScrollView()
     private let addStepButton = UIButton()
+    
+    private var renderedProps: [IngredientsAndSteps.Step]?
         
     // MARK: - Lifecycle
     
@@ -35,9 +37,17 @@ final class CreateStepsViewController: BaseViewController {
     }
     
     func render(steps: [IngredientsAndSteps.Step]) {
-//        let ingredientsProps = ingredients.map { SingleIngredientView.Props(name: $0.ingredientName, amount: "\($0.ingredientAmount) \($0.ingredientType)") }
-//
-//        ingredientsView.render(props: IngredientsView.Props(ingredients: ingredientsProps))
+        
+        let props = steps.enumerated().map { StepView.Props(image: $1.stepAttachmentURL, stepNumber: $0, description: $1.stepDescription) }
+        
+        stepsStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
+            
+        props.forEach { step in
+            let stepView = StepView()
+            stepView.render(props: step)
+            stepsStackView.addArrangedSubview(stepView)
+            stepView.heightAnchor.constraint(equalToConstant: 132).isActive = true
+        }
     }
     
     private func setup() {
@@ -48,7 +58,10 @@ final class CreateStepsViewController: BaseViewController {
         titleLabel.textColor = R.color.textBlack()
         titleLabel.text = "Steps"
         
-        scrollView.addSubview(stepsView, withEdgeInsets: .zero)
+        stepsStackView.axis = .vertical
+        stepsStackView.spacing = 24
+        
+        scrollView.addSubview(stepsStackView, withEdgeInsets: .zero)
         scrollView.contentInset.bottom = 60
         scrollView.clipsToBounds = true
         scrollView.apply(style: Styles.View.CornerRadius.small)
@@ -74,7 +87,7 @@ final class CreateStepsViewController: BaseViewController {
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             scrollView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16),
-            stepsView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -32)
+            stepsStackView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -32)
         ])
         
         addStepView.isUserInteractionEnabled = true
@@ -117,4 +130,3 @@ struct CreateStepsPreview: PreviewProvider {
         ViewRepresentable(CreateStepsViewController(viewModel: CreateStepsViewModel()).view)
     }
 }
-

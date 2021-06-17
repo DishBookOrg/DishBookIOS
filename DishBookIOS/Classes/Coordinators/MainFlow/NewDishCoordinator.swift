@@ -13,14 +13,10 @@ final class NewDishCoordinator: BaseRootCoordinator {
     // MARK: - Variables
     
     private var newDish = NewDish()
-    private var ingredientsAndSteps = IngredientsAndSteps(ingredients: [
-        IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name", ingredientType: "g", ingredientAmount: 350),
-        IngredientsAndSteps.Ingredient(ingredientName: "Some", ingredientType: "kg", ingredientAmount: 0.5),
-        IngredientsAndSteps.Ingredient(ingredientName: "Name Name Name2", ingredientType: "g", ingredientAmount: 350),
-        IngredientsAndSteps.Ingredient(ingredientName: "Some3", ingredientType: "kg", ingredientAmount: 0.5)
-    ], steps: [])
+    private var ingredientsAndSteps = IngredientsAndSteps(ingredients: [], steps: [])
     
     private var ingredientsViewController: IngredientsViewController?
+    private var createStepsViewController: CreateStepsViewController?
 
     // MARK: - Life cycle
     
@@ -63,7 +59,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
             .store(in: &cancelableSet)
         
         viewModel.didChangeNumberOfServingsPublisher
-            .sink { _ in }
+            .sink { [unowned self] in newDish.numberOfServings = $0 }
             .store(in: &cancelableSet)
         
         viewModel.didPressNextPublisher
@@ -135,11 +131,71 @@ final class NewDishCoordinator: BaseRootCoordinator {
     private func createAddStepsStep() -> UIViewController {
         let viewModel = CreateStepsViewModel()
         
-        let createStepsViewController = CreateStepsViewController(viewModel: viewModel)
-        return createStepsViewController
+        viewModel.didPressPlusPublisher
+            .sink { [unowned self] in
+                ingredientsViewController?.present(createAddNewStepStep(), animated: true)
+            }
+            .store(in: &cancelableSet)
+        
+        viewModel.didPressNextPublisher
+            .sink(receiveValue: showDishDetail)
+            .store(in: &cancelableSet)
+        
+        createStepsViewController = CreateStepsViewController(viewModel: viewModel)
+        createStepsViewController?.render(steps: ingredientsAndSteps.steps)
+        return createStepsViewController!
     }
     
     // MARK: - AddStep
     
+    private func createAddNewStepStep(_ step: IngredientsAndSteps.Step = IngredientsAndSteps.Step(stepDescription: "", stepAttachmentURL: "", stepTime: 0)) -> UIViewController {
+        
+        let viewModel = NewStepViewModel(stepNumber: ingredientsAndSteps.steps.count + 1,
+                                         step: step)
+        
+        viewModel.didPressDonePublisher
+            .sink { [unowned self] in
+                ingredientsAndSteps.steps.append($0)
+                newDish.totalTime = (newDish.totalTime ?? 0) + $0.stepTime
+                createStepsViewController?.render(steps: ingredientsAndSteps.steps)
+                createStepsViewController?.dismiss(animated: true)
+            }
+            .store(in: &cancelableSet)
+        
+        viewModel.didPressBackPublisher
+            .sink { [unowned self] _ in createStepsViewController?.dismiss(animated: true) }
+            .store(in: &cancelableSet)
+        
+        let ingredientViewController = NewStepViewController(viewModel: viewModel)
+        return ingredientViewController
+    }
+    
     // MARK: - ShowAllDish
+    
+    private func createDishDetailViewController(with newDish: NewDish) -> DishDetailViewController {
+        
+        var dish = Dish(newDish: newDish)
+        dish.ingredientsAndSteps = ingredientsAndSteps
+        dish.imageURL = ingredientsAndSteps.steps.last?.stepAttachmentURL
+        
+        let viewModel = DishDetailViewModel(dish: dish, type: .newDish)
+        
+        viewModel.finishLoadNewDishPublisher
+            .sink { [unowned self] _ in
+                self.newDish = NewDish()
+                ingredientsAndSteps = IngredientsAndSteps(ingredients: [], steps: [])
+                navigationController?.popToRootViewController(animated: true)
+                start()
+            }
+            .store(in: &cancelableSet)
+        
+        let viewController = DishDetailViewController(viewModel: viewModel)
+        return viewController
+    }
+    
+    private func showDishDetail() {
+        
+        let controller = createDishDetailViewController(with: newDish)
+        navigationController?.pushViewController(controller, animated: true)
+    }
 }

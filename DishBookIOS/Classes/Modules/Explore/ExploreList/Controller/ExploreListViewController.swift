@@ -206,7 +206,7 @@ final class ExploreListViewController: BaseViewController {
     
     private func createSearchLayout() -> UICollectionViewCompositionalLayout {
         
-        let layout = UICollectionViewCompositionalLayout { sectionIndex, environment in
+        let layout = UICollectionViewCompositionalLayout { _, environment in
             
             return ExploreListSection.search.sectionLayout(with: environment)
         }
