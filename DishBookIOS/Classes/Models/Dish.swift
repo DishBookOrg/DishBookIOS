@@ -191,7 +191,6 @@ extension Dish.Privacy: StringConvertible {
     }
 }
 
-
 extension Dish {
     
     init(newDish: NewDish) {

@@ -35,6 +35,8 @@
 		5F2B6B42267AA07E00FF3CAB /* String+StorageRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B41267AA07E00FF3CAB /* String+StorageRef.swift */; };
 		5F2B6B44267AA53200FF3CAB /* UINavigationBar+Touches.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B43267AA53200FF3CAB /* UINavigationBar+Touches.swift */; };
 		5F2B6B47267AAD2600FF3CAB /* Constraints+Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B46267AAD2600FF3CAB /* Constraints+Priority.swift */; };
+		5F2B6B50267BD20C00FF3CAB /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B4F267BD20C00FF3CAB /* ImagePickerView.swift */; };
+		5F2B6B52267BD41100FF3CAB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B51267BD41100FF3CAB /* ImagePicker.swift */; };
 		5F4218FC25F9509000366A16 /* DishCardSmallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */; };
 		5F42190425F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */; };
 		5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44162925CB04CE0009FE5F /* UIControlSubscription.swift */; };
@@ -178,6 +180,8 @@
 		5F2B6B41267AA07E00FF3CAB /* String+StorageRef.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+StorageRef.swift"; sourceTree = "<group>"; };
 		5F2B6B43267AA53200FF3CAB /* UINavigationBar+Touches.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Touches.swift"; sourceTree = "<group>"; };
 		5F2B6B46267AAD2600FF3CAB /* Constraints+Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constraints+Priority.swift"; sourceTree = "<group>"; };
+		5F2B6B4F267BD20C00FF3CAB /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		5F2B6B51267BD41100FF3CAB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardSmallCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardBigCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F42190B25F9555E00366A16 /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
@@ -331,6 +335,7 @@
 				5DB5C37A267787A6003CCC73 /* IngredientsView.swift */,
 				5DB5C388267962E2003CCC73 /* GradientView.swift */,
 				5DB5C38E26796FDA003CCC73 /* StepView.swift */,
+				5F2B6B4F267BD20C00FF3CAB /* ImagePickerView.swift */,
 			);
 			path = AddDish;
 			sourceTree = "<group>";
@@ -676,6 +681,7 @@
 			isa = PBXGroup;
 			children = (
 				5FD012FB25CDBC0000A0E257 /* AlertManager.swift */,
+				5F2B6B51267BD41100FF3CAB /* ImagePicker.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1390,6 +1396,7 @@
 				5FACE000265BA41F009728D5 /* Shadow+View.swift in Sources */,
 				5FACE015265BA8CC009728D5 /* Text+Font.swift in Sources */,
 				5FCFDA192641885000B3CFFC /* ReusableCell.swift in Sources */,
+				5F2B6B50267BD20C00FF3CAB /* ImagePickerView.swift in Sources */,
 				5FACE004265BA5CE009728D5 /* Base+Button.swift in Sources */,
 				5FBE835F25C9EC6200E3F3EB /* FirstStepViewModel.swift in Sources */,
 				5FBE836225C9F0FB00E3F3EB /* NewDishCoordinator.swift in Sources */,
@@ -1467,6 +1474,7 @@
 				5FCFDA1D2641888600B3CFFC /* UICollectionView+Reusable.swift in Sources */,
 				5FBE835C25C9EC5A00E3F3EB /* ShoplistViewModel.swift in Sources */,
 				5F6A7EEB267A89DE0073DE43 /* IngredientsAndSteps.swift in Sources */,
+				5F2B6B52267BD41100FF3CAB /* ImagePicker.swift in Sources */,
 				5FCFDA132641876600B3CFFC /* UICollectionView+Section.swift in Sources */,
 				5FFB20B325C4CA360086440A /* Loader.swift in Sources */,
 				5F7B78702677EDC5006D91AF /* DishDetailViewController.swift in Sources */,

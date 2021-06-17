@@ -148,8 +148,10 @@ final class NewDishCoordinator: BaseRootCoordinator {
     
     // MARK: - AddStep
     
-    private func createAddNewStepStep() -> UIViewController {
-        let viewModel = NewStepViewModel()
+    private func createAddNewStepStep(_ step: IngredientsAndSteps.Step = IngredientsAndSteps.Step(stepDescription: "", stepAttachmentURL: "", stepTime: 0)) -> UIViewController {
+        
+        let viewModel = NewStepViewModel(stepNumber: ingredientsAndSteps.steps.count + 1,
+                                         step: step)
         
         viewModel.didPressDonePublisher
             .sink { [unowned self] in
@@ -164,7 +166,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
             .sink { [unowned self] _ in createStepsViewController?.dismiss(animated: true) }
             .store(in: &cancelableSet)
         
-        let ingredientViewController = NewStepViewController(viewModel: viewModel, stepNumber: ingredientsAndSteps.steps.count + 1)
+        let ingredientViewController = NewStepViewController(viewModel: viewModel)
         return ingredientViewController
     }
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ShadowedView: UIView {
+class ShadowedView: UIView {
     
     private var shadowLayer: CAShapeLayer!
     
