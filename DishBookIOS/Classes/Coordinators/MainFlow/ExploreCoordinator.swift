@@ -49,7 +49,7 @@ final class ExploreCoordinator: BaseRootCoordinator {
     
     private func createDishDetailViewController(with dish: Dish) -> DishDetailViewController {
         
-        let viewModel = DishDetailViewModel(dish: dish)
+        let viewModel = DishDetailViewModel(dish: dish, type: .explore)
         let viewController = DishDetailViewController(viewModel: viewModel)
         return viewController
     }

@@ -6,23 +6,45 @@
 //
 
 import UIKit
+import Combine
+import FirebaseFirestore
+import CombineFirebaseFirestore
 
 final class DishDetailViewModel: BaseViewModel {
+    
+    enum DishDetailsType {
+        case explore
+        case newDish
+        case dishBook
+    }
     
     // MARK: - Published properties
     
     @Published var dish: Dish
     
+    lazy var didPressPublicatePublisher = didPressPublicateSubject.eraseToAnyPublisher()
+    let didPressPublicateSubject = PassthroughSubject<Void, Never>()
+    
+    lazy var finishLoadNewDishPublisher = finishLoadNewDishSubject.eraseToAnyPublisher()
+    let finishLoadNewDishSubject = PassthroughSubject<Void, Never>()
+    
+    let type: DishDetailsType
+    
     // MARK: - Lifecycle
     
-    init(dish: Dish) {
+    init(dish: Dish, type: DishDetailsType) {
         self.dish = dish
+        self.type = type
         
         super.init()
         
         if dish.ingredientsAndSteps == nil {
             getFullDish()
         }
+        
+        didPressPublicatePublisher
+            .sink { [weak self] _ in self?.publicateDish() }
+            .store(in: &cancelableSet)
     }
     
     func countNewIngredients(numberOfServings: Int) -> [SingleIngredientView.Props]? {
@@ -53,6 +75,16 @@ final class DishDetailViewModel: BaseViewModel {
 
 extension DishDetailViewModel {
     
+    func onErrorCompletion(completion: Subscribers.Completion<Error>) {
+        switch completion {
+        case .finished:
+            print("🏁 finished")
+        case .failure(let error):
+            print("❗️ failure: \(error)")
+        }
+       showLoader = false
+    }
+    
     func getFullDish() {
         
         guard let dishId = dish.id else {
@@ -74,5 +106,35 @@ extension DishDetailViewModel {
             }
             .store(in: &cancelableSet)
         
+    }
+    
+    func publicateDish() {
+        
+        showLoader = true
+        
+        (APIClient
+            .shared
+            .collection(for: .publicDishes)
+            .addDocument(from: dish) as AnyPublisher<DocumentReference, Error>)
+            .sink(receiveCompletion: onErrorCompletion, receiveValue: setIngredientsAndSteps)
+            .store(in: &cancelableSet)
+        
+    }
+    
+    func setIngredientsAndSteps(documentReference: DocumentReference) {
+        
+        showLoader = true
+        
+        (APIClient
+            .shared
+            .collection(for: .publicDishes)
+            .document(documentReference.documentID)
+            .collection("IngredientsAndSteps")
+            .document("IngredientsAndSteps")
+            .setData(from: self.dish.ingredientsAndSteps) as AnyPublisher<Void, Error>)
+            .sink(receiveCompletion: onErrorCompletion, receiveValue: { [weak self] in
+                self?.finishLoadNewDishSubject.send(())
+            })
+            .store(in: &cancelableSet)
     }
 }

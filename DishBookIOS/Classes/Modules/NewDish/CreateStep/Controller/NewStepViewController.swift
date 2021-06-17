@@ -129,12 +129,11 @@ final class NewStepViewController: BaseViewController {
             .sink { [unowned self] in viewModel.step.stepDescription = $0 }
             .store(in: &cancelableSet)
         
-        datePicker.publisher(for: .valueChanged)
-            .sink { [unowned self] _ in viewModel.step.stepTime = Int(datePicker.countDownDuration) }
-            .store(in: &cancelableSet)
-        
         doneButton.publisher(for: .touchUpInside)
-            .sink { [unowned self] _ in viewModel.didPressDoneSubject.send((viewModel.step)) }
+            .sink { [unowned self] _ in
+                step.stepTime = Int(datePicker.countDownDuration)
+                viewModel.didPressDoneSubject.send((step))
+            }
             .store(in: &cancelableSet)
         
         backButton.publisher(for: .touchUpInside)

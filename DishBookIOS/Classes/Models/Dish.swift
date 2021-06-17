@@ -29,7 +29,7 @@ struct Dish {
     
     /// URL to image model.
     /// Use `.imageReference` with sd_setImage
-    var imageURL: String
+    var imageURL: String?
     
     /// Number of servings choosen in NewDish
     var numberOfServings: Int
@@ -80,7 +80,7 @@ extension Dish {
     
     var imageReference: StorageReference {
         
-        return imageURL.imageReference
+        return (imageURL ?? "").imageReference
     }
 }
 
