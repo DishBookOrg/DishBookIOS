@@ -30,8 +30,6 @@ final class NewStepViewModel: BaseViewModel {
         self.stepNumber = stepNumber
         self.step = step
     }
-    
-    
 }
 
 // MARK: - API
@@ -52,8 +50,7 @@ extension NewStepViewModel {
             .reference(forURL: newURL)
                 
         (reference.putData(data) as AnyPublisher<StorageMetadata, Error>)
-//            .con
-            .sink(receiveCompletion: { [weak self] completion in
+            .sink { [weak self] completion in
                 
                 self?.showLoader = false
                 
@@ -64,8 +61,7 @@ extension NewStepViewModel {
                 case .failure(let error):
                     print(error)
                 }
-            }) { [weak self] metadata in
-                // Success
+            } receiveValue: { [weak self] metadata in
                 self?.showLoader = false
                 print(metadata)
             }
