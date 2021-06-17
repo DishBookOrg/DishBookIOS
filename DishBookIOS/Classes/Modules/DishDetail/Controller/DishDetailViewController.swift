@@ -61,10 +61,11 @@ final class DishDetailViewController: BaseViewController {
         
         addToDishBookButton.setTitle(R.string.dishDetail.addToDishBookButton(), for: .normal)
         
-        if viewModel.type == .explore || viewModel.type == .dishBook {
-            highlightedButton.setTitle(R.string.dishDetail.cookItButton(), for: .normal)
-        } else {
-            highlightedButton.setTitle(R.string.dishDetail.publicateButton(), for: .normal)
+        switch viewModel.type {
+            case .explore, .dishBook:
+                highlightedButton.setTitle(R.string.dishDetail.cookItButton(), for: .normal)
+            case .newDish:
+                highlightedButton.setTitle(R.string.dishDetail.publicateButton(), for: .normal)
         }
         
         stackView.clipsToBounds = false
