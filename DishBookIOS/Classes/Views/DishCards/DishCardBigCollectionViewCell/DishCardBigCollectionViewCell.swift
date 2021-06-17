@@ -96,9 +96,9 @@ final class DishCardBigCollectionViewCell: UICollectionViewCell {
         
         dishTimeLabel.textAlignment = .center
         NSLayoutConstraint.activate([
-            dishTimeLabel.widthAnchor.constraint(equalToConstant: 80),
+            dishTimeLabel.widthAnchor.constraint(equalToConstant: 120),
             dishTimeLabel.heightAnchor.constraint(equalToConstant: 25),
-            dishDifficultyLabel.widthAnchor.constraint(equalToConstant: 80),
+            dishDifficultyLabel.widthAnchor.constraint(equalToConstant: 120),
             dishDifficultyLabel.heightAnchor.constraint(equalToConstant: 25)
         ])
         
@@ -110,7 +110,7 @@ final class DishCardBigCollectionViewCell: UICollectionViewCell {
             
             trailingStackView.leadingAnchor.constraint(equalTo: dishNameLabel.trailingAnchor, constant: 6),
             trailingStackView.bottomAnchor.constraint(equalTo: visualEffectView.bottomAnchor, constant: -20),
-            trailingStackView.widthAnchor.constraint(equalToConstant: 80),
+            trailingStackView.widthAnchor.constraint(equalToConstant: 120),
             trailingStackView.topAnchor.constraint(equalTo: visualEffectView.topAnchor, constant: 20),
             trailingStackView.trailingAnchor.constraint(equalTo: visualEffectView.trailingAnchor, constant: -6)
         ])
@@ -124,12 +124,12 @@ extension DishCardBigCollectionViewCell: BindableCell {
     typealias Props = Dish
     
     func render(props: Dish) {
-            
-        // TODO: Add placeholder
-        dishImageView.sd_setImage(with: props.imageReference, placeholderImage: UIImage())
+        
+        dishImageView.sd_setImage(with: props.imageReference, placeholderImage: R.image.placeholder())
         dishNameLabel.text = props.name
         dishTimeLabel.text = "􀐫 \(props.stringTotalTimeShort)"
         dishDifficultyLabel.text = props.difficulty.stringValue
+        dishDifficultyLabel.textColor = props.difficulty.color
     }
 }
 

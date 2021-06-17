@@ -87,6 +87,7 @@ final class ExploreListViewModel: BaseViewModel {
         APIClient
             .shared
             .collection(for: .publicDishes)
+            .order(by: "dishCreatedTime", descending: true)
             .limit(to: 25)
             .publisher(as: Dish.self)
             .sink { [weak self] completion in
@@ -99,7 +100,8 @@ final class ExploreListViewModel: BaseViewModel {
                 
             } receiveValue: { [weak self] dishes in
                 
-                self?.tryItDishes = dishes.addBlockId(1)
+                
+                self?.tryItDishes = dishes.addBlockId(0)
             }
             .store(in: &cancelableSet)
     }
@@ -110,7 +112,8 @@ final class ExploreListViewModel: BaseViewModel {
             .shared
             .collection(for: .publicDishes)
             .whereField("dishRation", in: [ration.rawValue])
-            .limit(to: 10)
+            .order(by: "dishCreatedTime", descending: true)
+            .limit(to: 25)
             .publisher(as: Dish.self)
             .sink { [weak self] completion in
                 
@@ -123,11 +126,11 @@ final class ExploreListViewModel: BaseViewModel {
                 
                 switch ration {
                 case .breakfast:
-                    self?.breakfastDishes = dishes
+                    self?.breakfastDishes = dishes.addBlockId(1)
                 case .lunch:
-                    self?.lunchDishes = dishes
+                    self?.lunchDishes = dishes.addBlockId(2)
                 case .dinner:
-                    self?.dinnerDishes = dishes
+                    self?.dinnerDishes = dishes.addBlockId(3)
                 }
             }
             .store(in: &cancelableSet)
