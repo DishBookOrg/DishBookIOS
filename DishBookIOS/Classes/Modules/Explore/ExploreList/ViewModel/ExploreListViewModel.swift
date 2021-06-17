@@ -87,8 +87,8 @@ final class ExploreListViewModel: BaseViewModel {
         APIClient
             .shared
             .collection(for: .publicDishes)
-            .limit(to: 10)
-            .getDocuments(as: Dish.self)
+            .limit(to: 25)
+            .publisher(as: Dish.self)
             .sink { [weak self] completion in
                 
                 self?.showLoader = false
@@ -111,7 +111,7 @@ final class ExploreListViewModel: BaseViewModel {
             .collection(for: .publicDishes)
             .whereField("dishRation", in: [ration.rawValue])
             .limit(to: 10)
-            .getDocuments(as: Dish.self)
+            .publisher(as: Dish.self)
             .sink { [weak self] completion in
                 
                 self?.showLoader = false

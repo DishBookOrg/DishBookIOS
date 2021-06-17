@@ -131,8 +131,8 @@ final class NewStepViewController: BaseViewController {
         
         doneButton.publisher(for: .touchUpInside)
             .sink { [unowned self] _ in
-                step.stepTime = Int(datePicker.countDownDuration)
-                viewModel.didPressDoneSubject.send((step))
+                viewModel.step.stepTime = Int(datePicker.countDownDuration)
+                viewModel.didPressDoneSubject.send(viewModel.step)
             }
             .store(in: &cancelableSet)
         
@@ -150,6 +150,10 @@ import SwiftUI
 struct StepPreview: PreviewProvider {
     
     static var previews: some View {
-        ViewRepresentable(NewStepViewController(viewModel: NewStepViewModel(stepNumber: 3, step: IngredientsAndSteps.Step(stepDescription: "", stepAttachmentURL: "", stepTime: 1))).view)
+        ViewRepresentable(
+            NewStepViewController(
+                viewModel: NewStepViewModel(
+                    stepNumber: 3,
+                                                    step: IngredientsAndSteps.Step(stepDescription: "", stepAttachmentURL: "", stepTime: 1))).view)
     }
 }
