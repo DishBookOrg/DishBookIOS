@@ -33,7 +33,7 @@ class BaseViewController: UIViewController {
     
     init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, closableCoordinator: ClosableCoordinator) {
         self.closableCoordinator = closableCoordinator
-        
+
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
     
@@ -47,6 +47,7 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = .systemBackground
     }
     
     override func viewWillDisappear(_ animated: Bool) {

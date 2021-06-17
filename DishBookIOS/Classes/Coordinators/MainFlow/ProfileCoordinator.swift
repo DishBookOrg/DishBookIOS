@@ -14,7 +14,7 @@ final class ProfileCoordinator: BaseRootCoordinator {
         
         self.tabItem = UITabBarItem(title: R.string.profile.profile(),
                                     image: R.image.profile(),
-                                    selectedImage: R.image.profile()?.withTintColor(R.color.orangeMuted()!,
+                                    selectedImage: R.image.profile()?.withTintColor(R.color.primaryOrangeMuted()!,
                                                                                     renderingMode: .alwaysOriginal))
         start()
     }
@@ -22,7 +22,7 @@ final class ProfileCoordinator: BaseRootCoordinator {
     override func start() {
         
         let viewModel = ProfileViewModel()
-        let profileViewController = ProfileViewController.create(viewModel: viewModel)
+        let profileViewController = ProfileViewController(viewModel: viewModel)
         navigationController?.pushViewController(profileViewController, animated: false)
     }
 }

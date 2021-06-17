@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import Combine
 
 class BaseFlowCoordinator: BaseCoordinator {
     
     var navigationController: UINavigationController?
+    var cancelableSet: Set<AnyCancellable> = []
     
     init(navigationController: UINavigationController?) {
         navigationController?.isNavigationBarHidden = true

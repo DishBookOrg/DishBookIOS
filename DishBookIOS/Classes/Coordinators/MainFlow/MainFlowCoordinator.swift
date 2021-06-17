@@ -31,26 +31,40 @@ final class MainFlowCoordinator: BaseCoordinator {
         
         var controllers: [UIViewController] = []
         
-        exploreCoordinator = ExploreCoordinator()
-        dishBookCoordinator = DishBookCoordinator()
-        newDishCoordinator = NewDishCoordinator()
-        shoplistCoordinator = ShoplistCoordinator()
-        profileCoordinator = ProfileCoordinator()
+        let exploreCoordinator = ExploreCoordinator()
+        self.exploreCoordinator = exploreCoordinator
+        childCoordinators.append(exploreCoordinator)
+
+        let dishBookCoordinator = DishBookCoordinator()
+        self.dishBookCoordinator = dishBookCoordinator
+        childCoordinators.append(dishBookCoordinator)
         
-        let exploreRootViewController = exploreCoordinator!.rootViewController!
-        exploreRootViewController.tabBarItem = exploreCoordinator?.tabItem
+        let newDishCoordinator = NewDishCoordinator()
+        self.newDishCoordinator = newDishCoordinator
+        childCoordinators.append(newDishCoordinator)
         
-        let dishBookRootViewController = dishBookCoordinator!.rootViewController!
-        dishBookRootViewController.tabBarItem = dishBookCoordinator?.tabItem
+        let shoplistCoordinator = ShoplistCoordinator()
+        self.shoplistCoordinator = shoplistCoordinator
+        childCoordinators.append(shoplistCoordinator)
         
-        let newDishRootViewController = newDishCoordinator!.rootViewController!
-        newDishRootViewController.tabBarItem = newDishCoordinator?.tabItem
+        let profileCoordinator = ProfileCoordinator()
+        self.profileCoordinator = profileCoordinator
+        childCoordinators.append(profileCoordinator)
         
-        let shoplistRootViewController = shoplistCoordinator!.rootViewController!
-        shoplistRootViewController.tabBarItem = shoplistCoordinator?.tabItem
+        let exploreRootViewController = exploreCoordinator.rootViewController!
+        exploreRootViewController.tabBarItem = exploreCoordinator.tabItem
         
-        let profileRootViewController = profileCoordinator!.rootViewController!
-        profileRootViewController.tabBarItem = profileCoordinator?.tabItem
+        let dishBookRootViewController = dishBookCoordinator.rootViewController!
+        dishBookRootViewController.tabBarItem = dishBookCoordinator.tabItem
+        
+        let newDishRootViewController = newDishCoordinator.rootViewController!
+        newDishRootViewController.tabBarItem = newDishCoordinator.tabItem
+        
+        let shoplistRootViewController = shoplistCoordinator.rootViewController!
+        shoplistRootViewController.tabBarItem = shoplistCoordinator.tabItem
+        
+        let profileRootViewController = profileCoordinator.rootViewController!
+        profileRootViewController.tabBarItem = profileCoordinator.tabItem
         
         controllers.append(exploreRootViewController)
         controllers.append(dishBookRootViewController)
@@ -60,7 +74,7 @@ final class MainFlowCoordinator: BaseCoordinator {
         
         tabBarController.delegate = self
         tabBarController.viewControllers = controllers
-        tabBarController.tabBar.tintColor = R.color.orangeMuted()
+        tabBarController.tabBar.tintColor = R.color.primaryOrangeMuted()
         
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
@@ -73,6 +87,6 @@ extension MainFlowCoordinator: UITabBarControllerDelegate {
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         
-        print("tabBarController didSelect")
+        print("tabBarController didSelect \((viewController as? UINavigationController)?.viewControllers.first?.description ?? "")")
     }
 }

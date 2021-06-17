@@ -14,15 +14,49 @@ final class ExploreCoordinator: BaseRootCoordinator {
         
         self.tabItem = UITabBarItem(title: R.string.explore.explore(),
                                     image: R.image.search(),
-                                    selectedImage: R.image.search()?.withTintColor(R.color.orangeMuted()!,
+                                    selectedImage: R.image.search()?.withTintColor(R.color.primaryOrangeMuted()!,
                                                                                    renderingMode: .alwaysOriginal))
+        
+        navigationController?.isNavigationBarHidden = false
         start()
     }
     
     override func start() {
         
+        showExploreList()
+    }
+    
+    // MARK: - Explore list
+    
+    private func createExploreListViewController() -> ExploreListViewController {
+        
         let viewModel = ExploreListViewModel()
-        let exploreController = ExploreListViewController.create(viewModel: viewModel)
-        navigationController?.pushViewController(exploreController, animated: false)
+        viewModel.didPressDishDetailPublisher
+            .sink(receiveValue: showDishDetail)
+            .store(in: &cancelableSet)
+        
+        let exploreController = ExploreListViewController(viewModel: viewModel)
+        return exploreController
+    }
+    
+    private func showExploreList() {
+        
+        let controller = createExploreListViewController()
+        navigationController?.pushViewController(controller, animated: false)
+    }
+    
+    // MARK: - Dish detail
+    
+    private func createDishDetailViewController(with dish: Dish) -> DishDetailViewController {
+        
+        let viewModel = DishDetailViewModel(dish: dish, type: .explore)
+        let viewController = DishDetailViewController(viewModel: viewModel)
+        return viewController
+    }
+    
+    private func showDishDetail(with dish: Dish) {
+        
+        let controller = createDishDetailViewController(with: dish)
+        navigationController?.pushViewController(controller, animated: true)
     }
 }

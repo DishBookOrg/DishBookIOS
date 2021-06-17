@@ -14,7 +14,7 @@ final class DishBookCoordinator: BaseRootCoordinator {
         
         self.tabItem = UITabBarItem(title: R.string.dishBook.dishBook(),
                                     image: R.image.dishBook(),
-                                    selectedImage: R.image.dishBook()?.withTintColor(R.color.orangeMuted()!,
+                                    selectedImage: R.image.dishBook()?.withTintColor(R.color.primaryOrangeMuted()!,
                                                                                      renderingMode: .alwaysOriginal))
         start()
     }
@@ -22,7 +22,7 @@ final class DishBookCoordinator: BaseRootCoordinator {
     override func start() {
         
         let viewModel = DishBookViewModel()
-        let dishBookController = DishBookViewController.create(viewModel: viewModel)
+        let dishBookController = DishBookViewController(viewModel: viewModel)
         navigationController?.pushViewController(dishBookController, animated: false)
     }
 }

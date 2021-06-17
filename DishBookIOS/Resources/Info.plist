@@ -52,11 +52,18 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Add a picture by allowing $(PRODUCT_NAME) to access your photo gallery.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Add a sound to video by allowing $(PRODUCT_NAME) to access your microphone.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Add a picture by allowing $(PRODUCT_NAME) to access your photo gallery.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>SF-Pro-Text-Semibold.otf</string>
 		<string>SF-Pro-Text-Regular.otf</string>
 		<string>SF-Pro-Rounded-Medium.otf</string>
+        <string>SF-Pro-Rounded-Regular.otf</string>
 		<string>SF-Pro-Rounded-Semibold.otf</string>
 		<string>SF-Pro-Display-Regular.otf</string>
 		<string>SF-Pro-Text-Medium.otf</string>
