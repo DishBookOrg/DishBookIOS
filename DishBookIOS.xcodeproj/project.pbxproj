@@ -37,6 +37,7 @@
 		5F2B6B47267AAD2600FF3CAB /* Constraints+Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B46267AAD2600FF3CAB /* Constraints+Priority.swift */; };
 		5F2B6B50267BD20C00FF3CAB /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B4F267BD20C00FF3CAB /* ImagePickerView.swift */; };
 		5F2B6B52267BD41100FF3CAB /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B51267BD41100FF3CAB /* ImagePicker.swift */; };
+		5F2B6B54267BFC0D00FF3CAB /* SearchSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B6B53267BFC0D00FF3CAB /* SearchSection.swift */; };
 		5F4218FC25F9509000366A16 /* DishCardSmallCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */; };
 		5F42190425F950A900366A16 /* DishCardBigCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */; };
 		5F44162A25CB04CE0009FE5F /* UIControlSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F44162925CB04CE0009FE5F /* UIControlSubscription.swift */; };
@@ -182,6 +183,7 @@
 		5F2B6B46267AAD2600FF3CAB /* Constraints+Priority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constraints+Priority.swift"; sourceTree = "<group>"; };
 		5F2B6B4F267BD20C00FF3CAB /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
 		5F2B6B51267BD41100FF3CAB /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		5F2B6B53267BFC0D00FF3CAB /* SearchSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSection.swift; sourceTree = "<group>"; };
 		5F4218FA25F9509000366A16 /* DishCardSmallCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardSmallCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F42190325F950A900366A16 /* DishCardBigCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCardBigCollectionViewCell.swift; sourceTree = "<group>"; };
 		5F42190B25F9555E00366A16 /* SF-Pro-Rounded-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Rounded-Regular.otf"; sourceTree = "<group>"; };
@@ -846,6 +848,7 @@
 				5F8FA25826416D0000E24685 /* CollectionSection.swift */,
 				5F8FA25A26416D4300E24685 /* SmallItemsSection.swift */,
 				5F8FA25C26416D4E00E24685 /* BigItemsSection.swift */,
+				5F2B6B53267BFC0D00FF3CAB /* SearchSection.swift */,
 				5F15C86226497030009EB349 /* SectionHeader.swift */,
 			);
 			path = Layout;
@@ -1202,6 +1205,7 @@
 				5F5C525225C4B0E900AC7E3C /* Resources */,
 				5F5C52AF25C4B9E600AC7E3C /* SwiftLint */,
 				E4D8641B30EC8FD37ECE55BA /* [CP] Embed Pods Frameworks */,
+				BEF333CDD0B61C8AAC11EBF3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1348,6 +1352,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
+		BEF333CDD0B61C8AAC11EBF3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DishBookIOS/Pods-DishBookIOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E4D8641B30EC8FD37ECE55BA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1422,6 +1443,7 @@
 				5FEBB75D26795130003C2DBA /* DishServingsView.swift in Sources */,
 				5DB5C377267779CF003CCC73 /* IngredientsViewController.swift in Sources */,
 				5FFB20FE25C4D3370086440A /* ExploreListViewController.swift in Sources */,
+				5F2B6B54267BFC0D00FF3CAB /* SearchSection.swift in Sources */,
 				5DB5C37926777D22003CCC73 /* SingleIngredientView.swift in Sources */,
 				5F44162D25CB04D70009FE5F /* UIControlPublisher.swift in Sources */,
 				5FEBD1C725C9D9A6000F7E9C /* SignInWithGoogleCoordinator.swift in Sources */,

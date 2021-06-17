@@ -23,12 +23,12 @@ final class AuthCoordinator: BaseCoordinator {
         let loginController = LoginViewController.create(viewModel: viewModel)
         
         let signInWithAppleCoordinator = SignInWithAppleCoordinator()
-//        let signInWithGoogleCoordinator = SignInWithGoogleCoordinator()
+        let signInWithGoogleCoordinator = SignInWithGoogleCoordinator()
 
         viewModel.googleAuthAction = {
-//            signInWithGoogleCoordinator.startSignIn { [weak self] in
-//                self?.isCompleted?()
-//            }
+            signInWithGoogleCoordinator.startSignIn { [weak self] in
+                self?.isCompleted?()
+            }
         }
         viewModel.appleAuthAction = {
             signInWithAppleCoordinator.startSignInWithAppleFlow(authControllerDelegate: loginController) { nonce in

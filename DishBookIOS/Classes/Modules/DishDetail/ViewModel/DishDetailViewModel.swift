@@ -132,9 +132,9 @@ extension DishDetailViewModel {
             .collection("IngredientsAndSteps")
             .document("IngredientsAndSteps")
             .setData(from: self.dish.ingredientsAndSteps) as AnyPublisher<Void, Error>)
-            .sink(receiveCompletion: onErrorCompletion, receiveValue: { [weak self] in
+            .sink(receiveCompletion: onErrorCompletion) { [weak self] in
                 self?.finishLoadNewDishSubject.send(())
-            })
+            }
             .store(in: &cancelableSet)
     }
 }
