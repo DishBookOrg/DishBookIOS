@@ -154,6 +154,7 @@ final class NewDishCoordinator: BaseRootCoordinator {
         viewModel.didPressDonePublisher
             .sink { [unowned self] in
                 ingredientsAndSteps.steps.append($0)
+                newDish.totalTime = (newDish.totalTime ?? 0) + $0.stepTime
                 createStepsViewController?.render(steps: ingredientsAndSteps.steps)
                 createStepsViewController?.dismiss(animated: true)
             }
@@ -173,10 +174,17 @@ final class NewDishCoordinator: BaseRootCoordinator {
         
         var dish = Dish(newDish: newDish)
         dish.ingredientsAndSteps = ingredientsAndSteps
+        dish.imageURL = ingredientsAndSteps.steps.last?.stepAttachmentURL
+        
         let viewModel = DishDetailViewModel(dish: dish, type: .newDish)
         
-        viewModel.didPressPublicatePublisher
-            .sink { [unowned self] _ in }
+        viewModel.finishLoadNewDishPublisher
+            .sink { [unowned self] _ in
+                self.newDish = NewDish()
+                ingredientsAndSteps = IngredientsAndSteps(ingredients: [], steps: [])
+                navigationController?.popToRootViewController(animated: true)
+                start()
+            }
             .store(in: &cancelableSet)
         
         let viewController = DishDetailViewController(viewModel: viewModel)

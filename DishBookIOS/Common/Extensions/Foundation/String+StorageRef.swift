@@ -15,7 +15,7 @@ extension String {
         if contains("gs://") || contains("http://") || contains("https://") {
             return Storage.storage().reference(forURL: self)
         } else {
-            return Storage.storage().reference(forURL: "https://firebasestorage.googleapis.com/v0/b/dishbookapp.appspot.com/o/chicken.jpg")
+            return Storage.storage().reference(forURL: "https://firebasestorage.googleapis.com/v0/b/dishbookapp.appspot.com/o/placeholder.png")
         }
     }
 }

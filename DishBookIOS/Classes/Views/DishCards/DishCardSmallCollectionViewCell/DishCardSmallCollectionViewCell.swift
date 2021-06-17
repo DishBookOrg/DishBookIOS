@@ -127,7 +127,7 @@ extension DishCardSmallCollectionViewCell: BindableCell {
     
     func render(props: Dish) {
         
-        dishImageView.sd_setImage(with: Storage.storage().reference(forURL: props.imageURL),
+        dishImageView.sd_setImage(with: props.imageReference,
                                   placeholderImage: UIImage())
         dishNameLabel.text = props.name
         dishTimeLabel.text = props.stringTotalTimeShort
